@@ -17,7 +17,11 @@ class _$ProductTearOff {
 
 // ignore: unused_element
   _Product call(
-      {String id, String productKey, String notes, double cost, double price}) {
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double price}) {
     return _Product(
       id: id,
       productKey: productKey,
@@ -33,6 +37,7 @@ const $Product = _$ProductTearOff();
 
 mixin _$Product {
   String get id;
+  @JsonKey(name: 'product_key')
   String get productKey;
   String get notes;
   double get cost;
@@ -46,7 +51,11 @@ abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
       _$ProductCopyWithImpl<$Res>;
   $Res call(
-      {String id, String productKey, String notes, double cost, double price});
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double price});
 }
 
 class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
@@ -80,7 +89,11 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       __$ProductCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id, String productKey, String notes, double cost, double price});
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double price});
 }
 
 class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
@@ -110,9 +123,14 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class _$_Product with DiagnosticableTreeMixin implements _Product {
-  _$_Product({this.id, this.productKey, this.notes, this.cost, this.price});
+  _$_Product(
+      {this.id,
+      @JsonKey(name: 'product_key') this.productKey,
+      this.notes,
+      this.cost,
+      this.price});
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductFromJson(json);
@@ -120,6 +138,7 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   @override
   final String id;
   @override
+  @JsonKey(name: 'product_key')
   final String productKey;
   @override
   final String notes;
@@ -184,7 +203,7 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
 abstract class _Product implements Product {
   factory _Product(
       {String id,
-      String productKey,
+      @JsonKey(name: 'product_key') String productKey,
       String notes,
       double cost,
       double price}) = _$_Product;
@@ -194,6 +213,7 @@ abstract class _Product implements Product {
   @override
   String get id;
   @override
+  @JsonKey(name: 'product_key')
   String get productKey;
   @override
   String get notes;

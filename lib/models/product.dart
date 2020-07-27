@@ -7,9 +7,10 @@ part 'product.g.dart';
 
 @freezed
 abstract class Product with _$Product {
+  @JsonSerializable(explicitToJson: true)
   factory Product({
     String id,
-    String productKey,
+    @JsonKey(name: 'product_key') String productKey,
     String notes,
     double cost,
     double price,
