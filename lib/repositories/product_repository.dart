@@ -3,7 +3,8 @@ import 'package:invoice_ninja/models/product.dart';
 import 'package:invoice_ninja/utils/web_client.dart';
 
 class ProductRepository {
-  static Future<List<Product>> load() async {
+
+  Future<List<Product>> load() async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/products', InvoiceNinja.token);
 
