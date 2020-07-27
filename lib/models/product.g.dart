@@ -11,7 +11,6 @@ _$_Product _$_$_ProductFromJson(Map<String, dynamic> json) {
     id: json['id'] as String ?? '',
     productKey: json['product_key'] as String,
     notes: json['notes'] as String ?? '',
-    cost: (json['cost'] as num)?.toDouble() ?? 0,
     price: (json['price'] as num)?.toDouble() ?? 0,
   );
 }
@@ -21,7 +20,6 @@ Map<String, dynamic> _$_$_ProductToJson(_$_Product instance) =>
       'id': instance.id,
       'product_key': instance.productKey,
       'notes': instance.notes,
-      'cost': instance.cost,
       'price': instance.price,
     };
 

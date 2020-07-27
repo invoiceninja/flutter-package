@@ -20,13 +20,11 @@ class _$ProductTearOff {
       {String id = '',
       @JsonKey(name: 'product_key') String productKey = '',
       String notes = '',
-      double cost = 0,
       double price = 0}) {
     return _Product(
       id: id,
       productKey: productKey,
       notes: notes,
-      cost: cost,
       price: price,
     );
   }
@@ -40,7 +38,6 @@ mixin _$Product {
   @JsonKey(name: 'product_key')
   String get productKey;
   String get notes;
-  double get cost;
   double get price;
 
   Map<String, dynamic> toJson();
@@ -54,7 +51,6 @@ abstract class $ProductCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double cost,
       double price});
 }
 
@@ -70,7 +66,6 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
     Object id = freezed,
     Object productKey = freezed,
     Object notes = freezed,
-    Object cost = freezed,
     Object price = freezed,
   }) {
     return _then(_value.copyWith(
@@ -78,7 +73,6 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
       productKey:
           productKey == freezed ? _value.productKey : productKey as String,
       notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
       price: price == freezed ? _value.price : price as double,
     ));
   }
@@ -92,7 +86,6 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double cost,
       double price});
 }
 
@@ -109,7 +102,6 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     Object id = freezed,
     Object productKey = freezed,
     Object notes = freezed,
-    Object cost = freezed,
     Object price = freezed,
   }) {
     return _then(_Product(
@@ -117,7 +109,6 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
       productKey:
           productKey == freezed ? _value.productKey : productKey as String,
       notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
       price: price == freezed ? _value.price : price as double,
     ));
   }
@@ -129,12 +120,10 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       {this.id = '',
       @JsonKey(name: 'product_key') this.productKey = '',
       this.notes = '',
-      this.cost = 0,
       this.price = 0})
       : assert(id != null),
         assert(productKey != null),
         assert(notes != null),
-        assert(cost != null),
         assert(price != null);
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
@@ -151,14 +140,11 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   final String notes;
   @JsonKey(defaultValue: 0)
   @override
-  final double cost;
-  @JsonKey(defaultValue: 0)
-  @override
   final double price;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Product(id: $id, productKey: $productKey, notes: $notes, cost: $cost, price: $price)';
+    return 'Product(id: $id, productKey: $productKey, notes: $notes, price: $price)';
   }
 
   @override
@@ -169,7 +155,6 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('productKey', productKey))
       ..add(DiagnosticsProperty('notes', notes))
-      ..add(DiagnosticsProperty('cost', cost))
       ..add(DiagnosticsProperty('price', price));
   }
 
@@ -184,8 +169,6 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
                     .equals(other.productKey, productKey)) &&
             (identical(other.notes, notes) ||
                 const DeepCollectionEquality().equals(other.notes, notes)) &&
-            (identical(other.cost, cost) ||
-                const DeepCollectionEquality().equals(other.cost, cost)) &&
             (identical(other.price, price) ||
                 const DeepCollectionEquality().equals(other.price, price)));
   }
@@ -196,7 +179,6 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(productKey) ^
       const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(cost) ^
       const DeepCollectionEquality().hash(price);
 
   @override
@@ -214,7 +196,6 @@ abstract class _Product implements Product {
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double cost,
       double price}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
@@ -226,8 +207,6 @@ abstract class _Product implements Product {
   String get productKey;
   @override
   String get notes;
-  @override
-  double get cost;
   @override
   double get price;
   @override
