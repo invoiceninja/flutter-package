@@ -1,27 +1,22 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
+
+part 'product.freezed.dart';
 
 part 'product.g.dart';
 
-@JsonSerializable(nullable: false)
-class Product {
-  final String id;
-
-  Product({this.id});
+@freezed
+abstract class Product with _$Product {
+  factory Product({String id}) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ProductToJson(this);
 }
 
-@JsonSerializable(nullable: false)
-class ProductList {
-  final List<Product> data;
-
-  ProductList({this.data});
+@freezed
+abstract class ProductList with _$ProductList {
+  factory ProductList({List<Product> data}) = _ProductList;
 
   factory ProductList.fromJson(Map<String, dynamic> json) =>
       _$ProductListFromJson(json);
-
-  Map<String, dynamic> toJson() => _$ProductListToJson(this);
 }
