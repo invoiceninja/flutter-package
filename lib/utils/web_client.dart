@@ -24,7 +24,7 @@ class WebClient {
     dynamic data,
   }) async {
     final http.Response response = await http.Client()
-        .post(url, body: data, headers: _getHeaders(token))
+        .post(url, body: json.encode(data), headers: _getHeaders(token))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
@@ -40,7 +40,7 @@ class WebClient {
     dynamic data,
   }) async {
     final http.Response response = await http.Client()
-        .put(url, body: data, headers: _getHeaders(token))
+        .put(url, body: json.encode(data), headers: _getHeaders(token))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
