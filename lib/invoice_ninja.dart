@@ -7,7 +7,7 @@ class InvoiceNinja {
   static String token;
   static bool isDebug;
 
-  static ProductRepository products;
+  static ProductRepository products = ProductRepository();
 
   static void initialize(
     String token, {
@@ -22,4 +22,3 @@ class InvoiceNinja {
     }
   }
 }
-
