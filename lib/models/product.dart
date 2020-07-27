@@ -7,7 +7,12 @@ part 'product.g.dart';
 
 @freezed
 abstract class Product with _$Product {
-  factory Product({String id}) = _Product;
+  factory Product({
+    String id,
+    String notes,
+    double cost,
+    double price,
+  }) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);
