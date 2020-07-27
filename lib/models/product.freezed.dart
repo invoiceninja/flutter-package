@@ -18,14 +18,48 @@ class _$ProductTearOff {
 // ignore: unused_element
   _Product call(
       {String id = '',
+      @JsonKey(name: 'user_id') String createdById = '',
       @JsonKey(name: 'product_key') String productKey = '',
       String notes = '',
-      double price = 0}) {
+      double cost = 0,
+      double price = 0,
+      double quantity = 0,
+      @JsonKey(name: 'tax_name1') String taxName1 = '',
+      @JsonKey(name: 'tax_rate1') double taxRate1 = 0,
+      @JsonKey(name: 'tax_name2') String taxName2 = '',
+      @JsonKey(name: 'tax_rate2') double taxRate2 = 0,
+      @JsonKey(name: 'tax_name3') String taxName3 = '',
+      @JsonKey(name: 'tax_rate3') double taxRate3 = 0,
+      @JsonKey(name: 'created_at') int createdAt = 0,
+      @JsonKey(name: 'updated_at') int updatedAt = 0,
+      @JsonKey(name: 'archived_at') int archivedAt = 0,
+      @JsonKey(name: 'is_deleted') bool isDeleted = false,
+      @JsonKey(name: 'custom_value1') String customValue1 = '',
+      @JsonKey(name: 'custom_value2') String customValue2 = '',
+      @JsonKey(name: 'custom_value3') String customValue3 = '',
+      @JsonKey(name: 'custom_value4') String customValue4 = ''}) {
     return _Product(
       id: id,
+      createdById: createdById,
       productKey: productKey,
       notes: notes,
+      cost: cost,
       price: price,
+      quantity: quantity,
+      taxName1: taxName1,
+      taxRate1: taxRate1,
+      taxName2: taxName2,
+      taxRate2: taxRate2,
+      taxName3: taxName3,
+      taxRate3: taxRate3,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      archivedAt: archivedAt,
+      isDeleted: isDeleted,
+      customValue1: customValue1,
+      customValue2: customValue2,
+      customValue3: customValue3,
+      customValue4: customValue4,
     );
   }
 }
@@ -35,10 +69,42 @@ const $Product = _$ProductTearOff();
 
 mixin _$Product {
   String get id;
+  @JsonKey(name: 'user_id')
+  String get createdById;
   @JsonKey(name: 'product_key')
   String get productKey;
   String get notes;
+  double get cost;
   double get price;
+  double get quantity;
+  @JsonKey(name: 'tax_name1')
+  String get taxName1;
+  @JsonKey(name: 'tax_rate1')
+  double get taxRate1;
+  @JsonKey(name: 'tax_name2')
+  String get taxName2;
+  @JsonKey(name: 'tax_rate2')
+  double get taxRate2;
+  @JsonKey(name: 'tax_name3')
+  String get taxName3;
+  @JsonKey(name: 'tax_rate3')
+  double get taxRate3;
+  @JsonKey(name: 'created_at')
+  int get createdAt;
+  @JsonKey(name: 'updated_at')
+  int get updatedAt;
+  @JsonKey(name: 'archived_at')
+  int get archivedAt;
+  @JsonKey(name: 'is_deleted')
+  bool get isDeleted;
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
 
   Map<String, dynamic> toJson();
   $ProductCopyWith<Product> get copyWith;
@@ -49,9 +115,26 @@ abstract class $ProductCopyWith<$Res> {
       _$ProductCopyWithImpl<$Res>;
   $Res call(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double price});
+      double cost,
+      double price,
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4});
 }
 
 class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
@@ -64,16 +147,59 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
+    Object createdById = freezed,
     Object productKey = freezed,
     Object notes = freezed,
+    Object cost = freezed,
     Object price = freezed,
+    Object quantity = freezed,
+    Object taxName1 = freezed,
+    Object taxRate1 = freezed,
+    Object taxName2 = freezed,
+    Object taxRate2 = freezed,
+    Object taxName3 = freezed,
+    Object taxRate3 = freezed,
+    Object createdAt = freezed,
+    Object updatedAt = freezed,
+    Object archivedAt = freezed,
+    Object isDeleted = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
+      createdById:
+          createdById == freezed ? _value.createdById : createdById as String,
       productKey:
           productKey == freezed ? _value.productKey : productKey as String,
       notes: notes == freezed ? _value.notes : notes as String,
+      cost: cost == freezed ? _value.cost : cost as double,
       price: price == freezed ? _value.price : price as double,
+      quantity: quantity == freezed ? _value.quantity : quantity as double,
+      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
+      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
+      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
+      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
+      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
+      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
+      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
+      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
     ));
   }
 }
@@ -84,9 +210,26 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @override
   $Res call(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double price});
+      double cost,
+      double price,
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4});
 }
 
 class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
@@ -100,16 +243,59 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object createdById = freezed,
     Object productKey = freezed,
     Object notes = freezed,
+    Object cost = freezed,
     Object price = freezed,
+    Object quantity = freezed,
+    Object taxName1 = freezed,
+    Object taxRate1 = freezed,
+    Object taxName2 = freezed,
+    Object taxRate2 = freezed,
+    Object taxName3 = freezed,
+    Object taxRate3 = freezed,
+    Object createdAt = freezed,
+    Object updatedAt = freezed,
+    Object archivedAt = freezed,
+    Object isDeleted = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
   }) {
     return _then(_Product(
       id: id == freezed ? _value.id : id as String,
+      createdById:
+          createdById == freezed ? _value.createdById : createdById as String,
       productKey:
           productKey == freezed ? _value.productKey : productKey as String,
       notes: notes == freezed ? _value.notes : notes as String,
+      cost: cost == freezed ? _value.cost : cost as double,
       price: price == freezed ? _value.price : price as double,
+      quantity: quantity == freezed ? _value.quantity : quantity as double,
+      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
+      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
+      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
+      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
+      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
+      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
+      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
+      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
     ));
   }
 }
@@ -118,13 +304,47 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 class _$_Product with DiagnosticableTreeMixin implements _Product {
   _$_Product(
       {this.id = '',
+      @JsonKey(name: 'user_id') this.createdById = '',
       @JsonKey(name: 'product_key') this.productKey = '',
       this.notes = '',
-      this.price = 0})
+      this.cost = 0,
+      this.price = 0,
+      this.quantity = 0,
+      @JsonKey(name: 'tax_name1') this.taxName1 = '',
+      @JsonKey(name: 'tax_rate1') this.taxRate1 = 0,
+      @JsonKey(name: 'tax_name2') this.taxName2 = '',
+      @JsonKey(name: 'tax_rate2') this.taxRate2 = 0,
+      @JsonKey(name: 'tax_name3') this.taxName3 = '',
+      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
+      @JsonKey(name: 'created_at') this.createdAt = 0,
+      @JsonKey(name: 'updated_at') this.updatedAt = 0,
+      @JsonKey(name: 'archived_at') this.archivedAt = 0,
+      @JsonKey(name: 'is_deleted') this.isDeleted = false,
+      @JsonKey(name: 'custom_value1') this.customValue1 = '',
+      @JsonKey(name: 'custom_value2') this.customValue2 = '',
+      @JsonKey(name: 'custom_value3') this.customValue3 = '',
+      @JsonKey(name: 'custom_value4') this.customValue4 = ''})
       : assert(id != null),
+        assert(createdById != null),
         assert(productKey != null),
         assert(notes != null),
-        assert(price != null);
+        assert(cost != null),
+        assert(price != null),
+        assert(quantity != null),
+        assert(taxName1 != null),
+        assert(taxRate1 != null),
+        assert(taxName2 != null),
+        assert(taxRate2 != null),
+        assert(taxName3 != null),
+        assert(taxRate3 != null),
+        assert(createdAt != null),
+        assert(updatedAt != null),
+        assert(archivedAt != null),
+        assert(isDeleted != null),
+        assert(customValue1 != null),
+        assert(customValue2 != null),
+        assert(customValue3 != null),
+        assert(customValue4 != null);
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductFromJson(json);
@@ -133,6 +353,9 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   @override
   final String id;
   @override
+  @JsonKey(name: 'user_id')
+  final String createdById;
+  @override
   @JsonKey(name: 'product_key')
   final String productKey;
   @JsonKey(defaultValue: '')
@@ -140,11 +363,59 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   final String notes;
   @JsonKey(defaultValue: 0)
   @override
+  final double cost;
+  @JsonKey(defaultValue: 0)
+  @override
   final double price;
+  @JsonKey(defaultValue: 0)
+  @override
+  final double quantity;
+  @override
+  @JsonKey(name: 'tax_name1')
+  final String taxName1;
+  @override
+  @JsonKey(name: 'tax_rate1')
+  final double taxRate1;
+  @override
+  @JsonKey(name: 'tax_name2')
+  final String taxName2;
+  @override
+  @JsonKey(name: 'tax_rate2')
+  final double taxRate2;
+  @override
+  @JsonKey(name: 'tax_name3')
+  final String taxName3;
+  @override
+  @JsonKey(name: 'tax_rate3')
+  final double taxRate3;
+  @override
+  @JsonKey(name: 'created_at')
+  final int createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  final int updatedAt;
+  @override
+  @JsonKey(name: 'archived_at')
+  final int archivedAt;
+  @override
+  @JsonKey(name: 'is_deleted')
+  final bool isDeleted;
+  @override
+  @JsonKey(name: 'custom_value1')
+  final String customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  final String customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  final String customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  final String customValue4;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Product(id: $id, productKey: $productKey, notes: $notes, price: $price)';
+    return 'Product(id: $id, createdById: $createdById, productKey: $productKey, notes: $notes, cost: $cost, price: $price, quantity: $quantity, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4)';
   }
 
   @override
@@ -153,9 +424,26 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
     properties
       ..add(DiagnosticsProperty('type', 'Product'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('createdById', createdById))
       ..add(DiagnosticsProperty('productKey', productKey))
       ..add(DiagnosticsProperty('notes', notes))
-      ..add(DiagnosticsProperty('price', price));
+      ..add(DiagnosticsProperty('cost', cost))
+      ..add(DiagnosticsProperty('price', price))
+      ..add(DiagnosticsProperty('quantity', quantity))
+      ..add(DiagnosticsProperty('taxName1', taxName1))
+      ..add(DiagnosticsProperty('taxRate1', taxRate1))
+      ..add(DiagnosticsProperty('taxName2', taxName2))
+      ..add(DiagnosticsProperty('taxRate2', taxRate2))
+      ..add(DiagnosticsProperty('taxName3', taxName3))
+      ..add(DiagnosticsProperty('taxRate3', taxRate3))
+      ..add(DiagnosticsProperty('createdAt', createdAt))
+      ..add(DiagnosticsProperty('updatedAt', updatedAt))
+      ..add(DiagnosticsProperty('archivedAt', archivedAt))
+      ..add(DiagnosticsProperty('isDeleted', isDeleted))
+      ..add(DiagnosticsProperty('customValue1', customValue1))
+      ..add(DiagnosticsProperty('customValue2', customValue2))
+      ..add(DiagnosticsProperty('customValue3', customValue3))
+      ..add(DiagnosticsProperty('customValue4', customValue4));
   }
 
   @override
@@ -164,22 +452,89 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
         (other is _Product &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.createdById, createdById) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdById, createdById)) &&
             (identical(other.productKey, productKey) ||
                 const DeepCollectionEquality()
                     .equals(other.productKey, productKey)) &&
             (identical(other.notes, notes) ||
                 const DeepCollectionEquality().equals(other.notes, notes)) &&
+            (identical(other.cost, cost) ||
+                const DeepCollectionEquality().equals(other.cost, cost)) &&
             (identical(other.price, price) ||
-                const DeepCollectionEquality().equals(other.price, price)));
+                const DeepCollectionEquality().equals(other.price, price)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.taxName1, taxName1) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName1, taxName1)) &&
+            (identical(other.taxRate1, taxRate1) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate1, taxRate1)) &&
+            (identical(other.taxName2, taxName2) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName2, taxName2)) &&
+            (identical(other.taxRate2, taxRate2) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate2, taxRate2)) &&
+            (identical(other.taxName3, taxName3) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName3, taxName3)) &&
+            (identical(other.taxRate3, taxRate3) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate3, taxRate3)) &&
+            (identical(other.createdAt, createdAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdAt, createdAt)) &&
+            (identical(other.updatedAt, updatedAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.updatedAt, updatedAt)) &&
+            (identical(other.archivedAt, archivedAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.archivedAt, archivedAt)) &&
+            (identical(other.isDeleted, isDeleted) ||
+                const DeepCollectionEquality()
+                    .equals(other.isDeleted, isDeleted)) &&
+            (identical(other.customValue1, customValue1) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue1, customValue1)) &&
+            (identical(other.customValue2, customValue2) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue2, customValue2)) &&
+            (identical(other.customValue3, customValue3) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue3, customValue3)) &&
+            (identical(other.customValue4, customValue4) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue4, customValue4)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(createdById) ^
       const DeepCollectionEquality().hash(productKey) ^
       const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(price);
+      const DeepCollectionEquality().hash(cost) ^
+      const DeepCollectionEquality().hash(price) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(taxName1) ^
+      const DeepCollectionEquality().hash(taxRate1) ^
+      const DeepCollectionEquality().hash(taxName2) ^
+      const DeepCollectionEquality().hash(taxRate2) ^
+      const DeepCollectionEquality().hash(taxName3) ^
+      const DeepCollectionEquality().hash(taxRate3) ^
+      const DeepCollectionEquality().hash(createdAt) ^
+      const DeepCollectionEquality().hash(updatedAt) ^
+      const DeepCollectionEquality().hash(archivedAt) ^
+      const DeepCollectionEquality().hash(isDeleted) ^
+      const DeepCollectionEquality().hash(customValue1) ^
+      const DeepCollectionEquality().hash(customValue2) ^
+      const DeepCollectionEquality().hash(customValue3) ^
+      const DeepCollectionEquality().hash(customValue4);
 
   @override
   _$ProductCopyWith<_Product> get copyWith =>
@@ -194,21 +549,87 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
 abstract class _Product implements Product {
   factory _Product(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
-      double price}) = _$_Product;
+      double cost,
+      double price,
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
   @override
   String get id;
   @override
+  @JsonKey(name: 'user_id')
+  String get createdById;
+  @override
   @JsonKey(name: 'product_key')
   String get productKey;
   @override
   String get notes;
   @override
+  double get cost;
+  @override
   double get price;
+  @override
+  double get quantity;
+  @override
+  @JsonKey(name: 'tax_name1')
+  String get taxName1;
+  @override
+  @JsonKey(name: 'tax_rate1')
+  double get taxRate1;
+  @override
+  @JsonKey(name: 'tax_name2')
+  String get taxName2;
+  @override
+  @JsonKey(name: 'tax_rate2')
+  double get taxRate2;
+  @override
+  @JsonKey(name: 'tax_name3')
+  String get taxName3;
+  @override
+  @JsonKey(name: 'tax_rate3')
+  double get taxRate3;
+  @override
+  @JsonKey(name: 'created_at')
+  int get createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  int get updatedAt;
+  @override
+  @JsonKey(name: 'archived_at')
+  int get archivedAt;
+  @override
+  @JsonKey(name: 'is_deleted')
+  bool get isDeleted;
+  @override
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
   @override
   _$ProductCopyWith<_Product> get copyWith;
 }
