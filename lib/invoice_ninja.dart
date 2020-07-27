@@ -1,11 +1,14 @@
 library invoice_ninja;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
-
 class InvoiceNinja {
-  void hello() => print('Hello ninja!');
+  static String _token;
+  static bool _isDebug;
+
+  static void setToken(String value) => _token = value;
+
+  static void enableDebug() => _isDebug = true;
+
+  void loadProducts() {
+    print('Working... $_token $_isDebug');
+  }
 }
