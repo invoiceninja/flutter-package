@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:invoice_ninja/invoice_ninja.dart';
 
 class WebClient {
   const WebClient();
@@ -7,31 +8,51 @@ class WebClient {
   Future<dynamic> get(String url, String token) async {
     final http.Response response = await http.Client().get(
       url,
-      headers: _getHeaders(url, token),
+      headers: _getHeaders(token),
     );
 
-    final dynamic jsonResponse = json.decode(response.body);
+    if (InvoiceNinja.debugEnabled) {
+      print('Invoice Ninja [GET] $url\n${response.body}');
+    }
 
-    return jsonResponse;
+    return json.decode(response.body);
+  }
+
+  Future<dynamic> post(
+    String url,
+    String token, {
+    dynamic data,
+  }) async {
+    final http.Response response = await http.Client()
+        .post(url, body: data, headers: _getHeaders(token))
+        .timeout(const Duration(seconds: 60));
+
+    if (InvoiceNinja.debugEnabled) {
+      print('Invoice Ninja [POST] $url\n${response.body}');
+    }
+
+    return json.decode(response.body);
+  }
+
+  Future<dynamic> put(
+    String url,
+    String token, {
+    dynamic data,
+  }) async {
+    final http.Response response = await http.Client()
+        .put(url, body: data, headers: _getHeaders(token))
+        .timeout(const Duration(seconds: 60));
+
+    if (InvoiceNinja.debugEnabled) {
+      print('Invoice Ninja [PUT] $url\n${response.body}');
+    }
+    return json.decode(response.body);
   }
 }
 
-Map<String, String> _getHeaders(String url, String token,
-    {String secret, String password}) {
-  final headers = {
-    'X-API-SECRET': secret,
-    'X-Requested-With': 'XMLHttpRequest',
-    'Content-Type': 'application/json',
-    'user-agent': 'flutter-package',
-  };
-
-  if (token != null && token.isNotEmpty) {
-    headers['X-API-Token'] = token;
-  }
-
-  if (password != null && password.isNotEmpty) {
-    headers['X-API-PASSWORD'] = password;
-  }
-
-  return headers;
-}
+Map<String, String> _getHeaders(String token) => {
+      'X-API-Token': token,
+      'X-Requested-With': 'XMLHttpRequest',
+      'Content-Type': 'application/json',
+      'user-agent': 'flutter-package',
+    };
