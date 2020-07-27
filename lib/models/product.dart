@@ -9,11 +9,10 @@ part 'product.g.dart';
 abstract class Product with _$Product {
   @JsonSerializable(explicitToJson: true)
   factory Product({
-    String id,
-    @JsonKey(name: 'product_key') String productKey,
-    String notes,
-    double cost,
-    double price,
+    @Default('') String id,
+    @Default('') @JsonKey(name: 'product_key') String productKey,
+    @Default('') String notes,
+    @Default(0) double price,
   }) = _Product;
 
   factory Product.fromJson(Map<String, dynamic> json) =>

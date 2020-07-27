@@ -17,11 +17,11 @@ class _$ProductTearOff {
 
 // ignore: unused_element
   _Product call(
-      {String id,
-      @JsonKey(name: 'product_key') String productKey,
-      String notes,
-      double cost,
-      double price}) {
+      {String id = '',
+      @JsonKey(name: 'product_key') String productKey = '',
+      String notes = '',
+      double cost = 0,
+      double price = 0}) {
     return _Product(
       id: id,
       productKey: productKey,
@@ -126,24 +126,33 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_Product with DiagnosticableTreeMixin implements _Product {
   _$_Product(
-      {this.id,
-      @JsonKey(name: 'product_key') this.productKey,
-      this.notes,
-      this.cost,
-      this.price});
+      {this.id = '',
+      @JsonKey(name: 'product_key') this.productKey = '',
+      this.notes = '',
+      this.cost = 0,
+      this.price = 0})
+      : assert(id != null),
+        assert(productKey != null),
+        assert(notes != null),
+        assert(cost != null),
+        assert(price != null);
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductFromJson(json);
 
+  @JsonKey(defaultValue: '')
   @override
   final String id;
   @override
   @JsonKey(name: 'product_key')
   final String productKey;
+  @JsonKey(defaultValue: '')
   @override
   final String notes;
+  @JsonKey(defaultValue: 0)
   @override
   final double cost;
+  @JsonKey(defaultValue: 0)
   @override
   final double price;
 
