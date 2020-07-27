@@ -9,6 +9,7 @@ part 'product.g.dart';
 abstract class Product with _$Product {
   factory Product({
     String id,
+    String productKey,
     String notes,
     double cost,
     double price,
