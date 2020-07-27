@@ -23,6 +23,6 @@ class ClientRepository {
           data: client.toJson());
     }
 
-    return Client.fromJson(response);
+    return ClientItem.fromJson(response).data;
   }
 }
