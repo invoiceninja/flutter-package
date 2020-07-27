@@ -22,11 +22,13 @@ class InvoiceNinja {
 
   static void setDebug(bool value) => _isDebug = true;
 
-  void loadProducts() {
+  dynamic loadProducts() async {
     print('Working... $_url $_token $_isDebug');
 
-    final response = WebClient().get('$_url/api/v1/products', _token);
+    final response = await WebClient().get('$_url/api/v1/products', _token);
 
     print('RESPONSE: $response');
+
+    return response;
   }
 }
