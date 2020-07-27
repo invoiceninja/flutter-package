@@ -27,7 +27,7 @@ class InvoiceNinja {
 
   static void setDebug(bool value) => _isDebug = true;
 
-  dynamic loadProducts() async {
+  Future<List<Product>> loadProducts() async {
     print('Working... $_url $_token $_isDebug');
 
     final response = await WebClient().get('$_url/api/v1/products', _token);
