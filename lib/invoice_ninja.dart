@@ -7,21 +7,25 @@ import 'package:invoice_ninja/repositories/product_repository.dart';
 class InvoiceNinja {
   static String url = 'https://app.invoicing.co';
   static String token;
-  static bool isDebug;
+  static bool debugEnabled;
 
   static ProductRepository products = ProductRepository();
   static ClientRepository clients = ClientRepository();
   static InvoiceRepository invoices = InvoiceRepository();
 
-  static void initialize(
+  static void configure(
     String token, {
-    bool isDebug = false,
+    bool debugEnabled = false,
     String url,
   }) {
     InvoiceNinja.token = token;
-    InvoiceNinja.isDebug = isDebug;
+    InvoiceNinja.debugEnabled = debugEnabled;
 
     if (url != null) {
+      if (!url.startsWith('http')) {
+        url = 'https://$url';
+      }
+
       InvoiceNinja.url = url;
     }
   }
