@@ -16,9 +16,16 @@ class _$InvoiceTearOff {
   const _$InvoiceTearOff();
 
 // ignore: unused_element
-  _Invoice call({String id = ''}) {
+  _Invoice call(
+      {String id = '',
+      @JsonKey(name: 'client_id')
+          String clientId = '',
+      @JsonKey(name: 'line_items')
+          List<LineItem> lineItems = const <LineItem>[]}) {
     return _Invoice(
       id: id,
+      clientId: clientId,
+      lineItems: lineItems,
     );
   }
 }
@@ -28,6 +35,10 @@ const $Invoice = _$InvoiceTearOff();
 
 mixin _$Invoice {
   String get id;
+  @JsonKey(name: 'client_id')
+  String get clientId;
+  @JsonKey(name: 'line_items')
+  List<LineItem> get lineItems;
 
   Map<String, dynamic> toJson();
   $InvoiceCopyWith<Invoice> get copyWith;
@@ -36,7 +47,10 @@ mixin _$Invoice {
 abstract class $InvoiceCopyWith<$Res> {
   factory $InvoiceCopyWith(Invoice value, $Res Function(Invoice) then) =
       _$InvoiceCopyWithImpl<$Res>;
-  $Res call({String id});
+  $Res call(
+      {String id,
+      @JsonKey(name: 'client_id') String clientId,
+      @JsonKey(name: 'line_items') List<LineItem> lineItems});
 }
 
 class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
@@ -49,9 +63,14 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
+    Object clientId = freezed,
+    Object lineItems = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
+      clientId: clientId == freezed ? _value.clientId : clientId as String,
+      lineItems:
+          lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
     ));
   }
 }
@@ -60,7 +79,10 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
   factory _$InvoiceCopyWith(_Invoice value, $Res Function(_Invoice) then) =
       __$InvoiceCopyWithImpl<$Res>;
   @override
-  $Res call({String id});
+  $Res call(
+      {String id,
+      @JsonKey(name: 'client_id') String clientId,
+      @JsonKey(name: 'line_items') List<LineItem> lineItems});
 }
 
 class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
@@ -74,16 +96,27 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object clientId = freezed,
+    Object lineItems = freezed,
   }) {
     return _then(_Invoice(
       id: id == freezed ? _value.id : id as String,
+      clientId: clientId == freezed ? _value.clientId : clientId as String,
+      lineItems:
+          lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
 class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
-  _$_Invoice({this.id = ''}) : assert(id != null);
+  _$_Invoice(
+      {this.id = '',
+      @JsonKey(name: 'client_id') this.clientId = '',
+      @JsonKey(name: 'line_items') this.lineItems = const <LineItem>[]})
+      : assert(id != null),
+        assert(clientId != null),
+        assert(lineItems != null);
 
   factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
       _$_$_InvoiceFromJson(json);
@@ -91,10 +124,16 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   @JsonKey(defaultValue: '')
   @override
   final String id;
+  @override
+  @JsonKey(name: 'client_id')
+  final String clientId;
+  @override
+  @JsonKey(name: 'line_items')
+  final List<LineItem> lineItems;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Invoice(id: $id)';
+    return 'Invoice(id: $id, clientId: $clientId, lineItems: $lineItems)';
   }
 
   @override
@@ -102,7 +141,9 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'Invoice'))
-      ..add(DiagnosticsProperty('id', id));
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('clientId', clientId))
+      ..add(DiagnosticsProperty('lineItems', lineItems));
   }
 
   @override
@@ -110,12 +151,21 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
     return identical(this, other) ||
         (other is _Invoice &&
             (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)));
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.clientId, clientId) ||
+                const DeepCollectionEquality()
+                    .equals(other.clientId, clientId)) &&
+            (identical(other.lineItems, lineItems) ||
+                const DeepCollectionEquality()
+                    .equals(other.lineItems, lineItems)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(id);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(clientId) ^
+      const DeepCollectionEquality().hash(lineItems);
 
   @override
   _$InvoiceCopyWith<_Invoice> get copyWith =>
@@ -128,14 +178,250 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
 }
 
 abstract class _Invoice implements Invoice {
-  factory _Invoice({String id}) = _$_Invoice;
+  factory _Invoice(
+      {String id,
+      @JsonKey(name: 'client_id') String clientId,
+      @JsonKey(name: 'line_items') List<LineItem> lineItems}) = _$_Invoice;
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
   @override
   String get id;
   @override
+  @JsonKey(name: 'client_id')
+  String get clientId;
+  @override
+  @JsonKey(name: 'line_items')
+  List<LineItem> get lineItems;
+  @override
   _$InvoiceCopyWith<_Invoice> get copyWith;
+}
+
+LineItem _$LineItemFromJson(Map<String, dynamic> json) {
+  return _LineItem.fromJson(json);
+}
+
+class _$LineItemTearOff {
+  const _$LineItemTearOff();
+
+// ignore: unused_element
+  _LineItem call(
+      {String id = '',
+      @JsonKey(name: 'product_key') String productKey = '',
+      String notes = '',
+      double cost = 0,
+      double quantity = 0}) {
+    return _LineItem(
+      id: id,
+      productKey: productKey,
+      notes: notes,
+      cost: cost,
+      quantity: quantity,
+    );
+  }
+}
+
+// ignore: unused_element
+const $LineItem = _$LineItemTearOff();
+
+mixin _$LineItem {
+  String get id;
+  @JsonKey(name: 'product_key')
+  String get productKey;
+  String get notes;
+  double get cost;
+  double get quantity;
+
+  Map<String, dynamic> toJson();
+  $LineItemCopyWith<LineItem> get copyWith;
+}
+
+abstract class $LineItemCopyWith<$Res> {
+  factory $LineItemCopyWith(LineItem value, $Res Function(LineItem) then) =
+      _$LineItemCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double quantity});
+}
+
+class _$LineItemCopyWithImpl<$Res> implements $LineItemCopyWith<$Res> {
+  _$LineItemCopyWithImpl(this._value, this._then);
+
+  final LineItem _value;
+  // ignore: unused_field
+  final $Res Function(LineItem) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object productKey = freezed,
+    Object notes = freezed,
+    Object cost = freezed,
+    Object quantity = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      productKey:
+          productKey == freezed ? _value.productKey : productKey as String,
+      notes: notes == freezed ? _value.notes : notes as String,
+      cost: cost == freezed ? _value.cost : cost as double,
+      quantity: quantity == freezed ? _value.quantity : quantity as double,
+    ));
+  }
+}
+
+abstract class _$LineItemCopyWith<$Res> implements $LineItemCopyWith<$Res> {
+  factory _$LineItemCopyWith(_LineItem value, $Res Function(_LineItem) then) =
+      __$LineItemCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double quantity});
+}
+
+class __$LineItemCopyWithImpl<$Res> extends _$LineItemCopyWithImpl<$Res>
+    implements _$LineItemCopyWith<$Res> {
+  __$LineItemCopyWithImpl(_LineItem _value, $Res Function(_LineItem) _then)
+      : super(_value, (v) => _then(v as _LineItem));
+
+  @override
+  _LineItem get _value => super._value as _LineItem;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object productKey = freezed,
+    Object notes = freezed,
+    Object cost = freezed,
+    Object quantity = freezed,
+  }) {
+    return _then(_LineItem(
+      id: id == freezed ? _value.id : id as String,
+      productKey:
+          productKey == freezed ? _value.productKey : productKey as String,
+      notes: notes == freezed ? _value.notes : notes as String,
+      cost: cost == freezed ? _value.cost : cost as double,
+      quantity: quantity == freezed ? _value.quantity : quantity as double,
+    ));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class _$_LineItem with DiagnosticableTreeMixin implements _LineItem {
+  _$_LineItem(
+      {this.id = '',
+      @JsonKey(name: 'product_key') this.productKey = '',
+      this.notes = '',
+      this.cost = 0,
+      this.quantity = 0})
+      : assert(id != null),
+        assert(productKey != null),
+        assert(notes != null),
+        assert(cost != null),
+        assert(quantity != null);
+
+  factory _$_LineItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_LineItemFromJson(json);
+
+  @JsonKey(defaultValue: '')
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'product_key')
+  final String productKey;
+  @JsonKey(defaultValue: '')
+  @override
+  final String notes;
+  @JsonKey(defaultValue: 0)
+  @override
+  final double cost;
+  @JsonKey(defaultValue: 0)
+  @override
+  final double quantity;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LineItem(id: $id, productKey: $productKey, notes: $notes, cost: $cost, quantity: $quantity)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'LineItem'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('productKey', productKey))
+      ..add(DiagnosticsProperty('notes', notes))
+      ..add(DiagnosticsProperty('cost', cost))
+      ..add(DiagnosticsProperty('quantity', quantity));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _LineItem &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.productKey, productKey) ||
+                const DeepCollectionEquality()
+                    .equals(other.productKey, productKey)) &&
+            (identical(other.notes, notes) ||
+                const DeepCollectionEquality().equals(other.notes, notes)) &&
+            (identical(other.cost, cost) ||
+                const DeepCollectionEquality().equals(other.cost, cost)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(productKey) ^
+      const DeepCollectionEquality().hash(notes) ^
+      const DeepCollectionEquality().hash(cost) ^
+      const DeepCollectionEquality().hash(quantity);
+
+  @override
+  _$LineItemCopyWith<_LineItem> get copyWith =>
+      __$LineItemCopyWithImpl<_LineItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_LineItemToJson(this);
+  }
+}
+
+abstract class _LineItem implements LineItem {
+  factory _LineItem(
+      {String id,
+      @JsonKey(name: 'product_key') String productKey,
+      String notes,
+      double cost,
+      double quantity}) = _$_LineItem;
+
+  factory _LineItem.fromJson(Map<String, dynamic> json) = _$_LineItem.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'product_key')
+  String get productKey;
+  @override
+  String get notes;
+  @override
+  double get cost;
+  @override
+  double get quantity;
+  @override
+  _$LineItemCopyWith<_LineItem> get copyWith;
 }
 
 InvoiceList _$InvoiceListFromJson(Map<String, dynamic> json) {

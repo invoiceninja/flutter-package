@@ -10,10 +10,29 @@ abstract class Invoice with _$Invoice {
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
     @Default('') String id,
+    @Default('') @JsonKey(name: 'client_id') String clientId,
+    @Default(<LineItem>[])
+    @JsonKey(name: 'line_items')
+        List<LineItem> lineItems,
   }) = _Invoice;
 
   factory Invoice.fromJson(Map<String, dynamic> json) =>
       _$InvoiceFromJson(json);
+}
+
+@freezed
+abstract class LineItem with _$LineItem {
+  @JsonSerializable(explicitToJson: true)
+  factory LineItem({
+    @Default('') String id,
+    @Default('') @JsonKey(name: 'product_key') String productKey,
+    @Default('') String notes,
+    @Default(0) double cost,
+    @Default(0) double quantity,
+  }) = _LineItem;
+
+  factory LineItem.fromJson(Map<String, dynamic> json) =>
+      _$LineItemFromJson(json);
 }
 
 @freezed

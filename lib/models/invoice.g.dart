@@ -9,12 +9,38 @@ part of 'invoice.dart';
 _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
   return _$_Invoice(
     id: json['id'] as String ?? '',
+    clientId: json['client_id'] as String,
+    lineItems: (json['line_items'] as List)
+        ?.map((e) =>
+            e == null ? null : LineItem.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
   );
 }
 
 Map<String, dynamic> _$_$_InvoiceToJson(_$_Invoice instance) =>
     <String, dynamic>{
       'id': instance.id,
+      'client_id': instance.clientId,
+      'line_items': instance.lineItems?.map((e) => e?.toJson())?.toList(),
+    };
+
+_$_LineItem _$_$_LineItemFromJson(Map<String, dynamic> json) {
+  return _$_LineItem(
+    id: json['id'] as String ?? '',
+    productKey: json['product_key'] as String,
+    notes: json['notes'] as String ?? '',
+    cost: (json['cost'] as num)?.toDouble() ?? 0,
+    quantity: (json['quantity'] as num)?.toDouble() ?? 0,
+  );
+}
+
+Map<String, dynamic> _$_$_LineItemToJson(_$_LineItem instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'product_key': instance.productKey,
+      'notes': instance.notes,
+      'cost': instance.cost,
+      'quantity': instance.quantity,
     };
 
 _$_InvoiceList _$_$_InvoiceListFromJson(Map<String, dynamic> json) {
