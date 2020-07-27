@@ -7,5 +7,5 @@ class Calculator {
 }
 
 class InvoiceNinja {
-  void hello() => print('Hello ninja :)');
+  void hello() => print('Hello ninja!');
 }
