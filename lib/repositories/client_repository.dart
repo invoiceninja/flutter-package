@@ -16,11 +16,11 @@ class ClientRepository {
     if (client.id.isEmpty) {
       response = await WebClient().post(
           '${InvoiceNinja.url}/api/v1/clients', InvoiceNinja.token,
-          data: client.toJson());
+          data: client);
     } else {
       response = await WebClient().put(
           '${InvoiceNinja.url}/api/v1/clients/${client.id}', InvoiceNinja.token,
-          data: client.toJson());
+          data: client);
     }
 
     return Client.fromJson(response);
