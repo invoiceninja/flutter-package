@@ -1,5 +1,7 @@
 library invoice_ninja;
 
+import 'package:invoice_ninja/utils/web_client.dart';
+
 class InvoiceNinja {
   static String _url = 'https://app.invoiceninja.com';
   static String _token;
@@ -8,7 +10,10 @@ class InvoiceNinja {
   static void initialize(String token, {bool isDebug = false, String url}) {
     _token = token;
     _isDebug = isDebug;
-    _url ??= url;
+
+    if (url != null) {
+      _url = url;
+    }
   }
 
   static void setURL(String value) => _url = value;
@@ -19,5 +24,9 @@ class InvoiceNinja {
 
   void loadProducts() {
     print('Working... $_url $_token $_isDebug');
+
+    final response = WebClient().get('$_url/api/v1/products', _token);
+
+    print('RESPONSE: $response');
   }
 }
