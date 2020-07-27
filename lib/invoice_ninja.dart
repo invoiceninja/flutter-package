@@ -1,5 +1,6 @@
 library invoice_ninja;
 
+import 'package:invoice_ninja/models/product.dart';
 import 'package:invoice_ninja/utils/web_client.dart';
 
 class InvoiceNinja {
@@ -33,6 +34,6 @@ class InvoiceNinja {
 
     print('RESPONSE: $response');
 
-    return response;
+    return ProductList.fromJson(response).data;
   }
 }
