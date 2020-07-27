@@ -22,6 +22,7 @@ Map<String, String> _getHeaders(String url, String token,
     'X-API-SECRET': secret,
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json',
+    'user-agent': 'flutter-package',
   };
 
   if (token != null && token.isNotEmpty) {
