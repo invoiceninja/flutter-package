@@ -3,11 +3,15 @@ library invoice_ninja;
 import 'package:invoice_ninja/utils/web_client.dart';
 
 class InvoiceNinja {
-  static String _url = 'https://app.invoiceninja.com';
+  static String _url = 'https://app.invoicing.co';
   static String _token;
-  static bool _isDebug = false;
+  static bool _isDebug;
 
-  static void initialize(String token, {bool isDebug = false, String url}) {
+  static void initialize(
+    String token, {
+    bool isDebug = false,
+    String url,
+  }) {
     _token = token;
     _isDebug = isDebug;
 
