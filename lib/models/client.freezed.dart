@@ -164,9 +164,9 @@ class _$ClientListTearOff {
   const _$ClientListTearOff();
 
 // ignore: unused_element
-  _ClientList call({List<Client> data}) {
+  _ClientList call(List<Client> data) {
     return _ClientList(
-      data: data,
+      data,
     );
   }
 }
@@ -227,14 +227,14 @@ class __$ClientListCopyWithImpl<$Res> extends _$ClientListCopyWithImpl<$Res>
     Object data = freezed,
   }) {
     return _then(_ClientList(
-      data: data == freezed ? _value.data : data as List<Client>,
+      data == freezed ? _value.data : data as List<Client>,
     ));
   }
 }
 
 @JsonSerializable()
 class _$_ClientList with DiagnosticableTreeMixin implements _ClientList {
-  _$_ClientList({this.data});
+  _$_ClientList(this.data) : assert(data != null);
 
   factory _$_ClientList.fromJson(Map<String, dynamic> json) =>
       _$_$_ClientListFromJson(json);
@@ -278,7 +278,7 @@ class _$_ClientList with DiagnosticableTreeMixin implements _ClientList {
 }
 
 abstract class _ClientList implements ClientList {
-  factory _ClientList({List<Client> data}) = _$_ClientList;
+  factory _ClientList(List<Client> data) = _$_ClientList;
 
   factory _ClientList.fromJson(Map<String, dynamic> json) =
       _$_ClientList.fromJson;
@@ -287,4 +287,152 @@ abstract class _ClientList implements ClientList {
   List<Client> get data;
   @override
   _$ClientListCopyWith<_ClientList> get copyWith;
+}
+
+ClientItem _$ClientItemFromJson(Map<String, dynamic> json) {
+  return _ClientItem.fromJson(json);
+}
+
+class _$ClientItemTearOff {
+  const _$ClientItemTearOff();
+
+// ignore: unused_element
+  _ClientItem call(Client data) {
+    return _ClientItem(
+      data,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ClientItem = _$ClientItemTearOff();
+
+mixin _$ClientItem {
+  Client get data;
+
+  Map<String, dynamic> toJson();
+  $ClientItemCopyWith<ClientItem> get copyWith;
+}
+
+abstract class $ClientItemCopyWith<$Res> {
+  factory $ClientItemCopyWith(
+          ClientItem value, $Res Function(ClientItem) then) =
+      _$ClientItemCopyWithImpl<$Res>;
+  $Res call({Client data});
+
+  $ClientCopyWith<$Res> get data;
+}
+
+class _$ClientItemCopyWithImpl<$Res> implements $ClientItemCopyWith<$Res> {
+  _$ClientItemCopyWithImpl(this._value, this._then);
+
+  final ClientItem _value;
+  // ignore: unused_field
+  final $Res Function(ClientItem) _then;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_value.copyWith(
+      data: data == freezed ? _value.data : data as Client,
+    ));
+  }
+
+  @override
+  $ClientCopyWith<$Res> get data {
+    if (_value.data == null) {
+      return null;
+    }
+    return $ClientCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+abstract class _$ClientItemCopyWith<$Res> implements $ClientItemCopyWith<$Res> {
+  factory _$ClientItemCopyWith(
+          _ClientItem value, $Res Function(_ClientItem) then) =
+      __$ClientItemCopyWithImpl<$Res>;
+  @override
+  $Res call({Client data});
+
+  @override
+  $ClientCopyWith<$Res> get data;
+}
+
+class __$ClientItemCopyWithImpl<$Res> extends _$ClientItemCopyWithImpl<$Res>
+    implements _$ClientItemCopyWith<$Res> {
+  __$ClientItemCopyWithImpl(
+      _ClientItem _value, $Res Function(_ClientItem) _then)
+      : super(_value, (v) => _then(v as _ClientItem));
+
+  @override
+  _ClientItem get _value => super._value as _ClientItem;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_ClientItem(
+      data == freezed ? _value.data : data as Client,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_ClientItem with DiagnosticableTreeMixin implements _ClientItem {
+  _$_ClientItem(this.data) : assert(data != null);
+
+  factory _$_ClientItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_ClientItemFromJson(json);
+
+  @override
+  final Client data;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ClientItem(data: $data)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ClientItem'))
+      ..add(DiagnosticsProperty('data', data));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ClientItem &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @override
+  _$ClientItemCopyWith<_ClientItem> get copyWith =>
+      __$ClientItemCopyWithImpl<_ClientItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ClientItemToJson(this);
+  }
+}
+
+abstract class _ClientItem implements ClientItem {
+  factory _ClientItem(Client data) = _$_ClientItem;
+
+  factory _ClientItem.fromJson(Map<String, dynamic> json) =
+      _$_ClientItem.fromJson;
+
+  @override
+  Client get data;
+  @override
+  _$ClientItemCopyWith<_ClientItem> get copyWith;
 }

@@ -346,3 +346,152 @@ abstract class _ProductList implements ProductList {
   @override
   _$ProductListCopyWith<_ProductList> get copyWith;
 }
+
+ProductItem _$ProductItemFromJson(Map<String, dynamic> json) {
+  return _ProductItem.fromJson(json);
+}
+
+class _$ProductItemTearOff {
+  const _$ProductItemTearOff();
+
+// ignore: unused_element
+  _ProductItem call(Product data) {
+    return _ProductItem(
+      data,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ProductItem = _$ProductItemTearOff();
+
+mixin _$ProductItem {
+  Product get data;
+
+  Map<String, dynamic> toJson();
+  $ProductItemCopyWith<ProductItem> get copyWith;
+}
+
+abstract class $ProductItemCopyWith<$Res> {
+  factory $ProductItemCopyWith(
+          ProductItem value, $Res Function(ProductItem) then) =
+      _$ProductItemCopyWithImpl<$Res>;
+  $Res call({Product data});
+
+  $ProductCopyWith<$Res> get data;
+}
+
+class _$ProductItemCopyWithImpl<$Res> implements $ProductItemCopyWith<$Res> {
+  _$ProductItemCopyWithImpl(this._value, this._then);
+
+  final ProductItem _value;
+  // ignore: unused_field
+  final $Res Function(ProductItem) _then;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_value.copyWith(
+      data: data == freezed ? _value.data : data as Product,
+    ));
+  }
+
+  @override
+  $ProductCopyWith<$Res> get data {
+    if (_value.data == null) {
+      return null;
+    }
+    return $ProductCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
+  }
+}
+
+abstract class _$ProductItemCopyWith<$Res>
+    implements $ProductItemCopyWith<$Res> {
+  factory _$ProductItemCopyWith(
+          _ProductItem value, $Res Function(_ProductItem) then) =
+      __$ProductItemCopyWithImpl<$Res>;
+  @override
+  $Res call({Product data});
+
+  @override
+  $ProductCopyWith<$Res> get data;
+}
+
+class __$ProductItemCopyWithImpl<$Res> extends _$ProductItemCopyWithImpl<$Res>
+    implements _$ProductItemCopyWith<$Res> {
+  __$ProductItemCopyWithImpl(
+      _ProductItem _value, $Res Function(_ProductItem) _then)
+      : super(_value, (v) => _then(v as _ProductItem));
+
+  @override
+  _ProductItem get _value => super._value as _ProductItem;
+
+  @override
+  $Res call({
+    Object data = freezed,
+  }) {
+    return _then(_ProductItem(
+      data == freezed ? _value.data : data as Product,
+    ));
+  }
+}
+
+@JsonSerializable()
+class _$_ProductItem with DiagnosticableTreeMixin implements _ProductItem {
+  _$_ProductItem(this.data) : assert(data != null);
+
+  factory _$_ProductItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_ProductItemFromJson(json);
+
+  @override
+  final Product data;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ProductItem(data: $data)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ProductItem'))
+      ..add(DiagnosticsProperty('data', data));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ProductItem &&
+            (identical(other.data, data) ||
+                const DeepCollectionEquality().equals(other.data, data)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
+
+  @override
+  _$ProductItemCopyWith<_ProductItem> get copyWith =>
+      __$ProductItemCopyWithImpl<_ProductItem>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ProductItemToJson(this);
+  }
+}
+
+abstract class _ProductItem implements ProductItem {
+  factory _ProductItem(Product data) = _$_ProductItem;
+
+  factory _ProductItem.fromJson(Map<String, dynamic> json) =
+      _$_ProductItem.fromJson;
+
+  @override
+  Product get data;
+  @override
+  _$ProductItemCopyWith<_ProductItem> get copyWith;
+}

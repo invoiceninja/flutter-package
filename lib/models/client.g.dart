@@ -20,7 +20,7 @@ Map<String, dynamic> _$_$_ClientToJson(_$_Client instance) => <String, dynamic>{
 
 _$_ClientList _$_$_ClientListFromJson(Map<String, dynamic> json) {
   return _$_ClientList(
-    data: (json['data'] as List)
+    (json['data'] as List)
         ?.map((e) =>
             e == null ? null : Client.fromJson(e as Map<String, dynamic>))
         ?.toList(),
@@ -28,6 +28,19 @@ _$_ClientList _$_$_ClientListFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_ClientListToJson(_$_ClientList instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };
+
+_$_ClientItem _$_$_ClientItemFromJson(Map<String, dynamic> json) {
+  return _$_ClientItem(
+    json['data'] == null
+        ? null
+        : Client.fromJson(json['data'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_ClientItemToJson(_$_ClientItem instance) =>
     <String, dynamic>{
       'data': instance.data,
     };

@@ -36,3 +36,16 @@ Map<String, dynamic> _$_$_ProductListToJson(_$_ProductList instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
+
+_$_ProductItem _$_$_ProductItemFromJson(Map<String, dynamic> json) {
+  return _$_ProductItem(
+    json['data'] == null
+        ? null
+        : Product.fromJson(json['data'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_ProductItemToJson(_$_ProductItem instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };

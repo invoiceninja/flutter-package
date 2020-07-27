@@ -26,3 +26,11 @@ abstract class ProductList with _$ProductList {
   factory ProductList.fromJson(Map<String, dynamic> json) =>
       _$ProductListFromJson(json);
 }
+
+@freezed
+abstract class ProductItem with _$ProductItem {
+  factory ProductItem(Product data) = _ProductItem;
+
+  factory ProductItem.fromJson(Map<String, dynamic> json) =>
+      _$ProductItemFromJson(json);
+}

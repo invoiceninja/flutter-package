@@ -30,3 +30,16 @@ Map<String, dynamic> _$_$_InvoiceListToJson(_$_InvoiceList instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
+
+_$_InvoiceItem _$_$_InvoiceItemFromJson(Map<String, dynamic> json) {
+  return _$_InvoiceItem(
+    json['data'] == null
+        ? null
+        : Invoice.fromJson(json['data'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_InvoiceItemToJson(_$_InvoiceItem instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+    };

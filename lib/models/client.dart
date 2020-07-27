@@ -19,8 +19,16 @@ abstract class Client with _$Client {
 
 @freezed
 abstract class ClientList with _$ClientList {
-  factory ClientList({List<Client> data}) = _ClientList;
+  factory ClientList(List<Client> data) = _ClientList;
 
   factory ClientList.fromJson(Map<String, dynamic> json) =>
       _$ClientListFromJson(json);
+}
+
+@freezed
+abstract class ClientItem with _$ClientItem {
+  factory ClientItem(Client data) = _ClientItem;
+
+  factory ClientItem.fromJson(Map<String, dynamic> json) =>
+      _$ClientItemFromJson(json);
 }

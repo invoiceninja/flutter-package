@@ -23,3 +23,11 @@ abstract class InvoiceList with _$InvoiceList {
   factory InvoiceList.fromJson(Map<String, dynamic> json) =>
       _$InvoiceListFromJson(json);
 }
+
+@freezed
+abstract class InvoiceItem with _$InvoiceItem {
+  factory InvoiceItem(Invoice data) = _InvoiceItem;
+
+  factory InvoiceItem.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceItemFromJson(json);
+}
