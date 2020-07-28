@@ -7,8 +7,12 @@ part 'client.g.dart';
 
 @freezed
 abstract class Client with _$Client {
-  factory Client.forContact(
-      {String firstName, String lastName, String email, String phone}) {
+  factory Client.forContact({
+    String firstName = '',
+    String lastName = '',
+    String email = '',
+    String phone = '',
+  }) {
     return Client(contacts: [
       ClientContact(
         firstName: firstName,
