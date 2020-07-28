@@ -1,12 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoice_ninja/models/invoice.dart';
 
 part 'product.freezed.dart';
 
 part 'product.g.dart';
 
 @freezed
-abstract class Product with _$Product {
+abstract class Product implements _$Product {
+  const Product._();
+
   @JsonSerializable(explicitToJson: true)
   factory Product({
     @Default('') String id,
@@ -32,6 +35,23 @@ abstract class Product with _$Product {
     @Default('') @JsonKey(name: 'tax_name3') String taxName3,
     @Default(0) @JsonKey(name: 'tax_rate3') double taxRate3,
   }) = _Product;
+
+  InvoiceLineItem get lineItem => InvoiceLineItem(
+        productKey: productKey,
+        notes: notes,
+        cost: price,
+        quantity: quantity ?? 1,
+        customValue1: customValue1,
+        customValue2: customValue2,
+        customValue3: customValue3,
+        customValue4: customValue4,
+        taxName1: taxName1,
+        taxRate1: taxRate1,
+        taxName2: taxName2,
+        taxRate2: taxRate2,
+        taxName3: taxName3,
+        taxRate3: taxRate3,
+      );
 
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);

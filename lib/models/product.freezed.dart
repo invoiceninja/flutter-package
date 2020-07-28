@@ -315,7 +315,7 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 }
 
 @JsonSerializable(explicitToJson: true)
-class _$_Product with DiagnosticableTreeMixin implements _Product {
+class _$_Product extends _Product with DiagnosticableTreeMixin {
   _$_Product(
       {this.id = '',
       @JsonKey(name: 'user_id') this.createdById = '',
@@ -360,7 +360,8 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
         assert(taxName2 != null),
         assert(taxRate2 != null),
         assert(taxName3 != null),
-        assert(taxRate3 != null);
+        assert(taxRate3 != null),
+        super._();
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductFromJson(json);
@@ -570,7 +571,8 @@ class _$_Product with DiagnosticableTreeMixin implements _Product {
   }
 }
 
-abstract class _Product implements Product {
+abstract class _Product extends Product {
+  _Product._() : super._();
   factory _Product(
       {String id,
       @JsonKey(name: 'user_id') String createdById,

@@ -1,5 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoice_ninja/models/client.dart';
+import 'package:invoice_ninja/models/product.dart';
 
 part 'invoice.freezed.dart';
 
@@ -8,6 +10,12 @@ part 'invoice.g.dart';
 @freezed
 abstract class Invoice implements _$Invoice {
   const Invoice._();
+
+  factory Invoice.forClient(Client client, {List<Product> products}) {
+    return Invoice(
+        clientId: client.id,
+        lineItems: (products ?? []).map((product) => product.lineItem));
+  }
 
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
