@@ -26,4 +26,21 @@ class InvoiceRepository {
 
     return InvoiceItem.fromJson(response).data;
   }
+
+  Future<Invoice> findById(String id) async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/invoices/$id', InvoiceNinja.token);
+
+    return InvoiceItem.fromJson(response).data;
+  }
+
+  Future<Invoice> findByNumber(String number) async {
+    final response = await WebClient().get(
+        '${InvoiceNinja.url}/api/v1/invoices?number=$number',
+        InvoiceNinja.token);
+
+    final data = InvoiceList.fromJson(response).data;
+
+    return data.isEmpty ? null : data.first;
+  }
 }
