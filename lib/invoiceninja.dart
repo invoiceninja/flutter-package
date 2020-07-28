@@ -13,6 +13,7 @@ class InvoiceNinja {
   static ClientRepository clients = ClientRepository();
   static InvoiceRepository invoices = InvoiceRepository();
 
+  /// Configure the Invoice Ninja package
   static void configure(
     String companyKey, {
     bool debugEnabled = false,
@@ -30,5 +31,6 @@ class InvoiceNinja {
     }
   }
 
+  /// Check if the package has been initialized
   static bool get isInitialized => debugEnabled != null;
 }

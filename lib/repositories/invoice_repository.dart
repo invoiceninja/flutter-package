@@ -2,6 +2,7 @@ import 'package:invoiceninja/invoiceninja.dart';
 import 'package:invoiceninja/models/invoice.dart';
 import 'package:invoiceninja/utils/web_client.dart';
 
+/// Invoice Repository
 class InvoiceRepository {
   /// Persist invoice to the server
   Future<Invoice> save(Invoice invoice) async {

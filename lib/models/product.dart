@@ -9,6 +9,7 @@ part 'product.g.dart';
 /// Product class
 @freezed
 abstract class Product implements _$Product {
+  /// Default constructor
   const Product._();
 
   /// Product factory constructor

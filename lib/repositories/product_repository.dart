@@ -2,6 +2,7 @@ import 'package:invoiceninja/invoiceninja.dart';
 import 'package:invoiceninja/models/product.dart';
 import 'package:invoiceninja/utils/web_client.dart';
 
+/// Product Repository
 class ProductRepository {
 
   /// Load list of products

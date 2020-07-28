@@ -8,6 +8,7 @@ part 'client.g.dart';
 /// Client class
 @freezed
 abstract class Client implements _$Client {
+  /// Default constructor
   const Client._();
 
   /// Client factory constructor

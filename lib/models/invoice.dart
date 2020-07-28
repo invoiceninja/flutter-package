@@ -10,6 +10,7 @@ part 'invoice.g.dart';
 /// Invoice class
 @freezed
 abstract class Invoice implements _$Invoice {
+  /// Default constructor
   const Invoice._();
 
   /// Invoice factory constructor
@@ -108,7 +109,6 @@ abstract class Invoice implements _$Invoice {
 /// InvoiceLineItem class
 @freezed
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
-
   /// InvoiceLineItem factory constructor
   @JsonSerializable(explicitToJson: true)
   factory InvoiceLineItem({
@@ -175,7 +175,6 @@ abstract class InvoiceList with _$InvoiceList {
 /// Single-item invoice response
 @freezed
 abstract class InvoiceItem with _$InvoiceItem {
-
   /// InvoiceItem factory constructor
   factory InvoiceItem(Invoice data) = _InvoiceItem;
 
