@@ -1,12 +1,12 @@
 # Invoice Ninja 
 
-This package provides a simple way to charge users for features/products in a Flutter app 
+This package provides a simple way to charge for features/products in a Flutter app 
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
 * Supports many payment gateways including Stripe, PayPal and Authorize.net 
 * Easily create professional PDF invoices 
-* Provides a self-service client portal
+* Includes a self-service client portal
 * Many [more features](https://www.invoiceninja.com/invoicing-payment-features/)... 
 
 **Note: the package requires the new v5 version of the app [[Demo](https://demo.invoiceninja.com) | [More info](https://forum.invoiceninja.com/t/the-invoice-ninja-v5-beta-is-now-available/4066)]**
@@ -82,6 +82,6 @@ if (invoice.isPaid) {
 }
 ```
 
-You can use WidgetsBindingObserver to run code when the app is resumed. 
+You can use the [WidgetsBindingObserver](https://api.flutter.dev/flutter/widgets/WidgetsBindingObserver-class.html) interface to run code when the app is resumed. 
 
 Consider giving issue [#57536](https://github.com/flutter/flutter/issues/57536) a thumbs up to make this better in the future.
