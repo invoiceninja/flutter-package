@@ -1,4 +1,3 @@
-import 'package:invoiceninja/invoiceninja.dart';
 import 'package:invoiceninja/models/client.dart';
 import 'package:invoiceninja/utils/web_client.dart';
 
