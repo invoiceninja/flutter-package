@@ -1,6 +1,6 @@
 name: invoiceninja
 description: This package provides a simple way to charge for features/products in a Flutter app
-version: 0.0.1
+version: 0.0.2
 homepage: https://invoiceninja.com
 
 environment:

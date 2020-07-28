@@ -180,11 +180,9 @@ packages:
   invoiceninja:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "7c3007d55a23c640e9bfe650c41f43ea0827be63"
-      url: "git://github.com/invoiceninja/flutter-package.git"
-    source: git
+      name: invoiceninja
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   js:
     dependency: transitive
