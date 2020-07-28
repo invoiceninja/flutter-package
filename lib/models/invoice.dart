@@ -13,8 +13,9 @@ abstract class Invoice implements _$Invoice {
 
   factory Invoice.forClient(Client client, {List<Product> products}) {
     return Invoice(
-        clientId: client.id,
-        lineItems: (products ?? []).map((product) => product.lineItem));
+      clientId: client.id,
+      lineItems: (products ?? []).map((product) => product.lineItem).toList(),
+    );
   }
 
   @JsonSerializable(explicitToJson: true)
