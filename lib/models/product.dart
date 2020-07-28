@@ -36,7 +36,7 @@ abstract class Product implements _$Product {
     @Default(0) @JsonKey(name: 'tax_rate3') double taxRate3,
   }) = _Product;
 
-  InvoiceLineItem get lineItem => InvoiceLineItem(
+  InvoiceLineItem get toLineItem => InvoiceLineItem(
         productKey: productKey,
         notes: notes,
         cost: price,
