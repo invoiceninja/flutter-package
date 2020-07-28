@@ -7,6 +7,18 @@ part 'client.g.dart';
 
 @freezed
 abstract class Client with _$Client {
+  factory Client.forContact(
+      {String firstName, String lastName, String email, String phone}) {
+    return Client(contacts: [
+      ClientContact(
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+      )
+    ]);
+  }
+
   @JsonSerializable(explicitToJson: true)
   factory Client({
     @Default('') String id,
@@ -82,7 +94,6 @@ abstract class ClientContact with _$ClientContact {
 
 @freezed
 abstract class ClientSettings with _$ClientSettings {
-
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
     @nullable @Default('') @JsonKey(name: 'currency_id') String currencyId,
