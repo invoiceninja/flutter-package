@@ -51,13 +51,19 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
+  Invoice _invoice;
   Future<Invoice> createInvoice(Product product) async {
+    if (_invoice != null) {
+      return _invoice;
+    }
+
     var client = Client.forContact(email: 'test@example.com');
     client = await InvoiceNinja.clients.save(client);
 
     var invoice = Invoice.forClient(client, products: [product]);
     invoice = await InvoiceNinja.invoices.save(invoice);
 
+    _invoice = invoice;
     return invoice;
   }
 
