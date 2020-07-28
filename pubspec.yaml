@@ -1,7 +1,6 @@
 name: invoiceninja
 description: A Dart package to integrate with Invoice Ninja
 version: 0.0.1
-author: Hillel Coren
 homepage: https://invoiceninja.com
 
 environment:
@@ -12,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.12.2
-  freezed_annotation:
+  freezed_annotation: ^0.11.0
   json_serializable: ^3.2.5
 
 dev_dependencies:
