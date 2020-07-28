@@ -64,7 +64,7 @@ class WebClient {
 }
 
 Map<String, String> _getHeaders(String companyKey) => {
-      'X-API-COMPANY_KEY': companyKey,
+      'X-API-COMPANY-KEY': companyKey,
       'X-Requested-With': 'XMLHttpRequest',
       'Content-Type': 'application/json',
       'user-agent': 'flutter-package',

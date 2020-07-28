@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
 
     InvoiceNinja.configure(
-      'TOKEN',
+      'demo',
       url: 'demo.invoiceninja.com',
       debugEnabled: true,
     );
@@ -62,7 +62,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (_invoice != null && state == AppLifecycleState.resumed) {
-      //final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
+      final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
+      if (invoice.isPaid) {
+        // Unlock feature...
+      }
     }
   }
 
