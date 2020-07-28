@@ -3,10 +3,10 @@
 A Dart package to integrate with Invoice Ninja
 
 ## Features
-• Accept online payment in mobile, web and desktop Flutter apps
-• Supports many payment gateways including Stripe, PayPal and Authorize.net 
-• Easily create professional PDF invoices 
-• Provides a self-service client portal 
+* Accept online payment in mobile, web and desktop Flutter apps
+* Supports many payment gateways including Stripe, PayPal and Authorize.net 
+* Easily create professional PDF invoices 
+* Provides a self-service client portal 
 
 ### Installing
 
@@ -31,43 +31,43 @@ InvoiceNinja.configure(
 );
 ```
 
-### Load product list
+### Load the product list
 
 ```dart
 final products = await InvoiceNinja.products.load();
 ```
 
-### Find a product by key
+### Find the product by key
 
 ```dart
 final product = await InvoiceNinja.products.findByKey('product_key');
 ```
 
-### Create a client
+### Create the client
 
 ```dart
 var client = Client.forContact(email: 'test@example.com');
 client = await InvoiceNinja.clients.save(client);
 ```
 
-### Create an invoice
+### Create the invoice
 
 ```dart
 var invoice = Invoice.forClient(client, products: [product]);
 invoice = await InvoiceNinja.invoices.save(invoice);
 ```
 
-### Accept a payment 
-
-```dart
-launch(invoice.url);
-```
-
 ### Display the PDF
-
 ```dart
 launch(
   'https://docs.google.com/gview?embedded=true&url=${invoice.pdfUrl}',
   forceWebView: true,
 );
 ```
+
+### Accept the payment 
+
+```dart
+launch(invoice.url);
+```
+
