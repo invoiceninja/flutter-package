@@ -27,7 +27,7 @@ abstract class Client with _$Client {
     @Default('') @JsonKey(name: 'group_settings_id') String groupId,
     @Default(0) @JsonKey(name: 'paid_to_date') double paidToDate,
     @Default(0) @JsonKey(name: 'credit_balance') double creditBalance,
-    @Default(0) @JsonKey(name: 'last_login') int lastLogin,
+    @nullable @Default(0) @JsonKey(name: 'last_login') int lastLogin,
     @Default('') @JsonKey(name: 'size_id') String sizeId,
     @Default('') @JsonKey(name: 'public_notes') String publicNotes,
     @Default('') String phone,

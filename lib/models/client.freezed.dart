@@ -35,7 +35,7 @@ class _$ClientTearOff {
       @JsonKey(name: 'group_settings_id') String groupId = '',
       @JsonKey(name: 'paid_to_date') double paidToDate = 0,
       @JsonKey(name: 'credit_balance') double creditBalance = 0,
-      @JsonKey(name: 'last_login') int lastLogin = 0,
+      @nullable @JsonKey(name: 'last_login') int lastLogin = 0,
       @JsonKey(name: 'size_id') String sizeId = '',
       @JsonKey(name: 'public_notes') String publicNotes = '',
       String phone = '',
@@ -136,6 +136,7 @@ mixin _$Client {
   double get paidToDate;
   @JsonKey(name: 'credit_balance')
   double get creditBalance;
+  @nullable
   @JsonKey(name: 'last_login')
   int get lastLogin;
   @JsonKey(name: 'size_id')
@@ -198,7 +199,7 @@ abstract class $ClientCopyWith<$Res> {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @JsonKey(name: 'last_login') int lastLogin,
+      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -383,7 +384,7 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @JsonKey(name: 'last_login') int lastLogin,
+      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -558,7 +559,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       @JsonKey(name: 'group_settings_id') this.groupId = '',
       @JsonKey(name: 'paid_to_date') this.paidToDate = 0,
       @JsonKey(name: 'credit_balance') this.creditBalance = 0,
-      @JsonKey(name: 'last_login') this.lastLogin = 0,
+      @nullable @JsonKey(name: 'last_login') this.lastLogin = 0,
       @JsonKey(name: 'size_id') this.sizeId = '',
       @JsonKey(name: 'public_notes') this.publicNotes = '',
       this.phone = '',
@@ -597,7 +598,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
         assert(groupId != null),
         assert(paidToDate != null),
         assert(creditBalance != null),
-        assert(lastLogin != null),
         assert(sizeId != null),
         assert(publicNotes != null),
         assert(phone != null),
@@ -676,6 +676,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
   @JsonKey(name: 'credit_balance')
   final double creditBalance;
   @override
+  @nullable
   @JsonKey(name: 'last_login')
   final int lastLogin;
   @override
@@ -950,7 +951,7 @@ abstract class _Client implements Client {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @JsonKey(name: 'last_login') int lastLogin,
+      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -1025,6 +1026,7 @@ abstract class _Client implements Client {
   @JsonKey(name: 'credit_balance')
   double get creditBalance;
   @override
+  @nullable
   @JsonKey(name: 'last_login')
   int get lastLogin;
   @override
