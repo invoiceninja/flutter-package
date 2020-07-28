@@ -82,11 +82,11 @@ abstract class ClientContact with _$ClientContact {
 
 @freezed
 abstract class ClientSettings with _$ClientSettings {
-  
+
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
-    @Default('') @JsonKey(name: 'currency_id') String currencyId,
-    @Default('') @JsonKey(name: 'language_id') String languageId,
+    @nullable @Default('') @JsonKey(name: 'currency_id') String currencyId,
+    @nullable @Default('') @JsonKey(name: 'language_id') String languageId,
   }) = _ClientSettings;
 
   factory ClientSettings.fromJson(Map<String, dynamic> json) =>

@@ -1583,8 +1583,8 @@ class _$ClientSettingsTearOff {
 
 // ignore: unused_element
   _ClientSettings call(
-      {@JsonKey(name: 'currency_id') String currencyId = '',
-      @JsonKey(name: 'language_id') String languageId = ''}) {
+      {@nullable @JsonKey(name: 'currency_id') String currencyId = '',
+      @nullable @JsonKey(name: 'language_id') String languageId = ''}) {
     return _ClientSettings(
       currencyId: currencyId,
       languageId: languageId,
@@ -1596,8 +1596,10 @@ class _$ClientSettingsTearOff {
 const $ClientSettings = _$ClientSettingsTearOff();
 
 mixin _$ClientSettings {
+  @nullable
   @JsonKey(name: 'currency_id')
   String get currencyId;
+  @nullable
   @JsonKey(name: 'language_id')
   String get languageId;
 
@@ -1610,8 +1612,8 @@ abstract class $ClientSettingsCopyWith<$Res> {
           ClientSettings value, $Res Function(ClientSettings) then) =
       _$ClientSettingsCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'language_id') String languageId});
+      {@nullable @JsonKey(name: 'currency_id') String currencyId,
+      @nullable @JsonKey(name: 'language_id') String languageId});
 }
 
 class _$ClientSettingsCopyWithImpl<$Res>
@@ -1643,8 +1645,8 @@ abstract class _$ClientSettingsCopyWith<$Res>
       __$ClientSettingsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'language_id') String languageId});
+      {@nullable @JsonKey(name: 'currency_id') String currencyId,
+      @nullable @JsonKey(name: 'language_id') String languageId});
 }
 
 class __$ClientSettingsCopyWithImpl<$Res>
@@ -1676,18 +1678,18 @@ class _$_ClientSettings
     with DiagnosticableTreeMixin
     implements _ClientSettings {
   _$_ClientSettings(
-      {@JsonKey(name: 'currency_id') this.currencyId = '',
-      @JsonKey(name: 'language_id') this.languageId = ''})
-      : assert(currencyId != null),
-        assert(languageId != null);
+      {@nullable @JsonKey(name: 'currency_id') this.currencyId = '',
+      @nullable @JsonKey(name: 'language_id') this.languageId = ''});
 
   factory _$_ClientSettings.fromJson(Map<String, dynamic> json) =>
       _$_$_ClientSettingsFromJson(json);
 
   @override
+  @nullable
   @JsonKey(name: 'currency_id')
   final String currencyId;
   @override
+  @nullable
   @JsonKey(name: 'language_id')
   final String languageId;
 
@@ -1735,16 +1737,19 @@ class _$_ClientSettings
 
 abstract class _ClientSettings implements ClientSettings {
   factory _ClientSettings(
-      {@JsonKey(name: 'currency_id') String currencyId,
-      @JsonKey(name: 'language_id') String languageId}) = _$_ClientSettings;
+          {@nullable @JsonKey(name: 'currency_id') String currencyId,
+          @nullable @JsonKey(name: 'language_id') String languageId}) =
+      _$_ClientSettings;
 
   factory _ClientSettings.fromJson(Map<String, dynamic> json) =
       _$_ClientSettings.fromJson;
 
   @override
+  @nullable
   @JsonKey(name: 'currency_id')
   String get currencyId;
   @override
+  @nullable
   @JsonKey(name: 'language_id')
   String get languageId;
   @override
