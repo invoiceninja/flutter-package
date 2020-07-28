@@ -25,4 +25,30 @@ class ClientRepository {
 
     return ClientItem.fromJson(response).data;
   }
+
+  Future<Client> findById(String id) async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/clients/$id', InvoiceNinja.token);
+
+    return ClientItem.fromJson(response).data;
+  }
+
+  Future<Client> findByEmail(String email) async {
+    final response = await WebClient().get(
+        '${InvoiceNinja.url}/api/v1/clients?email=$email', InvoiceNinja.token);
+
+    final data = ClientList.fromJson(response).data;
+
+    return data.isEmpty ? null : data.first;
+  }
+
+  Future<Client> findByIdNumber(String idNumber) async {
+    final response = await WebClient().get(
+        '${InvoiceNinja.url}/api/v1/clients?id_number=$idNumber',
+        InvoiceNinja.token);
+
+    final data = ClientList.fromJson(response).data;
+
+    return data.isEmpty ? null : data.first;
+  }
 }
