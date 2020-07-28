@@ -50,21 +50,21 @@ final products = await InvoiceNinja.products.load();
 final product = await InvoiceNinja.products.findByKey('product_key');
 ```
 
-### Create the client
+### Create/persist the client
 
 ```dart
 var client = Client.forContact(email: 'test@example.com');
 client = await InvoiceNinja.clients.save(client);
 ```
 
-### Create the invoice
+### Create/persist the invoice
 
 ```dart
 var invoice = Invoice.forClient(client, products: [product]);
 invoice = await InvoiceNinja.invoices.save(invoice);
 ```
 
-### Display the PDF
+### Display the PDF invoice
 ```dart
 launch(
   'https://docs.google.com/gview?embedded=true&url=${invoice.pdfUrl}',
