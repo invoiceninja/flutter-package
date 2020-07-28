@@ -21,9 +21,10 @@ abstract class Invoice with _$Invoice {
     @Default('') @JsonKey(name: 'custom_value3') String customValue3,
     @Default('') @JsonKey(name: 'custom_value4') String customValue4,
     @Default('') @JsonKey(name: 'client_id') String clientId,
-    @Default(<LineItem>[])
+    @Default(<InvoiceLineItem>[])
     @JsonKey(name: 'line_items')
-        List<LineItem> lineItems,
+        List<InvoiceLineItem> lineItems,
+    @Default(<InvoiceInvitation>[]) List<InvoiceInvitation> invitations,
     @Default(0) double amount,
     @Default(0) double balance,
     @Default('') @JsonKey(name: 'vendor_id') String vendorId,
@@ -78,9 +79,9 @@ abstract class Invoice with _$Invoice {
 }
 
 @freezed
-abstract class LineItem with _$LineItem {
+abstract class InvoiceLineItem with _$InvoiceLineItem {
   @JsonSerializable(explicitToJson: true)
-  factory LineItem({
+  factory InvoiceLineItem({
     @Default('') String id,
     @Default('') @JsonKey(name: 'product_key') String productKey,
     @Default('') String notes,
@@ -98,10 +99,27 @@ abstract class LineItem with _$LineItem {
     @Default('') @JsonKey(name: 'custom_value3') String customValue3,
     @Default('') @JsonKey(name: 'custom_value4') String customValue4,
     @Default(0) double discount,
-  }) = _LineItem;
+  }) = _InvoiceLineItem;
 
-  factory LineItem.fromJson(Map<String, dynamic> json) =>
-      _$LineItemFromJson(json);
+  factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceLineItemFromJson(json);
+}
+
+@freezed
+abstract class InvoiceInvitation with _$InvoiceInvitation {
+  @JsonSerializable(explicitToJson: true)
+  factory InvoiceInvitation({
+    @Default('') String id,
+    @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
+    @Default('') String key,
+    @Default('') String link,
+    @Default('') @JsonKey(name: 'sent_date') String sentDate,
+    @Default('') @JsonKey(name: 'viewed_date') String viewedDate,
+    @Default('') @JsonKey(name: 'opened_date') String openedDate,
+  }) = _InvoiceInvitation;
+
+  factory InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
+      _$InvoiceInvitationFromJson(json);
 }
 
 @freezed

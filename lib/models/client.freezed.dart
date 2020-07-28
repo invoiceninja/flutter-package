@@ -1104,7 +1104,7 @@ class _$ClientContactTearOff {
       @JsonKey(name: 'is_primary') bool isPrimary = false,
       @JsonKey(name: 'is_locked') bool isLocked = false,
       String phone = '',
-      @JsonKey(name: 'contact_key') String contactKey = '',
+      @JsonKey(name: 'contact_key') String key = '',
       @JsonKey(name: 'send_email') bool sendEmail = true,
       @JsonKey(name: 'lsst_login') int lastLogin = 0,
       String password = ''}) {
@@ -1120,7 +1120,7 @@ class _$ClientContactTearOff {
       isPrimary: isPrimary,
       isLocked: isLocked,
       phone: phone,
-      contactKey: contactKey,
+      key: key,
       sendEmail: sendEmail,
       lastLogin: lastLogin,
       password: password,
@@ -1152,7 +1152,7 @@ mixin _$ClientContact {
   bool get isLocked;
   String get phone;
   @JsonKey(name: 'contact_key')
-  String get contactKey;
+  String get key;
   @JsonKey(name: 'send_email')
   bool get sendEmail;
   @JsonKey(name: 'lsst_login')
@@ -1179,7 +1179,7 @@ abstract class $ClientContactCopyWith<$Res> {
       @JsonKey(name: 'is_primary') bool isPrimary,
       @JsonKey(name: 'is_locked') bool isLocked,
       String phone,
-      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'contact_key') String key,
       @JsonKey(name: 'send_email') bool sendEmail,
       @JsonKey(name: 'lsst_login') int lastLogin,
       String password});
@@ -1206,7 +1206,7 @@ class _$ClientContactCopyWithImpl<$Res>
     Object isPrimary = freezed,
     Object isLocked = freezed,
     Object phone = freezed,
-    Object contactKey = freezed,
+    Object key = freezed,
     Object sendEmail = freezed,
     Object lastLogin = freezed,
     Object password = freezed,
@@ -1231,8 +1231,7 @@ class _$ClientContactCopyWithImpl<$Res>
       isPrimary: isPrimary == freezed ? _value.isPrimary : isPrimary as bool,
       isLocked: isLocked == freezed ? _value.isLocked : isLocked as bool,
       phone: phone == freezed ? _value.phone : phone as String,
-      contactKey:
-          contactKey == freezed ? _value.contactKey : contactKey as String,
+      key: key == freezed ? _value.key : key as String,
       sendEmail: sendEmail == freezed ? _value.sendEmail : sendEmail as bool,
       lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
       password: password == freezed ? _value.password : password as String,
@@ -1258,7 +1257,7 @@ abstract class _$ClientContactCopyWith<$Res>
       @JsonKey(name: 'is_primary') bool isPrimary,
       @JsonKey(name: 'is_locked') bool isLocked,
       String phone,
-      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'contact_key') String key,
       @JsonKey(name: 'send_email') bool sendEmail,
       @JsonKey(name: 'lsst_login') int lastLogin,
       String password});
@@ -1287,7 +1286,7 @@ class __$ClientContactCopyWithImpl<$Res>
     Object isPrimary = freezed,
     Object isLocked = freezed,
     Object phone = freezed,
-    Object contactKey = freezed,
+    Object key = freezed,
     Object sendEmail = freezed,
     Object lastLogin = freezed,
     Object password = freezed,
@@ -1312,8 +1311,7 @@ class __$ClientContactCopyWithImpl<$Res>
       isPrimary: isPrimary == freezed ? _value.isPrimary : isPrimary as bool,
       isLocked: isLocked == freezed ? _value.isLocked : isLocked as bool,
       phone: phone == freezed ? _value.phone : phone as String,
-      contactKey:
-          contactKey == freezed ? _value.contactKey : contactKey as String,
+      key: key == freezed ? _value.key : key as String,
       sendEmail: sendEmail == freezed ? _value.sendEmail : sendEmail as bool,
       lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
       password: password == freezed ? _value.password : password as String,
@@ -1335,7 +1333,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
       @JsonKey(name: 'is_primary') this.isPrimary = false,
       @JsonKey(name: 'is_locked') this.isLocked = false,
       this.phone = '',
-      @JsonKey(name: 'contact_key') this.contactKey = '',
+      @JsonKey(name: 'contact_key') this.key = '',
       @JsonKey(name: 'send_email') this.sendEmail = true,
       @JsonKey(name: 'lsst_login') this.lastLogin = 0,
       this.password = ''})
@@ -1350,7 +1348,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
         assert(isPrimary != null),
         assert(isLocked != null),
         assert(phone != null),
-        assert(contactKey != null),
+        assert(key != null),
         assert(sendEmail != null),
         assert(lastLogin != null),
         assert(password != null);
@@ -1393,7 +1391,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   final String phone;
   @override
   @JsonKey(name: 'contact_key')
-  final String contactKey;
+  final String key;
   @override
   @JsonKey(name: 'send_email')
   final bool sendEmail;
@@ -1406,7 +1404,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ClientContact(id: $id, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, firstName: $firstName, lastName: $lastName, email: $email, isPrimary: $isPrimary, isLocked: $isLocked, phone: $phone, contactKey: $contactKey, sendEmail: $sendEmail, lastLogin: $lastLogin, password: $password)';
+    return 'ClientContact(id: $id, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, firstName: $firstName, lastName: $lastName, email: $email, isPrimary: $isPrimary, isLocked: $isLocked, phone: $phone, key: $key, sendEmail: $sendEmail, lastLogin: $lastLogin, password: $password)';
   }
 
   @override
@@ -1425,7 +1423,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
       ..add(DiagnosticsProperty('isPrimary', isPrimary))
       ..add(DiagnosticsProperty('isLocked', isLocked))
       ..add(DiagnosticsProperty('phone', phone))
-      ..add(DiagnosticsProperty('contactKey', contactKey))
+      ..add(DiagnosticsProperty('key', key))
       ..add(DiagnosticsProperty('sendEmail', sendEmail))
       ..add(DiagnosticsProperty('lastLogin', lastLogin))
       ..add(DiagnosticsProperty('password', password));
@@ -1465,9 +1463,8 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
                     .equals(other.isLocked, isLocked)) &&
             (identical(other.phone, phone) ||
                 const DeepCollectionEquality().equals(other.phone, phone)) &&
-            (identical(other.contactKey, contactKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.contactKey, contactKey)) &&
+            (identical(other.key, key) ||
+                const DeepCollectionEquality().equals(other.key, key)) &&
             (identical(other.sendEmail, sendEmail) ||
                 const DeepCollectionEquality()
                     .equals(other.sendEmail, sendEmail)) &&
@@ -1493,7 +1490,7 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
       const DeepCollectionEquality().hash(isPrimary) ^
       const DeepCollectionEquality().hash(isLocked) ^
       const DeepCollectionEquality().hash(phone) ^
-      const DeepCollectionEquality().hash(contactKey) ^
+      const DeepCollectionEquality().hash(key) ^
       const DeepCollectionEquality().hash(sendEmail) ^
       const DeepCollectionEquality().hash(lastLogin) ^
       const DeepCollectionEquality().hash(password);
@@ -1521,7 +1518,7 @@ abstract class _ClientContact implements ClientContact {
       @JsonKey(name: 'is_primary') bool isPrimary,
       @JsonKey(name: 'is_locked') bool isLocked,
       String phone,
-      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'contact_key') String key,
       @JsonKey(name: 'send_email') bool sendEmail,
       @JsonKey(name: 'lsst_login') int lastLogin,
       String password}) = _$_ClientContact;
@@ -1561,7 +1558,7 @@ abstract class _ClientContact implements ClientContact {
   String get phone;
   @override
   @JsonKey(name: 'contact_key')
-  String get contactKey;
+  String get key;
   @override
   @JsonKey(name: 'send_email')
   bool get sendEmail;

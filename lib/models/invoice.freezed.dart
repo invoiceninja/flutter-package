@@ -41,7 +41,8 @@ class _$InvoiceTearOff {
       @JsonKey(name: 'client_id')
           String clientId = '',
       @JsonKey(name: 'line_items')
-          List<LineItem> lineItems = const <LineItem>[],
+          List<InvoiceLineItem> lineItems = const <InvoiceLineItem>[],
+      List<InvoiceInvitation> invitations = const <InvoiceInvitation>[],
       double amount = 0,
       double balance = 0,
       @JsonKey(name: 'vendor_id')
@@ -122,6 +123,7 @@ class _$InvoiceTearOff {
       customValue4: customValue4,
       clientId: clientId,
       lineItems: lineItems,
+      invitations: invitations,
       amount: amount,
       balance: balance,
       vendorId: vendorId,
@@ -191,7 +193,8 @@ mixin _$Invoice {
   @JsonKey(name: 'client_id')
   String get clientId;
   @JsonKey(name: 'line_items')
-  List<LineItem> get lineItems;
+  List<InvoiceLineItem> get lineItems;
+  List<InvoiceInvitation> get invitations;
   double get amount;
   double get balance;
   @JsonKey(name: 'vendor_id')
@@ -279,7 +282,8 @@ abstract class $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
-      @JsonKey(name: 'line_items') List<LineItem> lineItems,
+      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
+      List<InvoiceInvitation> invitations,
       double amount,
       double balance,
       @JsonKey(name: 'vendor_id') String vendorId,
@@ -341,6 +345,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
     Object customValue4 = freezed,
     Object clientId = freezed,
     Object lineItems = freezed,
+    Object invitations = freezed,
     Object amount = freezed,
     Object balance = freezed,
     Object vendorId = freezed,
@@ -403,8 +408,12 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
           ? _value.customValue4
           : customValue4 as String,
       clientId: clientId == freezed ? _value.clientId : clientId as String,
-      lineItems:
-          lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
+      lineItems: lineItems == freezed
+          ? _value.lineItems
+          : lineItems as List<InvoiceLineItem>,
+      invitations: invitations == freezed
+          ? _value.invitations
+          : invitations as List<InvoiceInvitation>,
       amount: amount == freezed ? _value.amount : amount as double,
       balance: balance == freezed ? _value.balance : balance as double,
       vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
@@ -494,7 +503,8 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
-      @JsonKey(name: 'line_items') List<LineItem> lineItems,
+      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
+      List<InvoiceInvitation> invitations,
       double amount,
       double balance,
       @JsonKey(name: 'vendor_id') String vendorId,
@@ -557,6 +567,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
     Object customValue4 = freezed,
     Object clientId = freezed,
     Object lineItems = freezed,
+    Object invitations = freezed,
     Object amount = freezed,
     Object balance = freezed,
     Object vendorId = freezed,
@@ -619,8 +630,12 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
           ? _value.customValue4
           : customValue4 as String,
       clientId: clientId == freezed ? _value.clientId : clientId as String,
-      lineItems:
-          lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
+      lineItems: lineItems == freezed
+          ? _value.lineItems
+          : lineItems as List<InvoiceLineItem>,
+      invitations: invitations == freezed
+          ? _value.invitations
+          : invitations as List<InvoiceInvitation>,
       amount: amount == freezed ? _value.amount : amount as double,
       balance: balance == freezed ? _value.balance : balance as double,
       vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
@@ -708,7 +723,8 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
       @JsonKey(name: 'custom_value3') this.customValue3 = '',
       @JsonKey(name: 'custom_value4') this.customValue4 = '',
       @JsonKey(name: 'client_id') this.clientId = '',
-      @JsonKey(name: 'line_items') this.lineItems = const <LineItem>[],
+      @JsonKey(name: 'line_items') this.lineItems = const <InvoiceLineItem>[],
+      this.invitations = const <InvoiceInvitation>[],
       this.amount = 0,
       this.balance = 0,
       @JsonKey(name: 'vendor_id') this.vendorId = '',
@@ -759,6 +775,7 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
         assert(customValue4 != null),
         assert(clientId != null),
         assert(lineItems != null),
+        assert(invitations != null),
         assert(amount != null),
         assert(balance != null),
         assert(vendorId != null),
@@ -838,7 +855,10 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   final String clientId;
   @override
   @JsonKey(name: 'line_items')
-  final List<LineItem> lineItems;
+  final List<InvoiceLineItem> lineItems;
+  @JsonKey(defaultValue: const <InvoiceInvitation>[])
+  @override
+  final List<InvoiceInvitation> invitations;
   @JsonKey(defaultValue: 0)
   @override
   final double amount;
@@ -953,7 +973,7 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4)';
+    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4)';
   }
 
   @override
@@ -974,6 +994,7 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
       ..add(DiagnosticsProperty('customValue4', customValue4))
       ..add(DiagnosticsProperty('clientId', clientId))
       ..add(DiagnosticsProperty('lineItems', lineItems))
+      ..add(DiagnosticsProperty('invitations', invitations))
       ..add(DiagnosticsProperty('amount', amount))
       ..add(DiagnosticsProperty('balance', balance))
       ..add(DiagnosticsProperty('vendorId', vendorId))
@@ -1055,6 +1076,9 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
             (identical(other.lineItems, lineItems) ||
                 const DeepCollectionEquality()
                     .equals(other.lineItems, lineItems)) &&
+            (identical(other.invitations, invitations) ||
+                const DeepCollectionEquality()
+                    .equals(other.invitations, invitations)) &&
             (identical(other.amount, amount) ||
                 const DeepCollectionEquality().equals(other.amount, amount)) &&
             (identical(other.balance, balance) ||
@@ -1080,10 +1104,8 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
             (identical(other.lastSentDate, lastSentDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastSentDate, lastSentDate)) &&
-            (identical(other.nextSendDate, nextSendDate) ||
-                const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
+                const DeepCollectionEquality().equals(other.lastSentDate, lastSentDate)) &&
+            (identical(other.nextSendDate, nextSendDate) || const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
             (identical(other.dueDate, dueDate) || const DeepCollectionEquality().equals(other.dueDate, dueDate)) &&
             (identical(other.terms, terms) || const DeepCollectionEquality().equals(other.terms, terms)) &&
             (identical(other.publicNotes, publicNotes) || const DeepCollectionEquality().equals(other.publicNotes, publicNotes)) &&
@@ -1128,6 +1150,7 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
       const DeepCollectionEquality().hash(customValue4) ^
       const DeepCollectionEquality().hash(clientId) ^
       const DeepCollectionEquality().hash(lineItems) ^
+      const DeepCollectionEquality().hash(invitations) ^
       const DeepCollectionEquality().hash(amount) ^
       const DeepCollectionEquality().hash(balance) ^
       const DeepCollectionEquality().hash(vendorId) ^
@@ -1190,7 +1213,8 @@ abstract class _Invoice implements Invoice {
           @JsonKey(name: 'custom_value3') String customValue3,
           @JsonKey(name: 'custom_value4') String customValue4,
           @JsonKey(name: 'client_id') String clientId,
-          @JsonKey(name: 'line_items') List<LineItem> lineItems,
+          @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
+          List<InvoiceInvitation> invitations,
           double amount,
           double balance,
           @JsonKey(name: 'vendor_id') String vendorId,
@@ -1269,7 +1293,9 @@ abstract class _Invoice implements Invoice {
   String get clientId;
   @override
   @JsonKey(name: 'line_items')
-  List<LineItem> get lineItems;
+  List<InvoiceLineItem> get lineItems;
+  @override
+  List<InvoiceInvitation> get invitations;
   @override
   double get amount;
   @override
@@ -1377,62 +1403,123 @@ abstract class _Invoice implements Invoice {
   _$InvoiceCopyWith<_Invoice> get copyWith;
 }
 
-LineItem _$LineItemFromJson(Map<String, dynamic> json) {
-  return _LineItem.fromJson(json);
+InvoiceLineItem _$InvoiceLineItemFromJson(Map<String, dynamic> json) {
+  return _InvoiceLineItem.fromJson(json);
 }
 
-class _$LineItemTearOff {
-  const _$LineItemTearOff();
+class _$InvoiceLineItemTearOff {
+  const _$InvoiceLineItemTearOff();
 
 // ignore: unused_element
-  _LineItem call(
+  _InvoiceLineItem call(
       {String id = '',
       @JsonKey(name: 'product_key') String productKey = '',
       String notes = '',
       double cost = 0,
-      double quantity = 0}) {
-    return _LineItem(
+      double quantity = 0,
+      @JsonKey(name: 'tax_name1') String taxName1 = '',
+      @JsonKey(name: 'tax_rate1') double taxRate1 = 0,
+      @JsonKey(name: 'tax_name2') String taxName2 = '',
+      @JsonKey(name: 'tax_rate2') double taxRate2 = 0,
+      @JsonKey(name: 'tax_name3') String taxName3 = '',
+      @JsonKey(name: 'tax_rate3') double taxRate3 = 0,
+      @JsonKey(name: 'type_id') String typeId = '',
+      @JsonKey(name: 'custom_value1') String customValue1 = '',
+      @JsonKey(name: 'custom_value2') String customValue2 = '',
+      @JsonKey(name: 'custom_value3') String customValue3 = '',
+      @JsonKey(name: 'custom_value4') String customValue4 = '',
+      double discount = 0}) {
+    return _InvoiceLineItem(
       id: id,
       productKey: productKey,
       notes: notes,
       cost: cost,
       quantity: quantity,
+      taxName1: taxName1,
+      taxRate1: taxRate1,
+      taxName2: taxName2,
+      taxRate2: taxRate2,
+      taxName3: taxName3,
+      taxRate3: taxRate3,
+      typeId: typeId,
+      customValue1: customValue1,
+      customValue2: customValue2,
+      customValue3: customValue3,
+      customValue4: customValue4,
+      discount: discount,
     );
   }
 }
 
 // ignore: unused_element
-const $LineItem = _$LineItemTearOff();
+const $InvoiceLineItem = _$InvoiceLineItemTearOff();
 
-mixin _$LineItem {
+mixin _$InvoiceLineItem {
   String get id;
   @JsonKey(name: 'product_key')
   String get productKey;
   String get notes;
   double get cost;
   double get quantity;
+  @JsonKey(name: 'tax_name1')
+  String get taxName1;
+  @JsonKey(name: 'tax_rate1')
+  double get taxRate1;
+  @JsonKey(name: 'tax_name2')
+  String get taxName2;
+  @JsonKey(name: 'tax_rate2')
+  double get taxRate2;
+  @JsonKey(name: 'tax_name3')
+  String get taxName3;
+  @JsonKey(name: 'tax_rate3')
+  double get taxRate3;
+  @JsonKey(name: 'type_id')
+  String get typeId;
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
+  double get discount;
 
   Map<String, dynamic> toJson();
-  $LineItemCopyWith<LineItem> get copyWith;
+  $InvoiceLineItemCopyWith<InvoiceLineItem> get copyWith;
 }
 
-abstract class $LineItemCopyWith<$Res> {
-  factory $LineItemCopyWith(LineItem value, $Res Function(LineItem) then) =
-      _$LineItemCopyWithImpl<$Res>;
+abstract class $InvoiceLineItemCopyWith<$Res> {
+  factory $InvoiceLineItemCopyWith(
+          InvoiceLineItem value, $Res Function(InvoiceLineItem) then) =
+      _$InvoiceLineItemCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
       double cost,
-      double quantity});
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'type_id') String typeId,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
+      double discount});
 }
 
-class _$LineItemCopyWithImpl<$Res> implements $LineItemCopyWith<$Res> {
-  _$LineItemCopyWithImpl(this._value, this._then);
+class _$InvoiceLineItemCopyWithImpl<$Res>
+    implements $InvoiceLineItemCopyWith<$Res> {
+  _$InvoiceLineItemCopyWithImpl(this._value, this._then);
 
-  final LineItem _value;
+  final InvoiceLineItem _value;
   // ignore: unused_field
-  final $Res Function(LineItem) _then;
+  final $Res Function(InvoiceLineItem) _then;
 
   @override
   $Res call({
@@ -1441,6 +1528,18 @@ class _$LineItemCopyWithImpl<$Res> implements $LineItemCopyWith<$Res> {
     Object notes = freezed,
     Object cost = freezed,
     Object quantity = freezed,
+    Object taxName1 = freezed,
+    Object taxRate1 = freezed,
+    Object taxName2 = freezed,
+    Object taxRate2 = freezed,
+    Object taxName3 = freezed,
+    Object taxRate3 = freezed,
+    Object typeId = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
+    Object discount = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1449,29 +1548,65 @@ class _$LineItemCopyWithImpl<$Res> implements $LineItemCopyWith<$Res> {
       notes: notes == freezed ? _value.notes : notes as String,
       cost: cost == freezed ? _value.cost : cost as double,
       quantity: quantity == freezed ? _value.quantity : quantity as double,
+      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
+      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
+      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
+      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
+      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
+      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      typeId: typeId == freezed ? _value.typeId : typeId as String,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
+      discount: discount == freezed ? _value.discount : discount as double,
     ));
   }
 }
 
-abstract class _$LineItemCopyWith<$Res> implements $LineItemCopyWith<$Res> {
-  factory _$LineItemCopyWith(_LineItem value, $Res Function(_LineItem) then) =
-      __$LineItemCopyWithImpl<$Res>;
+abstract class _$InvoiceLineItemCopyWith<$Res>
+    implements $InvoiceLineItemCopyWith<$Res> {
+  factory _$InvoiceLineItemCopyWith(
+          _InvoiceLineItem value, $Res Function(_InvoiceLineItem) then) =
+      __$InvoiceLineItemCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
       double cost,
-      double quantity});
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'type_id') String typeId,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
+      double discount});
 }
 
-class __$LineItemCopyWithImpl<$Res> extends _$LineItemCopyWithImpl<$Res>
-    implements _$LineItemCopyWith<$Res> {
-  __$LineItemCopyWithImpl(_LineItem _value, $Res Function(_LineItem) _then)
-      : super(_value, (v) => _then(v as _LineItem));
+class __$InvoiceLineItemCopyWithImpl<$Res>
+    extends _$InvoiceLineItemCopyWithImpl<$Res>
+    implements _$InvoiceLineItemCopyWith<$Res> {
+  __$InvoiceLineItemCopyWithImpl(
+      _InvoiceLineItem _value, $Res Function(_InvoiceLineItem) _then)
+      : super(_value, (v) => _then(v as _InvoiceLineItem));
 
   @override
-  _LineItem get _value => super._value as _LineItem;
+  _InvoiceLineItem get _value => super._value as _InvoiceLineItem;
 
   @override
   $Res call({
@@ -1480,34 +1615,92 @@ class __$LineItemCopyWithImpl<$Res> extends _$LineItemCopyWithImpl<$Res>
     Object notes = freezed,
     Object cost = freezed,
     Object quantity = freezed,
+    Object taxName1 = freezed,
+    Object taxRate1 = freezed,
+    Object taxName2 = freezed,
+    Object taxRate2 = freezed,
+    Object taxName3 = freezed,
+    Object taxRate3 = freezed,
+    Object typeId = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
+    Object discount = freezed,
   }) {
-    return _then(_LineItem(
+    return _then(_InvoiceLineItem(
       id: id == freezed ? _value.id : id as String,
       productKey:
           productKey == freezed ? _value.productKey : productKey as String,
       notes: notes == freezed ? _value.notes : notes as String,
       cost: cost == freezed ? _value.cost : cost as double,
       quantity: quantity == freezed ? _value.quantity : quantity as double,
+      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
+      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
+      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
+      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
+      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
+      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      typeId: typeId == freezed ? _value.typeId : typeId as String,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
+      discount: discount == freezed ? _value.discount : discount as double,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class _$_LineItem with DiagnosticableTreeMixin implements _LineItem {
-  _$_LineItem(
+class _$_InvoiceLineItem
+    with DiagnosticableTreeMixin
+    implements _InvoiceLineItem {
+  _$_InvoiceLineItem(
       {this.id = '',
       @JsonKey(name: 'product_key') this.productKey = '',
       this.notes = '',
       this.cost = 0,
-      this.quantity = 0})
+      this.quantity = 0,
+      @JsonKey(name: 'tax_name1') this.taxName1 = '',
+      @JsonKey(name: 'tax_rate1') this.taxRate1 = 0,
+      @JsonKey(name: 'tax_name2') this.taxName2 = '',
+      @JsonKey(name: 'tax_rate2') this.taxRate2 = 0,
+      @JsonKey(name: 'tax_name3') this.taxName3 = '',
+      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
+      @JsonKey(name: 'type_id') this.typeId = '',
+      @JsonKey(name: 'custom_value1') this.customValue1 = '',
+      @JsonKey(name: 'custom_value2') this.customValue2 = '',
+      @JsonKey(name: 'custom_value3') this.customValue3 = '',
+      @JsonKey(name: 'custom_value4') this.customValue4 = '',
+      this.discount = 0})
       : assert(id != null),
         assert(productKey != null),
         assert(notes != null),
         assert(cost != null),
-        assert(quantity != null);
+        assert(quantity != null),
+        assert(taxName1 != null),
+        assert(taxRate1 != null),
+        assert(taxName2 != null),
+        assert(taxRate2 != null),
+        assert(taxName3 != null),
+        assert(taxRate3 != null),
+        assert(typeId != null),
+        assert(customValue1 != null),
+        assert(customValue2 != null),
+        assert(customValue3 != null),
+        assert(customValue4 != null),
+        assert(discount != null);
 
-  factory _$_LineItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_LineItemFromJson(json);
+  factory _$_InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
+      _$_$_InvoiceLineItemFromJson(json);
 
   @JsonKey(defaultValue: '')
   @override
@@ -1524,28 +1717,76 @@ class _$_LineItem with DiagnosticableTreeMixin implements _LineItem {
   @JsonKey(defaultValue: 0)
   @override
   final double quantity;
+  @override
+  @JsonKey(name: 'tax_name1')
+  final String taxName1;
+  @override
+  @JsonKey(name: 'tax_rate1')
+  final double taxRate1;
+  @override
+  @JsonKey(name: 'tax_name2')
+  final String taxName2;
+  @override
+  @JsonKey(name: 'tax_rate2')
+  final double taxRate2;
+  @override
+  @JsonKey(name: 'tax_name3')
+  final String taxName3;
+  @override
+  @JsonKey(name: 'tax_rate3')
+  final double taxRate3;
+  @override
+  @JsonKey(name: 'type_id')
+  final String typeId;
+  @override
+  @JsonKey(name: 'custom_value1')
+  final String customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  final String customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  final String customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  final String customValue4;
+  @JsonKey(defaultValue: 0)
+  @override
+  final double discount;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LineItem(id: $id, productKey: $productKey, notes: $notes, cost: $cost, quantity: $quantity)';
+    return 'InvoiceLineItem(id: $id, productKey: $productKey, notes: $notes, cost: $cost, quantity: $quantity, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, typeId: $typeId, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, discount: $discount)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LineItem'))
+      ..add(DiagnosticsProperty('type', 'InvoiceLineItem'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('productKey', productKey))
       ..add(DiagnosticsProperty('notes', notes))
       ..add(DiagnosticsProperty('cost', cost))
-      ..add(DiagnosticsProperty('quantity', quantity));
+      ..add(DiagnosticsProperty('quantity', quantity))
+      ..add(DiagnosticsProperty('taxName1', taxName1))
+      ..add(DiagnosticsProperty('taxRate1', taxRate1))
+      ..add(DiagnosticsProperty('taxName2', taxName2))
+      ..add(DiagnosticsProperty('taxRate2', taxRate2))
+      ..add(DiagnosticsProperty('taxName3', taxName3))
+      ..add(DiagnosticsProperty('taxRate3', taxRate3))
+      ..add(DiagnosticsProperty('typeId', typeId))
+      ..add(DiagnosticsProperty('customValue1', customValue1))
+      ..add(DiagnosticsProperty('customValue2', customValue2))
+      ..add(DiagnosticsProperty('customValue3', customValue3))
+      ..add(DiagnosticsProperty('customValue4', customValue4))
+      ..add(DiagnosticsProperty('discount', discount));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LineItem &&
+        (other is _InvoiceLineItem &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.productKey, productKey) ||
@@ -1557,7 +1798,42 @@ class _$_LineItem with DiagnosticableTreeMixin implements _LineItem {
                 const DeepCollectionEquality().equals(other.cost, cost)) &&
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)));
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.taxName1, taxName1) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName1, taxName1)) &&
+            (identical(other.taxRate1, taxRate1) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate1, taxRate1)) &&
+            (identical(other.taxName2, taxName2) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName2, taxName2)) &&
+            (identical(other.taxRate2, taxRate2) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate2, taxRate2)) &&
+            (identical(other.taxName3, taxName3) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxName3, taxName3)) &&
+            (identical(other.taxRate3, taxRate3) ||
+                const DeepCollectionEquality()
+                    .equals(other.taxRate3, taxRate3)) &&
+            (identical(other.typeId, typeId) ||
+                const DeepCollectionEquality().equals(other.typeId, typeId)) &&
+            (identical(other.customValue1, customValue1) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue1, customValue1)) &&
+            (identical(other.customValue2, customValue2) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue2, customValue2)) &&
+            (identical(other.customValue3, customValue3) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue3, customValue3)) &&
+            (identical(other.customValue4, customValue4) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue4, customValue4)) &&
+            (identical(other.discount, discount) ||
+                const DeepCollectionEquality()
+                    .equals(other.discount, discount)));
   }
 
   @override
@@ -1567,27 +1843,52 @@ class _$_LineItem with DiagnosticableTreeMixin implements _LineItem {
       const DeepCollectionEquality().hash(productKey) ^
       const DeepCollectionEquality().hash(notes) ^
       const DeepCollectionEquality().hash(cost) ^
-      const DeepCollectionEquality().hash(quantity);
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(taxName1) ^
+      const DeepCollectionEquality().hash(taxRate1) ^
+      const DeepCollectionEquality().hash(taxName2) ^
+      const DeepCollectionEquality().hash(taxRate2) ^
+      const DeepCollectionEquality().hash(taxName3) ^
+      const DeepCollectionEquality().hash(taxRate3) ^
+      const DeepCollectionEquality().hash(typeId) ^
+      const DeepCollectionEquality().hash(customValue1) ^
+      const DeepCollectionEquality().hash(customValue2) ^
+      const DeepCollectionEquality().hash(customValue3) ^
+      const DeepCollectionEquality().hash(customValue4) ^
+      const DeepCollectionEquality().hash(discount);
 
   @override
-  _$LineItemCopyWith<_LineItem> get copyWith =>
-      __$LineItemCopyWithImpl<_LineItem>(this, _$identity);
+  _$InvoiceLineItemCopyWith<_InvoiceLineItem> get copyWith =>
+      __$InvoiceLineItemCopyWithImpl<_InvoiceLineItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LineItemToJson(this);
+    return _$_$_InvoiceLineItemToJson(this);
   }
 }
 
-abstract class _LineItem implements LineItem {
-  factory _LineItem(
+abstract class _InvoiceLineItem implements InvoiceLineItem {
+  factory _InvoiceLineItem(
       {String id,
       @JsonKey(name: 'product_key') String productKey,
       String notes,
       double cost,
-      double quantity}) = _$_LineItem;
+      double quantity,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'type_id') String typeId,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
+      double discount}) = _$_InvoiceLineItem;
 
-  factory _LineItem.fromJson(Map<String, dynamic> json) = _$_LineItem.fromJson;
+  factory _InvoiceLineItem.fromJson(Map<String, dynamic> json) =
+      _$_InvoiceLineItem.fromJson;
 
   @override
   String get id;
@@ -1601,7 +1902,334 @@ abstract class _LineItem implements LineItem {
   @override
   double get quantity;
   @override
-  _$LineItemCopyWith<_LineItem> get copyWith;
+  @JsonKey(name: 'tax_name1')
+  String get taxName1;
+  @override
+  @JsonKey(name: 'tax_rate1')
+  double get taxRate1;
+  @override
+  @JsonKey(name: 'tax_name2')
+  String get taxName2;
+  @override
+  @JsonKey(name: 'tax_rate2')
+  double get taxRate2;
+  @override
+  @JsonKey(name: 'tax_name3')
+  String get taxName3;
+  @override
+  @JsonKey(name: 'tax_rate3')
+  double get taxRate3;
+  @override
+  @JsonKey(name: 'type_id')
+  String get typeId;
+  @override
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
+  @override
+  double get discount;
+  @override
+  _$InvoiceLineItemCopyWith<_InvoiceLineItem> get copyWith;
+}
+
+InvoiceInvitation _$InvoiceInvitationFromJson(Map<String, dynamic> json) {
+  return _InvoiceInvitation.fromJson(json);
+}
+
+class _$InvoiceInvitationTearOff {
+  const _$InvoiceInvitationTearOff();
+
+// ignore: unused_element
+  _InvoiceInvitation call(
+      {String id = '',
+      @JsonKey(name: 'client_contact_id') String clientContactId = '',
+      String key = '',
+      String link = '',
+      @JsonKey(name: 'sent_date') String sentDate = '',
+      @JsonKey(name: 'viewed_date') String viewedDate = '',
+      @JsonKey(name: 'opened_date') String openedDate = ''}) {
+    return _InvoiceInvitation(
+      id: id,
+      clientContactId: clientContactId,
+      key: key,
+      link: link,
+      sentDate: sentDate,
+      viewedDate: viewedDate,
+      openedDate: openedDate,
+    );
+  }
+}
+
+// ignore: unused_element
+const $InvoiceInvitation = _$InvoiceInvitationTearOff();
+
+mixin _$InvoiceInvitation {
+  String get id;
+  @JsonKey(name: 'client_contact_id')
+  String get clientContactId;
+  String get key;
+  String get link;
+  @JsonKey(name: 'sent_date')
+  String get sentDate;
+  @JsonKey(name: 'viewed_date')
+  String get viewedDate;
+  @JsonKey(name: 'opened_date')
+  String get openedDate;
+
+  Map<String, dynamic> toJson();
+  $InvoiceInvitationCopyWith<InvoiceInvitation> get copyWith;
+}
+
+abstract class $InvoiceInvitationCopyWith<$Res> {
+  factory $InvoiceInvitationCopyWith(
+          InvoiceInvitation value, $Res Function(InvoiceInvitation) then) =
+      _$InvoiceInvitationCopyWithImpl<$Res>;
+  $Res call(
+      {String id,
+      @JsonKey(name: 'client_contact_id') String clientContactId,
+      String key,
+      String link,
+      @JsonKey(name: 'sent_date') String sentDate,
+      @JsonKey(name: 'viewed_date') String viewedDate,
+      @JsonKey(name: 'opened_date') String openedDate});
+}
+
+class _$InvoiceInvitationCopyWithImpl<$Res>
+    implements $InvoiceInvitationCopyWith<$Res> {
+  _$InvoiceInvitationCopyWithImpl(this._value, this._then);
+
+  final InvoiceInvitation _value;
+  // ignore: unused_field
+  final $Res Function(InvoiceInvitation) _then;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object clientContactId = freezed,
+    Object key = freezed,
+    Object link = freezed,
+    Object sentDate = freezed,
+    Object viewedDate = freezed,
+    Object openedDate = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed ? _value.id : id as String,
+      clientContactId: clientContactId == freezed
+          ? _value.clientContactId
+          : clientContactId as String,
+      key: key == freezed ? _value.key : key as String,
+      link: link == freezed ? _value.link : link as String,
+      sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
+      viewedDate:
+          viewedDate == freezed ? _value.viewedDate : viewedDate as String,
+      openedDate:
+          openedDate == freezed ? _value.openedDate : openedDate as String,
+    ));
+  }
+}
+
+abstract class _$InvoiceInvitationCopyWith<$Res>
+    implements $InvoiceInvitationCopyWith<$Res> {
+  factory _$InvoiceInvitationCopyWith(
+          _InvoiceInvitation value, $Res Function(_InvoiceInvitation) then) =
+      __$InvoiceInvitationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String id,
+      @JsonKey(name: 'client_contact_id') String clientContactId,
+      String key,
+      String link,
+      @JsonKey(name: 'sent_date') String sentDate,
+      @JsonKey(name: 'viewed_date') String viewedDate,
+      @JsonKey(name: 'opened_date') String openedDate});
+}
+
+class __$InvoiceInvitationCopyWithImpl<$Res>
+    extends _$InvoiceInvitationCopyWithImpl<$Res>
+    implements _$InvoiceInvitationCopyWith<$Res> {
+  __$InvoiceInvitationCopyWithImpl(
+      _InvoiceInvitation _value, $Res Function(_InvoiceInvitation) _then)
+      : super(_value, (v) => _then(v as _InvoiceInvitation));
+
+  @override
+  _InvoiceInvitation get _value => super._value as _InvoiceInvitation;
+
+  @override
+  $Res call({
+    Object id = freezed,
+    Object clientContactId = freezed,
+    Object key = freezed,
+    Object link = freezed,
+    Object sentDate = freezed,
+    Object viewedDate = freezed,
+    Object openedDate = freezed,
+  }) {
+    return _then(_InvoiceInvitation(
+      id: id == freezed ? _value.id : id as String,
+      clientContactId: clientContactId == freezed
+          ? _value.clientContactId
+          : clientContactId as String,
+      key: key == freezed ? _value.key : key as String,
+      link: link == freezed ? _value.link : link as String,
+      sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
+      viewedDate:
+          viewedDate == freezed ? _value.viewedDate : viewedDate as String,
+      openedDate:
+          openedDate == freezed ? _value.openedDate : openedDate as String,
+    ));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class _$_InvoiceInvitation
+    with DiagnosticableTreeMixin
+    implements _InvoiceInvitation {
+  _$_InvoiceInvitation(
+      {this.id = '',
+      @JsonKey(name: 'client_contact_id') this.clientContactId = '',
+      this.key = '',
+      this.link = '',
+      @JsonKey(name: 'sent_date') this.sentDate = '',
+      @JsonKey(name: 'viewed_date') this.viewedDate = '',
+      @JsonKey(name: 'opened_date') this.openedDate = ''})
+      : assert(id != null),
+        assert(clientContactId != null),
+        assert(key != null),
+        assert(link != null),
+        assert(sentDate != null),
+        assert(viewedDate != null),
+        assert(openedDate != null);
+
+  factory _$_InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
+      _$_$_InvoiceInvitationFromJson(json);
+
+  @JsonKey(defaultValue: '')
+  @override
+  final String id;
+  @override
+  @JsonKey(name: 'client_contact_id')
+  final String clientContactId;
+  @JsonKey(defaultValue: '')
+  @override
+  final String key;
+  @JsonKey(defaultValue: '')
+  @override
+  final String link;
+  @override
+  @JsonKey(name: 'sent_date')
+  final String sentDate;
+  @override
+  @JsonKey(name: 'viewed_date')
+  final String viewedDate;
+  @override
+  @JsonKey(name: 'opened_date')
+  final String openedDate;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'InvoiceInvitation(id: $id, clientContactId: $clientContactId, key: $key, link: $link, sentDate: $sentDate, viewedDate: $viewedDate, openedDate: $openedDate)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'InvoiceInvitation'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('clientContactId', clientContactId))
+      ..add(DiagnosticsProperty('key', key))
+      ..add(DiagnosticsProperty('link', link))
+      ..add(DiagnosticsProperty('sentDate', sentDate))
+      ..add(DiagnosticsProperty('viewedDate', viewedDate))
+      ..add(DiagnosticsProperty('openedDate', openedDate));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _InvoiceInvitation &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.clientContactId, clientContactId) ||
+                const DeepCollectionEquality()
+                    .equals(other.clientContactId, clientContactId)) &&
+            (identical(other.key, key) ||
+                const DeepCollectionEquality().equals(other.key, key)) &&
+            (identical(other.link, link) ||
+                const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.sentDate, sentDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.sentDate, sentDate)) &&
+            (identical(other.viewedDate, viewedDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.viewedDate, viewedDate)) &&
+            (identical(other.openedDate, openedDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.openedDate, openedDate)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(clientContactId) ^
+      const DeepCollectionEquality().hash(key) ^
+      const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(sentDate) ^
+      const DeepCollectionEquality().hash(viewedDate) ^
+      const DeepCollectionEquality().hash(openedDate);
+
+  @override
+  _$InvoiceInvitationCopyWith<_InvoiceInvitation> get copyWith =>
+      __$InvoiceInvitationCopyWithImpl<_InvoiceInvitation>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_InvoiceInvitationToJson(this);
+  }
+}
+
+abstract class _InvoiceInvitation implements InvoiceInvitation {
+  factory _InvoiceInvitation(
+      {String id,
+      @JsonKey(name: 'client_contact_id') String clientContactId,
+      String key,
+      String link,
+      @JsonKey(name: 'sent_date') String sentDate,
+      @JsonKey(name: 'viewed_date') String viewedDate,
+      @JsonKey(name: 'opened_date') String openedDate}) = _$_InvoiceInvitation;
+
+  factory _InvoiceInvitation.fromJson(Map<String, dynamic> json) =
+      _$_InvoiceInvitation.fromJson;
+
+  @override
+  String get id;
+  @override
+  @JsonKey(name: 'client_contact_id')
+  String get clientContactId;
+  @override
+  String get key;
+  @override
+  String get link;
+  @override
+  @JsonKey(name: 'sent_date')
+  String get sentDate;
+  @override
+  @JsonKey(name: 'viewed_date')
+  String get viewedDate;
+  @override
+  @JsonKey(name: 'opened_date')
+  String get openedDate;
+  @override
+  _$InvoiceInvitationCopyWith<_InvoiceInvitation> get copyWith;
 }
 
 InvoiceList _$InvoiceListFromJson(Map<String, dynamic> json) {

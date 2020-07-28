@@ -70,7 +70,7 @@ abstract class ClientContact with _$ClientContact {
     @Default(false) @JsonKey(name: 'is_primary') bool isPrimary,
     @Default(false) @JsonKey(name: 'is_locked') bool isLocked,
     @Default('') String phone,
-    @Default('') @JsonKey(name: 'contact_key') String contactKey,
+    @Default('') @JsonKey(name: 'contact_key') String key,
     @Default(true) @JsonKey(name: 'send_email') bool sendEmail,
     @Default(0) @JsonKey(name: 'lsst_login') int lastLogin,
     @Default('') String password,
