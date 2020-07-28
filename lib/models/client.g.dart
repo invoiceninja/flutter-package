@@ -43,11 +43,15 @@ _$_Client _$_$_ClientFromJson(Map<String, dynamic> json) {
     shippingState: json['shipping_state'] as String,
     shippingPostalCode: json['shipping_postal_code'] as String,
     shippingCountryId: json['shipping_country_id'] as String,
+    settings: json['settings'] == null
+        ? null
+        : ClientSettings.fromJson(json['settings'] as Map<String, dynamic>),
     idNumber: json['id_number'] as String,
     vatNumber: json['vat_number'] as String,
     contacts: (json['contacts'] as List)
-            ?.map((e) =>
-                e == null ? null : Contact.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => e == null
+                ? null
+                : ClientContact.fromJson(e as Map<String, dynamic>))
             ?.toList() ??
         [],
   );
@@ -89,30 +93,62 @@ Map<String, dynamic> _$_$_ClientToJson(_$_Client instance) => <String, dynamic>{
       'shipping_state': instance.shippingState,
       'shipping_postal_code': instance.shippingPostalCode,
       'shipping_country_id': instance.shippingCountryId,
+      'settings': instance.settings?.toJson(),
       'id_number': instance.idNumber,
       'vat_number': instance.vatNumber,
       'contacts': instance.contacts?.map((e) => e?.toJson())?.toList(),
     };
 
-_$_Contact _$_$_ContactFromJson(Map<String, dynamic> json) {
-  return _$_Contact(
+_$_ClientContact _$_$_ClientContactFromJson(Map<String, dynamic> json) {
+  return _$_ClientContact(
     id: json['id'] as String ?? '',
     customValue1: json['custom_value1'] as String,
     customValue2: json['custom_value2'] as String,
     customValue3: json['custom_value3'] as String,
     customValue4: json['custom_value4'] as String,
-    name: json['name'] as String ?? '',
+    firstName: json['first_name'] as String,
+    lastName: json['last_name'] as String,
+    email: json['email'] as String ?? '',
+    isPrimary: json['is_primary'] as bool,
+    isLocked: json['is_locked'] as bool,
+    phone: json['phone'] as String ?? '',
+    contactKey: json['contact_key'] as String,
+    sendEmail: json['send_email'] as bool,
+    lastLogin: json['lsst_login'] as int,
+    password: json['password'] as String ?? '',
   );
 }
 
-Map<String, dynamic> _$_$_ContactToJson(_$_Contact instance) =>
+Map<String, dynamic> _$_$_ClientContactToJson(_$_ClientContact instance) =>
     <String, dynamic>{
       'id': instance.id,
       'custom_value1': instance.customValue1,
       'custom_value2': instance.customValue2,
       'custom_value3': instance.customValue3,
       'custom_value4': instance.customValue4,
-      'name': instance.name,
+      'first_name': instance.firstName,
+      'last_name': instance.lastName,
+      'email': instance.email,
+      'is_primary': instance.isPrimary,
+      'is_locked': instance.isLocked,
+      'phone': instance.phone,
+      'contact_key': instance.contactKey,
+      'send_email': instance.sendEmail,
+      'lsst_login': instance.lastLogin,
+      'password': instance.password,
+    };
+
+_$_ClientSettings _$_$_ClientSettingsFromJson(Map<String, dynamic> json) {
+  return _$_ClientSettings(
+    currencyId: json['currency_id'] as String,
+    languageId: json['language_id'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_ClientSettingsToJson(_$_ClientSettings instance) =>
+    <String, dynamic>{
+      'currency_id': instance.currencyId,
+      'language_id': instance.languageId,
     };
 
 _$_ClientList _$_$_ClientListFromJson(Map<String, dynamic> json) {

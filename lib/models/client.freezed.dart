@@ -52,9 +52,10 @@ class _$ClientTearOff {
       @JsonKey(name: 'shipping_state') String shippingState = '',
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode = '',
       @JsonKey(name: 'shipping_country_id') String shippingCountryId = '',
+      ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber = '',
       @JsonKey(name: 'vat_number') String vatNumber = '',
-      List<Contact> contacts = const <Contact>[]}) {
+      List<ClientContact> contacts = const <ClientContact>[]}) {
     return _Client(
       id: id,
       createdById: createdById,
@@ -91,6 +92,7 @@ class _$ClientTearOff {
       shippingState: shippingState,
       shippingPostalCode: shippingPostalCode,
       shippingCountryId: shippingCountryId,
+      settings: settings,
       idNumber: idNumber,
       vatNumber: vatNumber,
       contacts: contacts,
@@ -163,11 +165,12 @@ mixin _$Client {
   String get shippingPostalCode;
   @JsonKey(name: 'shipping_country_id')
   String get shippingCountryId;
+  ClientSettings get settings;
   @JsonKey(name: 'id_number')
   String get idNumber;
   @JsonKey(name: 'vat_number')
   String get vatNumber;
-  List<Contact> get contacts;
+  List<ClientContact> get contacts;
 
   Map<String, dynamic> toJson();
   $ClientCopyWith<Client> get copyWith;
@@ -212,9 +215,12 @@ abstract class $ClientCopyWith<$Res> {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<Contact> contacts});
+      List<ClientContact> contacts});
+
+  $ClientSettingsCopyWith<$Res> get settings;
 }
 
 class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
@@ -261,6 +267,7 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
     Object shippingState = freezed,
     Object shippingPostalCode = freezed,
     Object shippingCountryId = freezed,
+    Object settings = freezed,
     Object idNumber = freezed,
     Object vatNumber = freezed,
     Object contacts = freezed,
@@ -332,11 +339,24 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
       shippingCountryId: shippingCountryId == freezed
           ? _value.shippingCountryId
           : shippingCountryId as String,
+      settings:
+          settings == freezed ? _value.settings : settings as ClientSettings,
       idNumber: idNumber == freezed ? _value.idNumber : idNumber as String,
       vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
-      contacts:
-          contacts == freezed ? _value.contacts : contacts as List<Contact>,
+      contacts: contacts == freezed
+          ? _value.contacts
+          : contacts as List<ClientContact>,
     ));
+  }
+
+  @override
+  $ClientSettingsCopyWith<$Res> get settings {
+    if (_value.settings == null) {
+      return null;
+    }
+    return $ClientSettingsCopyWith<$Res>(_value.settings, (value) {
+      return _then(_value.copyWith(settings: value));
+    });
   }
 }
 
@@ -380,9 +400,13 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<Contact> contacts});
+      List<ClientContact> contacts});
+
+  @override
+  $ClientSettingsCopyWith<$Res> get settings;
 }
 
 class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
@@ -430,6 +454,7 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
     Object shippingState = freezed,
     Object shippingPostalCode = freezed,
     Object shippingCountryId = freezed,
+    Object settings = freezed,
     Object idNumber = freezed,
     Object vatNumber = freezed,
     Object contacts = freezed,
@@ -501,10 +526,13 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
       shippingCountryId: shippingCountryId == freezed
           ? _value.shippingCountryId
           : shippingCountryId as String,
+      settings:
+          settings == freezed ? _value.settings : settings as ClientSettings,
       idNumber: idNumber == freezed ? _value.idNumber : idNumber as String,
       vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
-      contacts:
-          contacts == freezed ? _value.contacts : contacts as List<Contact>,
+      contacts: contacts == freezed
+          ? _value.contacts
+          : contacts as List<ClientContact>,
     ));
   }
 }
@@ -547,9 +575,10 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       @JsonKey(name: 'shipping_state') this.shippingState = '',
       @JsonKey(name: 'shipping_postal_code') this.shippingPostalCode = '',
       @JsonKey(name: 'shipping_country_id') this.shippingCountryId = '',
+      this.settings,
       @JsonKey(name: 'id_number') this.idNumber = '',
       @JsonKey(name: 'vat_number') this.vatNumber = '',
-      this.contacts = const <Contact>[]})
+      this.contacts = const <ClientContact>[]})
       : assert(id != null),
         assert(createdById != null),
         assert(assignedToId != null),
@@ -698,18 +727,20 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
   @JsonKey(name: 'shipping_country_id')
   final String shippingCountryId;
   @override
+  final ClientSettings settings;
+  @override
   @JsonKey(name: 'id_number')
   final String idNumber;
   @override
   @JsonKey(name: 'vat_number')
   final String vatNumber;
-  @JsonKey(defaultValue: const <Contact>[])
+  @JsonKey(defaultValue: const <ClientContact>[])
   @override
-  final List<Contact> contacts;
+  final List<ClientContact> contacts;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts)';
+    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts)';
   }
 
   @override
@@ -752,6 +783,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       ..add(DiagnosticsProperty('shippingState', shippingState))
       ..add(DiagnosticsProperty('shippingPostalCode', shippingPostalCode))
       ..add(DiagnosticsProperty('shippingCountryId', shippingCountryId))
+      ..add(DiagnosticsProperty('settings', settings))
       ..add(DiagnosticsProperty('idNumber', idNumber))
       ..add(DiagnosticsProperty('vatNumber', vatNumber))
       ..add(DiagnosticsProperty('contacts', contacts));
@@ -839,6 +871,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
             (identical(other.shippingState, shippingState) || const DeepCollectionEquality().equals(other.shippingState, shippingState)) &&
             (identical(other.shippingPostalCode, shippingPostalCode) || const DeepCollectionEquality().equals(other.shippingPostalCode, shippingPostalCode)) &&
             (identical(other.shippingCountryId, shippingCountryId) || const DeepCollectionEquality().equals(other.shippingCountryId, shippingCountryId)) &&
+            (identical(other.settings, settings) || const DeepCollectionEquality().equals(other.settings, settings)) &&
             (identical(other.idNumber, idNumber) || const DeepCollectionEquality().equals(other.idNumber, idNumber)) &&
             (identical(other.vatNumber, vatNumber) || const DeepCollectionEquality().equals(other.vatNumber, vatNumber)) &&
             (identical(other.contacts, contacts) || const DeepCollectionEquality().equals(other.contacts, contacts)));
@@ -882,6 +915,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       const DeepCollectionEquality().hash(shippingState) ^
       const DeepCollectionEquality().hash(shippingPostalCode) ^
       const DeepCollectionEquality().hash(shippingCountryId) ^
+      const DeepCollectionEquality().hash(settings) ^
       const DeepCollectionEquality().hash(idNumber) ^
       const DeepCollectionEquality().hash(vatNumber) ^
       const DeepCollectionEquality().hash(contacts);
@@ -933,9 +967,10 @@ abstract class _Client implements Client {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<Contact> contacts}) = _$_Client;
+      List<ClientContact> contacts}) = _$_Client;
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$_Client.fromJson;
 
@@ -1036,47 +1071,67 @@ abstract class _Client implements Client {
   @JsonKey(name: 'shipping_country_id')
   String get shippingCountryId;
   @override
+  ClientSettings get settings;
+  @override
   @JsonKey(name: 'id_number')
   String get idNumber;
   @override
   @JsonKey(name: 'vat_number')
   String get vatNumber;
   @override
-  List<Contact> get contacts;
+  List<ClientContact> get contacts;
   @override
   _$ClientCopyWith<_Client> get copyWith;
 }
 
-Contact _$ContactFromJson(Map<String, dynamic> json) {
-  return _Contact.fromJson(json);
+ClientContact _$ClientContactFromJson(Map<String, dynamic> json) {
+  return _ClientContact.fromJson(json);
 }
 
-class _$ContactTearOff {
-  const _$ContactTearOff();
+class _$ClientContactTearOff {
+  const _$ClientContactTearOff();
 
 // ignore: unused_element
-  _Contact call(
+  _ClientContact call(
       {String id = '',
       @JsonKey(name: 'custom_value1') String customValue1 = '',
       @JsonKey(name: 'custom_value2') String customValue2 = '',
       @JsonKey(name: 'custom_value3') String customValue3 = '',
       @JsonKey(name: 'custom_value4') String customValue4 = '',
-      String name = ''}) {
-    return _Contact(
+      @JsonKey(name: 'first_name') String firstName = '',
+      @JsonKey(name: 'last_name') String lastName = '',
+      String email = '',
+      @JsonKey(name: 'is_primary') bool isPrimary = false,
+      @JsonKey(name: 'is_locked') bool isLocked = false,
+      String phone = '',
+      @JsonKey(name: 'contact_key') String contactKey = '',
+      @JsonKey(name: 'send_email') bool sendEmail = true,
+      @JsonKey(name: 'lsst_login') int lastLogin = 0,
+      String password = ''}) {
+    return _ClientContact(
       id: id,
       customValue1: customValue1,
       customValue2: customValue2,
       customValue3: customValue3,
       customValue4: customValue4,
-      name: name,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      isPrimary: isPrimary,
+      isLocked: isLocked,
+      phone: phone,
+      contactKey: contactKey,
+      sendEmail: sendEmail,
+      lastLogin: lastLogin,
+      password: password,
     );
   }
 }
 
 // ignore: unused_element
-const $Contact = _$ContactTearOff();
+const $ClientContact = _$ClientContactTearOff();
 
-mixin _$Contact {
+mixin _$ClientContact {
   String get id;
   @JsonKey(name: 'custom_value1')
   String get customValue1;
@@ -1086,30 +1141,57 @@ mixin _$Contact {
   String get customValue3;
   @JsonKey(name: 'custom_value4')
   String get customValue4;
-  String get name;
+  @JsonKey(name: 'first_name')
+  String get firstName;
+  @JsonKey(name: 'last_name')
+  String get lastName;
+  String get email;
+  @JsonKey(name: 'is_primary')
+  bool get isPrimary;
+  @JsonKey(name: 'is_locked')
+  bool get isLocked;
+  String get phone;
+  @JsonKey(name: 'contact_key')
+  String get contactKey;
+  @JsonKey(name: 'send_email')
+  bool get sendEmail;
+  @JsonKey(name: 'lsst_login')
+  int get lastLogin;
+  String get password;
 
   Map<String, dynamic> toJson();
-  $ContactCopyWith<Contact> get copyWith;
+  $ClientContactCopyWith<ClientContact> get copyWith;
 }
 
-abstract class $ContactCopyWith<$Res> {
-  factory $ContactCopyWith(Contact value, $Res Function(Contact) then) =
-      _$ContactCopyWithImpl<$Res>;
+abstract class $ClientContactCopyWith<$Res> {
+  factory $ClientContactCopyWith(
+          ClientContact value, $Res Function(ClientContact) then) =
+      _$ClientContactCopyWithImpl<$Res>;
   $Res call(
       {String id,
       @JsonKey(name: 'custom_value1') String customValue1,
       @JsonKey(name: 'custom_value2') String customValue2,
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
-      String name});
+      @JsonKey(name: 'first_name') String firstName,
+      @JsonKey(name: 'last_name') String lastName,
+      String email,
+      @JsonKey(name: 'is_primary') bool isPrimary,
+      @JsonKey(name: 'is_locked') bool isLocked,
+      String phone,
+      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'send_email') bool sendEmail,
+      @JsonKey(name: 'lsst_login') int lastLogin,
+      String password});
 }
 
-class _$ContactCopyWithImpl<$Res> implements $ContactCopyWith<$Res> {
-  _$ContactCopyWithImpl(this._value, this._then);
+class _$ClientContactCopyWithImpl<$Res>
+    implements $ClientContactCopyWith<$Res> {
+  _$ClientContactCopyWithImpl(this._value, this._then);
 
-  final Contact _value;
+  final ClientContact _value;
   // ignore: unused_field
-  final $Res Function(Contact) _then;
+  final $Res Function(ClientContact) _then;
 
   @override
   $Res call({
@@ -1118,7 +1200,16 @@ class _$ContactCopyWithImpl<$Res> implements $ContactCopyWith<$Res> {
     Object customValue2 = freezed,
     Object customValue3 = freezed,
     Object customValue4 = freezed,
-    Object name = freezed,
+    Object firstName = freezed,
+    Object lastName = freezed,
+    Object email = freezed,
+    Object isPrimary = freezed,
+    Object isLocked = freezed,
+    Object phone = freezed,
+    Object contactKey = freezed,
+    Object sendEmail = freezed,
+    Object lastLogin = freezed,
+    Object password = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -1134,14 +1225,26 @@ class _$ContactCopyWithImpl<$Res> implements $ContactCopyWith<$Res> {
       customValue4: customValue4 == freezed
           ? _value.customValue4
           : customValue4 as String,
-      name: name == freezed ? _value.name : name as String,
+      firstName: firstName == freezed ? _value.firstName : firstName as String,
+      lastName: lastName == freezed ? _value.lastName : lastName as String,
+      email: email == freezed ? _value.email : email as String,
+      isPrimary: isPrimary == freezed ? _value.isPrimary : isPrimary as bool,
+      isLocked: isLocked == freezed ? _value.isLocked : isLocked as bool,
+      phone: phone == freezed ? _value.phone : phone as String,
+      contactKey:
+          contactKey == freezed ? _value.contactKey : contactKey as String,
+      sendEmail: sendEmail == freezed ? _value.sendEmail : sendEmail as bool,
+      lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
+      password: password == freezed ? _value.password : password as String,
     ));
   }
 }
 
-abstract class _$ContactCopyWith<$Res> implements $ContactCopyWith<$Res> {
-  factory _$ContactCopyWith(_Contact value, $Res Function(_Contact) then) =
-      __$ContactCopyWithImpl<$Res>;
+abstract class _$ClientContactCopyWith<$Res>
+    implements $ClientContactCopyWith<$Res> {
+  factory _$ClientContactCopyWith(
+          _ClientContact value, $Res Function(_ClientContact) then) =
+      __$ClientContactCopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -1149,16 +1252,27 @@ abstract class _$ContactCopyWith<$Res> implements $ContactCopyWith<$Res> {
       @JsonKey(name: 'custom_value2') String customValue2,
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
-      String name});
+      @JsonKey(name: 'first_name') String firstName,
+      @JsonKey(name: 'last_name') String lastName,
+      String email,
+      @JsonKey(name: 'is_primary') bool isPrimary,
+      @JsonKey(name: 'is_locked') bool isLocked,
+      String phone,
+      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'send_email') bool sendEmail,
+      @JsonKey(name: 'lsst_login') int lastLogin,
+      String password});
 }
 
-class __$ContactCopyWithImpl<$Res> extends _$ContactCopyWithImpl<$Res>
-    implements _$ContactCopyWith<$Res> {
-  __$ContactCopyWithImpl(_Contact _value, $Res Function(_Contact) _then)
-      : super(_value, (v) => _then(v as _Contact));
+class __$ClientContactCopyWithImpl<$Res>
+    extends _$ClientContactCopyWithImpl<$Res>
+    implements _$ClientContactCopyWith<$Res> {
+  __$ClientContactCopyWithImpl(
+      _ClientContact _value, $Res Function(_ClientContact) _then)
+      : super(_value, (v) => _then(v as _ClientContact));
 
   @override
-  _Contact get _value => super._value as _Contact;
+  _ClientContact get _value => super._value as _ClientContact;
 
   @override
   $Res call({
@@ -1167,9 +1281,18 @@ class __$ContactCopyWithImpl<$Res> extends _$ContactCopyWithImpl<$Res>
     Object customValue2 = freezed,
     Object customValue3 = freezed,
     Object customValue4 = freezed,
-    Object name = freezed,
+    Object firstName = freezed,
+    Object lastName = freezed,
+    Object email = freezed,
+    Object isPrimary = freezed,
+    Object isLocked = freezed,
+    Object phone = freezed,
+    Object contactKey = freezed,
+    Object sendEmail = freezed,
+    Object lastLogin = freezed,
+    Object password = freezed,
   }) {
-    return _then(_Contact(
+    return _then(_ClientContact(
       id: id == freezed ? _value.id : id as String,
       customValue1: customValue1 == freezed
           ? _value.customValue1
@@ -1183,29 +1306,57 @@ class __$ContactCopyWithImpl<$Res> extends _$ContactCopyWithImpl<$Res>
       customValue4: customValue4 == freezed
           ? _value.customValue4
           : customValue4 as String,
-      name: name == freezed ? _value.name : name as String,
+      firstName: firstName == freezed ? _value.firstName : firstName as String,
+      lastName: lastName == freezed ? _value.lastName : lastName as String,
+      email: email == freezed ? _value.email : email as String,
+      isPrimary: isPrimary == freezed ? _value.isPrimary : isPrimary as bool,
+      isLocked: isLocked == freezed ? _value.isLocked : isLocked as bool,
+      phone: phone == freezed ? _value.phone : phone as String,
+      contactKey:
+          contactKey == freezed ? _value.contactKey : contactKey as String,
+      sendEmail: sendEmail == freezed ? _value.sendEmail : sendEmail as bool,
+      lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
+      password: password == freezed ? _value.password : password as String,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
-class _$_Contact with DiagnosticableTreeMixin implements _Contact {
-  _$_Contact(
+class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
+  _$_ClientContact(
       {this.id = '',
       @JsonKey(name: 'custom_value1') this.customValue1 = '',
       @JsonKey(name: 'custom_value2') this.customValue2 = '',
       @JsonKey(name: 'custom_value3') this.customValue3 = '',
       @JsonKey(name: 'custom_value4') this.customValue4 = '',
-      this.name = ''})
+      @JsonKey(name: 'first_name') this.firstName = '',
+      @JsonKey(name: 'last_name') this.lastName = '',
+      this.email = '',
+      @JsonKey(name: 'is_primary') this.isPrimary = false,
+      @JsonKey(name: 'is_locked') this.isLocked = false,
+      this.phone = '',
+      @JsonKey(name: 'contact_key') this.contactKey = '',
+      @JsonKey(name: 'send_email') this.sendEmail = true,
+      @JsonKey(name: 'lsst_login') this.lastLogin = 0,
+      this.password = ''})
       : assert(id != null),
         assert(customValue1 != null),
         assert(customValue2 != null),
         assert(customValue3 != null),
         assert(customValue4 != null),
-        assert(name != null);
+        assert(firstName != null),
+        assert(lastName != null),
+        assert(email != null),
+        assert(isPrimary != null),
+        assert(isLocked != null),
+        assert(phone != null),
+        assert(contactKey != null),
+        assert(sendEmail != null),
+        assert(lastLogin != null),
+        assert(password != null);
 
-  factory _$_Contact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContactFromJson(json);
+  factory _$_ClientContact.fromJson(Map<String, dynamic> json) =>
+      _$_$_ClientContactFromJson(json);
 
   @JsonKey(defaultValue: '')
   @override
@@ -1222,32 +1373,68 @@ class _$_Contact with DiagnosticableTreeMixin implements _Contact {
   @override
   @JsonKey(name: 'custom_value4')
   final String customValue4;
+  @override
+  @JsonKey(name: 'first_name')
+  final String firstName;
+  @override
+  @JsonKey(name: 'last_name')
+  final String lastName;
   @JsonKey(defaultValue: '')
   @override
-  final String name;
+  final String email;
+  @override
+  @JsonKey(name: 'is_primary')
+  final bool isPrimary;
+  @override
+  @JsonKey(name: 'is_locked')
+  final bool isLocked;
+  @JsonKey(defaultValue: '')
+  @override
+  final String phone;
+  @override
+  @JsonKey(name: 'contact_key')
+  final String contactKey;
+  @override
+  @JsonKey(name: 'send_email')
+  final bool sendEmail;
+  @override
+  @JsonKey(name: 'lsst_login')
+  final int lastLogin;
+  @JsonKey(defaultValue: '')
+  @override
+  final String password;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Contact(id: $id, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name)';
+    return 'ClientContact(id: $id, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, firstName: $firstName, lastName: $lastName, email: $email, isPrimary: $isPrimary, isLocked: $isLocked, phone: $phone, contactKey: $contactKey, sendEmail: $sendEmail, lastLogin: $lastLogin, password: $password)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Contact'))
+      ..add(DiagnosticsProperty('type', 'ClientContact'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('customValue1', customValue1))
       ..add(DiagnosticsProperty('customValue2', customValue2))
       ..add(DiagnosticsProperty('customValue3', customValue3))
       ..add(DiagnosticsProperty('customValue4', customValue4))
-      ..add(DiagnosticsProperty('name', name));
+      ..add(DiagnosticsProperty('firstName', firstName))
+      ..add(DiagnosticsProperty('lastName', lastName))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('isPrimary', isPrimary))
+      ..add(DiagnosticsProperty('isLocked', isLocked))
+      ..add(DiagnosticsProperty('phone', phone))
+      ..add(DiagnosticsProperty('contactKey', contactKey))
+      ..add(DiagnosticsProperty('sendEmail', sendEmail))
+      ..add(DiagnosticsProperty('lastLogin', lastLogin))
+      ..add(DiagnosticsProperty('password', password));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Contact &&
+        (other is _ClientContact &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.customValue1, customValue1) ||
@@ -1262,8 +1449,34 @@ class _$_Contact with DiagnosticableTreeMixin implements _Contact {
             (identical(other.customValue4, customValue4) ||
                 const DeepCollectionEquality()
                     .equals(other.customValue4, customValue4)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+            (identical(other.firstName, firstName) ||
+                const DeepCollectionEquality()
+                    .equals(other.firstName, firstName)) &&
+            (identical(other.lastName, lastName) ||
+                const DeepCollectionEquality()
+                    .equals(other.lastName, lastName)) &&
+            (identical(other.email, email) ||
+                const DeepCollectionEquality().equals(other.email, email)) &&
+            (identical(other.isPrimary, isPrimary) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPrimary, isPrimary)) &&
+            (identical(other.isLocked, isLocked) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLocked, isLocked)) &&
+            (identical(other.phone, phone) ||
+                const DeepCollectionEquality().equals(other.phone, phone)) &&
+            (identical(other.contactKey, contactKey) ||
+                const DeepCollectionEquality()
+                    .equals(other.contactKey, contactKey)) &&
+            (identical(other.sendEmail, sendEmail) ||
+                const DeepCollectionEquality()
+                    .equals(other.sendEmail, sendEmail)) &&
+            (identical(other.lastLogin, lastLogin) ||
+                const DeepCollectionEquality()
+                    .equals(other.lastLogin, lastLogin)) &&
+            (identical(other.password, password) ||
+                const DeepCollectionEquality()
+                    .equals(other.password, password)));
   }
 
   @override
@@ -1274,28 +1487,47 @@ class _$_Contact with DiagnosticableTreeMixin implements _Contact {
       const DeepCollectionEquality().hash(customValue2) ^
       const DeepCollectionEquality().hash(customValue3) ^
       const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(name);
+      const DeepCollectionEquality().hash(firstName) ^
+      const DeepCollectionEquality().hash(lastName) ^
+      const DeepCollectionEquality().hash(email) ^
+      const DeepCollectionEquality().hash(isPrimary) ^
+      const DeepCollectionEquality().hash(isLocked) ^
+      const DeepCollectionEquality().hash(phone) ^
+      const DeepCollectionEquality().hash(contactKey) ^
+      const DeepCollectionEquality().hash(sendEmail) ^
+      const DeepCollectionEquality().hash(lastLogin) ^
+      const DeepCollectionEquality().hash(password);
 
   @override
-  _$ContactCopyWith<_Contact> get copyWith =>
-      __$ContactCopyWithImpl<_Contact>(this, _$identity);
+  _$ClientContactCopyWith<_ClientContact> get copyWith =>
+      __$ClientContactCopyWithImpl<_ClientContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContactToJson(this);
+    return _$_$_ClientContactToJson(this);
   }
 }
 
-abstract class _Contact implements Contact {
-  factory _Contact(
+abstract class _ClientContact implements ClientContact {
+  factory _ClientContact(
       {String id,
       @JsonKey(name: 'custom_value1') String customValue1,
       @JsonKey(name: 'custom_value2') String customValue2,
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
-      String name}) = _$_Contact;
+      @JsonKey(name: 'first_name') String firstName,
+      @JsonKey(name: 'last_name') String lastName,
+      String email,
+      @JsonKey(name: 'is_primary') bool isPrimary,
+      @JsonKey(name: 'is_locked') bool isLocked,
+      String phone,
+      @JsonKey(name: 'contact_key') String contactKey,
+      @JsonKey(name: 'send_email') bool sendEmail,
+      @JsonKey(name: 'lsst_login') int lastLogin,
+      String password}) = _$_ClientContact;
 
-  factory _Contact.fromJson(Map<String, dynamic> json) = _$_Contact.fromJson;
+  factory _ClientContact.fromJson(Map<String, dynamic> json) =
+      _$_ClientContact.fromJson;
 
   @override
   String get id;
@@ -1312,9 +1544,211 @@ abstract class _Contact implements Contact {
   @JsonKey(name: 'custom_value4')
   String get customValue4;
   @override
-  String get name;
+  @JsonKey(name: 'first_name')
+  String get firstName;
   @override
-  _$ContactCopyWith<_Contact> get copyWith;
+  @JsonKey(name: 'last_name')
+  String get lastName;
+  @override
+  String get email;
+  @override
+  @JsonKey(name: 'is_primary')
+  bool get isPrimary;
+  @override
+  @JsonKey(name: 'is_locked')
+  bool get isLocked;
+  @override
+  String get phone;
+  @override
+  @JsonKey(name: 'contact_key')
+  String get contactKey;
+  @override
+  @JsonKey(name: 'send_email')
+  bool get sendEmail;
+  @override
+  @JsonKey(name: 'lsst_login')
+  int get lastLogin;
+  @override
+  String get password;
+  @override
+  _$ClientContactCopyWith<_ClientContact> get copyWith;
+}
+
+ClientSettings _$ClientSettingsFromJson(Map<String, dynamic> json) {
+  return _ClientSettings.fromJson(json);
+}
+
+class _$ClientSettingsTearOff {
+  const _$ClientSettingsTearOff();
+
+// ignore: unused_element
+  _ClientSettings call(
+      {@JsonKey(name: 'currency_id') String currencyId = '',
+      @JsonKey(name: 'language_id') String languageId = ''}) {
+    return _ClientSettings(
+      currencyId: currencyId,
+      languageId: languageId,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ClientSettings = _$ClientSettingsTearOff();
+
+mixin _$ClientSettings {
+  @JsonKey(name: 'currency_id')
+  String get currencyId;
+  @JsonKey(name: 'language_id')
+  String get languageId;
+
+  Map<String, dynamic> toJson();
+  $ClientSettingsCopyWith<ClientSettings> get copyWith;
+}
+
+abstract class $ClientSettingsCopyWith<$Res> {
+  factory $ClientSettingsCopyWith(
+          ClientSettings value, $Res Function(ClientSettings) then) =
+      _$ClientSettingsCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'currency_id') String currencyId,
+      @JsonKey(name: 'language_id') String languageId});
+}
+
+class _$ClientSettingsCopyWithImpl<$Res>
+    implements $ClientSettingsCopyWith<$Res> {
+  _$ClientSettingsCopyWithImpl(this._value, this._then);
+
+  final ClientSettings _value;
+  // ignore: unused_field
+  final $Res Function(ClientSettings) _then;
+
+  @override
+  $Res call({
+    Object currencyId = freezed,
+    Object languageId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      currencyId:
+          currencyId == freezed ? _value.currencyId : currencyId as String,
+      languageId:
+          languageId == freezed ? _value.languageId : languageId as String,
+    ));
+  }
+}
+
+abstract class _$ClientSettingsCopyWith<$Res>
+    implements $ClientSettingsCopyWith<$Res> {
+  factory _$ClientSettingsCopyWith(
+          _ClientSettings value, $Res Function(_ClientSettings) then) =
+      __$ClientSettingsCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'currency_id') String currencyId,
+      @JsonKey(name: 'language_id') String languageId});
+}
+
+class __$ClientSettingsCopyWithImpl<$Res>
+    extends _$ClientSettingsCopyWithImpl<$Res>
+    implements _$ClientSettingsCopyWith<$Res> {
+  __$ClientSettingsCopyWithImpl(
+      _ClientSettings _value, $Res Function(_ClientSettings) _then)
+      : super(_value, (v) => _then(v as _ClientSettings));
+
+  @override
+  _ClientSettings get _value => super._value as _ClientSettings;
+
+  @override
+  $Res call({
+    Object currencyId = freezed,
+    Object languageId = freezed,
+  }) {
+    return _then(_ClientSettings(
+      currencyId:
+          currencyId == freezed ? _value.currencyId : currencyId as String,
+      languageId:
+          languageId == freezed ? _value.languageId : languageId as String,
+    ));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class _$_ClientSettings
+    with DiagnosticableTreeMixin
+    implements _ClientSettings {
+  _$_ClientSettings(
+      {@JsonKey(name: 'currency_id') this.currencyId = '',
+      @JsonKey(name: 'language_id') this.languageId = ''})
+      : assert(currencyId != null),
+        assert(languageId != null);
+
+  factory _$_ClientSettings.fromJson(Map<String, dynamic> json) =>
+      _$_$_ClientSettingsFromJson(json);
+
+  @override
+  @JsonKey(name: 'currency_id')
+  final String currencyId;
+  @override
+  @JsonKey(name: 'language_id')
+  final String languageId;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ClientSettings(currencyId: $currencyId, languageId: $languageId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ClientSettings'))
+      ..add(DiagnosticsProperty('currencyId', currencyId))
+      ..add(DiagnosticsProperty('languageId', languageId));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ClientSettings &&
+            (identical(other.currencyId, currencyId) ||
+                const DeepCollectionEquality()
+                    .equals(other.currencyId, currencyId)) &&
+            (identical(other.languageId, languageId) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageId, languageId)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(currencyId) ^
+      const DeepCollectionEquality().hash(languageId);
+
+  @override
+  _$ClientSettingsCopyWith<_ClientSettings> get copyWith =>
+      __$ClientSettingsCopyWithImpl<_ClientSettings>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ClientSettingsToJson(this);
+  }
+}
+
+abstract class _ClientSettings implements ClientSettings {
+  factory _ClientSettings(
+      {@JsonKey(name: 'currency_id') String currencyId,
+      @JsonKey(name: 'language_id') String languageId}) = _$_ClientSettings;
+
+  factory _ClientSettings.fromJson(Map<String, dynamic> json) =
+      _$_ClientSettings.fromJson;
+
+  @override
+  @JsonKey(name: 'currency_id')
+  String get currencyId;
+  @override
+  @JsonKey(name: 'language_id')
+  String get languageId;
+  @override
+  _$ClientSettingsCopyWith<_ClientSettings> get copyWith;
 }
 
 ClientList _$ClientListFromJson(Map<String, dynamic> json) {

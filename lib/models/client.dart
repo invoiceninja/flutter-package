@@ -46,29 +46,51 @@ abstract class Client with _$Client {
     @JsonKey(name: 'shipping_postal_code')
         String shippingPostalCode,
     @Default('') @JsonKey(name: 'shipping_country_id') String shippingCountryId,
-    //'settings' => $client->settings ?: new \stdClass,
+    ClientSettings settings,
     @Default('') @JsonKey(name: 'id_number') String idNumber,
     @Default('') @JsonKey(name: 'vat_number') String vatNumber,
-    @Default(<Contact>[]) List<Contact> contacts,
+    @Default(<ClientContact>[]) List<ClientContact> contacts,
   }) = _Client;
 
   factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
 }
 
 @freezed
-abstract class Contact with _$Contact {
+abstract class ClientContact with _$ClientContact {
   @JsonSerializable(explicitToJson: true)
-  factory Contact({
+  factory ClientContact({
     @Default('') String id,
     @Default('') @JsonKey(name: 'custom_value1') String customValue1,
     @Default('') @JsonKey(name: 'custom_value2') String customValue2,
     @Default('') @JsonKey(name: 'custom_value3') String customValue3,
     @Default('') @JsonKey(name: 'custom_value4') String customValue4,
-    @Default('') String name,
-  }) = _Contact;
+    @Default('') @JsonKey(name: 'first_name') String firstName,
+    @Default('') @JsonKey(name: 'last_name') String lastName,
+    @Default('') String email,
+    @Default(false) @JsonKey(name: 'is_primary') bool isPrimary,
+    @Default(false) @JsonKey(name: 'is_locked') bool isLocked,
+    @Default('') String phone,
+    @Default('') @JsonKey(name: 'contact_key') String contactKey,
+    @Default(true) @JsonKey(name: 'send_email') bool sendEmail,
+    @Default(0) @JsonKey(name: 'lsst_login') int lastLogin,
+    @Default('') String password,
+  }) = _ClientContact;
 
-  factory Contact.fromJson(Map<String, dynamic> json) =>
-      _$ContactFromJson(json);
+  factory ClientContact.fromJson(Map<String, dynamic> json) =>
+      _$ClientContactFromJson(json);
+}
+
+@freezed
+abstract class ClientSettings with _$ClientSettings {
+  
+  @JsonSerializable(explicitToJson: true)
+  factory ClientSettings({
+    @Default('') @JsonKey(name: 'currency_id') String currencyId,
+    @Default('') @JsonKey(name: 'language_id') String languageId,
+  }) = _ClientSettings;
+
+  factory ClientSettings.fromJson(Map<String, dynamic> json) =>
+      _$ClientSettingsFromJson(json);
 }
 
 @freezed
