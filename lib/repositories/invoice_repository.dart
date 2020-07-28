@@ -4,8 +4,8 @@ import 'package:invoice_ninja/utils/web_client.dart';
 
 class InvoiceRepository {
   Future<Invoice> save(Invoice invoice) async {
-    dynamic response = await WebClient().put(
-        '${InvoiceNinja.url}/api/v1/invoices/${invoice.id}', InvoiceNinja.token,
+    dynamic response = await WebClient().post(
+        '${InvoiceNinja.url}/api/v1/invoices', InvoiceNinja.token,
         data: invoice.toJson());
 
     return InvoiceItem.fromJson(response).data;
