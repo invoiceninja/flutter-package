@@ -3,6 +3,7 @@ import 'package:invoiceninja/models/client.dart';
 import 'package:invoiceninja/utils/web_client.dart';
 
 class ClientRepository {
+  /// Persist client to the server
   Future<Client> save(Client client) async {
     dynamic response = await WebClient().post(
         '${InvoiceNinja.url}/api/v1/shop/clients', InvoiceNinja.companyKey,
@@ -11,6 +12,7 @@ class ClientRepository {
     return ClientItem.fromJson(response).data;
   }
 
+  /// Find a client by its contact key
   Future<Client> findByKey(String key) async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/shop/client/$key', InvoiceNinja.companyKey);
