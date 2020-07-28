@@ -36,7 +36,7 @@ class InvoiceRepository {
 
   Future<Invoice> findByNumber(String number) async {
     final response = await WebClient().get(
-        '${InvoiceNinja.url}/api/v1/invoices?number=$number',
+        '${InvoiceNinja.url}/api/v1/invoices?invoice_number=$number',
         InvoiceNinja.token);
 
     final data = InvoiceList.fromJson(response).data;
