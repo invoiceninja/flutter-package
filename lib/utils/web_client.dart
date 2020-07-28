@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:invoice_ninja/invoice_ninja.dart';
+import 'package:invoiceninja/invoiceninja.dart';
 
 class WebClient {
   const WebClient();

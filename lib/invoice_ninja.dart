@@ -1,8 +1,8 @@
-library invoice_ninja;
+library invoiceninja;
 
-import 'package:invoice_ninja/repositories/client_repository.dart';
-import 'package:invoice_ninja/repositories/invoice_repository.dart';
-import 'package:invoice_ninja/repositories/product_repository.dart';
+import 'package:invoiceninja/repositories/client_repository.dart';
+import 'package:invoiceninja/repositories/invoice_repository.dart';
+import 'package:invoiceninja/repositories/product_repository.dart';
 
 class InvoiceNinja {
   static String url = 'https://app.invoicing.co';

@@ -1,8 +1,8 @@
 // Import the test package and Counter class
 import 'package:flutter_test/flutter_test.dart';
-import 'package:invoice_ninja/invoice_ninja.dart';
-import 'package:invoice_ninja/models/client.dart';
-import 'package:invoice_ninja/models/invoice.dart';
+import 'package:invoiceninja/invoiceninja.dart';
+import 'package:invoiceninja/models/client.dart';
+import 'package:invoiceninja/models/invoice.dart';
 
 void main() {
   setUp(() async {

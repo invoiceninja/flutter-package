@@ -15,13 +15,13 @@ This package provides a simple way to charge for features/products in a Flutter 
 
 ```yaml
 dependencies:
-  invoice_ninja: "^1.0.0"
+  invoiceninja: "^1.0.0"
 ```
 
 ### Import
 
 ```dart
-import 'package:invoice_ninja/invoice_ninja.dart';
+import 'package:invoiceninja/invoiceninja.dart';
 ```
 
 ### Configure

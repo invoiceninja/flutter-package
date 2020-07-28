@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
-import 'package:invoice_ninja/models/invoice.dart';
+import 'package:invoiceninja/models/invoice.dart';
 
 part 'product.freezed.dart';
 

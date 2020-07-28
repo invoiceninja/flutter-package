@@ -1,6 +1,6 @@
-import 'package:invoice_ninja/invoice_ninja.dart';
-import 'package:invoice_ninja/models/invoice.dart';
-import 'package:invoice_ninja/utils/web_client.dart';
+import 'package:invoiceninja/invoiceninja.dart';
+import 'package:invoiceninja/models/invoice.dart';
+import 'package:invoiceninja/utils/web_client.dart';
 
 class InvoiceRepository {
   Future<Invoice> save(Invoice invoice) async {

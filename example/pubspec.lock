@@ -177,7 +177,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.12"
-  invoice_ninja:
+  invoiceninja:
     dependency: "direct main"
     description:
       path: "."
