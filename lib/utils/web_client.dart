@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:invoiceninja/invoiceninja.dart';
 
+/// Utility class to make web requests
 class WebClient {
   const WebClient();
 
+  /// Send a GET web request
   Future<dynamic> get(String url, String companyKey) async {
     _checkInitialized();
 
@@ -22,6 +24,7 @@ class WebClient {
     return json.decode(response.body);
   }
 
+  /// Send a POST web request
   Future<dynamic> post(
     String url,
     String companyKey, {
@@ -42,6 +45,7 @@ class WebClient {
     return json.decode(response.body);
   }
 
+  /// Send a PUT web request
   Future<dynamic> put(
     String url,
     String companyKey, {
@@ -63,6 +67,7 @@ class WebClient {
   }
 }
 
+/// Determine headers for request
 Map<String, String> _getHeaders(String companyKey) => {
       'X-API-COMPANY-KEY': companyKey,
       'X-Requested-With': 'XMLHttpRequest',
@@ -70,17 +75,20 @@ Map<String, String> _getHeaders(String companyKey) => {
       'user-agent': 'flutter-package',
     };
 
+/// Print long debug string
 void _printWrapped(String text) {
   final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
   pattern.allMatches(text).forEach((match) => print(match.group(0)));
 }
 
+/// Ensure package is correctly initialized
 void _checkInitialized() {
   if (!InvoiceNinja.isInitialized) {
     throw 'Invoice Ninja error: the package is not initialized, please call InvoiceNinja.configure()';
   }
 }
 
+/// Ensure the response is valid
 void _checkResponse(http.Response response) {
   final serverVersion = response.headers['x-app-version'];
 

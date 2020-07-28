@@ -9,6 +9,7 @@ part 'client.g.dart';
 abstract class Client implements _$Client {
   const Client._();
 
+  /// Client factory constructor
   @JsonSerializable(explicitToJson: true)
   factory Client({
     @Default('') String id,
@@ -80,6 +81,8 @@ abstract class Client implements _$Client {
 
 @freezed
 abstract class ClientContact with _$ClientContact {
+
+  /// ClientContact factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientContact({
     @Default('') String id,
@@ -106,6 +109,8 @@ abstract class ClientContact with _$ClientContact {
 
 @freezed
 abstract class ClientSettings with _$ClientSettings {
+
+  /// ClientSettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
     @nullable @Default('') @JsonKey(name: 'currency_id') String currencyId,
@@ -117,8 +122,11 @@ abstract class ClientSettings with _$ClientSettings {
       _$ClientSettingsFromJson(json);
 }
 
+/// Multi-item client response
 @freezed
 abstract class ClientList with _$ClientList {
+
+  /// ClientList factory constructor
   factory ClientList(List<Client> data) = _ClientList;
 
   /// Create a ClientList from JSON
@@ -126,8 +134,11 @@ abstract class ClientList with _$ClientList {
       _$ClientListFromJson(json);
 }
 
+/// Single-item client response
 @freezed
 abstract class ClientItem with _$ClientItem {
+
+  /// ClientItem factory constructor
   factory ClientItem(Client data) = _ClientItem;
 
   /// Create a ClientItem from JSON

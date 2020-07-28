@@ -11,6 +11,7 @@ part 'invoice.g.dart';
 abstract class Invoice implements _$Invoice {
   const Invoice._();
 
+  /// Invoice factory constructor
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
     @Default('') String id,
@@ -105,6 +106,8 @@ abstract class Invoice implements _$Invoice {
 
 @freezed
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
+
+  /// InvoiceLineItem factory constructor
   @JsonSerializable(explicitToJson: true)
   factory InvoiceLineItem({
     @Default('') String id,
@@ -135,6 +138,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 abstract class InvoiceInvitation implements _$InvoiceInvitation {
   const InvoiceInvitation._();
 
+  /// InvoiceInvitation factory constructor
   @JsonSerializable(explicitToJson: true)
   factory InvoiceInvitation({
     @Default('') String id,
@@ -154,8 +158,10 @@ abstract class InvoiceInvitation implements _$InvoiceInvitation {
       _$InvoiceInvitationFromJson(json);
 }
 
+/// Multi-item invoice response
 @freezed
 abstract class InvoiceList with _$InvoiceList {
+  /// InvoiceList factory constructor
   factory InvoiceList({List<Invoice> data}) = _InvoiceList;
 
   /// Create an InvoiceList from JSON
@@ -163,8 +169,11 @@ abstract class InvoiceList with _$InvoiceList {
       _$InvoiceListFromJson(json);
 }
 
+/// Single-item invoice response
 @freezed
 abstract class InvoiceItem with _$InvoiceItem {
+
+  /// InvoiceItem factory constructor
   factory InvoiceItem(Invoice data) = _InvoiceItem;
 
   /// Create an InvoiceItem from JSON

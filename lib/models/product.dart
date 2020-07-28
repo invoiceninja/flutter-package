@@ -10,6 +10,7 @@ part 'product.g.dart';
 abstract class Product implements _$Product {
   const Product._();
 
+  /// Product factory constructor
   @JsonSerializable(explicitToJson: true)
   factory Product({
     @Default('') String id,
@@ -59,8 +60,11 @@ abstract class Product implements _$Product {
       _$ProductFromJson(json);
 }
 
+/// Multi-item product response
 @freezed
 abstract class ProductList with _$ProductList {
+
+  /// ProductList factory constructor
   factory ProductList({List<Product> data}) = _ProductList;
 
   /// Create a ProductList from JSON
@@ -68,8 +72,11 @@ abstract class ProductList with _$ProductList {
       _$ProductListFromJson(json);
 }
 
+/// Single-item product response
 @freezed
 abstract class ProductItem with _$ProductItem {
+
+  /// ProductItem factory constructor
   factory ProductItem(Product data) = _ProductItem;
 
   /// Create a ProductItem from JSON
