@@ -5,7 +5,7 @@ import 'package:invoice_ninja/utils/web_client.dart';
 class InvoiceRepository {
   Future<Invoice> save(Invoice invoice) async {
     dynamic response = await WebClient().post(
-        '${InvoiceNinja.url}/api/v1/invoices', InvoiceNinja.token,
+        '${InvoiceNinja.url}/api/v1/shop/invoices', InvoiceNinja.companyKey,
         data: invoice.toJson());
 
     return InvoiceItem.fromJson(response).data;
@@ -13,7 +13,7 @@ class InvoiceRepository {
 
   Future<Invoice> findByKey(String key) async {
     final response = await WebClient()
-        .get('${InvoiceNinja.url}/api/v1/invoice/$key', InvoiceNinja.token);
+        .get('${InvoiceNinja.url}/api/v1/shop/invoice/$key', InvoiceNinja.companyKey);
 
     return InvoiceItem.fromJson(response).data;
   }

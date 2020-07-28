@@ -5,14 +5,14 @@ import 'package:invoice_ninja/utils/web_client.dart';
 class ProductRepository {
   Future<List<Product>> load() async {
     final response = await WebClient()
-        .get('${InvoiceNinja.url}/api/v1/products', InvoiceNinja.token);
+        .get('${InvoiceNinja.url}/api/v1/shop/products', InvoiceNinja.companyKey);
 
     return ProductList.fromJson(response).data;
   }
 
   Future<Product> findByKey(String key) async {
     final response = await WebClient()
-        .get('${InvoiceNinja.url}/api/v1/product/$key', InvoiceNinja.token);
+        .get('${InvoiceNinja.url}/api/v1/shop/product/$key', InvoiceNinja.companyKey);
 
     return ProductItem.fromJson(response).data;
   }

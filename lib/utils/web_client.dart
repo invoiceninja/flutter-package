@@ -5,12 +5,12 @@ import 'package:invoice_ninja/invoice_ninja.dart';
 class WebClient {
   const WebClient();
 
-  Future<dynamic> get(String url, String token) async {
+  Future<dynamic> get(String url, String companyKey) async {
     _checkInitialized();
 
     final http.Response response = await http.Client().get(
       url,
-      headers: _getHeaders(token),
+      headers: _getHeaders(companyKey),
     );
 
     if (InvoiceNinja.debugEnabled) {
@@ -24,13 +24,13 @@ class WebClient {
 
   Future<dynamic> post(
     String url,
-    String token, {
+    String companyKey, {
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .post(url, body: json.encode(data), headers: _getHeaders(token))
+        .post(url, body: json.encode(data), headers: _getHeaders(companyKey))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
@@ -44,13 +44,13 @@ class WebClient {
 
   Future<dynamic> put(
     String url,
-    String token, {
+    String companyKey, {
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .put(url, body: json.encode(data), headers: _getHeaders(token))
+        .put(url, body: json.encode(data), headers: _getHeaders(companyKey))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
@@ -63,8 +63,8 @@ class WebClient {
   }
 }
 
-Map<String, String> _getHeaders(String token) => {
-      'X-API-Token': token,
+Map<String, String> _getHeaders(String companyKey) => {
+      'X-API-COMPANY_KEY': companyKey,
       'X-Requested-With': 'XMLHttpRequest',
       'Content-Type': 'application/json',
       'user-agent': 'flutter-package',

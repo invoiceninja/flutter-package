@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   child: Text('Purchase'),
                   onPressed: () async {
                     _invoice = await createInvoice(product);
-                    launch(_invoice.url, forceWebView: true);
+                    //launch(_invoice.url, forceWebView: true);
                   },
                 ),
               ],
