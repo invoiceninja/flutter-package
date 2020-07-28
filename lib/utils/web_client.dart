@@ -77,7 +77,7 @@ void _printWrapped(String text) {
 
 void _checkInitialized() {
   if (!InvoiceNinja.isInitialized) {
-    throw 'Error: the Invoice Ninja package is not initialized, please call InvoiceNinja.configure(<token>)';
+    throw 'Invoice Ninja error: the package is not initialized, please call InvoiceNinja.configure()';
   }
 }
 
@@ -85,8 +85,8 @@ void _checkResponse(http.Response response) {
   final serverVersion = response.headers['x-app-version'];
 
   if (serverVersion == null) {
-    throw 'Error: please check that Invoice Ninja v5 is installed on the server';
+    throw 'Invoice Ninja error: please check that v5 is installed on the server';
   } else if (response.statusCode >= 400) {
-    throw response.body;
+    throw 'Invoice Ninja error: ${response.body}';
   }
 }
