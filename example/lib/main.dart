@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   Future<Invoice> createInvoice(Product product) async {
-    var client = Client.forContact(email: 'test@aol.com');
+    var client = Client.forContact(email: 'test@example.com');
     client = await InvoiceNinja.clients.save(client);
 
     var invoice = Invoice.forClient(client, products: [product]);
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   onPressed: () async {
                     final invoice = await createInvoice(product);
                     _invoiceKey = invoice.key;
-                    launch(invoice.url, forceWebView: true);
+                    launch(invoice.url);
                   },
                 ),
               ],
