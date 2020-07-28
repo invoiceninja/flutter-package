@@ -32,8 +32,8 @@ import 'package:invoiceninja/invoiceninja.dart';
 
 ```dart
 InvoiceNinja.configure(
-  'demo',
-  url: 'demo.invoiceninja.com',
+  'demo', // Set your company key or use 'demo' to test
+  url: 'https://demo.invoiceninja.com', // Set your selfhost app URL
   debugEnabled: true,
 );
 ```
