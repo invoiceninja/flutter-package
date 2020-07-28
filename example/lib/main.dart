@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:invoiceninja/invoiceninja.dart';
+import 'package:invoiceninja/invoice_ninja.dart';
+//import 'package:invoiceninja/invoiceninja.dart';
 import 'package:invoiceninja/models/client.dart';
 import 'package:invoiceninja/models/invoice.dart';
 import 'package:invoiceninja/models/product.dart';
