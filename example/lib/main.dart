@@ -10,15 +10,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Invoice Ninja Demo',
+      title: 'Invoice Ninja',
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: MyHomePage(title: 'Invoice Ninja Demo'),
+      home: MyHomePage(title: 'Invoice Ninja Example'),
     );
   }
 }
@@ -61,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (_invoice != null && state == AppLifecycleState.resumed) {
       //final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
     }
@@ -118,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   child: Text('Purchase'),
                   onPressed: () async {
                     _invoice = await createInvoice(product);
-                    //launch(_invoice.url, forceWebView: true);
+                    launch(_invoice.url, forceWebView: true);
                   },
                 ),
               ],
