@@ -12,7 +12,7 @@ class WebClient {
     );
 
     if (InvoiceNinja.debugEnabled) {
-      print('Invoice Ninja [GET] $url\n${response.body}');
+      _printWrapped('Invoice Ninja [GET] $url\n${response.body}');
     }
 
     return json.decode(response.body);
@@ -28,7 +28,7 @@ class WebClient {
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
-      print('Invoice Ninja [POST] $url\n${response.body}');
+      _printWrapped('Invoice Ninja [POST] $url\n${response.body}');
     }
 
     return json.decode(response.body);
@@ -44,7 +44,7 @@ class WebClient {
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
-      print('Invoice Ninja [PUT] $url\n${response.body}');
+      _printWrapped('Invoice Ninja [PUT] $url\n${response.body}');
     }
     return json.decode(response.body);
   }
@@ -56,3 +56,8 @@ Map<String, String> _getHeaders(String token) => {
       'Content-Type': 'application/json',
       'user-agent': 'flutter-package',
     };
+
+void _printWrapped(String text) {
+  final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
+  pattern.allMatches(text).forEach((match) => print(match.group(0)));
+}
