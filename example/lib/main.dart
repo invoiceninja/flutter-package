@@ -114,6 +114,8 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   child: Text('Purchase'),
                   onPressed: () async {
                     final invoice = await createInvoice(product);
+                    // Note: in production this value should be persisted in
+                    // case the app is killed before the user returns
                     _invoiceKey = invoice.key;
                     launch(invoice.url);
                   },

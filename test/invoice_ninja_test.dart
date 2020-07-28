@@ -1,15 +1,19 @@
+// Import the test package and Counter class
 import 'package:flutter_test/flutter_test.dart';
-
-//import 'package:invoice_ninja/invoice_ninja.dart';
+import 'package:invoice_ninja/invoice_ninja.dart';
 
 void main() {
-  test('adds one to input values', () {
-    /*
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
-     */
+  setUp(() async {
+    InvoiceNinja.configure(
+      'demo',
+      url: 'demo.invoiceninja.com',
+      debugEnabled: true,
+    );
   });
+
+  test('Load product list', () async {
+    final products = await InvoiceNinja.products.load();
+    expect(products.isNotEmpty, true);
+  });
+
 }
