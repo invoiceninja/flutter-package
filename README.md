@@ -82,4 +82,6 @@ if (invoice.isPaid) {
 }
 ```
 
-You can use WidgetsBindingObserver to run code when the app is resumed and maybe upvote issue [#57536](https://github.com/flutter/flutter/issues/57536) to make this better in the future.
+You can use WidgetsBindingObserver to run code when the app is resumed. 
+
+Consider giving issue [#57536](https://github.com/flutter/flutter/issues/57536) a thumbs up to make this better in the future.
