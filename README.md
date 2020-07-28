@@ -74,8 +74,8 @@ launch(
 var invoiceKey = invoice.key;
 launch(invoice.url);
 
-// The example project shows how to use WidgetsBindingObserver 
-// to run code when the app is resumed 
+// Use WidgetsBindingObserver to run code when the app is resumed
+// and maybe upvote issue [#57536](https://github.com/flutter/flutter/issues/57536) to make this better in the future  
 
 final invoice = await InvoiceNinja.invoices.findByKey(invoiceKey);
 if (invoice.isPaid) {
