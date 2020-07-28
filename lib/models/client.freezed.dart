@@ -35,7 +35,6 @@ class _$ClientTearOff {
       @JsonKey(name: 'group_settings_id') String groupId = '',
       @JsonKey(name: 'paid_to_date') double paidToDate = 0,
       @JsonKey(name: 'credit_balance') double creditBalance = 0,
-      @nullable @JsonKey(name: 'last_login') int lastLogin = 0,
       @JsonKey(name: 'size_id') String sizeId = '',
       @JsonKey(name: 'public_notes') String publicNotes = '',
       String phone = '',
@@ -75,7 +74,6 @@ class _$ClientTearOff {
       groupId: groupId,
       paidToDate: paidToDate,
       creditBalance: creditBalance,
-      lastLogin: lastLogin,
       sizeId: sizeId,
       publicNotes: publicNotes,
       phone: phone,
@@ -136,9 +134,6 @@ mixin _$Client {
   double get paidToDate;
   @JsonKey(name: 'credit_balance')
   double get creditBalance;
-  @nullable
-  @JsonKey(name: 'last_login')
-  int get lastLogin;
   @JsonKey(name: 'size_id')
   String get sizeId;
   @JsonKey(name: 'public_notes')
@@ -199,7 +194,6 @@ abstract class $ClientCopyWith<$Res> {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -251,7 +245,6 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
     Object groupId = freezed,
     Object paidToDate = freezed,
     Object creditBalance = freezed,
-    Object lastLogin = freezed,
     Object sizeId = freezed,
     Object publicNotes = freezed,
     Object phone = freezed,
@@ -308,7 +301,6 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
       creditBalance: creditBalance == freezed
           ? _value.creditBalance
           : creditBalance as double,
-      lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
       sizeId: sizeId == freezed ? _value.sizeId : sizeId as String,
       publicNotes:
           publicNotes == freezed ? _value.publicNotes : publicNotes as String,
@@ -384,7 +376,6 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -438,7 +429,6 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
     Object groupId = freezed,
     Object paidToDate = freezed,
     Object creditBalance = freezed,
-    Object lastLogin = freezed,
     Object sizeId = freezed,
     Object publicNotes = freezed,
     Object phone = freezed,
@@ -495,7 +485,6 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
       creditBalance: creditBalance == freezed
           ? _value.creditBalance
           : creditBalance as double,
-      lastLogin: lastLogin == freezed ? _value.lastLogin : lastLogin as int,
       sizeId: sizeId == freezed ? _value.sizeId : sizeId as String,
       publicNotes:
           publicNotes == freezed ? _value.publicNotes : publicNotes as String,
@@ -559,7 +548,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       @JsonKey(name: 'group_settings_id') this.groupId = '',
       @JsonKey(name: 'paid_to_date') this.paidToDate = 0,
       @JsonKey(name: 'credit_balance') this.creditBalance = 0,
-      @nullable @JsonKey(name: 'last_login') this.lastLogin = 0,
       @JsonKey(name: 'size_id') this.sizeId = '',
       @JsonKey(name: 'public_notes') this.publicNotes = '',
       this.phone = '',
@@ -676,10 +664,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
   @JsonKey(name: 'credit_balance')
   final double creditBalance;
   @override
-  @nullable
-  @JsonKey(name: 'last_login')
-  final int lastLogin;
-  @override
   @JsonKey(name: 'size_id')
   final String sizeId;
   @override
@@ -741,7 +725,7 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts)';
+    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts)';
   }
 
   @override
@@ -767,7 +751,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       ..add(DiagnosticsProperty('groupId', groupId))
       ..add(DiagnosticsProperty('paidToDate', paidToDate))
       ..add(DiagnosticsProperty('creditBalance', creditBalance))
-      ..add(DiagnosticsProperty('lastLogin', lastLogin))
       ..add(DiagnosticsProperty('sizeId', sizeId))
       ..add(DiagnosticsProperty('publicNotes', publicNotes))
       ..add(DiagnosticsProperty('phone', phone))
@@ -846,9 +829,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
             (identical(other.creditBalance, creditBalance) ||
                 const DeepCollectionEquality()
                     .equals(other.creditBalance, creditBalance)) &&
-            (identical(other.lastLogin, lastLogin) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastLogin, lastLogin)) &&
             (identical(other.sizeId, sizeId) ||
                 const DeepCollectionEquality().equals(other.sizeId, sizeId)) &&
             (identical(other.publicNotes, publicNotes) ||
@@ -860,8 +840,10 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
                 const DeepCollectionEquality()
                     .equals(other.address1, address1)) &&
             (identical(other.address2, address2) ||
-                const DeepCollectionEquality().equals(other.address2, address2)) &&
-            (identical(other.city, city) || const DeepCollectionEquality().equals(other.city, city)) &&
+                const DeepCollectionEquality()
+                    .equals(other.address2, address2)) &&
+            (identical(other.city, city) ||
+                const DeepCollectionEquality().equals(other.city, city)) &&
             (identical(other.state, state) || const DeepCollectionEquality().equals(other.state, state)) &&
             (identical(other.postalCode, postalCode) || const DeepCollectionEquality().equals(other.postalCode, postalCode)) &&
             (identical(other.countryId, countryId) || const DeepCollectionEquality().equals(other.countryId, countryId)) &&
@@ -899,7 +881,6 @@ class _$_Client with DiagnosticableTreeMixin implements _Client {
       const DeepCollectionEquality().hash(groupId) ^
       const DeepCollectionEquality().hash(paidToDate) ^
       const DeepCollectionEquality().hash(creditBalance) ^
-      const DeepCollectionEquality().hash(lastLogin) ^
       const DeepCollectionEquality().hash(sizeId) ^
       const DeepCollectionEquality().hash(publicNotes) ^
       const DeepCollectionEquality().hash(phone) ^
@@ -951,7 +932,6 @@ abstract class _Client implements Client {
       @JsonKey(name: 'group_settings_id') String groupId,
       @JsonKey(name: 'paid_to_date') double paidToDate,
       @JsonKey(name: 'credit_balance') double creditBalance,
-      @nullable @JsonKey(name: 'last_login') int lastLogin,
       @JsonKey(name: 'size_id') String sizeId,
       @JsonKey(name: 'public_notes') String publicNotes,
       String phone,
@@ -1025,10 +1005,6 @@ abstract class _Client implements Client {
   @override
   @JsonKey(name: 'credit_balance')
   double get creditBalance;
-  @override
-  @nullable
-  @JsonKey(name: 'last_login')
-  int get lastLogin;
   @override
   @JsonKey(name: 'size_id')
   String get sizeId;
