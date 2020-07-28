@@ -17,6 +17,8 @@ class WebClient {
       _printWrapped('Invoice Ninja [GET] $url\n${response.body}');
     }
 
+    _checkResponse(response);
+
     return json.decode(response.body);
   }
 
@@ -35,6 +37,8 @@ class WebClient {
       _printWrapped('Invoice Ninja [POST] $url\n${response.body}');
     }
 
+    _checkResponse(response);
+
     return json.decode(response.body);
   }
 
@@ -52,6 +56,9 @@ class WebClient {
     if (InvoiceNinja.debugEnabled) {
       _printWrapped('Invoice Ninja [PUT] $url\n${response.body}');
     }
+
+    _checkResponse(response);
+
     return json.decode(response.body);
   }
 }
@@ -71,5 +78,15 @@ void _printWrapped(String text) {
 void _checkInitialized() {
   if (!InvoiceNinja.isInitialized) {
     throw 'Error: the Invoice Ninja package is not initialized, please call InvoiceNinja.configure(<token>)';
+  }
+}
+
+void _checkResponse(http.Response response) {
+  final serverVersion = response.headers['x-app-version'];
+
+  if (serverVersion == null) {
+    throw 'Error: please check that Invoice Ninja v5 is installed on the server';
+  } else if (response.statusCode >= 400) {
+    throw response.body;
   }
 }
