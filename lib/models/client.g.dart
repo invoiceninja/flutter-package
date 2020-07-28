@@ -26,6 +26,7 @@ _$_Client _$_$_ClientFromJson(Map<String, dynamic> json) {
     groupId: json['group_settings_id'] as String,
     paidToDate: (json['paid_to_date'] as num)?.toDouble(),
     creditBalance: (json['credit_balance'] as num)?.toDouble(),
+    lastLogin: json['last_login'] as int,
     sizeId: json['size_id'] as String,
     publicNotes: json['public_notes'] as String,
     phone: json['phone'] as String ?? '',
@@ -75,6 +76,7 @@ Map<String, dynamic> _$_$_ClientToJson(_$_Client instance) => <String, dynamic>{
       'group_settings_id': instance.groupId,
       'paid_to_date': instance.paidToDate,
       'credit_balance': instance.creditBalance,
+      'last_login': instance.lastLogin,
       'size_id': instance.sizeId,
       'public_notes': instance.publicNotes,
       'phone': instance.phone,
@@ -112,7 +114,7 @@ _$_ClientContact _$_$_ClientContactFromJson(Map<String, dynamic> json) {
     phone: json['phone'] as String ?? '',
     key: json['contact_key'] as String,
     sendEmail: json['send_email'] as bool,
-    lastLogin: json['lsst_login'] as int,
+    lastLogin: json['last_login'] as int,
     password: json['password'] as String ?? '',
   );
 }
@@ -132,7 +134,7 @@ Map<String, dynamic> _$_$_ClientContactToJson(_$_ClientContact instance) =>
       'phone': instance.phone,
       'contact_key': instance.key,
       'send_email': instance.sendEmail,
-      'lsst_login': instance.lastLogin,
+      'last_login': instance.lastLogin,
       'password': instance.password,
     };
 

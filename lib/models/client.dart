@@ -27,6 +27,7 @@ abstract class Client with _$Client {
     @Default('') @JsonKey(name: 'group_settings_id') String groupId,
     @Default(0) @JsonKey(name: 'paid_to_date') double paidToDate,
     @Default(0) @JsonKey(name: 'credit_balance') double creditBalance,
+    @Default(0) @JsonKey(name: 'last_login') int lastLogin,
     @Default('') @JsonKey(name: 'size_id') String sizeId,
     @Default('') @JsonKey(name: 'public_notes') String publicNotes,
     @Default('') String phone,
@@ -71,7 +72,7 @@ abstract class ClientContact with _$ClientContact {
     @Default('') String phone,
     @Default('') @JsonKey(name: 'contact_key') String key,
     @Default(true) @JsonKey(name: 'send_email') bool sendEmail,
-    @Default(0) @JsonKey(name: 'lsst_login') int lastLogin,
+    @Default(0) @JsonKey(name: 'last_login') int lastLogin,
     @Default('') String password,
   }) = _ClientContact;
 
