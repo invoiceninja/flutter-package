@@ -10,6 +10,16 @@ abstract class Invoice with _$Invoice {
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
     @Default('') String id,
+    @Default('') @JsonKey(name: 'user_id') String createdById,
+    @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
+    @Default(0) @JsonKey(name: 'created_at') int createdAt,
+    @Default(0) @JsonKey(name: 'updated_at') int updatedAt,
+    @Default(0) @JsonKey(name: 'archived_at') int archivedAt,
+    @Default(false) @JsonKey(name: 'is_deleted') bool isDeleted,
+    @Default('') @JsonKey(name: 'custom_value1') String customValue1,
+    @Default('') @JsonKey(name: 'custom_value2') String customValue2,
+    @Default('') @JsonKey(name: 'custom_value3') String customValue3,
+    @Default('') @JsonKey(name: 'custom_value4') String customValue4,
     @Default('') @JsonKey(name: 'client_id') String clientId,
     @Default(<LineItem>[])
     @JsonKey(name: 'line_items')

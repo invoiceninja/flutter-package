@@ -10,11 +10,65 @@ abstract class Client with _$Client {
   @JsonSerializable(explicitToJson: true)
   factory Client({
     @Default('') String id,
+    @Default('') @JsonKey(name: 'user_id') String createdById,
+    @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
+    @Default(0) @JsonKey(name: 'created_at') int createdAt,
+    @Default(0) @JsonKey(name: 'updated_at') int updatedAt,
+    @Default(0) @JsonKey(name: 'archived_at') int archivedAt,
+    @Default(false) @JsonKey(name: 'is_deleted') bool isDeleted,
+    @Default('') @JsonKey(name: 'custom_value1') String customValue1,
+    @Default('') @JsonKey(name: 'custom_value2') String customValue2,
+    @Default('') @JsonKey(name: 'custom_value3') String customValue3,
+    @Default('') @JsonKey(name: 'custom_value4') String customValue4,
     @Default('') String name,
+    @Default('') String website,
+    @Default('') @JsonKey(name: 'private_notes') String privateNotes,
+    @Default(0) double balance,
+    @Default('') @JsonKey(name: 'group_settings_id') String groupId,
+    @Default(0) @JsonKey(name: 'paid_to_date') double paidToDate,
+    @Default(0) @JsonKey(name: 'credit_balance') double creditBalance,
+    @Default(0) @JsonKey(name: 'last_login') int lastLogin,
+    @Default('') @JsonKey(name: 'size_id') String sizeId,
+    @Default('') @JsonKey(name: 'public_notes') String publicNotes,
+    @Default('') String phone,
+    @Default('') String address1,
+    @Default('') String address2,
+    @Default('') String city,
+    @Default('') String state,
+    @Default('') @JsonKey(name: 'postal_code') String postalCode,
+    @Default('') @JsonKey(name: 'country_id') String countryId,
+    @Default('') @JsonKey(name: 'industry_id') String industryId,
+    @Default('') @JsonKey(name: 'shipping_address1') String shippingAddress1,
+    @Default('') @JsonKey(name: 'shipping_address2') String shippingAddress2,
+    @Default('') @JsonKey(name: 'shipping_city') String shippingCity,
+    @Default('') @JsonKey(name: 'shipping_state') String shippingState,
+    @Default('')
+    @JsonKey(name: 'shipping_postal_code')
+        String shippingPostalCode,
+    @Default('') @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+    //'settings' => $client->settings ?: new \stdClass,
+    @Default('') @JsonKey(name: 'id_number') String idNumber,
+    @Default('') @JsonKey(name: 'vat_number') String vatNumber,
+    @Default(<Contact>[]) List<Contact> contacts,
   }) = _Client;
 
-  factory Client.fromJson(Map<String, dynamic> json) =>
-      _$ClientFromJson(json);
+  factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
+}
+
+@freezed
+abstract class Contact with _$Contact {
+  @JsonSerializable(explicitToJson: true)
+  factory Contact({
+    @Default('') String id,
+    @Default('') @JsonKey(name: 'custom_value1') String customValue1,
+    @Default('') @JsonKey(name: 'custom_value2') String customValue2,
+    @Default('') @JsonKey(name: 'custom_value3') String customValue3,
+    @Default('') @JsonKey(name: 'custom_value4') String customValue4,
+    @Default('') String name,
+  }) = _Contact;
+
+  factory Contact.fromJson(Map<String, dynamic> json) =>
+      _$ContactFromJson(json);
 }
 
 @freezed

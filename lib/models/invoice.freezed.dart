@@ -18,12 +18,42 @@ class _$InvoiceTearOff {
 // ignore: unused_element
   _Invoice call(
       {String id = '',
+      @JsonKey(name: 'user_id')
+          String createdById = '',
+      @JsonKey(name: 'assigned_user_id')
+          String assignedToId = '',
+      @JsonKey(name: 'created_at')
+          int createdAt = 0,
+      @JsonKey(name: 'updated_at')
+          int updatedAt = 0,
+      @JsonKey(name: 'archived_at')
+          int archivedAt = 0,
+      @JsonKey(name: 'is_deleted')
+          bool isDeleted = false,
+      @JsonKey(name: 'custom_value1')
+          String customValue1 = '',
+      @JsonKey(name: 'custom_value2')
+          String customValue2 = '',
+      @JsonKey(name: 'custom_value3')
+          String customValue3 = '',
+      @JsonKey(name: 'custom_value4')
+          String customValue4 = '',
       @JsonKey(name: 'client_id')
           String clientId = '',
       @JsonKey(name: 'line_items')
           List<LineItem> lineItems = const <LineItem>[]}) {
     return _Invoice(
       id: id,
+      createdById: createdById,
+      assignedToId: assignedToId,
+      createdAt: createdAt,
+      updatedAt: updatedAt,
+      archivedAt: archivedAt,
+      isDeleted: isDeleted,
+      customValue1: customValue1,
+      customValue2: customValue2,
+      customValue3: customValue3,
+      customValue4: customValue4,
       clientId: clientId,
       lineItems: lineItems,
     );
@@ -35,6 +65,26 @@ const $Invoice = _$InvoiceTearOff();
 
 mixin _$Invoice {
   String get id;
+  @JsonKey(name: 'user_id')
+  String get createdById;
+  @JsonKey(name: 'assigned_user_id')
+  String get assignedToId;
+  @JsonKey(name: 'created_at')
+  int get createdAt;
+  @JsonKey(name: 'updated_at')
+  int get updatedAt;
+  @JsonKey(name: 'archived_at')
+  int get archivedAt;
+  @JsonKey(name: 'is_deleted')
+  bool get isDeleted;
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
   @JsonKey(name: 'client_id')
   String get clientId;
   @JsonKey(name: 'line_items')
@@ -49,6 +99,16 @@ abstract class $InvoiceCopyWith<$Res> {
       _$InvoiceCopyWithImpl<$Res>;
   $Res call(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
+      @JsonKey(name: 'assigned_user_id') String assignedToId,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
       @JsonKey(name: 'line_items') List<LineItem> lineItems});
 }
@@ -63,11 +123,42 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
+    Object createdById = freezed,
+    Object assignedToId = freezed,
+    Object createdAt = freezed,
+    Object updatedAt = freezed,
+    Object archivedAt = freezed,
+    Object isDeleted = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
     Object clientId = freezed,
     Object lineItems = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
+      createdById:
+          createdById == freezed ? _value.createdById : createdById as String,
+      assignedToId: assignedToId == freezed
+          ? _value.assignedToId
+          : assignedToId as String,
+      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
+      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
+      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
       clientId: clientId == freezed ? _value.clientId : clientId as String,
       lineItems:
           lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
@@ -81,6 +172,16 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
   @override
   $Res call(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
+      @JsonKey(name: 'assigned_user_id') String assignedToId,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
       @JsonKey(name: 'line_items') List<LineItem> lineItems});
 }
@@ -96,11 +197,42 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object createdById = freezed,
+    Object assignedToId = freezed,
+    Object createdAt = freezed,
+    Object updatedAt = freezed,
+    Object archivedAt = freezed,
+    Object isDeleted = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
     Object clientId = freezed,
     Object lineItems = freezed,
   }) {
     return _then(_Invoice(
       id: id == freezed ? _value.id : id as String,
+      createdById:
+          createdById == freezed ? _value.createdById : createdById as String,
+      assignedToId: assignedToId == freezed
+          ? _value.assignedToId
+          : assignedToId as String,
+      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
+      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
+      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
       clientId: clientId == freezed ? _value.clientId : clientId as String,
       lineItems:
           lineItems == freezed ? _value.lineItems : lineItems as List<LineItem>,
@@ -112,9 +244,29 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
 class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   _$_Invoice(
       {this.id = '',
+      @JsonKey(name: 'user_id') this.createdById = '',
+      @JsonKey(name: 'assigned_user_id') this.assignedToId = '',
+      @JsonKey(name: 'created_at') this.createdAt = 0,
+      @JsonKey(name: 'updated_at') this.updatedAt = 0,
+      @JsonKey(name: 'archived_at') this.archivedAt = 0,
+      @JsonKey(name: 'is_deleted') this.isDeleted = false,
+      @JsonKey(name: 'custom_value1') this.customValue1 = '',
+      @JsonKey(name: 'custom_value2') this.customValue2 = '',
+      @JsonKey(name: 'custom_value3') this.customValue3 = '',
+      @JsonKey(name: 'custom_value4') this.customValue4 = '',
       @JsonKey(name: 'client_id') this.clientId = '',
       @JsonKey(name: 'line_items') this.lineItems = const <LineItem>[]})
       : assert(id != null),
+        assert(createdById != null),
+        assert(assignedToId != null),
+        assert(createdAt != null),
+        assert(updatedAt != null),
+        assert(archivedAt != null),
+        assert(isDeleted != null),
+        assert(customValue1 != null),
+        assert(customValue2 != null),
+        assert(customValue3 != null),
+        assert(customValue4 != null),
         assert(clientId != null),
         assert(lineItems != null);
 
@@ -125,6 +277,36 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   @override
   final String id;
   @override
+  @JsonKey(name: 'user_id')
+  final String createdById;
+  @override
+  @JsonKey(name: 'assigned_user_id')
+  final String assignedToId;
+  @override
+  @JsonKey(name: 'created_at')
+  final int createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  final int updatedAt;
+  @override
+  @JsonKey(name: 'archived_at')
+  final int archivedAt;
+  @override
+  @JsonKey(name: 'is_deleted')
+  final bool isDeleted;
+  @override
+  @JsonKey(name: 'custom_value1')
+  final String customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  final String customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  final String customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  final String customValue4;
+  @override
   @JsonKey(name: 'client_id')
   final String clientId;
   @override
@@ -133,7 +315,7 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Invoice(id: $id, clientId: $clientId, lineItems: $lineItems)';
+    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems)';
   }
 
   @override
@@ -142,6 +324,16 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
     properties
       ..add(DiagnosticsProperty('type', 'Invoice'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('createdById', createdById))
+      ..add(DiagnosticsProperty('assignedToId', assignedToId))
+      ..add(DiagnosticsProperty('createdAt', createdAt))
+      ..add(DiagnosticsProperty('updatedAt', updatedAt))
+      ..add(DiagnosticsProperty('archivedAt', archivedAt))
+      ..add(DiagnosticsProperty('isDeleted', isDeleted))
+      ..add(DiagnosticsProperty('customValue1', customValue1))
+      ..add(DiagnosticsProperty('customValue2', customValue2))
+      ..add(DiagnosticsProperty('customValue3', customValue3))
+      ..add(DiagnosticsProperty('customValue4', customValue4))
       ..add(DiagnosticsProperty('clientId', clientId))
       ..add(DiagnosticsProperty('lineItems', lineItems));
   }
@@ -152,6 +344,36 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
         (other is _Invoice &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.createdById, createdById) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdById, createdById)) &&
+            (identical(other.assignedToId, assignedToId) ||
+                const DeepCollectionEquality()
+                    .equals(other.assignedToId, assignedToId)) &&
+            (identical(other.createdAt, createdAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdAt, createdAt)) &&
+            (identical(other.updatedAt, updatedAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.updatedAt, updatedAt)) &&
+            (identical(other.archivedAt, archivedAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.archivedAt, archivedAt)) &&
+            (identical(other.isDeleted, isDeleted) ||
+                const DeepCollectionEquality()
+                    .equals(other.isDeleted, isDeleted)) &&
+            (identical(other.customValue1, customValue1) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue1, customValue1)) &&
+            (identical(other.customValue2, customValue2) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue2, customValue2)) &&
+            (identical(other.customValue3, customValue3) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue3, customValue3)) &&
+            (identical(other.customValue4, customValue4) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue4, customValue4)) &&
             (identical(other.clientId, clientId) ||
                 const DeepCollectionEquality()
                     .equals(other.clientId, clientId)) &&
@@ -164,6 +386,16 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(createdById) ^
+      const DeepCollectionEquality().hash(assignedToId) ^
+      const DeepCollectionEquality().hash(createdAt) ^
+      const DeepCollectionEquality().hash(updatedAt) ^
+      const DeepCollectionEquality().hash(archivedAt) ^
+      const DeepCollectionEquality().hash(isDeleted) ^
+      const DeepCollectionEquality().hash(customValue1) ^
+      const DeepCollectionEquality().hash(customValue2) ^
+      const DeepCollectionEquality().hash(customValue3) ^
+      const DeepCollectionEquality().hash(customValue4) ^
       const DeepCollectionEquality().hash(clientId) ^
       const DeepCollectionEquality().hash(lineItems);
 
@@ -180,6 +412,16 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
 abstract class _Invoice implements Invoice {
   factory _Invoice(
       {String id,
+      @JsonKey(name: 'user_id') String createdById,
+      @JsonKey(name: 'assigned_user_id') String assignedToId,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
       @JsonKey(name: 'line_items') List<LineItem> lineItems}) = _$_Invoice;
 
@@ -187,6 +429,36 @@ abstract class _Invoice implements Invoice {
 
   @override
   String get id;
+  @override
+  @JsonKey(name: 'user_id')
+  String get createdById;
+  @override
+  @JsonKey(name: 'assigned_user_id')
+  String get assignedToId;
+  @override
+  @JsonKey(name: 'created_at')
+  int get createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  int get updatedAt;
+  @override
+  @JsonKey(name: 'archived_at')
+  int get archivedAt;
+  @override
+  @JsonKey(name: 'is_deleted')
+  bool get isDeleted;
+  @override
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @override
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @override
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @override
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
   @override
   @JsonKey(name: 'client_id')
   String get clientId;
