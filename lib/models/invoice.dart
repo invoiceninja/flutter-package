@@ -7,6 +7,7 @@ part 'invoice.freezed.dart';
 
 part 'invoice.g.dart';
 
+/// Invoice class
 @freezed
 abstract class Invoice implements _$Invoice {
   const Invoice._();
@@ -104,6 +105,7 @@ abstract class Invoice implements _$Invoice {
       _$InvoiceFromJson(json);
 }
 
+/// InvoiceLineItem class
 @freezed
 abstract class InvoiceLineItem implements _$InvoiceLineItem {
 
@@ -134,6 +136,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
       _$InvoiceLineItemFromJson(json);
 }
 
+/// InvoiceInvitation class
 @freezed
 abstract class InvoiceInvitation implements _$InvoiceInvitation {
   const InvoiceInvitation._();

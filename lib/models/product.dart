@@ -6,6 +6,7 @@ part 'product.freezed.dart';
 
 part 'product.g.dart';
 
+/// Product class
 @freezed
 abstract class Product implements _$Product {
   const Product._();
@@ -63,7 +64,6 @@ abstract class Product implements _$Product {
 /// Multi-item product response
 @freezed
 abstract class ProductList with _$ProductList {
-
   /// ProductList factory constructor
   factory ProductList({List<Product> data}) = _ProductList;
 
@@ -75,7 +75,6 @@ abstract class ProductList with _$ProductList {
 /// Single-item product response
 @freezed
 abstract class ProductItem with _$ProductItem {
-
   /// ProductItem factory constructor
   factory ProductItem(Product data) = _ProductItem;
 

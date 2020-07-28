@@ -5,6 +5,7 @@ part 'client.freezed.dart';
 
 part 'client.g.dart';
 
+/// Client class
 @freezed
 abstract class Client implements _$Client {
   const Client._();
@@ -79,6 +80,7 @@ abstract class Client implements _$Client {
   factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
 }
 
+/// ClientContact class
 @freezed
 abstract class ClientContact with _$ClientContact {
 
@@ -107,6 +109,7 @@ abstract class ClientContact with _$ClientContact {
       _$ClientContactFromJson(json);
 }
 
+/// ClientSettings class
 @freezed
 abstract class ClientSettings with _$ClientSettings {
 

@@ -19,7 +19,7 @@ This package provides a simple way to charge for features/products in a Flutter 
 
 ```yaml
 dependencies:
-  invoiceninja: ^0.0.2
+  invoiceninja: ^0.0.3
 ```
 
 ### Import
