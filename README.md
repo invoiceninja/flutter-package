@@ -1,6 +1,6 @@
 # Invoice Ninja 
 
-A Dart package to integrate with Invoice Ninja
+This package provides a simple way to charge users for features/products in your Flutter app 
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
