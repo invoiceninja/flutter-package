@@ -68,6 +68,14 @@ launch(
 ### Accept the payment 
 
 ```dart
+var invoiceKey = invoice.key;
 launch(invoice.url);
-```
 
+// The example project shows how to use WidgetsBindingObserver 
+// to run code when the app is resumed 
+
+final invoice = await InvoiceNinja.invoices.findByKey(invoiceKey);
+if (invoice.isPaid) {
+  // ...
+}
+```
