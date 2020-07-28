@@ -80,6 +80,8 @@ abstract class Invoice implements _$Invoice {
 
   String get pdfUrl => invitations.first.pdfUrl;
 
+  bool get isPaid => statusId == '4';
+
   factory Invoice.fromJson(Map<String, dynamic> json) =>
       _$InvoiceFromJson(json);
 }
