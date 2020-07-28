@@ -36,6 +36,7 @@ abstract class Product implements _$Product {
     @Default(0) @JsonKey(name: 'tax_rate3') double taxRate3,
   }) = _Product;
 
+  /// Convert a product to an invoice line item
   InvoiceLineItem get toLineItem => InvoiceLineItem(
         productKey: productKey,
         notes: notes,
@@ -53,6 +54,7 @@ abstract class Product implements _$Product {
         taxRate3: taxRate3,
       );
 
+  /// Create a Product from JSON
   factory Product.fromJson(Map<String, dynamic> json) =>
       _$ProductFromJson(json);
 }
@@ -61,6 +63,7 @@ abstract class Product implements _$Product {
 abstract class ProductList with _$ProductList {
   factory ProductList({List<Product> data}) = _ProductList;
 
+  /// Create a ProductList from JSON
   factory ProductList.fromJson(Map<String, dynamic> json) =>
       _$ProductListFromJson(json);
 }
@@ -69,6 +72,7 @@ abstract class ProductList with _$ProductList {
 abstract class ProductItem with _$ProductItem {
   factory ProductItem(Product data) = _ProductItem;
 
+  /// Create a ProductItem from JSON
   factory ProductItem.fromJson(Map<String, dynamic> json) =>
       _$ProductItemFromJson(json);
 }

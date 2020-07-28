@@ -3,6 +3,8 @@ import 'package:invoiceninja/models/product.dart';
 import 'package:invoiceninja/utils/web_client.dart';
 
 class ProductRepository {
+
+  /// Load list of products
   Future<List<Product>> load() async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/shop/products', InvoiceNinja.companyKey);
@@ -10,6 +12,7 @@ class ProductRepository {
     return ProductList.fromJson(response).data;
   }
 
+  /// Find a product by its key
   Future<Product> findByKey(String key) async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/shop/product/$key', InvoiceNinja.companyKey);

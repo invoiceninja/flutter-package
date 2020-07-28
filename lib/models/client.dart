@@ -54,6 +54,7 @@ abstract class Client implements _$Client {
     @Default(<ClientContact>[]) List<ClientContact> contacts,
   }) = _Client;
 
+  /// Create a client using contact details
   factory Client.forContact({
     String firstName = '',
     String lastName = '',
@@ -70,8 +71,10 @@ abstract class Client implements _$Client {
     ]);
   }
 
+  /// Get the default contact key
   String get key => contacts.first.key;
 
+  /// Create a Client from JSON
   factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
 }
 
@@ -96,6 +99,7 @@ abstract class ClientContact with _$ClientContact {
     @Default('') String password,
   }) = _ClientContact;
 
+  /// Create a ClientContact from JSON
   factory ClientContact.fromJson(Map<String, dynamic> json) =>
       _$ClientContactFromJson(json);
 }
@@ -108,6 +112,7 @@ abstract class ClientSettings with _$ClientSettings {
     @nullable @Default('') @JsonKey(name: 'language_id') String languageId,
   }) = _ClientSettings;
 
+  /// Create a ClientSettings from JSON
   factory ClientSettings.fromJson(Map<String, dynamic> json) =>
       _$ClientSettingsFromJson(json);
 }
@@ -116,6 +121,7 @@ abstract class ClientSettings with _$ClientSettings {
 abstract class ClientList with _$ClientList {
   factory ClientList(List<Client> data) = _ClientList;
 
+  /// Create a ClientList from JSON
   factory ClientList.fromJson(Map<String, dynamic> json) =>
       _$ClientListFromJson(json);
 }
@@ -124,6 +130,7 @@ abstract class ClientList with _$ClientList {
 abstract class ClientItem with _$ClientItem {
   factory ClientItem(Client data) = _ClientItem;
 
+  /// Create a ClientItem from JSON
   factory ClientItem.fromJson(Map<String, dynamic> json) =>
       _$ClientItemFromJson(json);
 }

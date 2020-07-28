@@ -78,6 +78,7 @@ abstract class Invoice implements _$Invoice {
         bool customSurchargeTax4,
   }) = _Invoice;
 
+  /// Create an invoice for a client
   factory Invoice.forClient(Client client, {List<Product> products}) {
     return Invoice(
       clientId: client.id,
@@ -85,14 +86,19 @@ abstract class Invoice implements _$Invoice {
     );
   }
 
+  /// Get the default invitation URL
   String get url => invitations.first.url;
 
+  /// Get the default invitation PDF URL
   String get pdfUrl => invitations.first.pdfUrl;
 
+  /// Get the default invitation key
   String get key => invitations.first.key;
 
+  /// Determine if the invoice is paid
   bool get isPaid => statusId == '4';
 
+  /// Create an Invoice from JSON
   factory Invoice.fromJson(Map<String, dynamic> json) =>
       _$InvoiceFromJson(json);
 }
@@ -120,6 +126,7 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
     @Default(0) double discount,
   }) = _InvoiceLineItem;
 
+  /// Create an InvoiceLineItem from JSON
   factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
       _$InvoiceLineItemFromJson(json);
 }
@@ -139,8 +146,10 @@ abstract class InvoiceInvitation implements _$InvoiceInvitation {
     @Default('') @JsonKey(name: 'opened_date') String openedDate,
   }) = _InvoiceInvitation;
 
+  /// Get the PDF URL for the invitation
   String get pdfUrl => '$url/download';
 
+  /// Create an InvoiceInvitation from JSON
   factory InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
       _$InvoiceInvitationFromJson(json);
 }
@@ -149,6 +158,7 @@ abstract class InvoiceInvitation implements _$InvoiceInvitation {
 abstract class InvoiceList with _$InvoiceList {
   factory InvoiceList({List<Invoice> data}) = _InvoiceList;
 
+  /// Create an InvoiceList from JSON
   factory InvoiceList.fromJson(Map<String, dynamic> json) =>
       _$InvoiceListFromJson(json);
 }
@@ -157,6 +167,7 @@ abstract class InvoiceList with _$InvoiceList {
 abstract class InvoiceItem with _$InvoiceItem {
   factory InvoiceItem(Invoice data) = _InvoiceItem;
 
+  /// Create an InvoiceItem from JSON
   factory InvoiceItem.fromJson(Map<String, dynamic> json) =>
       _$InvoiceItemFromJson(json);
 }
