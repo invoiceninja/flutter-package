@@ -17,22 +17,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: MyHomePage(title: 'Invoice Ninja Example'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
-  Invoice _invoice;
+  String _invoiceKey;
   List<Product> _products = [];
 
   @override
@@ -46,11 +44,34 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       debugEnabled: true,
     );
 
-    InvoiceNinja.products.load().then((value) {
+    InvoiceNinja.products.load().then((products) {
       setState(() {
-        _products = value;
+        _products = products;
       });
     });
+  }
+
+  Future<Invoice> createInvoice(Product product) async {
+    var client = Client.forContact(email: 'test@aol.com');
+    client = await InvoiceNinja.clients.save(client);
+
+    var invoice = Invoice.forClient(client, products: [product]);
+    invoice = await InvoiceNinja.invoices.save(invoice);
+
+    return invoice;
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    if (_invoiceKey == null || state != AppLifecycleState.resumed) {
+      return;
+    }
+
+    final invoice = await InvoiceNinja.invoices.findByKey(_invoiceKey);
+
+    if (invoice.isPaid) {
+      // ...
+    }
   }
 
   @override
@@ -60,37 +81,10 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   @override
-  void didChangeAppLifecycleState(AppLifecycleState state) async {
-    if (_invoice != null && state == AppLifecycleState.resumed) {
-      final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
-      if (invoice.isPaid) {
-        // Unlock feature...
-      }
-    }
-  }
-
-  Future<Invoice> createInvoice(Product product) async {
-    // TODO remove this
-    if (_invoice != null) {
-      return _invoice;
-    }
-
-    var client = Client.forContact(email: 'test@aol.com');
-    client = await InvoiceNinja.clients.save(client);
-
-    var invoice = Invoice.forClient(client, products: [product]);
-    invoice = await InvoiceNinja.invoices.save(invoice);
-
-    _invoice = invoice;
-
-    return invoice;
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Invoice Ninja Example'),
       ),
       body: ListView.builder(
         itemCount: _products.length,
@@ -119,8 +113,9 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                   color: Colors.green,
                   child: Text('Purchase'),
                   onPressed: () async {
-                    _invoice = await createInvoice(product);
-                    launch(_invoice.url, forceWebView: true);
+                    final invoice = await createInvoice(product);
+                    _invoiceKey = invoice.key;
+                    launch(invoice.url, forceWebView: true);
                   },
                 ),
               ],
