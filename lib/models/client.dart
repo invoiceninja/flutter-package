@@ -6,22 +6,8 @@ part 'client.freezed.dart';
 part 'client.g.dart';
 
 @freezed
-abstract class Client with _$Client {
-  factory Client.forContact({
-    String firstName = '',
-    String lastName = '',
-    String email = '',
-    String phone = '',
-  }) {
-    return Client(contacts: [
-      ClientContact(
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phone: phone,
-      )
-    ]);
-  }
+abstract class Client implements _$Client {
+  const Client._();
 
   @JsonSerializable(explicitToJson: true)
   factory Client({
@@ -67,6 +53,24 @@ abstract class Client with _$Client {
     @Default('') @JsonKey(name: 'vat_number') String vatNumber,
     @Default(<ClientContact>[]) List<ClientContact> contacts,
   }) = _Client;
+
+  factory Client.forContact({
+    String firstName = '',
+    String lastName = '',
+    String email = '',
+    String phone = '',
+  }) {
+    return Client(contacts: [
+      ClientContact(
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+      )
+    ]);
+  }
+
+  String get key => contacts.first.key;
 
   factory Client.fromJson(Map<String, dynamic> json) => _$ClientFromJson(json);
 }

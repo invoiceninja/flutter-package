@@ -11,13 +11,6 @@ part 'invoice.g.dart';
 abstract class Invoice implements _$Invoice {
   const Invoice._();
 
-  factory Invoice.forClient(Client client, {List<Product> products}) {
-    return Invoice(
-      clientId: client.id,
-      lineItems: (products ?? []).map((product) => product.toLineItem).toList(),
-    );
-  }
-
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
     @Default('') String id,
@@ -85,9 +78,18 @@ abstract class Invoice implements _$Invoice {
         bool customSurchargeTax4,
   }) = _Invoice;
 
+  factory Invoice.forClient(Client client, {List<Product> products}) {
+    return Invoice(
+      clientId: client.id,
+      lineItems: (products ?? []).map((product) => product.toLineItem).toList(),
+    );
+  }
+
   String get url => invitations.first.url;
 
   String get pdfUrl => invitations.first.pdfUrl;
+
+  String get key => invitations.first.key;
 
   bool get isPaid => statusId == '4';
 
