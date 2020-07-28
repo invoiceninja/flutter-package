@@ -1,12 +1,13 @@
 # Invoice Ninja 
 
-This package provides a simple way to charge users for features/products in your Flutter app 
+This package provides a simple way to charge users for features/products in a Flutter app 
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
 * Supports many payment gateways including Stripe, PayPal and Authorize.net 
 * Easily create professional PDF invoices 
-* Provides a self-service client portal 
+* Provides a self-service client portal
+* Many [more features](https://www.invoiceninja.com/invoicing-payment-features/) 
 
 ### Installing
 
