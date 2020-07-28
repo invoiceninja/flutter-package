@@ -10,6 +10,23 @@ class ProductRepository {
     return ProductList.fromJson(response).data;
   }
 
+  Future<Product> findByKey(String key) async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/product/$key', InvoiceNinja.token);
+
+    return ProductItem.fromJson(response).data;
+  }
+}
+
+/*
+class ProductRepository {
+  Future<List<Product>> load() async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/products', InvoiceNinja.token);
+
+    return ProductList.fromJson(response).data;
+  }
+
   Future<Product> save(Product product) async {
     dynamic response;
 
@@ -27,3 +44,4 @@ class ProductRepository {
     return ProductItem.fromJson(response).data;
   }
 }
+*/

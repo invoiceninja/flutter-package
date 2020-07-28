@@ -3,6 +3,24 @@ import 'package:invoice_ninja/models/client.dart';
 import 'package:invoice_ninja/utils/web_client.dart';
 
 class ClientRepository {
+  Future<Client> save(Client client) async {
+    dynamic response = await WebClient().post(
+        '${InvoiceNinja.url}/api/v1/clients', InvoiceNinja.token,
+        data: client.toJson());
+
+    return ClientItem.fromJson(response).data;
+  }
+
+  Future<Client> findByKey(String key) async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/client/$key', InvoiceNinja.token);
+
+    return ClientItem.fromJson(response).data;
+  }
+}
+
+/*
+class ClientRepository {
   Future<List<Client>> load() async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/clients', InvoiceNinja.token);
@@ -52,3 +70,4 @@ class ClientRepository {
     return data.isEmpty ? null : data.first;
   }
 }
+*/

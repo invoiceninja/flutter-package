@@ -29,4 +29,6 @@ class InvoiceNinja {
       InvoiceNinja.url = url;
     }
   }
+
+  static bool get isInitialized => debugEnabled != null;
 }

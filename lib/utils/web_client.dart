@@ -6,6 +6,8 @@ class WebClient {
   const WebClient();
 
   Future<dynamic> get(String url, String token) async {
+    _checkInitialized();
+
     final http.Response response = await http.Client().get(
       url,
       headers: _getHeaders(token),
@@ -23,6 +25,8 @@ class WebClient {
     String token, {
     dynamic data,
   }) async {
+    _checkInitialized();
+
     final http.Response response = await http.Client()
         .post(url, body: json.encode(data), headers: _getHeaders(token))
         .timeout(const Duration(seconds: 60));
@@ -39,6 +43,8 @@ class WebClient {
     String token, {
     dynamic data,
   }) async {
+    _checkInitialized();
+
     final http.Response response = await http.Client()
         .put(url, body: json.encode(data), headers: _getHeaders(token))
         .timeout(const Duration(seconds: 60));
@@ -60,4 +66,10 @@ Map<String, String> _getHeaders(String token) => {
 void _printWrapped(String text) {
   final pattern = RegExp('.{1,800}'); // 800 is the size of each chunk
   pattern.allMatches(text).forEach((match) => print(match.group(0)));
+}
+
+void _checkInitialized() {
+  if (!InvoiceNinja.isInitialized) {
+    throw 'Error: the Invoice Ninja package is not initialized, please call InvoiceNinja.configure(<token>)';
+  }
 }

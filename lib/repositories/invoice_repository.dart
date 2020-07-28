@@ -3,6 +3,24 @@ import 'package:invoice_ninja/models/invoice.dart';
 import 'package:invoice_ninja/utils/web_client.dart';
 
 class InvoiceRepository {
+  Future<Invoice> save(Invoice invoice) async {
+    dynamic response = await WebClient().put(
+        '${InvoiceNinja.url}/api/v1/invoices/${invoice.id}', InvoiceNinja.token,
+        data: invoice.toJson());
+
+    return InvoiceItem.fromJson(response).data;
+  }
+
+  Future<Invoice> findByKey(String key) async {
+    final response = await WebClient()
+        .get('${InvoiceNinja.url}/api/v1/invoice/$key', InvoiceNinja.token);
+
+    return InvoiceItem.fromJson(response).data;
+  }
+}
+
+/*
+class InvoiceRepository {
   Future<List<Invoice>> load() async {
     final response = await WebClient()
         .get('${InvoiceNinja.url}/api/v1/invoices', InvoiceNinja.token);
@@ -44,3 +62,4 @@ class InvoiceRepository {
     return data.isEmpty ? null : data.first;
   }
 }
+*/
