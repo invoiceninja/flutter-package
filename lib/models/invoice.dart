@@ -6,7 +6,9 @@ part 'invoice.freezed.dart';
 part 'invoice.g.dart';
 
 @freezed
-abstract class Invoice with _$Invoice {
+abstract class Invoice implements _$Invoice {
+  const Invoice._();
+
   @JsonSerializable(explicitToJson: true)
   factory Invoice({
     @Default('') String id,
@@ -74,12 +76,16 @@ abstract class Invoice with _$Invoice {
         bool customSurchargeTax4,
   }) = _Invoice;
 
+  String get url => invitations.first.url;
+
+  String get pdfUrl => invitations.first.pdfUrl;
+
   factory Invoice.fromJson(Map<String, dynamic> json) =>
       _$InvoiceFromJson(json);
 }
 
 @freezed
-abstract class InvoiceLineItem with _$InvoiceLineItem {
+abstract class InvoiceLineItem implements _$InvoiceLineItem {
   @JsonSerializable(explicitToJson: true)
   factory InvoiceLineItem({
     @Default('') String id,
@@ -106,17 +112,21 @@ abstract class InvoiceLineItem with _$InvoiceLineItem {
 }
 
 @freezed
-abstract class InvoiceInvitation with _$InvoiceInvitation {
+abstract class InvoiceInvitation implements _$InvoiceInvitation {
+  const InvoiceInvitation._();
+
   @JsonSerializable(explicitToJson: true)
   factory InvoiceInvitation({
     @Default('') String id,
     @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
     @Default('') String key,
-    @Default('') String link,
+    @Default('') @JsonKey(name: 'link') String url,
     @Default('') @JsonKey(name: 'sent_date') String sentDate,
     @Default('') @JsonKey(name: 'viewed_date') String viewedDate,
     @Default('') @JsonKey(name: 'opened_date') String openedDate,
   }) = _InvoiceInvitation;
+
+  String get pdfUrl => '$url/download';
 
   factory InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
       _$InvoiceInvitationFromJson(json);

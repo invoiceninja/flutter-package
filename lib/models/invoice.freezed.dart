@@ -709,7 +709,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
 }
 
 @JsonSerializable(explicitToJson: true)
-class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
+class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   _$_Invoice(
       {this.id = '',
       @JsonKey(name: 'user_id') this.createdById = '',
@@ -812,7 +812,8 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
         assert(customSurchargeTax1 != null),
         assert(customSurchargeTax2 != null),
         assert(customSurchargeTax3 != null),
-        assert(customSurchargeTax4 != null);
+        assert(customSurchargeTax4 != null),
+        super._();
 
   factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
       _$_$_InvoiceFromJson(json);
@@ -1199,7 +1200,8 @@ class _$_Invoice with DiagnosticableTreeMixin implements _Invoice {
   }
 }
 
-abstract class _Invoice implements Invoice {
+abstract class _Invoice extends Invoice {
+  _Invoice._() : super._();
   factory _Invoice(
           {String id,
           @JsonKey(name: 'user_id') String createdById,
@@ -1952,7 +1954,7 @@ class _$InvoiceInvitationTearOff {
       {String id = '',
       @JsonKey(name: 'client_contact_id') String clientContactId = '',
       String key = '',
-      String link = '',
+      @JsonKey(name: 'link') String url = '',
       @JsonKey(name: 'sent_date') String sentDate = '',
       @JsonKey(name: 'viewed_date') String viewedDate = '',
       @JsonKey(name: 'opened_date') String openedDate = ''}) {
@@ -1960,7 +1962,7 @@ class _$InvoiceInvitationTearOff {
       id: id,
       clientContactId: clientContactId,
       key: key,
-      link: link,
+      url: url,
       sentDate: sentDate,
       viewedDate: viewedDate,
       openedDate: openedDate,
@@ -1976,7 +1978,8 @@ mixin _$InvoiceInvitation {
   @JsonKey(name: 'client_contact_id')
   String get clientContactId;
   String get key;
-  String get link;
+  @JsonKey(name: 'link')
+  String get url;
   @JsonKey(name: 'sent_date')
   String get sentDate;
   @JsonKey(name: 'viewed_date')
@@ -1996,7 +1999,7 @@ abstract class $InvoiceInvitationCopyWith<$Res> {
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
       String key,
-      String link,
+      @JsonKey(name: 'link') String url,
       @JsonKey(name: 'sent_date') String sentDate,
       @JsonKey(name: 'viewed_date') String viewedDate,
       @JsonKey(name: 'opened_date') String openedDate});
@@ -2015,7 +2018,7 @@ class _$InvoiceInvitationCopyWithImpl<$Res>
     Object id = freezed,
     Object clientContactId = freezed,
     Object key = freezed,
-    Object link = freezed,
+    Object url = freezed,
     Object sentDate = freezed,
     Object viewedDate = freezed,
     Object openedDate = freezed,
@@ -2026,7 +2029,7 @@ class _$InvoiceInvitationCopyWithImpl<$Res>
           ? _value.clientContactId
           : clientContactId as String,
       key: key == freezed ? _value.key : key as String,
-      link: link == freezed ? _value.link : link as String,
+      url: url == freezed ? _value.url : url as String,
       sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
       viewedDate:
           viewedDate == freezed ? _value.viewedDate : viewedDate as String,
@@ -2046,7 +2049,7 @@ abstract class _$InvoiceInvitationCopyWith<$Res>
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
       String key,
-      String link,
+      @JsonKey(name: 'link') String url,
       @JsonKey(name: 'sent_date') String sentDate,
       @JsonKey(name: 'viewed_date') String viewedDate,
       @JsonKey(name: 'opened_date') String openedDate});
@@ -2067,7 +2070,7 @@ class __$InvoiceInvitationCopyWithImpl<$Res>
     Object id = freezed,
     Object clientContactId = freezed,
     Object key = freezed,
-    Object link = freezed,
+    Object url = freezed,
     Object sentDate = freezed,
     Object viewedDate = freezed,
     Object openedDate = freezed,
@@ -2078,7 +2081,7 @@ class __$InvoiceInvitationCopyWithImpl<$Res>
           ? _value.clientContactId
           : clientContactId as String,
       key: key == freezed ? _value.key : key as String,
-      link: link == freezed ? _value.link : link as String,
+      url: url == freezed ? _value.url : url as String,
       sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
       viewedDate:
           viewedDate == freezed ? _value.viewedDate : viewedDate as String,
@@ -2089,24 +2092,24 @@ class __$InvoiceInvitationCopyWithImpl<$Res>
 }
 
 @JsonSerializable(explicitToJson: true)
-class _$_InvoiceInvitation
-    with DiagnosticableTreeMixin
-    implements _InvoiceInvitation {
+class _$_InvoiceInvitation extends _InvoiceInvitation
+    with DiagnosticableTreeMixin {
   _$_InvoiceInvitation(
       {this.id = '',
       @JsonKey(name: 'client_contact_id') this.clientContactId = '',
       this.key = '',
-      this.link = '',
+      @JsonKey(name: 'link') this.url = '',
       @JsonKey(name: 'sent_date') this.sentDate = '',
       @JsonKey(name: 'viewed_date') this.viewedDate = '',
       @JsonKey(name: 'opened_date') this.openedDate = ''})
       : assert(id != null),
         assert(clientContactId != null),
         assert(key != null),
-        assert(link != null),
+        assert(url != null),
         assert(sentDate != null),
         assert(viewedDate != null),
-        assert(openedDate != null);
+        assert(openedDate != null),
+        super._();
 
   factory _$_InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
       _$_$_InvoiceInvitationFromJson(json);
@@ -2120,9 +2123,9 @@ class _$_InvoiceInvitation
   @JsonKey(defaultValue: '')
   @override
   final String key;
-  @JsonKey(defaultValue: '')
   @override
-  final String link;
+  @JsonKey(name: 'link')
+  final String url;
   @override
   @JsonKey(name: 'sent_date')
   final String sentDate;
@@ -2135,7 +2138,7 @@ class _$_InvoiceInvitation
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'InvoiceInvitation(id: $id, clientContactId: $clientContactId, key: $key, link: $link, sentDate: $sentDate, viewedDate: $viewedDate, openedDate: $openedDate)';
+    return 'InvoiceInvitation(id: $id, clientContactId: $clientContactId, key: $key, url: $url, sentDate: $sentDate, viewedDate: $viewedDate, openedDate: $openedDate)';
   }
 
   @override
@@ -2146,7 +2149,7 @@ class _$_InvoiceInvitation
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('clientContactId', clientContactId))
       ..add(DiagnosticsProperty('key', key))
-      ..add(DiagnosticsProperty('link', link))
+      ..add(DiagnosticsProperty('url', url))
       ..add(DiagnosticsProperty('sentDate', sentDate))
       ..add(DiagnosticsProperty('viewedDate', viewedDate))
       ..add(DiagnosticsProperty('openedDate', openedDate));
@@ -2163,8 +2166,8 @@ class _$_InvoiceInvitation
                     .equals(other.clientContactId, clientContactId)) &&
             (identical(other.key, key) ||
                 const DeepCollectionEquality().equals(other.key, key)) &&
-            (identical(other.link, link) ||
-                const DeepCollectionEquality().equals(other.link, link)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
             (identical(other.sentDate, sentDate) ||
                 const DeepCollectionEquality()
                     .equals(other.sentDate, sentDate)) &&
@@ -2182,7 +2185,7 @@ class _$_InvoiceInvitation
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(clientContactId) ^
       const DeepCollectionEquality().hash(key) ^
-      const DeepCollectionEquality().hash(link) ^
+      const DeepCollectionEquality().hash(url) ^
       const DeepCollectionEquality().hash(sentDate) ^
       const DeepCollectionEquality().hash(viewedDate) ^
       const DeepCollectionEquality().hash(openedDate);
@@ -2197,12 +2200,13 @@ class _$_InvoiceInvitation
   }
 }
 
-abstract class _InvoiceInvitation implements InvoiceInvitation {
+abstract class _InvoiceInvitation extends InvoiceInvitation {
+  _InvoiceInvitation._() : super._();
   factory _InvoiceInvitation(
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
       String key,
-      String link,
+      @JsonKey(name: 'link') String url,
       @JsonKey(name: 'sent_date') String sentDate,
       @JsonKey(name: 'viewed_date') String viewedDate,
       @JsonKey(name: 'opened_date') String openedDate}) = _$_InvoiceInvitation;
@@ -2218,7 +2222,8 @@ abstract class _InvoiceInvitation implements InvoiceInvitation {
   @override
   String get key;
   @override
-  String get link;
+  @JsonKey(name: 'link')
+  String get url;
   @override
   @JsonKey(name: 'sent_date')
   String get sentDate;
