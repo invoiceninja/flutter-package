@@ -182,7 +182,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "8059fd410f15c14469f7dd6f004fa3fadd24aedb"
+      resolved-ref: d95429f9f66299075dbb843f9dc64d92225bb52d
       url: "git://github.com/invoiceninja/flutter-package.git"
     source: git
     version: "0.0.1"
