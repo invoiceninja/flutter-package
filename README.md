@@ -4,7 +4,7 @@ This package provides a simple way to charge for features/products in a Flutter 
 
 <p align="center">
     <img src="https://github.com/invoiceninja/flutter-package/blob/master/assets/sample.gif" alt="Sample" width="300"/>
-</p>
+</p>  
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps

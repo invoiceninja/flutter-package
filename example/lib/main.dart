@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
 
     InvoiceNinja.configure(
-      'demo',
-      url: 'demo.invoiceninja.com',
+      'demo', // Set your company key or use 'demo' to test
+      url: 'https://demo.invoiceninja.com', // Set your selfhost app URL
       debugEnabled: true,
     );
 
@@ -52,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   Invoice _invoice;
+
   Future<Invoice> createInvoice(Product product) async {
     if (_invoice != null) {
       return _invoice;
