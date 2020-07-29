@@ -25,7 +25,7 @@ This package makes it easy to sell products in a Flutter app
 
 ```yaml
 dependencies:
-  invoiceninja: ^0.0.3
+  invoiceninja: ^0.0.4
 ```
 
 ### Import
