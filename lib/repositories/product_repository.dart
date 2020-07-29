@@ -25,6 +25,7 @@ class ProductRepository {
 
 /// Product Admin Repository
 class ProductAdminRepository {
+  /// Load list of products
   Future<List<Product>> load() async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/products',
@@ -33,6 +34,7 @@ class ProductAdminRepository {
     return ProductList.fromJson(response).data;
   }
 
+  /// Persist product to the server
   Future<Product> save(Product product) async {
     dynamic response;
 

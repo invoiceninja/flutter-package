@@ -26,6 +26,7 @@ class ClientRepository {
 
 /// Client Admin Repository
 class ClientAdminRepository {
+  /// Load list of clients
   Future<List<Client>> load() async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients',
@@ -34,6 +35,7 @@ class ClientAdminRepository {
     return ClientList.fromJson(response).data;
   }
 
+  /// Persist client to the server
   Future<Client> save(Client client) async {
     dynamic response;
 
@@ -52,6 +54,7 @@ class ClientAdminRepository {
     return ClientItem.fromJson(response).data;
   }
 
+  /// Find client by its id
   Future<Client> findById(String id) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients/$id',
@@ -60,6 +63,7 @@ class ClientAdminRepository {
     return ClientItem.fromJson(response).data;
   }
 
+  /// Find client by its contact email address
   Future<Client> findByEmail(String email) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients?email=$email',
@@ -70,6 +74,7 @@ class ClientAdminRepository {
     return data.isEmpty ? null : data.first;
   }
 
+  /// Find client by its id number
   Future<Client> findByIdNumber(String idNumber) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients?id_number=$idNumber',
