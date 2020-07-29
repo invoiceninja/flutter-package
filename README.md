@@ -1,6 +1,6 @@
 # Invoice Ninja 
 
-This package provides a simple way to charge for features/products in a Flutter app   
+This package makes it easy to sell products in a Flutter app   
   
 <p align="center">
     <img src="https://github.com/invoiceninja/flutter-package/blob/master/assets/sample.gif" alt="Sample" width="300"/>
@@ -14,6 +14,13 @@ This package provides a simple way to charge for features/products in a Flutter 
 * Many [more features](https://www.invoiceninja.com/invoicing-payment-features/)... 
 
 **Note: the package requires the new v5 version of the app [[Demo](https://demo.invoiceninja.com) | [More info](https://forum.invoiceninja.com/t/the-invoice-ninja-v5-beta-is-now-available/4066)]**
+
+### To Do
+
+- [ ] Recurring billing
+- [ ] Images/documents
+- [ ] Tasks and expenses  
+- [ ] Admin SDK
 
 ### Installing
 
