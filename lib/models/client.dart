@@ -84,7 +84,6 @@ abstract class Client implements _$Client {
 /// ClientContact class
 @freezed
 abstract class ClientContact with _$ClientContact {
-
   /// ClientContact factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientContact({
@@ -113,7 +112,6 @@ abstract class ClientContact with _$ClientContact {
 /// ClientSettings class
 @freezed
 abstract class ClientSettings with _$ClientSettings {
-
   /// ClientSettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
@@ -129,7 +127,6 @@ abstract class ClientSettings with _$ClientSettings {
 /// Multi-item client response
 @freezed
 abstract class ClientList with _$ClientList {
-
   /// ClientList factory constructor
   factory ClientList(List<Client> data) = _ClientList;
 
@@ -141,7 +138,6 @@ abstract class ClientList with _$ClientList {
 /// Single-item client response
 @freezed
 abstract class ClientItem with _$ClientItem {
-
   /// ClientItem factory constructor
   factory ClientItem(Client data) = _ClientItem;
 

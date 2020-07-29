@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Added admin API
+
 ## 0.0.3
 
 * Added more API docs

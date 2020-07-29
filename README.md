@@ -20,7 +20,6 @@ This package makes it easy to sell products in a Flutter app
 - [ ] Recurring billing
 - [ ] Images/documents
 - [ ] Tasks and expenses  
-- [ ] Admin SDK
 
 ### Installing
 
