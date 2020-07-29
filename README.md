@@ -36,6 +36,10 @@ import 'package:invoiceninja/invoiceninja.dart';
 
 ### Configure
 
+The `InvoiceNinja` class provides an SDK for the Invoice Ninja `/shop` routes which support reading the list of products and creating/finding clients and invoices. 
+
+If each user of the app is accessing their own account you can use the `InvoiceNinjaAdmin` class to support editing records.
+
 ```dart
 InvoiceNinja.configure(
   'demo', // Set your company key or use 'demo' to test
@@ -95,3 +99,13 @@ if (invoice.isPaid) {
 You can use the [WidgetsBindingObserver](https://api.flutter.dev/flutter/widgets/WidgetsBindingObserver-class.html) interface to run code when the app is resumed. 
 
 Consider giving issue [#57536](https://github.com/flutter/flutter/issues/57536) a thumbs up to make this better in the future.
+
+### Admin API
+
+```dart
+InvoiceNinjaAdmion.configure(
+  'TOKEN', // Set your API token or use 'TOKEN' to test
+  url: 'https://demo.invoiceninja.com', // Set your selfhost app URL
+  debugEnabled: true,
+);
+``` 
