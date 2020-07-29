@@ -7,7 +7,8 @@ class ProductRepository {
   /// Load list of products
   Future<List<Product>> load() async {
     final response = await WebClient().get(
-        '${InvoiceNinja.url}/api/v1/shop/products', InvoiceNinja.companyKey);
+        '${InvoiceNinja.url}/api/v1/shop/products',
+        companyKey: InvoiceNinja.companyKey);
 
     return ProductList.fromJson(response).data;
   }
@@ -16,7 +17,7 @@ class ProductRepository {
   Future<Product> findByKey(String key) async {
     final response = await WebClient().get(
         '${InvoiceNinja.url}/api/v1/shop/product/$key',
-        InvoiceNinja.companyKey);
+        companyKey: InvoiceNinja.companyKey);
 
     return ProductItem.fromJson(response).data;
   }
@@ -26,7 +27,8 @@ class ProductRepository {
 class ProductAdminRepository {
   Future<List<Product>> load() async {
     final response = await WebClient().get(
-        '${InvoiceNinjaAdmin.url}/api/v1/products', InvoiceNinjaAdmin.token);
+        '${InvoiceNinjaAdmin.url}/api/v1/products',
+        token: InvoiceNinjaAdmin.token);
 
     return ProductList.fromJson(response).data;
   }
@@ -36,12 +38,13 @@ class ProductAdminRepository {
 
     if (product.id.isEmpty) {
       response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/products', InvoiceNinjaAdmin.token,
+          '${InvoiceNinjaAdmin.url}/api/v1/products',
+          token: InvoiceNinjaAdmin.token,
           data: product.toJson());
     } else {
       response = await WebClient().put(
           '${InvoiceNinjaAdmin.url}/api/v1/products/${product.id}',
-          InvoiceNinjaAdmin.token,
+          token: InvoiceNinjaAdmin.token,
           data: product.toJson());
     }
 

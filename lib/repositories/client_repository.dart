@@ -7,7 +7,8 @@ class ClientRepository {
   /// Persist client to the server
   Future<Client> save(Client client) async {
     dynamic response = await WebClient().post(
-        '${InvoiceNinja.url}/api/v1/shop/clients', InvoiceNinja.companyKey,
+        '${InvoiceNinja.url}/api/v1/shop/clients',
+        companyKey: InvoiceNinja.companyKey,
         data: client.toJson());
 
     return ClientItem.fromJson(response).data;
@@ -16,7 +17,8 @@ class ClientRepository {
   /// Find a client by its contact key
   Future<Client> findByKey(String key) async {
     final response = await WebClient().get(
-        '${InvoiceNinja.url}/api/v1/shop/client/$key', InvoiceNinja.companyKey);
+        '${InvoiceNinja.url}/api/v1/shop/client/$key',
+        companyKey: InvoiceNinja.companyKey);
 
     return ClientItem.fromJson(response).data;
   }
@@ -26,7 +28,8 @@ class ClientRepository {
 class ClientAdminRepository {
   Future<List<Client>> load() async {
     final response = await WebClient().get(
-        '${InvoiceNinjaAdmin.url}/api/v1/clients', InvoiceNinjaAdmin.token);
+        '${InvoiceNinjaAdmin.url}/api/v1/clients',
+        token: InvoiceNinjaAdmin.token);
 
     return ClientList.fromJson(response).data;
   }
@@ -36,12 +39,13 @@ class ClientAdminRepository {
 
     if (client.id.isEmpty) {
       response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/clients', InvoiceNinjaAdmin.token,
+          '${InvoiceNinjaAdmin.url}/api/v1/clients',
+          token: InvoiceNinjaAdmin.token,
           data: client.toJson());
     } else {
       response = await WebClient().put(
           '${InvoiceNinjaAdmin.url}/api/v1/clients/${client.id}',
-          InvoiceNinjaAdmin.token,
+          token: InvoiceNinjaAdmin.token,
           data: client.toJson());
     }
 
@@ -50,7 +54,8 @@ class ClientAdminRepository {
 
   Future<Client> findById(String id) async {
     final response = await WebClient().get(
-        '${InvoiceNinjaAdmin.url}/api/v1/clients/$id', InvoiceNinjaAdmin.token);
+        '${InvoiceNinjaAdmin.url}/api/v1/clients/$id',
+        token: InvoiceNinjaAdmin.token);
 
     return ClientItem.fromJson(response).data;
   }
@@ -58,7 +63,7 @@ class ClientAdminRepository {
   Future<Client> findByEmail(String email) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients?email=$email',
-        InvoiceNinjaAdmin.token);
+        token: InvoiceNinjaAdmin.token);
 
     final data = ClientList.fromJson(response).data;
 
@@ -68,7 +73,7 @@ class ClientAdminRepository {
   Future<Client> findByIdNumber(String idNumber) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/clients?id_number=$idNumber',
-        InvoiceNinjaAdmin.token);
+        token: InvoiceNinjaAdmin.token);
 
     final data = ClientList.fromJson(response).data;
 

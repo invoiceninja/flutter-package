@@ -7,12 +7,12 @@ class WebClient {
   const WebClient();
 
   /// Send a GET web request
-  Future<dynamic> get(String url, String companyKey) async {
+  Future<dynamic> get(String url, {String companyKey, String token}) async {
     _checkInitialized();
 
     final http.Response response = await http.Client().get(
       url,
-      headers: _getHeaders(companyKey),
+      headers: _getHeaders(companyKey: companyKey, token: token),
     );
 
     if (InvoiceNinja.debugEnabled) {
@@ -26,14 +26,17 @@ class WebClient {
 
   /// Send a POST web request
   Future<dynamic> post(
-    String url,
-    String companyKey, {
+    String url, {
+    String companyKey,
+    String token,
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .post(url, body: json.encode(data), headers: _getHeaders(companyKey))
+        .post(url,
+            body: json.encode(data),
+            headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
@@ -47,14 +50,17 @@ class WebClient {
 
   /// Send a PUT web request
   Future<dynamic> put(
-    String url,
-    String companyKey, {
+    String url, {
+    String companyKey,
+    String token,
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .put(url, body: json.encode(data), headers: _getHeaders(companyKey))
+        .put(url,
+            body: json.encode(data),
+            headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
 
     if (InvoiceNinja.debugEnabled) {
@@ -68,12 +74,23 @@ class WebClient {
 }
 
 /// Determine headers for request
-Map<String, String> _getHeaders(String companyKey) => {
-      'X-API-COMPANY-KEY': companyKey,
-      'X-Requested-With': 'XMLHttpRequest',
-      'Content-Type': 'application/json',
-      'user-agent': 'flutter-package',
-    };
+Map<String, String> _getHeaders({String companyKey, String token}) {
+  final data = {
+    'X-Requested-With': 'XMLHttpRequest',
+    'Content-Type': 'application/json',
+    'user-agent': 'flutter-package',
+  };
+
+  if ((token ?? '').isNotEmpty) {
+    data['X-API-Token'] = token;
+  } else if ((companyKey ?? '').isNotEmpty) {
+    data['X-API-COMPANY-KEY'] = companyKey;
+  } else {
+    throw 'Invoice Ninja error: the package is not initialized';
+  }
+
+  return data;
+}
 
 /// Print long debug string
 void _printWrapped(String text) {
@@ -84,7 +101,7 @@ void _printWrapped(String text) {
 /// Ensure package is correctly initialized
 void _checkInitialized() {
   if (!InvoiceNinja.isInitialized) {
-    throw 'Invoice Ninja error: the package is not initialized, please call InvoiceNinja.configure()';
+    throw 'Invoice Ninja error: the package is not initialized';
   }
 }
 
