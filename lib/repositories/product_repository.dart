@@ -22,6 +22,7 @@ class ProductRepository {
   }
 }
 
+/// Product Admin Repository
 class ProductAdminRepository {
   Future<List<Product>> load() async {
     final response = await WebClient().get(

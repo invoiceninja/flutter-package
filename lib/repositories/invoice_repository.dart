@@ -23,6 +23,7 @@ class InvoiceRepository {
   }
 }
 
+/// Invoice Admin Repository
 class InvoiceAdminRepository {
   Future<List<Invoice>> load() async {
     final response = await WebClient().get(
