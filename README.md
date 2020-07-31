@@ -103,7 +103,7 @@ Consider giving issue [#57536](https://github.com/flutter/flutter/issues/57536) 
 ### Admin API
 
 ```dart
-InvoiceNinjaAdmion.configure(
+InvoiceNinjaAdmin.configure(
   'TOKEN', // Set your API token or use 'TOKEN' to test
   url: 'https://demo.invoiceninja.com', // Set your selfhost app URL
   debugEnabled: true,
