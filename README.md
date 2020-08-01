@@ -34,13 +34,13 @@ dependencies:
 import 'package:invoiceninja/invoiceninja.dart';
 ```
 
-### Configure
-
 The `InvoiceNinja` class provides an SDK for the public Invoice Ninja storefront routes which support reading the list of products and creating/finding clients and invoices. 
 
 If each user of the app is accessing their own account you can use the `InvoiceNinjaAdmin` class to support editing records using token authentication.
 
 ## Storefront API
+
+### Configure
 
 ```dart
 InvoiceNinja.configure(
@@ -103,6 +103,8 @@ You can use the [WidgetsBindingObserver](https://api.flutter.dev/flutter/widgets
 Consider giving issue [#57536](https://github.com/flutter/flutter/issues/57536) a thumbs up to make this better in the future.
 
 ## Admin API
+
+### Configure
 
 ```dart
 InvoiceNinjaAdmin.configure(
