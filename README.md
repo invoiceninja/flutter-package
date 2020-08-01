@@ -34,7 +34,9 @@ dependencies:
 import 'package:invoiceninja/invoiceninja.dart';
 ```
 
-The `InvoiceNinja` class provides an SDK for the public Invoice Ninja storefront routes which support reading the list of products and creating/finding clients and invoices. You can use the `InvoiceNinjaAdmin` class to support editing records using token authentication.
+The package provides two main classes:
+* `InvoiceNinja`: Supports the public 'Storefront' routes which allow reading the list of products and creating/finding clients and invoices
+* `InvoiceNinjaAdmin`: Supports the full [REST Admin API](https://app.swaggerhub.com/apis/invoiceninja/invoiceninja) using token based security 
 
 ## Storefront API
 
