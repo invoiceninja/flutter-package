@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
 
     InvoiceNinja.configure(
-      'demo', // Set your company key or use 'demo' to test
+      'KEY', // Set your company key or use 'KEY' to test
       url: 'https://demo.invoiceninja.com', // Set your selfhost app URL
       debugEnabled: true,
     );

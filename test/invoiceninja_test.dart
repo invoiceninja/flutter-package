@@ -7,7 +7,7 @@ import 'package:invoiceninja/models/invoice.dart';
 void main() {
   setUp(() async {
     InvoiceNinja.configure(
-      'demo',
+      'KEY',
       url: 'demo.invoiceninja.com',
       debugEnabled: true,
     );
