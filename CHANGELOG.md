@@ -1,3 +1,7 @@
+## 0.0.5
+
+* Added company info 
+
 ## 0.0.4
 
 * Added admin API

@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^5.5.0
-  invoiceninja: ^0.0.1
+  invoiceninja: ^0.0.5
   #invoiceninja:
   #  git:
   #    url: git://github.com/invoiceninja/flutter-package.git
