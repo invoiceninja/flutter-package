@@ -1,6 +1,7 @@
 library invoiceninja;
 
 import 'package:invoiceninja/repositories/client_repository.dart';
+import 'package:invoiceninja/repositories/company_repository.dart';
 import 'package:invoiceninja/repositories/invoice_repository.dart';
 import 'package:invoiceninja/repositories/product_repository.dart';
 
@@ -10,6 +11,7 @@ class InvoiceNinja {
   static String companyKey;
   static bool debugEnabled;
 
+  static CompanyRepository company = CompanyRepository();
   static ProductRepository products = ProductRepository();
   static ClientRepository clients = ClientRepository();
   static InvoiceRepository invoices = InvoiceRepository();

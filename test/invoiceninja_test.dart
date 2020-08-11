@@ -13,6 +13,11 @@ void main() {
     );
   });
 
+  test('Test company', () async {
+    final company = await InvoiceNinja.company.load();
+    expect(company != null, true);
+  });
+
   test('Test products', () async {
     final products = await InvoiceNinja.products.load();
     expect(products.isNotEmpty, true);

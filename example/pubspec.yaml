@@ -37,6 +37,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  analyzer: 0.39.16
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
