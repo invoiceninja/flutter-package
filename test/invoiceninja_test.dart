@@ -15,7 +15,7 @@ void main() {
 
   test('Test company', () async {
     final company = await InvoiceNinja.company.load();
-    expect(company != null, true);
+    expect(company.key, 'KEY');
   });
 
   test('Test products', () async {

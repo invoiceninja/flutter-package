@@ -16,9 +16,12 @@ class _$CompanyTearOff {
   const _$CompanyTearOff();
 
 // ignore: unused_element
-  _Company call({String id = ''}) {
+  _Company call(
+      {@JsonKey(name: 'company_key') String key = '',
+      CompanySettings settings}) {
     return _Company(
-      id: id,
+      key: key,
+      settings: settings,
     );
   }
 }
@@ -27,7 +30,9 @@ class _$CompanyTearOff {
 const $Company = _$CompanyTearOff();
 
 mixin _$Company {
-  String get id;
+  @JsonKey(name: 'company_key')
+  String get key;
+  CompanySettings get settings;
 
   Map<String, dynamic> toJson();
   $CompanyCopyWith<Company> get copyWith;
@@ -36,7 +41,10 @@ mixin _$Company {
 abstract class $CompanyCopyWith<$Res> {
   factory $CompanyCopyWith(Company value, $Res Function(Company) then) =
       _$CompanyCopyWithImpl<$Res>;
-  $Res call({String id});
+  $Res call(
+      {@JsonKey(name: 'company_key') String key, CompanySettings settings});
+
+  $CompanySettingsCopyWith<$Res> get settings;
 }
 
 class _$CompanyCopyWithImpl<$Res> implements $CompanyCopyWith<$Res> {
@@ -48,11 +56,24 @@ class _$CompanyCopyWithImpl<$Res> implements $CompanyCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
+    Object key = freezed,
+    Object settings = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      key: key == freezed ? _value.key : key as String,
+      settings:
+          settings == freezed ? _value.settings : settings as CompanySettings,
     ));
+  }
+
+  @override
+  $CompanySettingsCopyWith<$Res> get settings {
+    if (_value.settings == null) {
+      return null;
+    }
+    return $CompanySettingsCopyWith<$Res>(_value.settings, (value) {
+      return _then(_value.copyWith(settings: value));
+    });
   }
 }
 
@@ -60,7 +81,11 @@ abstract class _$CompanyCopyWith<$Res> implements $CompanyCopyWith<$Res> {
   factory _$CompanyCopyWith(_Company value, $Res Function(_Company) then) =
       __$CompanyCopyWithImpl<$Res>;
   @override
-  $Res call({String id});
+  $Res call(
+      {@JsonKey(name: 'company_key') String key, CompanySettings settings});
+
+  @override
+  $CompanySettingsCopyWith<$Res> get settings;
 }
 
 class __$CompanyCopyWithImpl<$Res> extends _$CompanyCopyWithImpl<$Res>
@@ -73,30 +98,35 @@ class __$CompanyCopyWithImpl<$Res> extends _$CompanyCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
+    Object key = freezed,
+    Object settings = freezed,
   }) {
     return _then(_Company(
-      id: id == freezed ? _value.id : id as String,
+      key: key == freezed ? _value.key : key as String,
+      settings:
+          settings == freezed ? _value.settings : settings as CompanySettings,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
 class _$_Company extends _Company with DiagnosticableTreeMixin {
-  _$_Company({this.id = ''})
-      : assert(id != null),
+  _$_Company({@JsonKey(name: 'company_key') this.key = '', this.settings})
+      : assert(key != null),
         super._();
 
   factory _$_Company.fromJson(Map<String, dynamic> json) =>
       _$_$_CompanyFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
-  final String id;
+  @JsonKey(name: 'company_key')
+  final String key;
+  @override
+  final CompanySettings settings;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Company(id: $id)';
+    return 'Company(key: $key, settings: $settings)';
   }
 
   @override
@@ -104,20 +134,26 @@ class _$_Company extends _Company with DiagnosticableTreeMixin {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'Company'))
-      ..add(DiagnosticsProperty('id', id));
+      ..add(DiagnosticsProperty('key', key))
+      ..add(DiagnosticsProperty('settings', settings));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _Company &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)));
+            (identical(other.key, key) ||
+                const DeepCollectionEquality().equals(other.key, key)) &&
+            (identical(other.settings, settings) ||
+                const DeepCollectionEquality()
+                    .equals(other.settings, settings)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(id);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(key) ^
+      const DeepCollectionEquality().hash(settings);
 
   @override
   _$CompanyCopyWith<_Company> get copyWith =>
@@ -131,12 +167,17 @@ class _$_Company extends _Company with DiagnosticableTreeMixin {
 
 abstract class _Company extends Company {
   _Company._() : super._();
-  factory _Company({String id}) = _$_Company;
+  factory _Company(
+      {@JsonKey(name: 'company_key') String key,
+      CompanySettings settings}) = _$_Company;
 
   factory _Company.fromJson(Map<String, dynamic> json) = _$_Company.fromJson;
 
   @override
-  String get id;
+  @JsonKey(name: 'company_key')
+  String get key;
+  @override
+  CompanySettings get settings;
   @override
   _$CompanyCopyWith<_Company> get copyWith;
 }
@@ -150,11 +191,67 @@ class _$CompanySettingsTearOff {
 
 // ignore: unused_element
   _CompanySettings call(
-      {@nullable @JsonKey(name: 'currency_id') String currencyId = '',
-      @nullable @JsonKey(name: 'language_id') String languageId = ''}) {
+      {@nullable
+          String name = '',
+      @nullable
+          String address1 = '',
+      @nullable
+          String address2 = '',
+      @nullable
+          String city = '',
+      @nullable
+          String state = '',
+      @nullable
+          String phone = '',
+      @nullable
+          String email = '',
+      @nullable
+          String website = '',
+      @nullable
+      @JsonKey(name: 'custom_value1')
+          String customValue1 = '',
+      @nullable
+      @JsonKey(name: 'custom_value2')
+          String customValue2 = '',
+      @nullable
+      @JsonKey(name: 'custom_value3')
+          String customValue3 = '',
+      @nullable
+      @JsonKey(name: 'custom_value4')
+          String customValue4 = '',
+      @nullable
+      @JsonKey(name: 'company_logo')
+          String companyLogo = '',
+      @nullable
+      @JsonKey(name: 'postal_code')
+          String postalCode = '',
+      @nullable
+      @JsonKey(name: 'country_id')
+          String countryId = '',
+      @nullable
+      @JsonKey(name: 'vat_number')
+          String vatNumber = '',
+      @nullable
+      @JsonKey(name: 'custom_fields')
+          Map<String, String> customFields = const {}}) {
     return _CompanySettings(
-      currencyId: currencyId,
-      languageId: languageId,
+      name: name,
+      address1: address1,
+      address2: address2,
+      city: city,
+      state: state,
+      phone: phone,
+      email: email,
+      website: website,
+      customValue1: customValue1,
+      customValue2: customValue2,
+      customValue3: customValue3,
+      customValue4: customValue4,
+      companyLogo: companyLogo,
+      postalCode: postalCode,
+      countryId: countryId,
+      vatNumber: vatNumber,
+      customFields: customFields,
     );
   }
 }
@@ -164,11 +261,48 @@ const $CompanySettings = _$CompanySettingsTearOff();
 
 mixin _$CompanySettings {
   @nullable
-  @JsonKey(name: 'currency_id')
-  String get currencyId;
+  String get name;
   @nullable
-  @JsonKey(name: 'language_id')
-  String get languageId;
+  String get address1;
+  @nullable
+  String get address2;
+  @nullable
+  String get city;
+  @nullable
+  String get state;
+  @nullable
+  String get phone;
+  @nullable
+  String get email;
+  @nullable
+  String get website;
+  @nullable
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @nullable
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @nullable
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @nullable
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
+  @nullable
+  @JsonKey(name: 'company_logo')
+  String get companyLogo;
+  @nullable
+  @JsonKey(name: 'postal_code')
+  String get postalCode;
+  @nullable
+  @JsonKey(name: 'country_id')
+  String get countryId;
+  @nullable
+  @JsonKey(name: 'vat_number')
+  String get vatNumber;
+  @nullable
+  @JsonKey(name: 'custom_fields')
+  Map<String, String> get customFields;
 
   Map<String, dynamic> toJson();
   $CompanySettingsCopyWith<CompanySettings> get copyWith;
@@ -179,8 +313,49 @@ abstract class $CompanySettingsCopyWith<$Res> {
           CompanySettings value, $Res Function(CompanySettings) then) =
       _$CompanySettingsCopyWithImpl<$Res>;
   $Res call(
-      {@nullable @JsonKey(name: 'currency_id') String currencyId,
-      @nullable @JsonKey(name: 'language_id') String languageId});
+      {@nullable
+          String name,
+      @nullable
+          String address1,
+      @nullable
+          String address2,
+      @nullable
+          String city,
+      @nullable
+          String state,
+      @nullable
+          String phone,
+      @nullable
+          String email,
+      @nullable
+          String website,
+      @nullable
+      @JsonKey(name: 'custom_value1')
+          String customValue1,
+      @nullable
+      @JsonKey(name: 'custom_value2')
+          String customValue2,
+      @nullable
+      @JsonKey(name: 'custom_value3')
+          String customValue3,
+      @nullable
+      @JsonKey(name: 'custom_value4')
+          String customValue4,
+      @nullable
+      @JsonKey(name: 'company_logo')
+          String companyLogo,
+      @nullable
+      @JsonKey(name: 'postal_code')
+          String postalCode,
+      @nullable
+      @JsonKey(name: 'country_id')
+          String countryId,
+      @nullable
+      @JsonKey(name: 'vat_number')
+          String vatNumber,
+      @nullable
+      @JsonKey(name: 'custom_fields')
+          Map<String, String> customFields});
 }
 
 class _$CompanySettingsCopyWithImpl<$Res>
@@ -193,14 +368,54 @@ class _$CompanySettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currencyId = freezed,
-    Object languageId = freezed,
+    Object name = freezed,
+    Object address1 = freezed,
+    Object address2 = freezed,
+    Object city = freezed,
+    Object state = freezed,
+    Object phone = freezed,
+    Object email = freezed,
+    Object website = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
+    Object companyLogo = freezed,
+    Object postalCode = freezed,
+    Object countryId = freezed,
+    Object vatNumber = freezed,
+    Object customFields = freezed,
   }) {
     return _then(_value.copyWith(
-      currencyId:
-          currencyId == freezed ? _value.currencyId : currencyId as String,
-      languageId:
-          languageId == freezed ? _value.languageId : languageId as String,
+      name: name == freezed ? _value.name : name as String,
+      address1: address1 == freezed ? _value.address1 : address1 as String,
+      address2: address2 == freezed ? _value.address2 : address2 as String,
+      city: city == freezed ? _value.city : city as String,
+      state: state == freezed ? _value.state : state as String,
+      phone: phone == freezed ? _value.phone : phone as String,
+      email: email == freezed ? _value.email : email as String,
+      website: website == freezed ? _value.website : website as String,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
+      companyLogo:
+          companyLogo == freezed ? _value.companyLogo : companyLogo as String,
+      postalCode:
+          postalCode == freezed ? _value.postalCode : postalCode as String,
+      countryId: countryId == freezed ? _value.countryId : countryId as String,
+      vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
+      customFields: customFields == freezed
+          ? _value.customFields
+          : customFields as Map<String, String>,
     ));
   }
 }
@@ -212,8 +427,49 @@ abstract class _$CompanySettingsCopyWith<$Res>
       __$CompanySettingsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@nullable @JsonKey(name: 'currency_id') String currencyId,
-      @nullable @JsonKey(name: 'language_id') String languageId});
+      {@nullable
+          String name,
+      @nullable
+          String address1,
+      @nullable
+          String address2,
+      @nullable
+          String city,
+      @nullable
+          String state,
+      @nullable
+          String phone,
+      @nullable
+          String email,
+      @nullable
+          String website,
+      @nullable
+      @JsonKey(name: 'custom_value1')
+          String customValue1,
+      @nullable
+      @JsonKey(name: 'custom_value2')
+          String customValue2,
+      @nullable
+      @JsonKey(name: 'custom_value3')
+          String customValue3,
+      @nullable
+      @JsonKey(name: 'custom_value4')
+          String customValue4,
+      @nullable
+      @JsonKey(name: 'company_logo')
+          String companyLogo,
+      @nullable
+      @JsonKey(name: 'postal_code')
+          String postalCode,
+      @nullable
+      @JsonKey(name: 'country_id')
+          String countryId,
+      @nullable
+      @JsonKey(name: 'vat_number')
+          String vatNumber,
+      @nullable
+      @JsonKey(name: 'custom_fields')
+          Map<String, String> customFields});
 }
 
 class __$CompanySettingsCopyWithImpl<$Res>
@@ -228,14 +484,54 @@ class __$CompanySettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object currencyId = freezed,
-    Object languageId = freezed,
+    Object name = freezed,
+    Object address1 = freezed,
+    Object address2 = freezed,
+    Object city = freezed,
+    Object state = freezed,
+    Object phone = freezed,
+    Object email = freezed,
+    Object website = freezed,
+    Object customValue1 = freezed,
+    Object customValue2 = freezed,
+    Object customValue3 = freezed,
+    Object customValue4 = freezed,
+    Object companyLogo = freezed,
+    Object postalCode = freezed,
+    Object countryId = freezed,
+    Object vatNumber = freezed,
+    Object customFields = freezed,
   }) {
     return _then(_CompanySettings(
-      currencyId:
-          currencyId == freezed ? _value.currencyId : currencyId as String,
-      languageId:
-          languageId == freezed ? _value.languageId : languageId as String,
+      name: name == freezed ? _value.name : name as String,
+      address1: address1 == freezed ? _value.address1 : address1 as String,
+      address2: address2 == freezed ? _value.address2 : address2 as String,
+      city: city == freezed ? _value.city : city as String,
+      state: state == freezed ? _value.state : state as String,
+      phone: phone == freezed ? _value.phone : phone as String,
+      email: email == freezed ? _value.email : email as String,
+      website: website == freezed ? _value.website : website as String,
+      customValue1: customValue1 == freezed
+          ? _value.customValue1
+          : customValue1 as String,
+      customValue2: customValue2 == freezed
+          ? _value.customValue2
+          : customValue2 as String,
+      customValue3: customValue3 == freezed
+          ? _value.customValue3
+          : customValue3 as String,
+      customValue4: customValue4 == freezed
+          ? _value.customValue4
+          : customValue4 as String,
+      companyLogo:
+          companyLogo == freezed ? _value.companyLogo : companyLogo as String,
+      postalCode:
+          postalCode == freezed ? _value.postalCode : postalCode as String,
+      countryId: countryId == freezed ? _value.countryId : countryId as String,
+      vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
+      customFields: customFields == freezed
+          ? _value.customFields
+          : customFields as Map<String, String>,
     ));
   }
 }
@@ -245,24 +541,99 @@ class _$_CompanySettings
     with DiagnosticableTreeMixin
     implements _CompanySettings {
   _$_CompanySettings(
-      {@nullable @JsonKey(name: 'currency_id') this.currencyId = '',
-      @nullable @JsonKey(name: 'language_id') this.languageId = ''});
+      {@nullable this.name = '',
+      @nullable this.address1 = '',
+      @nullable this.address2 = '',
+      @nullable this.city = '',
+      @nullable this.state = '',
+      @nullable this.phone = '',
+      @nullable this.email = '',
+      @nullable this.website = '',
+      @nullable @JsonKey(name: 'custom_value1') this.customValue1 = '',
+      @nullable @JsonKey(name: 'custom_value2') this.customValue2 = '',
+      @nullable @JsonKey(name: 'custom_value3') this.customValue3 = '',
+      @nullable @JsonKey(name: 'custom_value4') this.customValue4 = '',
+      @nullable @JsonKey(name: 'company_logo') this.companyLogo = '',
+      @nullable @JsonKey(name: 'postal_code') this.postalCode = '',
+      @nullable @JsonKey(name: 'country_id') this.countryId = '',
+      @nullable @JsonKey(name: 'vat_number') this.vatNumber = '',
+      @nullable @JsonKey(name: 'custom_fields') this.customFields = const {}});
 
   factory _$_CompanySettings.fromJson(Map<String, dynamic> json) =>
       _$_$_CompanySettingsFromJson(json);
 
+  @JsonKey(defaultValue: '')
   @override
   @nullable
-  @JsonKey(name: 'currency_id')
-  final String currencyId;
+  final String name;
+  @JsonKey(defaultValue: '')
   @override
   @nullable
-  @JsonKey(name: 'language_id')
-  final String languageId;
+  final String address1;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String address2;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String city;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String state;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String phone;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String email;
+  @JsonKey(defaultValue: '')
+  @override
+  @nullable
+  final String website;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value1')
+  final String customValue1;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value2')
+  final String customValue2;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value3')
+  final String customValue3;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value4')
+  final String customValue4;
+  @override
+  @nullable
+  @JsonKey(name: 'company_logo')
+  final String companyLogo;
+  @override
+  @nullable
+  @JsonKey(name: 'postal_code')
+  final String postalCode;
+  @override
+  @nullable
+  @JsonKey(name: 'country_id')
+  final String countryId;
+  @override
+  @nullable
+  @JsonKey(name: 'vat_number')
+  final String vatNumber;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_fields')
+  final Map<String, String> customFields;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CompanySettings(currencyId: $currencyId, languageId: $languageId)';
+    return 'CompanySettings(name: $name, address1: $address1, address2: $address2, city: $city, state: $state, phone: $phone, email: $email, website: $website, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, companyLogo: $companyLogo, postalCode: $postalCode, countryId: $countryId, vatNumber: $vatNumber, customFields: $customFields)';
   }
 
   @override
@@ -270,27 +641,97 @@ class _$_CompanySettings
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'CompanySettings'))
-      ..add(DiagnosticsProperty('currencyId', currencyId))
-      ..add(DiagnosticsProperty('languageId', languageId));
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('address1', address1))
+      ..add(DiagnosticsProperty('address2', address2))
+      ..add(DiagnosticsProperty('city', city))
+      ..add(DiagnosticsProperty('state', state))
+      ..add(DiagnosticsProperty('phone', phone))
+      ..add(DiagnosticsProperty('email', email))
+      ..add(DiagnosticsProperty('website', website))
+      ..add(DiagnosticsProperty('customValue1', customValue1))
+      ..add(DiagnosticsProperty('customValue2', customValue2))
+      ..add(DiagnosticsProperty('customValue3', customValue3))
+      ..add(DiagnosticsProperty('customValue4', customValue4))
+      ..add(DiagnosticsProperty('companyLogo', companyLogo))
+      ..add(DiagnosticsProperty('postalCode', postalCode))
+      ..add(DiagnosticsProperty('countryId', countryId))
+      ..add(DiagnosticsProperty('vatNumber', vatNumber))
+      ..add(DiagnosticsProperty('customFields', customFields));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CompanySettings &&
-            (identical(other.currencyId, currencyId) ||
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.address1, address1) ||
                 const DeepCollectionEquality()
-                    .equals(other.currencyId, currencyId)) &&
-            (identical(other.languageId, languageId) ||
+                    .equals(other.address1, address1)) &&
+            (identical(other.address2, address2) ||
                 const DeepCollectionEquality()
-                    .equals(other.languageId, languageId)));
+                    .equals(other.address2, address2)) &&
+            (identical(other.city, city) ||
+                const DeepCollectionEquality().equals(other.city, city)) &&
+            (identical(other.state, state) ||
+                const DeepCollectionEquality().equals(other.state, state)) &&
+            (identical(other.phone, phone) ||
+                const DeepCollectionEquality().equals(other.phone, phone)) &&
+            (identical(other.email, email) ||
+                const DeepCollectionEquality().equals(other.email, email)) &&
+            (identical(other.website, website) ||
+                const DeepCollectionEquality()
+                    .equals(other.website, website)) &&
+            (identical(other.customValue1, customValue1) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue1, customValue1)) &&
+            (identical(other.customValue2, customValue2) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue2, customValue2)) &&
+            (identical(other.customValue3, customValue3) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue3, customValue3)) &&
+            (identical(other.customValue4, customValue4) ||
+                const DeepCollectionEquality()
+                    .equals(other.customValue4, customValue4)) &&
+            (identical(other.companyLogo, companyLogo) ||
+                const DeepCollectionEquality()
+                    .equals(other.companyLogo, companyLogo)) &&
+            (identical(other.postalCode, postalCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.postalCode, postalCode)) &&
+            (identical(other.countryId, countryId) ||
+                const DeepCollectionEquality()
+                    .equals(other.countryId, countryId)) &&
+            (identical(other.vatNumber, vatNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.vatNumber, vatNumber)) &&
+            (identical(other.customFields, customFields) ||
+                const DeepCollectionEquality()
+                    .equals(other.customFields, customFields)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(currencyId) ^
-      const DeepCollectionEquality().hash(languageId);
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(address1) ^
+      const DeepCollectionEquality().hash(address2) ^
+      const DeepCollectionEquality().hash(city) ^
+      const DeepCollectionEquality().hash(state) ^
+      const DeepCollectionEquality().hash(phone) ^
+      const DeepCollectionEquality().hash(email) ^
+      const DeepCollectionEquality().hash(website) ^
+      const DeepCollectionEquality().hash(customValue1) ^
+      const DeepCollectionEquality().hash(customValue2) ^
+      const DeepCollectionEquality().hash(customValue3) ^
+      const DeepCollectionEquality().hash(customValue4) ^
+      const DeepCollectionEquality().hash(companyLogo) ^
+      const DeepCollectionEquality().hash(postalCode) ^
+      const DeepCollectionEquality().hash(countryId) ^
+      const DeepCollectionEquality().hash(vatNumber) ^
+      const DeepCollectionEquality().hash(customFields);
 
   @override
   _$CompanySettingsCopyWith<_CompanySettings> get copyWith =>
@@ -304,21 +745,113 @@ class _$_CompanySettings
 
 abstract class _CompanySettings implements CompanySettings {
   factory _CompanySettings(
-          {@nullable @JsonKey(name: 'currency_id') String currencyId,
-          @nullable @JsonKey(name: 'language_id') String languageId}) =
-      _$_CompanySettings;
+      {@nullable
+          String name,
+      @nullable
+          String address1,
+      @nullable
+          String address2,
+      @nullable
+          String city,
+      @nullable
+          String state,
+      @nullable
+          String phone,
+      @nullable
+          String email,
+      @nullable
+          String website,
+      @nullable
+      @JsonKey(name: 'custom_value1')
+          String customValue1,
+      @nullable
+      @JsonKey(name: 'custom_value2')
+          String customValue2,
+      @nullable
+      @JsonKey(name: 'custom_value3')
+          String customValue3,
+      @nullable
+      @JsonKey(name: 'custom_value4')
+          String customValue4,
+      @nullable
+      @JsonKey(name: 'company_logo')
+          String companyLogo,
+      @nullable
+      @JsonKey(name: 'postal_code')
+          String postalCode,
+      @nullable
+      @JsonKey(name: 'country_id')
+          String countryId,
+      @nullable
+      @JsonKey(name: 'vat_number')
+          String vatNumber,
+      @nullable
+      @JsonKey(name: 'custom_fields')
+          Map<String, String> customFields}) = _$_CompanySettings;
 
   factory _CompanySettings.fromJson(Map<String, dynamic> json) =
       _$_CompanySettings.fromJson;
 
   @override
   @nullable
-  @JsonKey(name: 'currency_id')
-  String get currencyId;
+  String get name;
   @override
   @nullable
-  @JsonKey(name: 'language_id')
-  String get languageId;
+  String get address1;
+  @override
+  @nullable
+  String get address2;
+  @override
+  @nullable
+  String get city;
+  @override
+  @nullable
+  String get state;
+  @override
+  @nullable
+  String get phone;
+  @override
+  @nullable
+  String get email;
+  @override
+  @nullable
+  String get website;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value1')
+  String get customValue1;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value2')
+  String get customValue2;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value3')
+  String get customValue3;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_value4')
+  String get customValue4;
+  @override
+  @nullable
+  @JsonKey(name: 'company_logo')
+  String get companyLogo;
+  @override
+  @nullable
+  @JsonKey(name: 'postal_code')
+  String get postalCode;
+  @override
+  @nullable
+  @JsonKey(name: 'country_id')
+  String get countryId;
+  @override
+  @nullable
+  @JsonKey(name: 'vat_number')
+  String get vatNumber;
+  @override
+  @nullable
+  @JsonKey(name: 'custom_fields')
+  Map<String, String> get customFields;
   @override
   _$CompanySettingsCopyWith<_CompanySettings> get copyWith;
 }
