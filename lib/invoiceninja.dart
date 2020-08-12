@@ -3,6 +3,7 @@ library invoiceninja;
 import 'package:invoiceninja/repositories/client_repository.dart';
 import 'package:invoiceninja/repositories/company_repository.dart';
 import 'package:invoiceninja/repositories/invoice_repository.dart';
+import 'package:invoiceninja/repositories/payment_repository.dart';
 import 'package:invoiceninja/repositories/product_repository.dart';
 
 /// Storefront SDK for Invoice Ninja
@@ -47,6 +48,7 @@ class InvoiceNinjaAdmin {
   static ProductAdminRepository products = ProductAdminRepository();
   static ClientAdminRepository clients = ClientAdminRepository();
   static InvoiceAdminRepository invoices = InvoiceAdminRepository();
+  static PaymentAdminRepository payments = PaymentAdminRepository();
 
   /// Configure the Invoice Ninja package
   static void configure(
