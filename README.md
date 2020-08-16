@@ -113,3 +113,35 @@ InvoiceNinjaAdmin.configure(
   debugEnabled: true,
 );
 ``` 
+
+### Find a client by email
+
+```dart
+final client = await InvoiceNinjaAdmin.clients.findByEmail(email);
+``` 
+
+### Load the payments list
+
+```dart
+final payments = await InvoiceNinjaAdmin.payments.load();
+``` 
+
+### Find a payment by id
+
+```dart
+final payment = await InvoiceNinjaAdmin.payments.findById(id);
+``` 
+
+### Create/persist a quote
+
+```dart
+var quote = Quote.forClient(client, products: [product]);
+quote = await InvoiceNinjaAdmin.quotes.save(quote);
+``` 
+
+### Create/persist a credit
+
+```dart
+var credit = Credit.forClient(client, products: [product]);
+credit = await InvoiceNinjaAdmin.credits.save(quote);
+```
