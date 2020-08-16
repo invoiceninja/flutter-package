@@ -1,7 +1,9 @@
 # Invoice Ninja 
 
 This package makes it easy to sell products in a Flutter app   
-  
+
+Example               |
+:-------------------------:|  
 ![](https://github.com/invoiceninja/flutter-package/blob/master/assets/sample.gif)  
 
 ## Features
