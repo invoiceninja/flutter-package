@@ -2,7 +2,7 @@
 
 This package makes it easy to sell products in a Flutter app   
 
-![](https://github.com/invoiceninja/flutter-package/blob/master/assets/sample.gif  | width=200)  
+![](https://github.com/invoiceninja/flutter-package/blob/master/assets/sample.gif | width=200)  
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
