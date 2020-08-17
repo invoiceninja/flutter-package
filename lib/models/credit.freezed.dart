@@ -41,7 +41,7 @@ class _$CreditTearOff {
       @JsonKey(name: 'client_id')
           String clientId = '',
       @JsonKey(name: 'line_items')
-          List<CreditLineItem> lineItems = const <CreditLineItem>[],
+          List<InvoiceLineItem> lineItems = const <InvoiceLineItem>[],
       List<CreditInvitation> invitations = const <CreditInvitation>[],
       double amount = 0,
       double balance = 0,
@@ -60,8 +60,6 @@ class _$CreditTearOff {
           String lastSentDate = '',
       @JsonKey(name: 'next_send_date')
           String nextSendDate = '',
-      @JsonKey(name: 'due_date')
-          String dueDate = '',
       String terms = '',
       @JsonKey(name: 'public_notes')
           String publicNotes = '',
@@ -135,7 +133,6 @@ class _$CreditTearOff {
       date: date,
       lastSentDate: lastSentDate,
       nextSendDate: nextSendDate,
-      dueDate: dueDate,
       terms: terms,
       publicNotes: publicNotes,
       privateNotes: privateNotes,
@@ -193,7 +190,7 @@ mixin _$Credit {
   @JsonKey(name: 'client_id')
   String get clientId;
   @JsonKey(name: 'line_items')
-  List<CreditLineItem> get lineItems;
+  List<InvoiceLineItem> get lineItems;
   List<CreditInvitation> get invitations;
   double get amount;
   double get balance;
@@ -212,8 +209,6 @@ mixin _$Credit {
   String get lastSentDate;
   @JsonKey(name: 'next_send_date')
   String get nextSendDate;
-  @JsonKey(name: 'due_date')
-  String get dueDate;
   String get terms;
   @JsonKey(name: 'public_notes')
   String get publicNotes;
@@ -282,7 +277,7 @@ abstract class $CreditCopyWith<$Res> {
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
-      @JsonKey(name: 'line_items') List<CreditLineItem> lineItems,
+      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
       List<CreditInvitation> invitations,
       double amount,
       double balance,
@@ -295,7 +290,6 @@ abstract class $CreditCopyWith<$Res> {
       String date,
       @JsonKey(name: 'last_sent_date') String lastSentDate,
       @JsonKey(name: 'next_send_date') String nextSendDate,
-      @JsonKey(name: 'due_date') String dueDate,
       String terms,
       @JsonKey(name: 'public_notes') String publicNotes,
       @JsonKey(name: 'private_notes') String privateNotes,
@@ -357,7 +351,6 @@ class _$CreditCopyWithImpl<$Res> implements $CreditCopyWith<$Res> {
     Object date = freezed,
     Object lastSentDate = freezed,
     Object nextSendDate = freezed,
-    Object dueDate = freezed,
     Object terms = freezed,
     Object publicNotes = freezed,
     Object privateNotes = freezed,
@@ -410,7 +403,7 @@ class _$CreditCopyWithImpl<$Res> implements $CreditCopyWith<$Res> {
       clientId: clientId == freezed ? _value.clientId : clientId as String,
       lineItems: lineItems == freezed
           ? _value.lineItems
-          : lineItems as List<CreditLineItem>,
+          : lineItems as List<InvoiceLineItem>,
       invitations: invitations == freezed
           ? _value.invitations
           : invitations as List<CreditInvitation>,
@@ -429,7 +422,6 @@ class _$CreditCopyWithImpl<$Res> implements $CreditCopyWith<$Res> {
       nextSendDate: nextSendDate == freezed
           ? _value.nextSendDate
           : nextSendDate as String,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as String,
       terms: terms == freezed ? _value.terms : terms as String,
       publicNotes:
           publicNotes == freezed ? _value.publicNotes : publicNotes as String,
@@ -503,7 +495,7 @@ abstract class _$CreditCopyWith<$Res> implements $CreditCopyWith<$Res> {
       @JsonKey(name: 'custom_value3') String customValue3,
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
-      @JsonKey(name: 'line_items') List<CreditLineItem> lineItems,
+      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
       List<CreditInvitation> invitations,
       double amount,
       double balance,
@@ -516,7 +508,6 @@ abstract class _$CreditCopyWith<$Res> implements $CreditCopyWith<$Res> {
       String date,
       @JsonKey(name: 'last_sent_date') String lastSentDate,
       @JsonKey(name: 'next_send_date') String nextSendDate,
-      @JsonKey(name: 'due_date') String dueDate,
       String terms,
       @JsonKey(name: 'public_notes') String publicNotes,
       @JsonKey(name: 'private_notes') String privateNotes,
@@ -579,7 +570,6 @@ class __$CreditCopyWithImpl<$Res> extends _$CreditCopyWithImpl<$Res>
     Object date = freezed,
     Object lastSentDate = freezed,
     Object nextSendDate = freezed,
-    Object dueDate = freezed,
     Object terms = freezed,
     Object publicNotes = freezed,
     Object privateNotes = freezed,
@@ -632,7 +622,7 @@ class __$CreditCopyWithImpl<$Res> extends _$CreditCopyWithImpl<$Res>
       clientId: clientId == freezed ? _value.clientId : clientId as String,
       lineItems: lineItems == freezed
           ? _value.lineItems
-          : lineItems as List<CreditLineItem>,
+          : lineItems as List<InvoiceLineItem>,
       invitations: invitations == freezed
           ? _value.invitations
           : invitations as List<CreditInvitation>,
@@ -651,7 +641,6 @@ class __$CreditCopyWithImpl<$Res> extends _$CreditCopyWithImpl<$Res>
       nextSendDate: nextSendDate == freezed
           ? _value.nextSendDate
           : nextSendDate as String,
-      dueDate: dueDate == freezed ? _value.dueDate : dueDate as String,
       terms: terms == freezed ? _value.terms : terms as String,
       publicNotes:
           publicNotes == freezed ? _value.publicNotes : publicNotes as String,
@@ -723,7 +712,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
       @JsonKey(name: 'custom_value3') this.customValue3 = '',
       @JsonKey(name: 'custom_value4') this.customValue4 = '',
       @JsonKey(name: 'client_id') this.clientId = '',
-      @JsonKey(name: 'line_items') this.lineItems = const <CreditLineItem>[],
+      @JsonKey(name: 'line_items') this.lineItems = const <InvoiceLineItem>[],
       this.invitations = const <CreditInvitation>[],
       this.amount = 0,
       this.balance = 0,
@@ -736,7 +725,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
       this.date = '',
       @JsonKey(name: 'last_sent_date') this.lastSentDate = '',
       @JsonKey(name: 'next_send_date') this.nextSendDate = '',
-      @JsonKey(name: 'due_date') this.dueDate = '',
       this.terms = '',
       @JsonKey(name: 'public_notes') this.publicNotes = '',
       @JsonKey(name: 'private_notes') this.privateNotes = '',
@@ -787,7 +775,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
         assert(date != null),
         assert(lastSentDate != null),
         assert(nextSendDate != null),
-        assert(dueDate != null),
         assert(terms != null),
         assert(publicNotes != null),
         assert(privateNotes != null),
@@ -856,7 +843,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
   final String clientId;
   @override
   @JsonKey(name: 'line_items')
-  final List<CreditLineItem> lineItems;
+  final List<InvoiceLineItem> lineItems;
   @JsonKey(defaultValue: const <CreditInvitation>[])
   @override
   final List<CreditInvitation> invitations;
@@ -893,9 +880,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'next_send_date')
   final String nextSendDate;
-  @override
-  @JsonKey(name: 'due_date')
-  final String dueDate;
   @JsonKey(defaultValue: '')
   @override
   final String terms;
@@ -974,7 +958,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Credit(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4)';
+    return 'Credit(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4)';
   }
 
   @override
@@ -1007,7 +991,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('lastSentDate', lastSentDate))
       ..add(DiagnosticsProperty('nextSendDate', nextSendDate))
-      ..add(DiagnosticsProperty('dueDate', dueDate))
       ..add(DiagnosticsProperty('terms', terms))
       ..add(DiagnosticsProperty('publicNotes', publicNotes))
       ..add(DiagnosticsProperty('privateNotes', privateNotes))
@@ -1107,7 +1090,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
             (identical(other.lastSentDate, lastSentDate) ||
                 const DeepCollectionEquality().equals(other.lastSentDate, lastSentDate)) &&
             (identical(other.nextSendDate, nextSendDate) || const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
-            (identical(other.dueDate, dueDate) || const DeepCollectionEquality().equals(other.dueDate, dueDate)) &&
             (identical(other.terms, terms) || const DeepCollectionEquality().equals(other.terms, terms)) &&
             (identical(other.publicNotes, publicNotes) || const DeepCollectionEquality().equals(other.publicNotes, publicNotes)) &&
             (identical(other.privateNotes, privateNotes) || const DeepCollectionEquality().equals(other.privateNotes, privateNotes)) &&
@@ -1163,7 +1145,6 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(lastSentDate) ^
       const DeepCollectionEquality().hash(nextSendDate) ^
-      const DeepCollectionEquality().hash(dueDate) ^
       const DeepCollectionEquality().hash(terms) ^
       const DeepCollectionEquality().hash(publicNotes) ^
       const DeepCollectionEquality().hash(privateNotes) ^
@@ -1215,7 +1196,7 @@ abstract class _Credit extends Credit {
           @JsonKey(name: 'custom_value3') String customValue3,
           @JsonKey(name: 'custom_value4') String customValue4,
           @JsonKey(name: 'client_id') String clientId,
-          @JsonKey(name: 'line_items') List<CreditLineItem> lineItems,
+          @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
           List<CreditInvitation> invitations,
           double amount,
           double balance,
@@ -1228,7 +1209,6 @@ abstract class _Credit extends Credit {
           String date,
           @JsonKey(name: 'last_sent_date') String lastSentDate,
           @JsonKey(name: 'next_send_date') String nextSendDate,
-          @JsonKey(name: 'due_date') String dueDate,
           String terms,
           @JsonKey(name: 'public_notes') String publicNotes,
           @JsonKey(name: 'private_notes') String privateNotes,
@@ -1295,7 +1275,7 @@ abstract class _Credit extends Credit {
   String get clientId;
   @override
   @JsonKey(name: 'line_items')
-  List<CreditLineItem> get lineItems;
+  List<InvoiceLineItem> get lineItems;
   @override
   List<CreditInvitation> get invitations;
   @override
@@ -1326,9 +1306,6 @@ abstract class _Credit extends Credit {
   @override
   @JsonKey(name: 'next_send_date')
   String get nextSendDate;
-  @override
-  @JsonKey(name: 'due_date')
-  String get dueDate;
   @override
   String get terms;
   @override
@@ -1403,543 +1380,6 @@ abstract class _Credit extends Credit {
   bool get customSurchargeTax4;
   @override
   _$CreditCopyWith<_Credit> get copyWith;
-}
-
-CreditLineItem _$CreditLineItemFromJson(Map<String, dynamic> json) {
-  return _CreditLineItem.fromJson(json);
-}
-
-class _$CreditLineItemTearOff {
-  const _$CreditLineItemTearOff();
-
-// ignore: unused_element
-  _CreditLineItem call(
-      {String id = '',
-      @JsonKey(name: 'product_key') String productKey = '',
-      String notes = '',
-      double cost = 0,
-      double quantity = 0,
-      @JsonKey(name: 'tax_name1') String taxName1 = '',
-      @JsonKey(name: 'tax_rate1') double taxRate1 = 0,
-      @JsonKey(name: 'tax_name2') String taxName2 = '',
-      @JsonKey(name: 'tax_rate2') double taxRate2 = 0,
-      @JsonKey(name: 'tax_name3') String taxName3 = '',
-      @JsonKey(name: 'tax_rate3') double taxRate3 = 0,
-      @JsonKey(name: 'type_id') String typeId = '',
-      @JsonKey(name: 'custom_value1') String customValue1 = '',
-      @JsonKey(name: 'custom_value2') String customValue2 = '',
-      @JsonKey(name: 'custom_value3') String customValue3 = '',
-      @JsonKey(name: 'custom_value4') String customValue4 = '',
-      double discount = 0}) {
-    return _CreditLineItem(
-      id: id,
-      productKey: productKey,
-      notes: notes,
-      cost: cost,
-      quantity: quantity,
-      taxName1: taxName1,
-      taxRate1: taxRate1,
-      taxName2: taxName2,
-      taxRate2: taxRate2,
-      taxName3: taxName3,
-      taxRate3: taxRate3,
-      typeId: typeId,
-      customValue1: customValue1,
-      customValue2: customValue2,
-      customValue3: customValue3,
-      customValue4: customValue4,
-      discount: discount,
-    );
-  }
-}
-
-// ignore: unused_element
-const $CreditLineItem = _$CreditLineItemTearOff();
-
-mixin _$CreditLineItem {
-  String get id;
-  @JsonKey(name: 'product_key')
-  String get productKey;
-  String get notes;
-  double get cost;
-  double get quantity;
-  @JsonKey(name: 'tax_name1')
-  String get taxName1;
-  @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
-  @JsonKey(name: 'tax_name2')
-  String get taxName2;
-  @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
-  @JsonKey(name: 'tax_name3')
-  String get taxName3;
-  @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
-  @JsonKey(name: 'type_id')
-  String get typeId;
-  @JsonKey(name: 'custom_value1')
-  String get customValue1;
-  @JsonKey(name: 'custom_value2')
-  String get customValue2;
-  @JsonKey(name: 'custom_value3')
-  String get customValue3;
-  @JsonKey(name: 'custom_value4')
-  String get customValue4;
-  double get discount;
-
-  Map<String, dynamic> toJson();
-  $CreditLineItemCopyWith<CreditLineItem> get copyWith;
-}
-
-abstract class $CreditLineItemCopyWith<$Res> {
-  factory $CreditLineItemCopyWith(
-          CreditLineItem value, $Res Function(CreditLineItem) then) =
-      _$CreditLineItemCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      @JsonKey(name: 'product_key') String productKey,
-      String notes,
-      double cost,
-      double quantity,
-      @JsonKey(name: 'tax_name1') String taxName1,
-      @JsonKey(name: 'tax_rate1') double taxRate1,
-      @JsonKey(name: 'tax_name2') String taxName2,
-      @JsonKey(name: 'tax_rate2') double taxRate2,
-      @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3,
-      @JsonKey(name: 'type_id') String typeId,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      double discount});
-}
-
-class _$CreditLineItemCopyWithImpl<$Res>
-    implements $CreditLineItemCopyWith<$Res> {
-  _$CreditLineItemCopyWithImpl(this._value, this._then);
-
-  final CreditLineItem _value;
-  // ignore: unused_field
-  final $Res Function(CreditLineItem) _then;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object productKey = freezed,
-    Object notes = freezed,
-    Object cost = freezed,
-    Object quantity = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object typeId = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object discount = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      productKey:
-          productKey == freezed ? _value.productKey : productKey as String,
-      notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
-      quantity: quantity == freezed ? _value.quantity : quantity as double,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      typeId: typeId == freezed ? _value.typeId : typeId as String,
-      customValue1: customValue1 == freezed
-          ? _value.customValue1
-          : customValue1 as String,
-      customValue2: customValue2 == freezed
-          ? _value.customValue2
-          : customValue2 as String,
-      customValue3: customValue3 == freezed
-          ? _value.customValue3
-          : customValue3 as String,
-      customValue4: customValue4 == freezed
-          ? _value.customValue4
-          : customValue4 as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-    ));
-  }
-}
-
-abstract class _$CreditLineItemCopyWith<$Res>
-    implements $CreditLineItemCopyWith<$Res> {
-  factory _$CreditLineItemCopyWith(
-          _CreditLineItem value, $Res Function(_CreditLineItem) then) =
-      __$CreditLineItemCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String id,
-      @JsonKey(name: 'product_key') String productKey,
-      String notes,
-      double cost,
-      double quantity,
-      @JsonKey(name: 'tax_name1') String taxName1,
-      @JsonKey(name: 'tax_rate1') double taxRate1,
-      @JsonKey(name: 'tax_name2') String taxName2,
-      @JsonKey(name: 'tax_rate2') double taxRate2,
-      @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3,
-      @JsonKey(name: 'type_id') String typeId,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      double discount});
-}
-
-class __$CreditLineItemCopyWithImpl<$Res>
-    extends _$CreditLineItemCopyWithImpl<$Res>
-    implements _$CreditLineItemCopyWith<$Res> {
-  __$CreditLineItemCopyWithImpl(
-      _CreditLineItem _value, $Res Function(_CreditLineItem) _then)
-      : super(_value, (v) => _then(v as _CreditLineItem));
-
-  @override
-  _CreditLineItem get _value => super._value as _CreditLineItem;
-
-  @override
-  $Res call({
-    Object id = freezed,
-    Object productKey = freezed,
-    Object notes = freezed,
-    Object cost = freezed,
-    Object quantity = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object typeId = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object discount = freezed,
-  }) {
-    return _then(_CreditLineItem(
-      id: id == freezed ? _value.id : id as String,
-      productKey:
-          productKey == freezed ? _value.productKey : productKey as String,
-      notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
-      quantity: quantity == freezed ? _value.quantity : quantity as double,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      typeId: typeId == freezed ? _value.typeId : typeId as String,
-      customValue1: customValue1 == freezed
-          ? _value.customValue1
-          : customValue1 as String,
-      customValue2: customValue2 == freezed
-          ? _value.customValue2
-          : customValue2 as String,
-      customValue3: customValue3 == freezed
-          ? _value.customValue3
-          : customValue3 as String,
-      customValue4: customValue4 == freezed
-          ? _value.customValue4
-          : customValue4 as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-    ));
-  }
-}
-
-@JsonSerializable(explicitToJson: true)
-class _$_CreditLineItem
-    with DiagnosticableTreeMixin
-    implements _CreditLineItem {
-  _$_CreditLineItem(
-      {this.id = '',
-      @JsonKey(name: 'product_key') this.productKey = '',
-      this.notes = '',
-      this.cost = 0,
-      this.quantity = 0,
-      @JsonKey(name: 'tax_name1') this.taxName1 = '',
-      @JsonKey(name: 'tax_rate1') this.taxRate1 = 0,
-      @JsonKey(name: 'tax_name2') this.taxName2 = '',
-      @JsonKey(name: 'tax_rate2') this.taxRate2 = 0,
-      @JsonKey(name: 'tax_name3') this.taxName3 = '',
-      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
-      @JsonKey(name: 'type_id') this.typeId = '',
-      @JsonKey(name: 'custom_value1') this.customValue1 = '',
-      @JsonKey(name: 'custom_value2') this.customValue2 = '',
-      @JsonKey(name: 'custom_value3') this.customValue3 = '',
-      @JsonKey(name: 'custom_value4') this.customValue4 = '',
-      this.discount = 0})
-      : assert(id != null),
-        assert(productKey != null),
-        assert(notes != null),
-        assert(cost != null),
-        assert(quantity != null),
-        assert(taxName1 != null),
-        assert(taxRate1 != null),
-        assert(taxName2 != null),
-        assert(taxRate2 != null),
-        assert(taxName3 != null),
-        assert(taxRate3 != null),
-        assert(typeId != null),
-        assert(customValue1 != null),
-        assert(customValue2 != null),
-        assert(customValue3 != null),
-        assert(customValue4 != null),
-        assert(discount != null);
-
-  factory _$_CreditLineItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreditLineItemFromJson(json);
-
-  @JsonKey(defaultValue: '')
-  @override
-  final String id;
-  @override
-  @JsonKey(name: 'product_key')
-  final String productKey;
-  @JsonKey(defaultValue: '')
-  @override
-  final String notes;
-  @JsonKey(defaultValue: 0)
-  @override
-  final double cost;
-  @JsonKey(defaultValue: 0)
-  @override
-  final double quantity;
-  @override
-  @JsonKey(name: 'tax_name1')
-  final String taxName1;
-  @override
-  @JsonKey(name: 'tax_rate1')
-  final double taxRate1;
-  @override
-  @JsonKey(name: 'tax_name2')
-  final String taxName2;
-  @override
-  @JsonKey(name: 'tax_rate2')
-  final double taxRate2;
-  @override
-  @JsonKey(name: 'tax_name3')
-  final String taxName3;
-  @override
-  @JsonKey(name: 'tax_rate3')
-  final double taxRate3;
-  @override
-  @JsonKey(name: 'type_id')
-  final String typeId;
-  @override
-  @JsonKey(name: 'custom_value1')
-  final String customValue1;
-  @override
-  @JsonKey(name: 'custom_value2')
-  final String customValue2;
-  @override
-  @JsonKey(name: 'custom_value3')
-  final String customValue3;
-  @override
-  @JsonKey(name: 'custom_value4')
-  final String customValue4;
-  @JsonKey(defaultValue: 0)
-  @override
-  final double discount;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CreditLineItem(id: $id, productKey: $productKey, notes: $notes, cost: $cost, quantity: $quantity, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, typeId: $typeId, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, discount: $discount)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'CreditLineItem'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('productKey', productKey))
-      ..add(DiagnosticsProperty('notes', notes))
-      ..add(DiagnosticsProperty('cost', cost))
-      ..add(DiagnosticsProperty('quantity', quantity))
-      ..add(DiagnosticsProperty('taxName1', taxName1))
-      ..add(DiagnosticsProperty('taxRate1', taxRate1))
-      ..add(DiagnosticsProperty('taxName2', taxName2))
-      ..add(DiagnosticsProperty('taxRate2', taxRate2))
-      ..add(DiagnosticsProperty('taxName3', taxName3))
-      ..add(DiagnosticsProperty('taxRate3', taxRate3))
-      ..add(DiagnosticsProperty('typeId', typeId))
-      ..add(DiagnosticsProperty('customValue1', customValue1))
-      ..add(DiagnosticsProperty('customValue2', customValue2))
-      ..add(DiagnosticsProperty('customValue3', customValue3))
-      ..add(DiagnosticsProperty('customValue4', customValue4))
-      ..add(DiagnosticsProperty('discount', discount));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _CreditLineItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.productKey, productKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.productKey, productKey)) &&
-            (identical(other.notes, notes) ||
-                const DeepCollectionEquality().equals(other.notes, notes)) &&
-            (identical(other.cost, cost) ||
-                const DeepCollectionEquality().equals(other.cost, cost)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.taxName1, taxName1) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName1, taxName1)) &&
-            (identical(other.taxRate1, taxRate1) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate1, taxRate1)) &&
-            (identical(other.taxName2, taxName2) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName2, taxName2)) &&
-            (identical(other.taxRate2, taxRate2) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate2, taxRate2)) &&
-            (identical(other.taxName3, taxName3) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName3, taxName3)) &&
-            (identical(other.taxRate3, taxRate3) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate3, taxRate3)) &&
-            (identical(other.typeId, typeId) ||
-                const DeepCollectionEquality().equals(other.typeId, typeId)) &&
-            (identical(other.customValue1, customValue1) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue1, customValue1)) &&
-            (identical(other.customValue2, customValue2) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue2, customValue2)) &&
-            (identical(other.customValue3, customValue3) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue3, customValue3)) &&
-            (identical(other.customValue4, customValue4) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue4, customValue4)) &&
-            (identical(other.discount, discount) ||
-                const DeepCollectionEquality()
-                    .equals(other.discount, discount)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(productKey) ^
-      const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(cost) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(taxName1) ^
-      const DeepCollectionEquality().hash(taxRate1) ^
-      const DeepCollectionEquality().hash(taxName2) ^
-      const DeepCollectionEquality().hash(taxRate2) ^
-      const DeepCollectionEquality().hash(taxName3) ^
-      const DeepCollectionEquality().hash(taxRate3) ^
-      const DeepCollectionEquality().hash(typeId) ^
-      const DeepCollectionEquality().hash(customValue1) ^
-      const DeepCollectionEquality().hash(customValue2) ^
-      const DeepCollectionEquality().hash(customValue3) ^
-      const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(discount);
-
-  @override
-  _$CreditLineItemCopyWith<_CreditLineItem> get copyWith =>
-      __$CreditLineItemCopyWithImpl<_CreditLineItem>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_CreditLineItemToJson(this);
-  }
-}
-
-abstract class _CreditLineItem implements CreditLineItem {
-  factory _CreditLineItem(
-      {String id,
-      @JsonKey(name: 'product_key') String productKey,
-      String notes,
-      double cost,
-      double quantity,
-      @JsonKey(name: 'tax_name1') String taxName1,
-      @JsonKey(name: 'tax_rate1') double taxRate1,
-      @JsonKey(name: 'tax_name2') String taxName2,
-      @JsonKey(name: 'tax_rate2') double taxRate2,
-      @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3,
-      @JsonKey(name: 'type_id') String typeId,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      double discount}) = _$_CreditLineItem;
-
-  factory _CreditLineItem.fromJson(Map<String, dynamic> json) =
-      _$_CreditLineItem.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'product_key')
-  String get productKey;
-  @override
-  String get notes;
-  @override
-  double get cost;
-  @override
-  double get quantity;
-  @override
-  @JsonKey(name: 'tax_name1')
-  String get taxName1;
-  @override
-  @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
-  @override
-  @JsonKey(name: 'tax_name2')
-  String get taxName2;
-  @override
-  @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
-  @override
-  @JsonKey(name: 'tax_name3')
-  String get taxName3;
-  @override
-  @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
-  @override
-  @JsonKey(name: 'type_id')
-  String get typeId;
-  @override
-  @JsonKey(name: 'custom_value1')
-  String get customValue1;
-  @override
-  @JsonKey(name: 'custom_value2')
-  String get customValue2;
-  @override
-  @JsonKey(name: 'custom_value3')
-  String get customValue3;
-  @override
-  @JsonKey(name: 'custom_value4')
-  String get customValue4;
-  @override
-  double get discount;
-  @override
-  _$CreditLineItemCopyWith<_CreditLineItem> get copyWith;
 }
 
 CreditInvitation _$CreditInvitationFromJson(Map<String, dynamic> json) {

@@ -44,7 +44,7 @@ abstract class Quote implements _$Quote {
     @Default('') String date,
     @Default('') @JsonKey(name: 'last_sent_date') String lastSentDate,
     @Default('') @JsonKey(name: 'next_send_date') String nextSendDate,
-    @Default('') @JsonKey(name: 'due_date') String dueDate,
+    @Default('') @JsonKey(name: 'due_date') String validUntil,
     @Default('') String terms,
     @Default('') @JsonKey(name: 'public_notes') String publicNotes,
     @Default('') @JsonKey(name: 'private_notes') String privateNotes,

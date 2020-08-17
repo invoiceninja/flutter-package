@@ -23,7 +23,7 @@ _$_Quote _$_$_QuoteFromJson(Map<String, dynamic> json) {
     lineItems: (json['line_items'] as List)
         ?.map((e) => e == null
             ? null
-            : QuoteLineItem.fromJson(e as Map<String, dynamic>))
+            : InvoiceLineItem.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     invitations: (json['invitations'] as List)
             ?.map((e) => e == null
@@ -42,7 +42,7 @@ _$_Quote _$_$_QuoteFromJson(Map<String, dynamic> json) {
     date: json['date'] as String ?? '',
     lastSentDate: json['last_sent_date'] as String,
     nextSendDate: json['next_send_date'] as String,
-    dueDate: json['due_date'] as String,
+    validUntil: json['due_date'] as String,
     terms: json['terms'] as String ?? '',
     publicNotes: json['public_notes'] as String,
     privateNotes: json['private_notes'] as String,
@@ -97,7 +97,7 @@ Map<String, dynamic> _$_$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
       'date': instance.date,
       'last_sent_date': instance.lastSentDate,
       'next_send_date': instance.nextSendDate,
-      'due_date': instance.dueDate,
+      'due_date': instance.validUntil,
       'terms': instance.terms,
       'public_notes': instance.publicNotes,
       'private_notes': instance.privateNotes,
@@ -123,49 +123,6 @@ Map<String, dynamic> _$_$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
       'custom_surcharge_tax2': instance.customSurchargeTax2,
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
-    };
-
-_$_QuoteLineItem _$_$_QuoteLineItemFromJson(Map<String, dynamic> json) {
-  return _$_QuoteLineItem(
-    id: json['id'] as String ?? '',
-    productKey: json['product_key'] as String,
-    notes: json['notes'] as String ?? '',
-    cost: (json['cost'] as num)?.toDouble() ?? 0,
-    quantity: (json['quantity'] as num)?.toDouble() ?? 0,
-    taxName1: json['tax_name1'] as String,
-    taxRate1: (json['tax_rate1'] as num)?.toDouble(),
-    taxName2: json['tax_name2'] as String,
-    taxRate2: (json['tax_rate2'] as num)?.toDouble(),
-    taxName3: json['tax_name3'] as String,
-    taxRate3: (json['tax_rate3'] as num)?.toDouble(),
-    typeId: json['type_id'] as String,
-    customValue1: json['custom_value1'] as String,
-    customValue2: json['custom_value2'] as String,
-    customValue3: json['custom_value3'] as String,
-    customValue4: json['custom_value4'] as String,
-    discount: (json['discount'] as num)?.toDouble() ?? 0,
-  );
-}
-
-Map<String, dynamic> _$_$_QuoteLineItemToJson(_$_QuoteLineItem instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'product_key': instance.productKey,
-      'notes': instance.notes,
-      'cost': instance.cost,
-      'quantity': instance.quantity,
-      'tax_name1': instance.taxName1,
-      'tax_rate1': instance.taxRate1,
-      'tax_name2': instance.taxName2,
-      'tax_rate2': instance.taxRate2,
-      'tax_name3': instance.taxName3,
-      'tax_rate3': instance.taxRate3,
-      'type_id': instance.typeId,
-      'custom_value1': instance.customValue1,
-      'custom_value2': instance.customValue2,
-      'custom_value3': instance.customValue3,
-      'custom_value4': instance.customValue4,
-      'discount': instance.discount,
     };
 
 _$_QuoteInvitation _$_$_QuoteInvitationFromJson(Map<String, dynamic> json) {
