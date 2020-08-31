@@ -68,6 +68,11 @@ _$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
     customSurchargeTax2: json['custom_surcharge_tax2'] as bool,
     customSurchargeTax3: json['custom_surcharge_tax3'] as bool,
     customSurchargeTax4: json['custom_surcharge_tax4'] as bool,
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
   );
 }
 
@@ -124,6 +129,7 @@ Map<String, dynamic> _$_$_InvoiceToJson(_$_Invoice instance) =>
       'custom_surcharge_tax2': instance.customSurchargeTax2,
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_InvoiceLineItem _$_$_InvoiceLineItemFromJson(Map<String, dynamic> json) {

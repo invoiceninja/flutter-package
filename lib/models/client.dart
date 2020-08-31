@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoiceninja/models/document.dart';
 
 part 'client.freezed.dart';
 
@@ -55,6 +56,7 @@ abstract class Client implements _$Client {
     @Default('') @JsonKey(name: 'id_number') String idNumber,
     @Default('') @JsonKey(name: 'vat_number') String vatNumber,
     @Default(<ClientContact>[]) List<ClientContact> contacts,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Client;
 
   /// Create a client using contact details

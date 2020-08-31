@@ -108,7 +108,8 @@ class _$InvoiceTearOff {
       @JsonKey(name: 'custom_surcharge_tax3')
           bool customSurchargeTax3 = false,
       @JsonKey(name: 'custom_surcharge_tax4')
-          bool customSurchargeTax4 = false}) {
+          bool customSurchargeTax4 = false,
+      List<Document> documents = const <Document>[]}) {
     return _Invoice(
       id: id,
       createdById: createdById,
@@ -161,6 +162,7 @@ class _$InvoiceTearOff {
       customSurchargeTax2: customSurchargeTax2,
       customSurchargeTax3: customSurchargeTax3,
       customSurchargeTax4: customSurchargeTax4,
+      documents: documents,
     );
   }
 }
@@ -261,6 +263,7 @@ mixin _$Invoice {
   bool get customSurchargeTax3;
   @JsonKey(name: 'custom_surcharge_tax4')
   bool get customSurchargeTax4;
+  List<Document> get documents;
 
   Map<String, dynamic> toJson();
   $InvoiceCopyWith<Invoice> get copyWith;
@@ -320,7 +323,8 @@ abstract class $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_surcharge_tax1') bool customSurchargeTax1,
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
-      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4});
+      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
+      List<Document> documents});
 }
 
 class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
@@ -383,6 +387,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
     Object customSurchargeTax2 = freezed,
     Object customSurchargeTax3 = freezed,
     Object customSurchargeTax4 = freezed,
+    Object documents = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -482,6 +487,8 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       customSurchargeTax4: customSurchargeTax4 == freezed
           ? _value.customSurchargeTax4
           : customSurchargeTax4 as bool,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -541,7 +548,8 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_surcharge_tax1') bool customSurchargeTax1,
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
-      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4});
+      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
+      List<Document> documents});
 }
 
 class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
@@ -605,6 +613,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
     Object customSurchargeTax2 = freezed,
     Object customSurchargeTax3 = freezed,
     Object customSurchargeTax4 = freezed,
+    Object documents = freezed,
   }) {
     return _then(_Invoice(
       id: id == freezed ? _value.id : id as String,
@@ -704,6 +713,8 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       customSurchargeTax4: customSurchargeTax4 == freezed
           ? _value.customSurchargeTax4
           : customSurchargeTax4 as bool,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -761,7 +772,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
       @JsonKey(name: 'custom_surcharge_tax1') this.customSurchargeTax1 = false,
       @JsonKey(name: 'custom_surcharge_tax2') this.customSurchargeTax2 = false,
       @JsonKey(name: 'custom_surcharge_tax3') this.customSurchargeTax3 = false,
-      @JsonKey(name: 'custom_surcharge_tax4') this.customSurchargeTax4 = false})
+      @JsonKey(name: 'custom_surcharge_tax4') this.customSurchargeTax4 = false,
+      this.documents = const <Document>[]})
       : assert(id != null),
         assert(createdById != null),
         assert(assignedToId != null),
@@ -813,6 +825,7 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
         assert(customSurchargeTax2 != null),
         assert(customSurchargeTax3 != null),
         assert(customSurchargeTax4 != null),
+        assert(documents != null),
         super._();
 
   factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
@@ -971,10 +984,13 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'custom_surcharge_tax4')
   final bool customSurchargeTax4;
+  @JsonKey(defaultValue: const <Document>[])
+  @override
+  final List<Document> documents;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4)';
+    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
   }
 
   @override
@@ -1032,7 +1048,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('customSurchargeTax1', customSurchargeTax1))
       ..add(DiagnosticsProperty('customSurchargeTax2', customSurchargeTax2))
       ..add(DiagnosticsProperty('customSurchargeTax3', customSurchargeTax3))
-      ..add(DiagnosticsProperty('customSurchargeTax4', customSurchargeTax4));
+      ..add(DiagnosticsProperty('customSurchargeTax4', customSurchargeTax4))
+      ..add(DiagnosticsProperty('documents', documents));
   }
 
   @override
@@ -1132,7 +1149,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
             (identical(other.customSurchargeTax1, customSurchargeTax1) || const DeepCollectionEquality().equals(other.customSurchargeTax1, customSurchargeTax1)) &&
             (identical(other.customSurchargeTax2, customSurchargeTax2) || const DeepCollectionEquality().equals(other.customSurchargeTax2, customSurchargeTax2)) &&
             (identical(other.customSurchargeTax3, customSurchargeTax3) || const DeepCollectionEquality().equals(other.customSurchargeTax3, customSurchargeTax3)) &&
-            (identical(other.customSurchargeTax4, customSurchargeTax4) || const DeepCollectionEquality().equals(other.customSurchargeTax4, customSurchargeTax4)));
+            (identical(other.customSurchargeTax4, customSurchargeTax4) || const DeepCollectionEquality().equals(other.customSurchargeTax4, customSurchargeTax4)) &&
+            (identical(other.documents, documents) || const DeepCollectionEquality().equals(other.documents, documents)));
   }
 
   @override
@@ -1188,7 +1206,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(customSurchargeTax1) ^
       const DeepCollectionEquality().hash(customSurchargeTax2) ^
       const DeepCollectionEquality().hash(customSurchargeTax3) ^
-      const DeepCollectionEquality().hash(customSurchargeTax4);
+      const DeepCollectionEquality().hash(customSurchargeTax4) ^
+      const DeepCollectionEquality().hash(documents);
 
   @override
   _$InvoiceCopyWith<_Invoice> get copyWith =>
@@ -1203,58 +1222,58 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
 abstract class _Invoice extends Invoice {
   _Invoice._() : super._();
   factory _Invoice(
-          {String id,
-          @JsonKey(name: 'user_id') String createdById,
-          @JsonKey(name: 'assigned_user_id') String assignedToId,
-          @JsonKey(name: 'created_at') int createdAt,
-          @JsonKey(name: 'updated_at') int updatedAt,
-          @JsonKey(name: 'archived_at') int archivedAt,
-          @JsonKey(name: 'is_deleted') bool isDeleted,
-          @JsonKey(name: 'custom_value1') String customValue1,
-          @JsonKey(name: 'custom_value2') String customValue2,
-          @JsonKey(name: 'custom_value3') String customValue3,
-          @JsonKey(name: 'custom_value4') String customValue4,
-          @JsonKey(name: 'client_id') String clientId,
-          @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
-          List<InvoiceInvitation> invitations,
-          double amount,
-          double balance,
-          @JsonKey(name: 'vendor_id') String vendorId,
-          @JsonKey(name: 'status_id') String statusId,
-          @JsonKey(name: 'design_id') String designId,
-          String number,
-          double discount,
-          @JsonKey(name: 'po_number') String poNumber,
-          String date,
-          @JsonKey(name: 'last_sent_date') String lastSentDate,
-          @JsonKey(name: 'next_send_date') String nextSendDate,
-          @JsonKey(name: 'due_date') String dueDate,
-          String terms,
-          @JsonKey(name: 'public_notes') String publicNotes,
-          @JsonKey(name: 'private_notes') String privateNotes,
-          @JsonKey(name: 'uses_inclusive_taxes') bool usesInclusiveTaxes,
-          @JsonKey(name: 'tax_name1') String taxName1,
-          @JsonKey(name: 'tax_rate1') double taxRate1,
-          @JsonKey(name: 'tax_name2') String taxName2,
-          @JsonKey(name: 'tax_rate2') double taxRate2,
-          @JsonKey(name: 'tax_name3') String taxName3,
-          @JsonKey(name: 'tax_rate3') double taxRate3,
-          @JsonKey(name: 'total_taxes') double totalTaxes,
-          @JsonKey(name: 'is_amount_discount') bool isAmountDiscount,
-          String footer,
-          double partial,
-          @JsonKey(name: 'partial_due_date') String partialDueDate,
-          @JsonKey(name: 'has_tasks') bool hasTasks,
-          @JsonKey(name: 'has_expenses') bool hasExpenses,
-          @JsonKey(name: 'custom_surcharge1') double customSurcharge1,
-          @JsonKey(name: 'custom_surcharge2') double customSurcharge2,
-          @JsonKey(name: 'custom_surcharge3') double customSurcharge3,
-          @JsonKey(name: 'custom_surcharge4') double customSurcharge4,
-          @JsonKey(name: 'custom_surcharge_tax1') bool customSurchargeTax1,
-          @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
-          @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
-          @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4}) =
-      _$_Invoice;
+      {String id,
+      @JsonKey(name: 'user_id') String createdById,
+      @JsonKey(name: 'assigned_user_id') String assignedToId,
+      @JsonKey(name: 'created_at') int createdAt,
+      @JsonKey(name: 'updated_at') int updatedAt,
+      @JsonKey(name: 'archived_at') int archivedAt,
+      @JsonKey(name: 'is_deleted') bool isDeleted,
+      @JsonKey(name: 'custom_value1') String customValue1,
+      @JsonKey(name: 'custom_value2') String customValue2,
+      @JsonKey(name: 'custom_value3') String customValue3,
+      @JsonKey(name: 'custom_value4') String customValue4,
+      @JsonKey(name: 'client_id') String clientId,
+      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
+      List<InvoiceInvitation> invitations,
+      double amount,
+      double balance,
+      @JsonKey(name: 'vendor_id') String vendorId,
+      @JsonKey(name: 'status_id') String statusId,
+      @JsonKey(name: 'design_id') String designId,
+      String number,
+      double discount,
+      @JsonKey(name: 'po_number') String poNumber,
+      String date,
+      @JsonKey(name: 'last_sent_date') String lastSentDate,
+      @JsonKey(name: 'next_send_date') String nextSendDate,
+      @JsonKey(name: 'due_date') String dueDate,
+      String terms,
+      @JsonKey(name: 'public_notes') String publicNotes,
+      @JsonKey(name: 'private_notes') String privateNotes,
+      @JsonKey(name: 'uses_inclusive_taxes') bool usesInclusiveTaxes,
+      @JsonKey(name: 'tax_name1') String taxName1,
+      @JsonKey(name: 'tax_rate1') double taxRate1,
+      @JsonKey(name: 'tax_name2') String taxName2,
+      @JsonKey(name: 'tax_rate2') double taxRate2,
+      @JsonKey(name: 'tax_name3') String taxName3,
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      @JsonKey(name: 'total_taxes') double totalTaxes,
+      @JsonKey(name: 'is_amount_discount') bool isAmountDiscount,
+      String footer,
+      double partial,
+      @JsonKey(name: 'partial_due_date') String partialDueDate,
+      @JsonKey(name: 'has_tasks') bool hasTasks,
+      @JsonKey(name: 'has_expenses') bool hasExpenses,
+      @JsonKey(name: 'custom_surcharge1') double customSurcharge1,
+      @JsonKey(name: 'custom_surcharge2') double customSurcharge2,
+      @JsonKey(name: 'custom_surcharge3') double customSurcharge3,
+      @JsonKey(name: 'custom_surcharge4') double customSurcharge4,
+      @JsonKey(name: 'custom_surcharge_tax1') bool customSurchargeTax1,
+      @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
+      @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
+      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
+      List<Document> documents}) = _$_Invoice;
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
@@ -1401,6 +1420,8 @@ abstract class _Invoice extends Invoice {
   @override
   @JsonKey(name: 'custom_surcharge_tax4')
   bool get customSurchargeTax4;
+  @override
+  List<Document> get documents;
   @override
   _$InvoiceCopyWith<_Invoice> get copyWith;
 }

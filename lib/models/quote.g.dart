@@ -68,6 +68,11 @@ _$_Quote _$_$_QuoteFromJson(Map<String, dynamic> json) {
     customSurchargeTax2: json['custom_surcharge_tax2'] as bool,
     customSurchargeTax3: json['custom_surcharge_tax3'] as bool,
     customSurchargeTax4: json['custom_surcharge_tax4'] as bool,
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
   );
 }
 
@@ -123,6 +128,7 @@ Map<String, dynamic> _$_$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
       'custom_surcharge_tax2': instance.customSurchargeTax2,
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_QuoteInvitation _$_$_QuoteInvitationFromJson(Map<String, dynamic> json) {

@@ -55,7 +55,8 @@ class _$ClientTearOff {
       ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber = '',
       @JsonKey(name: 'vat_number') String vatNumber = '',
-      List<ClientContact> contacts = const <ClientContact>[]}) {
+      List<ClientContact> contacts = const <ClientContact>[],
+      List<Document> documents = const <Document>[]}) {
     return _Client(
       id: id,
       createdById: createdById,
@@ -96,6 +97,7 @@ class _$ClientTearOff {
       idNumber: idNumber,
       vatNumber: vatNumber,
       contacts: contacts,
+      documents: documents,
     );
   }
 }
@@ -171,6 +173,7 @@ mixin _$Client {
   @JsonKey(name: 'vat_number')
   String get vatNumber;
   List<ClientContact> get contacts;
+  List<Document> get documents;
 
   Map<String, dynamic> toJson();
   $ClientCopyWith<Client> get copyWith;
@@ -218,7 +221,8 @@ abstract class $ClientCopyWith<$Res> {
       ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<ClientContact> contacts});
+      List<ClientContact> contacts,
+      List<Document> documents});
 
   $ClientSettingsCopyWith<$Res> get settings;
 }
@@ -271,6 +275,7 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
     Object idNumber = freezed,
     Object vatNumber = freezed,
     Object contacts = freezed,
+    Object documents = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -346,6 +351,8 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
       contacts: contacts == freezed
           ? _value.contacts
           : contacts as List<ClientContact>,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 
@@ -403,7 +410,8 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
       ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<ClientContact> contacts});
+      List<ClientContact> contacts,
+      List<Document> documents});
 
   @override
   $ClientSettingsCopyWith<$Res> get settings;
@@ -458,6 +466,7 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
     Object idNumber = freezed,
     Object vatNumber = freezed,
     Object contacts = freezed,
+    Object documents = freezed,
   }) {
     return _then(_Client(
       id: id == freezed ? _value.id : id as String,
@@ -533,6 +542,8 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
       contacts: contacts == freezed
           ? _value.contacts
           : contacts as List<ClientContact>,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -578,7 +589,8 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       this.settings,
       @JsonKey(name: 'id_number') this.idNumber = '',
       @JsonKey(name: 'vat_number') this.vatNumber = '',
-      this.contacts = const <ClientContact>[]})
+      this.contacts = const <ClientContact>[],
+      this.documents = const <Document>[]})
       : assert(id != null),
         assert(createdById != null),
         assert(assignedToId != null),
@@ -617,6 +629,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
         assert(idNumber != null),
         assert(vatNumber != null),
         assert(contacts != null),
+        assert(documents != null),
         super._();
 
   factory _$_Client.fromJson(Map<String, dynamic> json) =>
@@ -738,10 +751,13 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: const <ClientContact>[])
   @override
   final List<ClientContact> contacts;
+  @JsonKey(defaultValue: const <Document>[])
+  @override
+  final List<Document> documents;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts)';
+    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts, documents: $documents)';
   }
 
   @override
@@ -787,7 +803,8 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('settings', settings))
       ..add(DiagnosticsProperty('idNumber', idNumber))
       ..add(DiagnosticsProperty('vatNumber', vatNumber))
-      ..add(DiagnosticsProperty('contacts', contacts));
+      ..add(DiagnosticsProperty('contacts', contacts))
+      ..add(DiagnosticsProperty('documents', documents));
   }
 
   @override
@@ -875,7 +892,8 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
             (identical(other.settings, settings) || const DeepCollectionEquality().equals(other.settings, settings)) &&
             (identical(other.idNumber, idNumber) || const DeepCollectionEquality().equals(other.idNumber, idNumber)) &&
             (identical(other.vatNumber, vatNumber) || const DeepCollectionEquality().equals(other.vatNumber, vatNumber)) &&
-            (identical(other.contacts, contacts) || const DeepCollectionEquality().equals(other.contacts, contacts)));
+            (identical(other.contacts, contacts) || const DeepCollectionEquality().equals(other.contacts, contacts)) &&
+            (identical(other.documents, documents) || const DeepCollectionEquality().equals(other.documents, documents)));
   }
 
   @override
@@ -919,7 +937,8 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(settings) ^
       const DeepCollectionEquality().hash(idNumber) ^
       const DeepCollectionEquality().hash(vatNumber) ^
-      const DeepCollectionEquality().hash(contacts);
+      const DeepCollectionEquality().hash(contacts) ^
+      const DeepCollectionEquality().hash(documents);
 
   @override
   _$ClientCopyWith<_Client> get copyWith =>
@@ -972,7 +991,8 @@ abstract class _Client extends Client {
       ClientSettings settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
-      List<ClientContact> contacts}) = _$_Client;
+      List<ClientContact> contacts,
+      List<Document> documents}) = _$_Client;
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$_Client.fromJson;
 
@@ -1082,6 +1102,8 @@ abstract class _Client extends Client {
   String get vatNumber;
   @override
   List<ClientContact> get contacts;
+  @override
+  List<Document> get documents;
   @override
   _$ClientCopyWith<_Client> get copyWith;
 }
