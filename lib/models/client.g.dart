@@ -54,6 +54,11 @@ _$_Client _$_$_ClientFromJson(Map<String, dynamic> json) {
                 : ClientContact.fromJson(e as Map<String, dynamic>))
             ?.toList() ??
         [],
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
   );
 }
 
@@ -97,6 +102,7 @@ Map<String, dynamic> _$_$_ClientToJson(_$_Client instance) => <String, dynamic>{
       'id_number': instance.idNumber,
       'vat_number': instance.vatNumber,
       'contacts': instance.contacts?.map((e) => e?.toJson())?.toList(),
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_ClientContact _$_$_ClientContactFromJson(Map<String, dynamic> json) {

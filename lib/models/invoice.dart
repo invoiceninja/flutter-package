@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:invoiceninja/models/client.dart';
+import 'package:invoiceninja/models/document.dart';
 import 'package:invoiceninja/models/product.dart';
 
 part 'invoice.freezed.dart';
@@ -79,6 +80,7 @@ abstract class Invoice implements _$Invoice {
     @Default(false)
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Invoice;
 
   /// Create an invoice for a client

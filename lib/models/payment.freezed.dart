@@ -67,7 +67,8 @@ class _$PaymentTearOff {
       @JsonKey(name: 'invoices')
           List<Paymentable> invoices = const <Paymentable>[],
       @JsonKey(name: 'credits')
-          List<Paymentable> credits = const <Paymentable>[]}) {
+          List<Paymentable> credits = const <Paymentable>[],
+      List<Document> documents = const <Document>[]}) {
     return _Payment(
       id: id,
       createdById: createdById,
@@ -95,6 +96,7 @@ class _$PaymentTearOff {
       paymentables: paymentables,
       invoices: invoices,
       credits: credits,
+      documents: documents,
     );
   }
 }
@@ -154,6 +156,7 @@ mixin _$Payment {
   List<Paymentable> get invoices;
   @JsonKey(name: 'credits')
   List<Paymentable> get credits;
+  List<Document> get documents;
 
   Map<String, dynamic> toJson();
   $PaymentCopyWith<Payment> get copyWith;
@@ -188,7 +191,8 @@ abstract class $PaymentCopyWith<$Res> {
       @JsonKey(name: 'company_gateway_id') double companyGatewayId,
       @JsonKey(name: 'paymentables') List<Paymentable> paymentables,
       @JsonKey(name: 'invoices') List<Paymentable> invoices,
-      @JsonKey(name: 'credits') List<Paymentable> credits});
+      @JsonKey(name: 'credits') List<Paymentable> credits,
+      List<Document> documents});
 }
 
 class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
@@ -226,6 +230,7 @@ class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
     Object paymentables = freezed,
     Object invoices = freezed,
     Object credits = freezed,
+    Object documents = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -279,6 +284,8 @@ class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
           invoices == freezed ? _value.invoices : invoices as List<Paymentable>,
       credits:
           credits == freezed ? _value.credits : credits as List<Paymentable>,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -313,7 +320,8 @@ abstract class _$PaymentCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       @JsonKey(name: 'company_gateway_id') double companyGatewayId,
       @JsonKey(name: 'paymentables') List<Paymentable> paymentables,
       @JsonKey(name: 'invoices') List<Paymentable> invoices,
-      @JsonKey(name: 'credits') List<Paymentable> credits});
+      @JsonKey(name: 'credits') List<Paymentable> credits,
+      List<Document> documents});
 }
 
 class __$PaymentCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
@@ -352,6 +360,7 @@ class __$PaymentCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
     Object paymentables = freezed,
     Object invoices = freezed,
     Object credits = freezed,
+    Object documents = freezed,
   }) {
     return _then(_Payment(
       id: id == freezed ? _value.id : id as String,
@@ -405,6 +414,8 @@ class __$PaymentCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
           invoices == freezed ? _value.invoices : invoices as List<Paymentable>,
       credits:
           credits == freezed ? _value.credits : credits as List<Paymentable>,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -437,7 +448,8 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
       @JsonKey(name: 'company_gateway_id') this.companyGatewayId = 0.0,
       @JsonKey(name: 'paymentables') this.paymentables = const <Paymentable>[],
       @JsonKey(name: 'invoices') this.invoices = const <Paymentable>[],
-      @JsonKey(name: 'credits') this.credits = const <Paymentable>[]})
+      @JsonKey(name: 'credits') this.credits = const <Paymentable>[],
+      this.documents = const <Document>[]})
       : assert(id != null),
         assert(createdById != null),
         assert(assignedToId != null),
@@ -464,6 +476,7 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
         assert(paymentables != null),
         assert(invoices != null),
         assert(credits != null),
+        assert(documents != null),
         super._();
 
   factory _$_Payment.fromJson(Map<String, dynamic> json) =>
@@ -547,10 +560,13 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'credits')
   final List<Paymentable> credits;
+  @JsonKey(defaultValue: const <Document>[])
+  @override
+  final List<Document> documents;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Payment(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, invitationId: $invitationId, clientContactId: $clientContactId, typeId: $typeId, date: $date, transactionReference: $transactionReference, privateNotes: $privateNotes, isManual: $isManual, amount: $amount, applied: $applied, refunded: $refunded, companyGatewayId: $companyGatewayId, paymentables: $paymentables, invoices: $invoices, credits: $credits)';
+    return 'Payment(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, invitationId: $invitationId, clientContactId: $clientContactId, typeId: $typeId, date: $date, transactionReference: $transactionReference, privateNotes: $privateNotes, isManual: $isManual, amount: $amount, applied: $applied, refunded: $refunded, companyGatewayId: $companyGatewayId, paymentables: $paymentables, invoices: $invoices, credits: $credits, documents: $documents)';
   }
 
   @override
@@ -583,7 +599,8 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('companyGatewayId', companyGatewayId))
       ..add(DiagnosticsProperty('paymentables', paymentables))
       ..add(DiagnosticsProperty('invoices', invoices))
-      ..add(DiagnosticsProperty('credits', credits));
+      ..add(DiagnosticsProperty('credits', credits))
+      ..add(DiagnosticsProperty('documents', documents));
   }
 
   @override
@@ -658,7 +675,8 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
             (identical(other.paymentables, paymentables) ||
                 const DeepCollectionEquality().equals(other.paymentables, paymentables)) &&
             (identical(other.invoices, invoices) || const DeepCollectionEquality().equals(other.invoices, invoices)) &&
-            (identical(other.credits, credits) || const DeepCollectionEquality().equals(other.credits, credits)));
+            (identical(other.credits, credits) || const DeepCollectionEquality().equals(other.credits, credits)) &&
+            (identical(other.documents, documents) || const DeepCollectionEquality().equals(other.documents, documents)));
   }
 
   @override
@@ -689,7 +707,8 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(companyGatewayId) ^
       const DeepCollectionEquality().hash(paymentables) ^
       const DeepCollectionEquality().hash(invoices) ^
-      const DeepCollectionEquality().hash(credits);
+      const DeepCollectionEquality().hash(credits) ^
+      const DeepCollectionEquality().hash(documents);
 
   @override
   _$PaymentCopyWith<_Payment> get copyWith =>
@@ -729,7 +748,8 @@ abstract class _Payment extends Payment {
       @JsonKey(name: 'company_gateway_id') double companyGatewayId,
       @JsonKey(name: 'paymentables') List<Paymentable> paymentables,
       @JsonKey(name: 'invoices') List<Paymentable> invoices,
-      @JsonKey(name: 'credits') List<Paymentable> credits}) = _$_Payment;
+      @JsonKey(name: 'credits') List<Paymentable> credits,
+      List<Document> documents}) = _$_Payment;
 
   factory _Payment.fromJson(Map<String, dynamic> json) = _$_Payment.fromJson;
 
@@ -810,6 +830,8 @@ abstract class _Payment extends Payment {
   @override
   @JsonKey(name: 'credits')
   List<Paymentable> get credits;
+  @override
+  List<Document> get documents;
   @override
   _$PaymentCopyWith<_Payment> get copyWith;
 }

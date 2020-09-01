@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoiceninja/models/document.dart';
 
 part 'payment.freezed.dart';
 
@@ -48,6 +49,7 @@ abstract class Payment implements _$Payment {
     @Default(<Paymentable>[])
     @JsonKey(name: 'credits')
     List<Paymentable> credits,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Payment;
 
   /// Create an Payment from JSON

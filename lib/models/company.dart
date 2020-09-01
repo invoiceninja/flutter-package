@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoiceninja/models/document.dart';
 
 part 'company.freezed.dart';
 
@@ -45,6 +46,7 @@ abstract class CompanySettings with _$CompanySettings {
     @nullable @Default('') @JsonKey(name: 'postal_code') String postalCode,
     @nullable @Default('') @JsonKey(name: 'country_id') String countryId,
     @nullable @Default('') @JsonKey(name: 'vat_number') String vatNumber,
+    @Default(<Document>[]) List<Document> documents,
     @nullable
     @Default({})
     @JsonKey(name: 'custom_fields')

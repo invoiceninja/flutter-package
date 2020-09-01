@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:invoiceninja/models/client.dart';
+import 'package:invoiceninja/models/document.dart';
 import 'package:invoiceninja/models/product.dart';
 
 import 'invoice.dart';
@@ -80,6 +81,7 @@ abstract class Credit implements _$Credit {
     @Default(false)
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Credit;
 
   /// Get the default invitation URL

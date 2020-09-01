@@ -120,6 +120,12 @@ InvoiceNinjaAdmin.configure(
 final client = await InvoiceNinjaAdmin.clients.findByEmail(email);
 ``` 
 
+### Load all invoices
+
+```dart
+final payments = await InvoiceNinjaAdmin.payments.load();
+``` 
+
 ### Load the payments list
 
 ```dart

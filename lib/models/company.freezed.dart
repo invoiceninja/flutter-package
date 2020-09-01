@@ -231,6 +231,7 @@ class _$CompanySettingsTearOff {
       @nullable
       @JsonKey(name: 'vat_number')
           String vatNumber = '',
+      List<Document> documents = const <Document>[],
       @nullable
       @JsonKey(name: 'custom_fields')
           Map<String, String> customFields = const {}}) {
@@ -251,6 +252,7 @@ class _$CompanySettingsTearOff {
       postalCode: postalCode,
       countryId: countryId,
       vatNumber: vatNumber,
+      documents: documents,
       customFields: customFields,
     );
   }
@@ -300,6 +302,7 @@ mixin _$CompanySettings {
   @nullable
   @JsonKey(name: 'vat_number')
   String get vatNumber;
+  List<Document> get documents;
   @nullable
   @JsonKey(name: 'custom_fields')
   Map<String, String> get customFields;
@@ -353,6 +356,7 @@ abstract class $CompanySettingsCopyWith<$Res> {
       @nullable
       @JsonKey(name: 'vat_number')
           String vatNumber,
+      List<Document> documents,
       @nullable
       @JsonKey(name: 'custom_fields')
           Map<String, String> customFields});
@@ -384,6 +388,7 @@ class _$CompanySettingsCopyWithImpl<$Res>
     Object postalCode = freezed,
     Object countryId = freezed,
     Object vatNumber = freezed,
+    Object documents = freezed,
     Object customFields = freezed,
   }) {
     return _then(_value.copyWith(
@@ -413,6 +418,8 @@ class _$CompanySettingsCopyWithImpl<$Res>
           postalCode == freezed ? _value.postalCode : postalCode as String,
       countryId: countryId == freezed ? _value.countryId : countryId as String,
       vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
       customFields: customFields == freezed
           ? _value.customFields
           : customFields as Map<String, String>,
@@ -467,6 +474,7 @@ abstract class _$CompanySettingsCopyWith<$Res>
       @nullable
       @JsonKey(name: 'vat_number')
           String vatNumber,
+      List<Document> documents,
       @nullable
       @JsonKey(name: 'custom_fields')
           Map<String, String> customFields});
@@ -500,6 +508,7 @@ class __$CompanySettingsCopyWithImpl<$Res>
     Object postalCode = freezed,
     Object countryId = freezed,
     Object vatNumber = freezed,
+    Object documents = freezed,
     Object customFields = freezed,
   }) {
     return _then(_CompanySettings(
@@ -529,6 +538,8 @@ class __$CompanySettingsCopyWithImpl<$Res>
           postalCode == freezed ? _value.postalCode : postalCode as String,
       countryId: countryId == freezed ? _value.countryId : countryId as String,
       vatNumber: vatNumber == freezed ? _value.vatNumber : vatNumber as String,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
       customFields: customFields == freezed
           ? _value.customFields
           : customFields as Map<String, String>,
@@ -557,7 +568,9 @@ class _$_CompanySettings
       @nullable @JsonKey(name: 'postal_code') this.postalCode = '',
       @nullable @JsonKey(name: 'country_id') this.countryId = '',
       @nullable @JsonKey(name: 'vat_number') this.vatNumber = '',
-      @nullable @JsonKey(name: 'custom_fields') this.customFields = const {}});
+      this.documents = const <Document>[],
+      @nullable @JsonKey(name: 'custom_fields') this.customFields = const {}})
+      : assert(documents != null);
 
   factory _$_CompanySettings.fromJson(Map<String, dynamic> json) =>
       _$_$_CompanySettingsFromJson(json);
@@ -626,6 +639,9 @@ class _$_CompanySettings
   @nullable
   @JsonKey(name: 'vat_number')
   final String vatNumber;
+  @JsonKey(defaultValue: const <Document>[])
+  @override
+  final List<Document> documents;
   @override
   @nullable
   @JsonKey(name: 'custom_fields')
@@ -633,7 +649,7 @@ class _$_CompanySettings
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CompanySettings(name: $name, address1: $address1, address2: $address2, city: $city, state: $state, phone: $phone, email: $email, website: $website, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, companyLogo: $companyLogo, postalCode: $postalCode, countryId: $countryId, vatNumber: $vatNumber, customFields: $customFields)';
+    return 'CompanySettings(name: $name, address1: $address1, address2: $address2, city: $city, state: $state, phone: $phone, email: $email, website: $website, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, companyLogo: $companyLogo, postalCode: $postalCode, countryId: $countryId, vatNumber: $vatNumber, documents: $documents, customFields: $customFields)';
   }
 
   @override
@@ -657,6 +673,7 @@ class _$_CompanySettings
       ..add(DiagnosticsProperty('postalCode', postalCode))
       ..add(DiagnosticsProperty('countryId', countryId))
       ..add(DiagnosticsProperty('vatNumber', vatNumber))
+      ..add(DiagnosticsProperty('documents', documents))
       ..add(DiagnosticsProperty('customFields', customFields));
   }
 
@@ -707,6 +724,9 @@ class _$_CompanySettings
             (identical(other.vatNumber, vatNumber) ||
                 const DeepCollectionEquality()
                     .equals(other.vatNumber, vatNumber)) &&
+            (identical(other.documents, documents) ||
+                const DeepCollectionEquality()
+                    .equals(other.documents, documents)) &&
             (identical(other.customFields, customFields) ||
                 const DeepCollectionEquality()
                     .equals(other.customFields, customFields)));
@@ -731,6 +751,7 @@ class _$_CompanySettings
       const DeepCollectionEquality().hash(postalCode) ^
       const DeepCollectionEquality().hash(countryId) ^
       const DeepCollectionEquality().hash(vatNumber) ^
+      const DeepCollectionEquality().hash(documents) ^
       const DeepCollectionEquality().hash(customFields);
 
   @override
@@ -785,6 +806,7 @@ abstract class _CompanySettings implements CompanySettings {
       @nullable
       @JsonKey(name: 'vat_number')
           String vatNumber,
+      List<Document> documents,
       @nullable
       @JsonKey(name: 'custom_fields')
           Map<String, String> customFields}) = _$_CompanySettings;
@@ -848,6 +870,8 @@ abstract class _CompanySettings implements CompanySettings {
   @nullable
   @JsonKey(name: 'vat_number')
   String get vatNumber;
+  @override
+  List<Document> get documents;
   @override
   @nullable
   @JsonKey(name: 'custom_fields')

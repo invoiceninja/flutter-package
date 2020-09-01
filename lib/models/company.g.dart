@@ -39,6 +39,11 @@ _$_CompanySettings _$_$_CompanySettingsFromJson(Map<String, dynamic> json) {
     postalCode: json['postal_code'] as String,
     countryId: json['country_id'] as String,
     vatNumber: json['vat_number'] as String,
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
     customFields: (json['custom_fields'] as Map<String, dynamic>)?.map(
       (k, e) => MapEntry(k, e as String),
     ),
@@ -63,6 +68,7 @@ Map<String, dynamic> _$_$_CompanySettingsToJson(_$_CompanySettings instance) =>
       'postal_code': instance.postalCode,
       'country_id': instance.countryId,
       'vat_number': instance.vatNumber,
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
       'custom_fields': instance.customFields,
     };
 
