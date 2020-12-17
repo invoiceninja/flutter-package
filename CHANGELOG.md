@@ -1,3 +1,7 @@
+## 0.0.6
+
+* Added more models 
+
 ## 0.0.5
 
 * Added company info 
