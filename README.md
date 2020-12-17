@@ -2,8 +2,6 @@
 
 This package makes it easy to sell products in a Flutter app   
   
-![Overview](https://raw.githubusercontent.com/invoiceninja/flutter-package/master/assets/sample.gif)
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/invoiceninja/flutter-package/master/assets/sample.gif" alt="Sample" width="300"/>
 </p>  
