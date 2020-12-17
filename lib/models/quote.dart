@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:invoiceninja/models/client.dart';
+import 'package:invoiceninja/models/document.dart';
 import 'package:invoiceninja/models/invoice.dart';
 import 'package:invoiceninja/models/product.dart';
 
@@ -80,6 +81,7 @@ abstract class Quote implements _$Quote {
     @Default(false)
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Quote;
 
   /// Get the default invitation URL

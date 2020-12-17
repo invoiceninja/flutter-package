@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:invoiceninja/models/document.dart';
 import 'package:invoiceninja/models/invoice.dart';
 
 part 'product.freezed.dart';
@@ -37,6 +38,7 @@ abstract class Product implements _$Product {
     @Default(0) @JsonKey(name: 'tax_rate2') double taxRate2,
     @Default('') @JsonKey(name: 'tax_name3') String taxName3,
     @Default(0) @JsonKey(name: 'tax_rate3') double taxRate3,
+    @Default(<Document>[]) List<Document> documents,
   }) = _Product;
 
   /// Convert a product to an invoice line item

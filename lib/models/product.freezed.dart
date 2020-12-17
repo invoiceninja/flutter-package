@@ -38,7 +38,8 @@ class _$ProductTearOff {
       @JsonKey(name: 'tax_name2') String taxName2 = '',
       @JsonKey(name: 'tax_rate2') double taxRate2 = 0,
       @JsonKey(name: 'tax_name3') String taxName3 = '',
-      @JsonKey(name: 'tax_rate3') double taxRate3 = 0}) {
+      @JsonKey(name: 'tax_rate3') double taxRate3 = 0,
+      List<Document> documents = const <Document>[]}) {
     return _Product(
       id: id,
       createdById: createdById,
@@ -62,6 +63,7 @@ class _$ProductTearOff {
       taxRate2: taxRate2,
       taxName3: taxName3,
       taxRate3: taxRate3,
+      documents: documents,
     );
   }
 }
@@ -109,6 +111,7 @@ mixin _$Product {
   String get taxName3;
   @JsonKey(name: 'tax_rate3')
   double get taxRate3;
+  List<Document> get documents;
 
   Map<String, dynamic> toJson();
   $ProductCopyWith<Product> get copyWith;
@@ -139,7 +142,8 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'tax_name2') String taxName2,
       @JsonKey(name: 'tax_rate2') double taxRate2,
       @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3});
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      List<Document> documents});
 }
 
 class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
@@ -173,6 +177,7 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
     Object taxRate2 = freezed,
     Object taxName3 = freezed,
     Object taxRate3 = freezed,
+    Object documents = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
@@ -209,6 +214,8 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
       taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
       taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
       taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -239,7 +246,8 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'tax_name2') String taxName2,
       @JsonKey(name: 'tax_rate2') double taxRate2,
       @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3});
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      List<Document> documents});
 }
 
 class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
@@ -274,6 +282,7 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     Object taxRate2 = freezed,
     Object taxName3 = freezed,
     Object taxRate3 = freezed,
+    Object documents = freezed,
   }) {
     return _then(_Product(
       id: id == freezed ? _value.id : id as String,
@@ -310,6 +319,8 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
       taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
       taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
       taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
+      documents:
+          documents == freezed ? _value.documents : documents as List<Document>,
     ));
   }
 }
@@ -338,7 +349,8 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
       @JsonKey(name: 'tax_name2') this.taxName2 = '',
       @JsonKey(name: 'tax_rate2') this.taxRate2 = 0,
       @JsonKey(name: 'tax_name3') this.taxName3 = '',
-      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0})
+      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
+      this.documents = const <Document>[]})
       : assert(id != null),
         assert(createdById != null),
         assert(assignedToId != null),
@@ -361,6 +373,7 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
         assert(taxRate2 != null),
         assert(taxName3 != null),
         assert(taxRate3 != null),
+        assert(documents != null),
         super._();
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
@@ -432,10 +445,13 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'tax_rate3')
   final double taxRate3;
+  @JsonKey(defaultValue: const <Document>[])
+  @override
+  final List<Document> documents;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Product(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, productKey: $productKey, notes: $notes, cost: $cost, price: $price, quantity: $quantity, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3)';
+    return 'Product(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, productKey: $productKey, notes: $notes, cost: $cost, price: $price, quantity: $quantity, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, documents: $documents)';
   }
 
   @override
@@ -464,7 +480,8 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('taxName2', taxName2))
       ..add(DiagnosticsProperty('taxRate2', taxRate2))
       ..add(DiagnosticsProperty('taxName3', taxName3))
-      ..add(DiagnosticsProperty('taxRate3', taxRate3));
+      ..add(DiagnosticsProperty('taxRate3', taxRate3))
+      ..add(DiagnosticsProperty('documents', documents));
   }
 
   @override
@@ -532,7 +549,10 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
                     .equals(other.taxName3, taxName3)) &&
             (identical(other.taxRate3, taxRate3) ||
                 const DeepCollectionEquality()
-                    .equals(other.taxRate3, taxRate3)));
+                    .equals(other.taxRate3, taxRate3)) &&
+            (identical(other.documents, documents) ||
+                const DeepCollectionEquality()
+                    .equals(other.documents, documents)));
   }
 
   @override
@@ -559,7 +579,8 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(taxName2) ^
       const DeepCollectionEquality().hash(taxRate2) ^
       const DeepCollectionEquality().hash(taxName3) ^
-      const DeepCollectionEquality().hash(taxRate3);
+      const DeepCollectionEquality().hash(taxRate3) ^
+      const DeepCollectionEquality().hash(documents);
 
   @override
   _$ProductCopyWith<_Product> get copyWith =>
@@ -595,7 +616,8 @@ abstract class _Product extends Product {
       @JsonKey(name: 'tax_name2') String taxName2,
       @JsonKey(name: 'tax_rate2') double taxRate2,
       @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3}) = _$_Product;
+      @JsonKey(name: 'tax_rate3') double taxRate3,
+      List<Document> documents}) = _$_Product;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
@@ -660,6 +682,8 @@ abstract class _Product extends Product {
   @override
   @JsonKey(name: 'tax_rate3')
   double get taxRate3;
+  @override
+  List<Document> get documents;
   @override
   _$ProductCopyWith<_Product> get copyWith;
 }

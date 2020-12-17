@@ -43,6 +43,11 @@ _$_Payment _$_$_PaymentFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : Paymentable.fromJson(e as Map<String, dynamic>))
         ?.toList(),
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
   );
 }
 
@@ -74,6 +79,7 @@ Map<String, dynamic> _$_$_PaymentToJson(_$_Payment instance) =>
       'paymentables': instance.paymentables?.map((e) => e?.toJson())?.toList(),
       'invoices': instance.invoices?.map((e) => e?.toJson())?.toList(),
       'credits': instance.credits?.map((e) => e?.toJson())?.toList(),
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_Paymentable _$_$_PaymentableFromJson(Map<String, dynamic> json) {

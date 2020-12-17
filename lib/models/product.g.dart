@@ -30,6 +30,11 @@ _$_Product _$_$_ProductFromJson(Map<String, dynamic> json) {
     taxRate2: (json['tax_rate2'] as num)?.toDouble(),
     taxName3: json['tax_name3'] as String,
     taxRate3: (json['tax_rate3'] as num)?.toDouble(),
+    documents: (json['documents'] as List)
+            ?.map((e) =>
+                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
+            ?.toList() ??
+        [],
   );
 }
 
@@ -57,6 +62,7 @@ Map<String, dynamic> _$_$_ProductToJson(_$_Product instance) =>
       'tax_rate2': instance.taxRate2,
       'tax_name3': instance.taxName3,
       'tax_rate3': instance.taxRate3,
+      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_ProductList _$_$_ProductListFromJson(Map<String, dynamic> json) {
