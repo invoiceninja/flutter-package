@@ -103,48 +103,54 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       appBar: AppBar(
         title: Text('Invoice Ninja Example'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Card(
-          child: ListView(
-            padding: const EdgeInsets.all(16),
-            children: [
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  suffixIcon: Icon(Icons.email),
-                ),
-                onChanged: (value) => setState(() => _email = value),
-                keyboardType: TextInputType.emailAddress,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: 'Email',
+                      suffixIcon: Icon(Icons.email),
+                    ),
+                    onChanged: (value) => setState(() => _email = value),
+                    keyboardType: TextInputType.emailAddress,
+                  ),
+                  DropdownButtonFormField<Product>(
+                    decoration: InputDecoration(
+                      labelText: 'Product',
+                    ),
+                    onChanged: (value) => setState(() => _product = value),
+                    items: _products
+                        .map((product) => DropdownMenuItem(
+                              child: Text(product.productKey),
+                              value: product,
+                            ))
+                        .toList(),
+                  ),
+                  SizedBox(height: 16),
+                  OutlineButton(
+                    child: Text('Create Invoice'),
+                    onPressed: (_email.isNotEmpty && _product != null)
+                        ? () => _createInvoice()
+                        : null,
+                  ),
+                  OutlineButton(
+                    child: Text('View PDF'),
+                    onPressed: (_invoice != null) ? () => _viewPdf() : null,
+                  ),
+                  OutlineButton(
+                    child: Text('View Portal'),
+                    onPressed: (_invoice != null) ? () => _viewPortal() : null,
+                  ),
+                ],
               ),
-              DropdownButtonFormField<Product>(
-                decoration: InputDecoration(
-                  labelText: 'Product',
-                ),
-                onChanged: (value) => setState(() => _product = value),
-                items: _products
-                    .map((product) => DropdownMenuItem(
-                          child: Text(product.productKey),
-                          value: product,
-                        ))
-                    .toList(),
-              ),
-              SizedBox(height: 16),
-              OutlineButton(
-                child: Text('Create Invoice'),
-                onPressed: (_email.isNotEmpty && _product != null)
-                    ? () => _createInvoice()
-                    : null,
-              ),
-              OutlineButton(
-                child: Text('View PDF'),
-                onPressed: (_invoice != null) ? () => _viewPdf() : null,
-              ),
-              OutlineButton(
-                child: Text('View Portal'),
-                onPressed: (_invoice != null) ? () => _viewPortal() : null,
-              ),
-            ],
+            ),
           ),
         ),
       ),
