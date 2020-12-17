@@ -30,8 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
-  String _invoiceKey;
   List<Product> _products = [];
+
+  String _email = '';
+  Product _product;
+  Invoice _invoice;
 
   @override
   initState() {
@@ -51,23 +54,37 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     });
   }
 
-  Future<Invoice> createInvoice(Product product) async {
-    var client = Client.forContact(email: 'test@example.com');
+  void _createInvoice() async {
+    var client = Client.forContact(email: _email);
     client = await InvoiceNinja.clients.save(client);
 
-    var invoice = Invoice.forClient(client, products: [product]);
+    var invoice = Invoice.forClient(client, products: [_product]);
     invoice = await InvoiceNinja.invoices.save(invoice);
 
-    return invoice;
+    setState(() {
+      _invoice = invoice;
+    });
+  }
+
+  void _viewPdf() {
+    launch(
+      'https://docs.google.com/gview?embedded=true&url=${_invoice.pdfUrl}',
+      forceWebView: true,
+    );
+  }
+
+  void _viewPortal() {
+    final invitation = _invoice.invitations.first;
+    launch(invitation.url);
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) async {
-    if (_invoiceKey == null || state != AppLifecycleState.resumed) {
+    if (_invoice == null || state != AppLifecycleState.resumed) {
       return;
     }
 
-    final invoice = await InvoiceNinja.invoices.findByKey(_invoiceKey);
+    final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
 
     if (invoice.isPaid) {
       // ...
@@ -86,44 +103,50 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       appBar: AppBar(
         title: Text('Invoice Ninja Example'),
       ),
-      body: ListView.builder(
-        itemCount: _products.length,
-        itemBuilder: (context, index) {
-          final product = _products[index];
-
-          return Padding(
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Card(
+          child: ListView(
             padding: const EdgeInsets.all(16),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Text(product.productKey),
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  suffixIcon: Icon(Icons.email),
                 ),
-                RaisedButton(
-                  child: Text('View PDF'),
-                  onPressed: () async {
-                    final invoice = await createInvoice(product);
-                    launch(
-                      'https://docs.google.com/gview?embedded=true&url=${invoice.pdfUrl}',
-                      forceWebView: true,
-                    );
-                  },
+                onChanged: (value) => setState(() => _email = value),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              DropdownButtonFormField<Product>(
+                decoration: InputDecoration(
+                  labelText: 'Product',
                 ),
-                SizedBox(width: 16),
-                RaisedButton(
-                  color: Colors.green,
-                  child: Text('Purchase'),
-                  onPressed: () async {
-                    final invoice = await createInvoice(product);
-                    // Note: in production this value should be persisted in
-                    // case the app is killed before the user returns
-                    _invoiceKey = invoice.key;
-                    launch(invoice.url);
-                  },
-                ),
-              ],
-            ),
-          );
-        },
+                onChanged: (value) => setState(() => _product = value),
+                items: _products
+                    .map((product) => DropdownMenuItem(
+                          child: Text(product.productKey),
+                          value: product,
+                        ))
+                    .toList(),
+              ),
+              SizedBox(height: 16),
+              OutlineButton(
+                child: Text('Create Invoice'),
+                onPressed: (_email.isNotEmpty && _product != null)
+                    ? () => _createInvoice()
+                    : null,
+              ),
+              OutlineButton(
+                child: Text('View PDF'),
+                onPressed: (_invoice != null) ? () => _viewPdf() : null,
+              ),
+              OutlineButton(
+                child: Text('View Portal'),
+                onPressed: (_invoice != null) ? () => _viewPortal() : null,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
