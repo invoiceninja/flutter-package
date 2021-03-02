@@ -100,7 +100,7 @@ void _printWrapped(String text) {
 
 /// Ensure package is correctly initialized
 void _checkInitialized() {
-  if (!InvoiceNinja.isInitialized) {
+  if (!InvoiceNinja.isInitialized && !InvoiceNinjaAdmin.isInitialized) {
     throw 'Invoice Ninja error: the package is not initialized';
   }
 }
