@@ -15,7 +15,8 @@ class WebClient {
       headers: _getHeaders(companyKey: companyKey, token: token),
     );
 
-    if (InvoiceNinja.debugEnabled) {
+    if (InvoiceNinja.debugEnabled == true ||
+        InvoiceNinjaAdmin.debugEnabled == true) {
       _printWrapped('Invoice Ninja [GET] $url\n${response.body}');
     }
 
@@ -39,7 +40,8 @@ class WebClient {
             headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
 
-    if (InvoiceNinja.debugEnabled) {
+    if (InvoiceNinja.debugEnabled == true ||
+        InvoiceNinjaAdmin.debugEnabled == true) {
       _printWrapped('Invoice Ninja [POST] $url\n${response.body}');
     }
 
@@ -63,7 +65,8 @@ class WebClient {
             headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
 
-    if (InvoiceNinja.debugEnabled) {
+    if (InvoiceNinja.debugEnabled == true ||
+        InvoiceNinjaAdmin.debugEnabled == true) {
       _printWrapped('Invoice Ninja [PUT] $url\n${response.body}');
     }
 

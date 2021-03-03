@@ -1,3 +1,7 @@
+## 0.0.8
+
+* Fixed debug bug for admin API
+
 ## 0.0.7
 
 * Fixed initialization bug for admin API
