@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'quote.dart';
 
@@ -8,14 +8,18 @@ part of 'quote.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Quote _$QuoteFromJson(Map<String, dynamic> json) {
   return _Quote.fromJson(json);
 }
 
+/// @nodoc
 class _$QuoteTearOff {
   const _$QuoteTearOff();
 
-// ignore: unused_element
   _Quote call(
       {String id = '',
       @JsonKey(name: 'user_id')
@@ -45,8 +49,6 @@ class _$QuoteTearOff {
       List<QuoteInvitation> invitations = const <QuoteInvitation>[],
       double amount = 0,
       double balance = 0,
-      @JsonKey(name: 'vendor_id')
-          String vendorId = '',
       @JsonKey(name: 'status_id')
           String statusId = '',
       @JsonKey(name: 'design_id')
@@ -127,7 +129,6 @@ class _$QuoteTearOff {
       invitations: invitations,
       amount: amount,
       balance: balance,
-      vendorId: vendorId,
       statusId: statusId,
       designId: designId,
       number: number,
@@ -165,110 +166,115 @@ class _$QuoteTearOff {
       documents: documents,
     );
   }
+
+  Quote fromJson(Map<String, Object> json) {
+    return Quote.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Quote = _$QuoteTearOff();
 
+/// @nodoc
 mixin _$Quote {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @JsonKey(name: 'client_id')
-  String get clientId;
+  String get clientId => throw _privateConstructorUsedError;
   @JsonKey(name: 'line_items')
-  List<InvoiceLineItem> get lineItems;
-  List<QuoteInvitation> get invitations;
-  double get amount;
-  double get balance;
-  @JsonKey(name: 'vendor_id')
-  String get vendorId;
+  List<InvoiceLineItem> get lineItems => throw _privateConstructorUsedError;
+  List<QuoteInvitation> get invitations => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
+  double get balance => throw _privateConstructorUsedError;
   @JsonKey(name: 'status_id')
-  String get statusId;
+  String get statusId => throw _privateConstructorUsedError;
   @JsonKey(name: 'design_id')
-  String get designId;
-  String get number;
-  double get discount;
+  String get designId => throw _privateConstructorUsedError;
+  String get number => throw _privateConstructorUsedError;
+  double get discount => throw _privateConstructorUsedError;
   @JsonKey(name: 'po_number')
-  String get poNumber;
-  String get date;
+  String get poNumber => throw _privateConstructorUsedError;
+  String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_sent_date')
-  String get lastSentDate;
+  String get lastSentDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'next_send_date')
-  String get nextSendDate;
+  String get nextSendDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'due_date')
-  String get validUntil;
-  String get terms;
+  String get validUntil => throw _privateConstructorUsedError;
+  String get terms => throw _privateConstructorUsedError;
   @JsonKey(name: 'public_notes')
-  String get publicNotes;
+  String get publicNotes => throw _privateConstructorUsedError;
   @JsonKey(name: 'private_notes')
-  String get privateNotes;
+  String get privateNotes => throw _privateConstructorUsedError;
   @JsonKey(name: 'uses_inclusive_taxes')
-  bool get usesInclusiveTaxes;
+  bool get usesInclusiveTaxes => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name1')
-  String get taxName1;
+  String get taxName1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
+  double get taxRate1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name2')
-  String get taxName2;
+  String get taxName2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
+  double get taxRate2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name3')
-  String get taxName3;
+  String get taxName3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
+  double get taxRate3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_taxes')
-  double get totalTaxes;
+  double get totalTaxes => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_amount_discount')
-  bool get isAmountDiscount;
-  String get footer;
-  double get partial;
+  bool get isAmountDiscount => throw _privateConstructorUsedError;
+  String get footer => throw _privateConstructorUsedError;
+  double get partial => throw _privateConstructorUsedError;
   @JsonKey(name: 'partial_due_date')
-  String get partialDueDate;
+  String get partialDueDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'has_tasks')
-  bool get hasTasks;
+  bool get hasTasks => throw _privateConstructorUsedError;
   @JsonKey(name: 'has_expenses')
-  bool get hasExpenses;
+  bool get hasExpenses => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge1')
-  double get customSurcharge1;
+  double get customSurcharge1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge2')
-  double get customSurcharge2;
+  double get customSurcharge2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge3')
-  double get customSurcharge3;
+  double get customSurcharge3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge4')
-  double get customSurcharge4;
+  double get customSurcharge4 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge_tax1')
-  bool get customSurchargeTax1;
+  bool get customSurchargeTax1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge_tax2')
-  bool get customSurchargeTax2;
+  bool get customSurchargeTax2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge_tax3')
-  bool get customSurchargeTax3;
+  bool get customSurchargeTax3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_surcharge_tax4')
-  bool get customSurchargeTax4;
-  List<Document> get documents;
+  bool get customSurchargeTax4 => throw _privateConstructorUsedError;
+  List<Document> get documents => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $QuoteCopyWith<Quote> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteCopyWith<Quote> get copyWith => throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $QuoteCopyWith<$Res> {
   factory $QuoteCopyWith(Quote value, $Res Function(Quote) then) =
       _$QuoteCopyWithImpl<$Res>;
@@ -289,7 +295,6 @@ abstract class $QuoteCopyWith<$Res> {
       List<QuoteInvitation> invitations,
       double amount,
       double balance,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'status_id') String statusId,
       @JsonKey(name: 'design_id') String designId,
       String number,
@@ -327,6 +332,7 @@ abstract class $QuoteCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class _$QuoteCopyWithImpl<$Res> implements $QuoteCopyWith<$Res> {
   _$QuoteCopyWithImpl(this._value, this._then);
 
@@ -336,164 +342,268 @@ class _$QuoteCopyWithImpl<$Res> implements $QuoteCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object clientId = freezed,
-    Object lineItems = freezed,
-    Object invitations = freezed,
-    Object amount = freezed,
-    Object balance = freezed,
-    Object vendorId = freezed,
-    Object statusId = freezed,
-    Object designId = freezed,
-    Object number = freezed,
-    Object discount = freezed,
-    Object poNumber = freezed,
-    Object date = freezed,
-    Object lastSentDate = freezed,
-    Object nextSendDate = freezed,
-    Object validUntil = freezed,
-    Object terms = freezed,
-    Object publicNotes = freezed,
-    Object privateNotes = freezed,
-    Object usesInclusiveTaxes = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object totalTaxes = freezed,
-    Object isAmountDiscount = freezed,
-    Object footer = freezed,
-    Object partial = freezed,
-    Object partialDueDate = freezed,
-    Object hasTasks = freezed,
-    Object hasExpenses = freezed,
-    Object customSurcharge1 = freezed,
-    Object customSurcharge2 = freezed,
-    Object customSurcharge3 = freezed,
-    Object customSurcharge4 = freezed,
-    Object customSurchargeTax1 = freezed,
-    Object customSurchargeTax2 = freezed,
-    Object customSurchargeTax3 = freezed,
-    Object customSurchargeTax4 = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? clientId = freezed,
+    Object? lineItems = freezed,
+    Object? invitations = freezed,
+    Object? amount = freezed,
+    Object? balance = freezed,
+    Object? statusId = freezed,
+    Object? designId = freezed,
+    Object? number = freezed,
+    Object? discount = freezed,
+    Object? poNumber = freezed,
+    Object? date = freezed,
+    Object? lastSentDate = freezed,
+    Object? nextSendDate = freezed,
+    Object? validUntil = freezed,
+    Object? terms = freezed,
+    Object? publicNotes = freezed,
+    Object? privateNotes = freezed,
+    Object? usesInclusiveTaxes = freezed,
+    Object? taxName1 = freezed,
+    Object? taxRate1 = freezed,
+    Object? taxName2 = freezed,
+    Object? taxRate2 = freezed,
+    Object? taxName3 = freezed,
+    Object? taxRate3 = freezed,
+    Object? totalTaxes = freezed,
+    Object? isAmountDiscount = freezed,
+    Object? footer = freezed,
+    Object? partial = freezed,
+    Object? partialDueDate = freezed,
+    Object? hasTasks = freezed,
+    Object? hasExpenses = freezed,
+    Object? customSurcharge1 = freezed,
+    Object? customSurcharge2 = freezed,
+    Object? customSurcharge3 = freezed,
+    Object? customSurcharge4 = freezed,
+    Object? customSurchargeTax1 = freezed,
+    Object? customSurchargeTax2 = freezed,
+    Object? customSurchargeTax3 = freezed,
+    Object? customSurchargeTax4 = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      clientId: clientId == freezed ? _value.clientId : clientId as String,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      clientId: clientId == freezed
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String,
       lineItems: lineItems == freezed
           ? _value.lineItems
-          : lineItems as List<InvoiceLineItem>,
+          : lineItems // ignore: cast_nullable_to_non_nullable
+              as List<InvoiceLineItem>,
       invitations: invitations == freezed
           ? _value.invitations
-          : invitations as List<QuoteInvitation>,
-      amount: amount == freezed ? _value.amount : amount as double,
-      balance: balance == freezed ? _value.balance : balance as double,
-      vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
-      statusId: statusId == freezed ? _value.statusId : statusId as String,
-      designId: designId == freezed ? _value.designId : designId as String,
-      number: number == freezed ? _value.number : number as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-      poNumber: poNumber == freezed ? _value.poNumber : poNumber as String,
-      date: date == freezed ? _value.date : date as String,
+          : invitations // ignore: cast_nullable_to_non_nullable
+              as List<QuoteInvitation>,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      balance: balance == freezed
+          ? _value.balance
+          : balance // ignore: cast_nullable_to_non_nullable
+              as double,
+      statusId: statusId == freezed
+          ? _value.statusId
+          : statusId // ignore: cast_nullable_to_non_nullable
+              as String,
+      designId: designId == freezed
+          ? _value.designId
+          : designId // ignore: cast_nullable_to_non_nullable
+              as String,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double,
+      poNumber: poNumber == freezed
+          ? _value.poNumber
+          : poNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       lastSentDate: lastSentDate == freezed
           ? _value.lastSentDate
-          : lastSentDate as String,
+          : lastSentDate // ignore: cast_nullable_to_non_nullable
+              as String,
       nextSendDate: nextSendDate == freezed
           ? _value.nextSendDate
-          : nextSendDate as String,
-      validUntil:
-          validUntil == freezed ? _value.validUntil : validUntil as String,
-      terms: terms == freezed ? _value.terms : terms as String,
-      publicNotes:
-          publicNotes == freezed ? _value.publicNotes : publicNotes as String,
+          : nextSendDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      validUntil: validUntil == freezed
+          ? _value.validUntil
+          : validUntil // ignore: cast_nullable_to_non_nullable
+              as String,
+      terms: terms == freezed
+          ? _value.terms
+          : terms // ignore: cast_nullable_to_non_nullable
+              as String,
+      publicNotes: publicNotes == freezed
+          ? _value.publicNotes
+          : publicNotes // ignore: cast_nullable_to_non_nullable
+              as String,
       privateNotes: privateNotes == freezed
           ? _value.privateNotes
-          : privateNotes as String,
+          : privateNotes // ignore: cast_nullable_to_non_nullable
+              as String,
       usesInclusiveTaxes: usesInclusiveTaxes == freezed
           ? _value.usesInclusiveTaxes
-          : usesInclusiveTaxes as bool,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      totalTaxes:
-          totalTaxes == freezed ? _value.totalTaxes : totalTaxes as double,
+          : usesInclusiveTaxes // ignore: cast_nullable_to_non_nullable
+              as bool,
+      taxName1: taxName1 == freezed
+          ? _value.taxName1
+          : taxName1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate1: taxRate1 == freezed
+          ? _value.taxRate1
+          : taxRate1 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName2: taxName2 == freezed
+          ? _value.taxName2
+          : taxName2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate2: taxRate2 == freezed
+          ? _value.taxRate2
+          : taxRate2 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName3: taxName3 == freezed
+          ? _value.taxName3
+          : taxName3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate3: taxRate3 == freezed
+          ? _value.taxRate3
+          : taxRate3 // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalTaxes: totalTaxes == freezed
+          ? _value.totalTaxes
+          : totalTaxes // ignore: cast_nullable_to_non_nullable
+              as double,
       isAmountDiscount: isAmountDiscount == freezed
           ? _value.isAmountDiscount
-          : isAmountDiscount as bool,
-      footer: footer == freezed ? _value.footer : footer as String,
-      partial: partial == freezed ? _value.partial : partial as double,
+          : isAmountDiscount // ignore: cast_nullable_to_non_nullable
+              as bool,
+      footer: footer == freezed
+          ? _value.footer
+          : footer // ignore: cast_nullable_to_non_nullable
+              as String,
+      partial: partial == freezed
+          ? _value.partial
+          : partial // ignore: cast_nullable_to_non_nullable
+              as double,
       partialDueDate: partialDueDate == freezed
           ? _value.partialDueDate
-          : partialDueDate as String,
-      hasTasks: hasTasks == freezed ? _value.hasTasks : hasTasks as bool,
-      hasExpenses:
-          hasExpenses == freezed ? _value.hasExpenses : hasExpenses as bool,
+          : partialDueDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      hasTasks: hasTasks == freezed
+          ? _value.hasTasks
+          : hasTasks // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasExpenses: hasExpenses == freezed
+          ? _value.hasExpenses
+          : hasExpenses // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurcharge1: customSurcharge1 == freezed
           ? _value.customSurcharge1
-          : customSurcharge1 as double,
+          : customSurcharge1 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge2: customSurcharge2 == freezed
           ? _value.customSurcharge2
-          : customSurcharge2 as double,
+          : customSurcharge2 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge3: customSurcharge3 == freezed
           ? _value.customSurcharge3
-          : customSurcharge3 as double,
+          : customSurcharge3 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge4: customSurcharge4 == freezed
           ? _value.customSurcharge4
-          : customSurcharge4 as double,
+          : customSurcharge4 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurchargeTax1: customSurchargeTax1 == freezed
           ? _value.customSurchargeTax1
-          : customSurchargeTax1 as bool,
+          : customSurchargeTax1 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax2: customSurchargeTax2 == freezed
           ? _value.customSurchargeTax2
-          : customSurchargeTax2 as bool,
+          : customSurchargeTax2 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax3: customSurchargeTax3 == freezed
           ? _value.customSurchargeTax3
-          : customSurchargeTax3 as bool,
+          : customSurchargeTax3 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax4: customSurchargeTax4 == freezed
           ? _value.customSurchargeTax4
-          : customSurchargeTax4 as bool,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : customSurchargeTax4 // ignore: cast_nullable_to_non_nullable
+              as bool,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$QuoteCopyWith<$Res> implements $QuoteCopyWith<$Res> {
   factory _$QuoteCopyWith(_Quote value, $Res Function(_Quote) then) =
       __$QuoteCopyWithImpl<$Res>;
@@ -515,7 +625,6 @@ abstract class _$QuoteCopyWith<$Res> implements $QuoteCopyWith<$Res> {
       List<QuoteInvitation> invitations,
       double amount,
       double balance,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'status_id') String statusId,
       @JsonKey(name: 'design_id') String designId,
       String number,
@@ -553,6 +662,7 @@ abstract class _$QuoteCopyWith<$Res> implements $QuoteCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class __$QuoteCopyWithImpl<$Res> extends _$QuoteCopyWithImpl<$Res>
     implements _$QuoteCopyWith<$Res> {
   __$QuoteCopyWithImpl(_Quote _value, $Res Function(_Quote) _then)
@@ -563,165 +673,270 @@ class __$QuoteCopyWithImpl<$Res> extends _$QuoteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object clientId = freezed,
-    Object lineItems = freezed,
-    Object invitations = freezed,
-    Object amount = freezed,
-    Object balance = freezed,
-    Object vendorId = freezed,
-    Object statusId = freezed,
-    Object designId = freezed,
-    Object number = freezed,
-    Object discount = freezed,
-    Object poNumber = freezed,
-    Object date = freezed,
-    Object lastSentDate = freezed,
-    Object nextSendDate = freezed,
-    Object validUntil = freezed,
-    Object terms = freezed,
-    Object publicNotes = freezed,
-    Object privateNotes = freezed,
-    Object usesInclusiveTaxes = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object totalTaxes = freezed,
-    Object isAmountDiscount = freezed,
-    Object footer = freezed,
-    Object partial = freezed,
-    Object partialDueDate = freezed,
-    Object hasTasks = freezed,
-    Object hasExpenses = freezed,
-    Object customSurcharge1 = freezed,
-    Object customSurcharge2 = freezed,
-    Object customSurcharge3 = freezed,
-    Object customSurcharge4 = freezed,
-    Object customSurchargeTax1 = freezed,
-    Object customSurchargeTax2 = freezed,
-    Object customSurchargeTax3 = freezed,
-    Object customSurchargeTax4 = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? clientId = freezed,
+    Object? lineItems = freezed,
+    Object? invitations = freezed,
+    Object? amount = freezed,
+    Object? balance = freezed,
+    Object? statusId = freezed,
+    Object? designId = freezed,
+    Object? number = freezed,
+    Object? discount = freezed,
+    Object? poNumber = freezed,
+    Object? date = freezed,
+    Object? lastSentDate = freezed,
+    Object? nextSendDate = freezed,
+    Object? validUntil = freezed,
+    Object? terms = freezed,
+    Object? publicNotes = freezed,
+    Object? privateNotes = freezed,
+    Object? usesInclusiveTaxes = freezed,
+    Object? taxName1 = freezed,
+    Object? taxRate1 = freezed,
+    Object? taxName2 = freezed,
+    Object? taxRate2 = freezed,
+    Object? taxName3 = freezed,
+    Object? taxRate3 = freezed,
+    Object? totalTaxes = freezed,
+    Object? isAmountDiscount = freezed,
+    Object? footer = freezed,
+    Object? partial = freezed,
+    Object? partialDueDate = freezed,
+    Object? hasTasks = freezed,
+    Object? hasExpenses = freezed,
+    Object? customSurcharge1 = freezed,
+    Object? customSurcharge2 = freezed,
+    Object? customSurcharge3 = freezed,
+    Object? customSurcharge4 = freezed,
+    Object? customSurchargeTax1 = freezed,
+    Object? customSurchargeTax2 = freezed,
+    Object? customSurchargeTax3 = freezed,
+    Object? customSurchargeTax4 = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_Quote(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      clientId: clientId == freezed ? _value.clientId : clientId as String,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      clientId: clientId == freezed
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String,
       lineItems: lineItems == freezed
           ? _value.lineItems
-          : lineItems as List<InvoiceLineItem>,
+          : lineItems // ignore: cast_nullable_to_non_nullable
+              as List<InvoiceLineItem>,
       invitations: invitations == freezed
           ? _value.invitations
-          : invitations as List<QuoteInvitation>,
-      amount: amount == freezed ? _value.amount : amount as double,
-      balance: balance == freezed ? _value.balance : balance as double,
-      vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
-      statusId: statusId == freezed ? _value.statusId : statusId as String,
-      designId: designId == freezed ? _value.designId : designId as String,
-      number: number == freezed ? _value.number : number as String,
-      discount: discount == freezed ? _value.discount : discount as double,
-      poNumber: poNumber == freezed ? _value.poNumber : poNumber as String,
-      date: date == freezed ? _value.date : date as String,
+          : invitations // ignore: cast_nullable_to_non_nullable
+              as List<QuoteInvitation>,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      balance: balance == freezed
+          ? _value.balance
+          : balance // ignore: cast_nullable_to_non_nullable
+              as double,
+      statusId: statusId == freezed
+          ? _value.statusId
+          : statusId // ignore: cast_nullable_to_non_nullable
+              as String,
+      designId: designId == freezed
+          ? _value.designId
+          : designId // ignore: cast_nullable_to_non_nullable
+              as String,
+      number: number == freezed
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as String,
+      discount: discount == freezed
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as double,
+      poNumber: poNumber == freezed
+          ? _value.poNumber
+          : poNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       lastSentDate: lastSentDate == freezed
           ? _value.lastSentDate
-          : lastSentDate as String,
+          : lastSentDate // ignore: cast_nullable_to_non_nullable
+              as String,
       nextSendDate: nextSendDate == freezed
           ? _value.nextSendDate
-          : nextSendDate as String,
-      validUntil:
-          validUntil == freezed ? _value.validUntil : validUntil as String,
-      terms: terms == freezed ? _value.terms : terms as String,
-      publicNotes:
-          publicNotes == freezed ? _value.publicNotes : publicNotes as String,
+          : nextSendDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      validUntil: validUntil == freezed
+          ? _value.validUntil
+          : validUntil // ignore: cast_nullable_to_non_nullable
+              as String,
+      terms: terms == freezed
+          ? _value.terms
+          : terms // ignore: cast_nullable_to_non_nullable
+              as String,
+      publicNotes: publicNotes == freezed
+          ? _value.publicNotes
+          : publicNotes // ignore: cast_nullable_to_non_nullable
+              as String,
       privateNotes: privateNotes == freezed
           ? _value.privateNotes
-          : privateNotes as String,
+          : privateNotes // ignore: cast_nullable_to_non_nullable
+              as String,
       usesInclusiveTaxes: usesInclusiveTaxes == freezed
           ? _value.usesInclusiveTaxes
-          : usesInclusiveTaxes as bool,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      totalTaxes:
-          totalTaxes == freezed ? _value.totalTaxes : totalTaxes as double,
+          : usesInclusiveTaxes // ignore: cast_nullable_to_non_nullable
+              as bool,
+      taxName1: taxName1 == freezed
+          ? _value.taxName1
+          : taxName1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate1: taxRate1 == freezed
+          ? _value.taxRate1
+          : taxRate1 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName2: taxName2 == freezed
+          ? _value.taxName2
+          : taxName2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate2: taxRate2 == freezed
+          ? _value.taxRate2
+          : taxRate2 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName3: taxName3 == freezed
+          ? _value.taxName3
+          : taxName3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate3: taxRate3 == freezed
+          ? _value.taxRate3
+          : taxRate3 // ignore: cast_nullable_to_non_nullable
+              as double,
+      totalTaxes: totalTaxes == freezed
+          ? _value.totalTaxes
+          : totalTaxes // ignore: cast_nullable_to_non_nullable
+              as double,
       isAmountDiscount: isAmountDiscount == freezed
           ? _value.isAmountDiscount
-          : isAmountDiscount as bool,
-      footer: footer == freezed ? _value.footer : footer as String,
-      partial: partial == freezed ? _value.partial : partial as double,
+          : isAmountDiscount // ignore: cast_nullable_to_non_nullable
+              as bool,
+      footer: footer == freezed
+          ? _value.footer
+          : footer // ignore: cast_nullable_to_non_nullable
+              as String,
+      partial: partial == freezed
+          ? _value.partial
+          : partial // ignore: cast_nullable_to_non_nullable
+              as double,
       partialDueDate: partialDueDate == freezed
           ? _value.partialDueDate
-          : partialDueDate as String,
-      hasTasks: hasTasks == freezed ? _value.hasTasks : hasTasks as bool,
-      hasExpenses:
-          hasExpenses == freezed ? _value.hasExpenses : hasExpenses as bool,
+          : partialDueDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      hasTasks: hasTasks == freezed
+          ? _value.hasTasks
+          : hasTasks // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasExpenses: hasExpenses == freezed
+          ? _value.hasExpenses
+          : hasExpenses // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurcharge1: customSurcharge1 == freezed
           ? _value.customSurcharge1
-          : customSurcharge1 as double,
+          : customSurcharge1 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge2: customSurcharge2 == freezed
           ? _value.customSurcharge2
-          : customSurcharge2 as double,
+          : customSurcharge2 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge3: customSurcharge3 == freezed
           ? _value.customSurcharge3
-          : customSurcharge3 as double,
+          : customSurcharge3 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurcharge4: customSurcharge4 == freezed
           ? _value.customSurcharge4
-          : customSurcharge4 as double,
+          : customSurcharge4 // ignore: cast_nullable_to_non_nullable
+              as double,
       customSurchargeTax1: customSurchargeTax1 == freezed
           ? _value.customSurchargeTax1
-          : customSurchargeTax1 as bool,
+          : customSurchargeTax1 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax2: customSurchargeTax2 == freezed
           ? _value.customSurchargeTax2
-          : customSurchargeTax2 as bool,
+          : customSurchargeTax2 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax3: customSurchargeTax3 == freezed
           ? _value.customSurchargeTax3
-          : customSurchargeTax3 as bool,
+          : customSurchargeTax3 // ignore: cast_nullable_to_non_nullable
+              as bool,
       customSurchargeTax4: customSurchargeTax4 == freezed
           ? _value.customSurchargeTax4
-          : customSurchargeTax4 as bool,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : customSurchargeTax4 // ignore: cast_nullable_to_non_nullable
+              as bool,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_Quote extends _Quote with DiagnosticableTreeMixin {
   _$_Quote(
       {this.id = '',
@@ -740,7 +955,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
       this.invitations = const <QuoteInvitation>[],
       this.amount = 0,
       this.balance = 0,
-      @JsonKey(name: 'vendor_id') this.vendorId = '',
       @JsonKey(name: 'status_id') this.statusId = '',
       @JsonKey(name: 'design_id') this.designId = '',
       this.number = '',
@@ -776,59 +990,7 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
       @JsonKey(name: 'custom_surcharge_tax3') this.customSurchargeTax3 = false,
       @JsonKey(name: 'custom_surcharge_tax4') this.customSurchargeTax4 = false,
       this.documents = const <Document>[]})
-      : assert(id != null),
-        assert(createdById != null),
-        assert(assignedToId != null),
-        assert(createdAt != null),
-        assert(updatedAt != null),
-        assert(archivedAt != null),
-        assert(isDeleted != null),
-        assert(customValue1 != null),
-        assert(customValue2 != null),
-        assert(customValue3 != null),
-        assert(customValue4 != null),
-        assert(clientId != null),
-        assert(lineItems != null),
-        assert(invitations != null),
-        assert(amount != null),
-        assert(balance != null),
-        assert(vendorId != null),
-        assert(statusId != null),
-        assert(designId != null),
-        assert(number != null),
-        assert(discount != null),
-        assert(poNumber != null),
-        assert(date != null),
-        assert(lastSentDate != null),
-        assert(nextSendDate != null),
-        assert(validUntil != null),
-        assert(terms != null),
-        assert(publicNotes != null),
-        assert(privateNotes != null),
-        assert(usesInclusiveTaxes != null),
-        assert(taxName1 != null),
-        assert(taxRate1 != null),
-        assert(taxName2 != null),
-        assert(taxRate2 != null),
-        assert(taxName3 != null),
-        assert(taxRate3 != null),
-        assert(totalTaxes != null),
-        assert(isAmountDiscount != null),
-        assert(footer != null),
-        assert(partial != null),
-        assert(partialDueDate != null),
-        assert(hasTasks != null),
-        assert(hasExpenses != null),
-        assert(customSurcharge1 != null),
-        assert(customSurcharge2 != null),
-        assert(customSurcharge3 != null),
-        assert(customSurcharge4 != null),
-        assert(customSurchargeTax1 != null),
-        assert(customSurchargeTax2 != null),
-        assert(customSurchargeTax3 != null),
-        assert(customSurchargeTax4 != null),
-        assert(documents != null),
-        super._();
+      : super._();
 
   factory _$_Quote.fromJson(Map<String, dynamic> json) =>
       _$_$_QuoteFromJson(json);
@@ -881,9 +1043,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: 0)
   @override
   final double balance;
-  @override
-  @JsonKey(name: 'vendor_id')
-  final String vendorId;
   @override
   @JsonKey(name: 'status_id')
   final String statusId;
@@ -992,7 +1151,7 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Quote(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, vendorId: $vendorId, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, validUntil: $validUntil, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
+    return 'Quote(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, validUntil: $validUntil, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
   }
 
   @override
@@ -1016,7 +1175,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('invitations', invitations))
       ..add(DiagnosticsProperty('amount', amount))
       ..add(DiagnosticsProperty('balance', balance))
-      ..add(DiagnosticsProperty('vendorId', vendorId))
       ..add(DiagnosticsProperty('statusId', statusId))
       ..add(DiagnosticsProperty('designId', designId))
       ..add(DiagnosticsProperty('number', number))
@@ -1104,9 +1262,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
             (identical(other.balance, balance) ||
                 const DeepCollectionEquality()
                     .equals(other.balance, balance)) &&
-            (identical(other.vendorId, vendorId) ||
-                const DeepCollectionEquality()
-                    .equals(other.vendorId, vendorId)) &&
             (identical(other.statusId, statusId) ||
                 const DeepCollectionEquality()
                     .equals(other.statusId, statusId)) &&
@@ -1124,8 +1279,10 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
             (identical(other.lastSentDate, lastSentDate) ||
-                const DeepCollectionEquality().equals(other.lastSentDate, lastSentDate)) &&
-            (identical(other.nextSendDate, nextSendDate) || const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
+                const DeepCollectionEquality()
+                    .equals(other.lastSentDate, lastSentDate)) &&
+            (identical(other.nextSendDate, nextSendDate) ||
+                const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
             (identical(other.validUntil, validUntil) || const DeepCollectionEquality().equals(other.validUntil, validUntil)) &&
             (identical(other.terms, terms) || const DeepCollectionEquality().equals(other.terms, terms)) &&
             (identical(other.publicNotes, publicNotes) || const DeepCollectionEquality().equals(other.publicNotes, publicNotes)) &&
@@ -1174,7 +1331,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(invitations) ^
       const DeepCollectionEquality().hash(amount) ^
       const DeepCollectionEquality().hash(balance) ^
-      const DeepCollectionEquality().hash(vendorId) ^
       const DeepCollectionEquality().hash(statusId) ^
       const DeepCollectionEquality().hash(designId) ^
       const DeepCollectionEquality().hash(number) ^
@@ -1211,6 +1367,7 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(customSurchargeTax4) ^
       const DeepCollectionEquality().hash(documents);
 
+  @JsonKey(ignore: true)
   @override
   _$QuoteCopyWith<_Quote> get copyWith =>
       __$QuoteCopyWithImpl<_Quote>(this, _$identity);
@@ -1222,7 +1379,6 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
 }
 
 abstract class _Quote extends Quote {
-  _Quote._() : super._();
   factory _Quote(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -1240,7 +1396,6 @@ abstract class _Quote extends Quote {
       List<QuoteInvitation> invitations,
       double amount,
       double balance,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'status_id') String statusId,
       @JsonKey(name: 'design_id') String designId,
       String number,
@@ -1276,166 +1431,165 @@ abstract class _Quote extends Quote {
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
       List<Document> documents}) = _$_Quote;
+  _Quote._() : super._();
 
   factory _Quote.fromJson(Map<String, dynamic> json) = _$_Quote.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'client_id')
-  String get clientId;
+  String get clientId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'line_items')
-  List<InvoiceLineItem> get lineItems;
+  List<InvoiceLineItem> get lineItems => throw _privateConstructorUsedError;
   @override
-  List<QuoteInvitation> get invitations;
+  List<QuoteInvitation> get invitations => throw _privateConstructorUsedError;
   @override
-  double get amount;
+  double get amount => throw _privateConstructorUsedError;
   @override
-  double get balance;
-  @override
-  @JsonKey(name: 'vendor_id')
-  String get vendorId;
+  double get balance => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'status_id')
-  String get statusId;
+  String get statusId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'design_id')
-  String get designId;
+  String get designId => throw _privateConstructorUsedError;
   @override
-  String get number;
+  String get number => throw _privateConstructorUsedError;
   @override
-  double get discount;
+  double get discount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'po_number')
-  String get poNumber;
+  String get poNumber => throw _privateConstructorUsedError;
   @override
-  String get date;
+  String get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'last_sent_date')
-  String get lastSentDate;
+  String get lastSentDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'next_send_date')
-  String get nextSendDate;
+  String get nextSendDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'due_date')
-  String get validUntil;
+  String get validUntil => throw _privateConstructorUsedError;
   @override
-  String get terms;
+  String get terms => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'public_notes')
-  String get publicNotes;
+  String get publicNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'private_notes')
-  String get privateNotes;
+  String get privateNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'uses_inclusive_taxes')
-  bool get usesInclusiveTaxes;
+  bool get usesInclusiveTaxes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name1')
-  String get taxName1;
+  String get taxName1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
+  double get taxRate1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name2')
-  String get taxName2;
+  String get taxName2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
+  double get taxRate2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name3')
-  String get taxName3;
+  String get taxName3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
+  double get taxRate3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'total_taxes')
-  double get totalTaxes;
+  double get totalTaxes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_amount_discount')
-  bool get isAmountDiscount;
+  bool get isAmountDiscount => throw _privateConstructorUsedError;
   @override
-  String get footer;
+  String get footer => throw _privateConstructorUsedError;
   @override
-  double get partial;
+  double get partial => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'partial_due_date')
-  String get partialDueDate;
+  String get partialDueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'has_tasks')
-  bool get hasTasks;
+  bool get hasTasks => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'has_expenses')
-  bool get hasExpenses;
+  bool get hasExpenses => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge1')
-  double get customSurcharge1;
+  double get customSurcharge1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge2')
-  double get customSurcharge2;
+  double get customSurcharge2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge3')
-  double get customSurcharge3;
+  double get customSurcharge3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge4')
-  double get customSurcharge4;
+  double get customSurcharge4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge_tax1')
-  bool get customSurchargeTax1;
+  bool get customSurchargeTax1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge_tax2')
-  bool get customSurchargeTax2;
+  bool get customSurchargeTax2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge_tax3')
-  bool get customSurchargeTax3;
+  bool get customSurchargeTax3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_surcharge_tax4')
-  bool get customSurchargeTax4;
+  bool get customSurchargeTax4 => throw _privateConstructorUsedError;
   @override
-  List<Document> get documents;
+  List<Document> get documents => throw _privateConstructorUsedError;
   @override
-  _$QuoteCopyWith<_Quote> get copyWith;
+  @JsonKey(ignore: true)
+  _$QuoteCopyWith<_Quote> get copyWith => throw _privateConstructorUsedError;
 }
 
 QuoteInvitation _$QuoteInvitationFromJson(Map<String, dynamic> json) {
   return _QuoteInvitation.fromJson(json);
 }
 
+/// @nodoc
 class _$QuoteInvitationTearOff {
   const _$QuoteInvitationTearOff();
 
-// ignore: unused_element
   _QuoteInvitation call(
       {String id = '',
       @JsonKey(name: 'client_contact_id') String clientContactId = '',
@@ -1454,29 +1608,37 @@ class _$QuoteInvitationTearOff {
       openedDate: openedDate,
     );
   }
+
+  QuoteInvitation fromJson(Map<String, Object> json) {
+    return QuoteInvitation.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $QuoteInvitation = _$QuoteInvitationTearOff();
 
+/// @nodoc
 mixin _$QuoteInvitation {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'client_contact_id')
-  String get clientContactId;
-  String get key;
+  String get clientContactId => throw _privateConstructorUsedError;
+  String get key => throw _privateConstructorUsedError;
   @JsonKey(name: 'link')
-  String get url;
+  String get url => throw _privateConstructorUsedError;
   @JsonKey(name: 'sent_date')
-  String get sentDate;
+  String get sentDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'viewed_date')
-  String get viewedDate;
+  String get viewedDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'opened_date')
-  String get openedDate;
+  String get openedDate => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $QuoteInvitationCopyWith<QuoteInvitation> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteInvitationCopyWith<QuoteInvitation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $QuoteInvitationCopyWith<$Res> {
   factory $QuoteInvitationCopyWith(
           QuoteInvitation value, $Res Function(QuoteInvitation) then) =
@@ -1491,6 +1653,7 @@ abstract class $QuoteInvitationCopyWith<$Res> {
       @JsonKey(name: 'opened_date') String openedDate});
 }
 
+/// @nodoc
 class _$QuoteInvitationCopyWithImpl<$Res>
     implements $QuoteInvitationCopyWith<$Res> {
   _$QuoteInvitationCopyWithImpl(this._value, this._then);
@@ -1501,30 +1664,48 @@ class _$QuoteInvitationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object clientContactId = freezed,
-    Object key = freezed,
-    Object url = freezed,
-    Object sentDate = freezed,
-    Object viewedDate = freezed,
-    Object openedDate = freezed,
+    Object? id = freezed,
+    Object? clientContactId = freezed,
+    Object? key = freezed,
+    Object? url = freezed,
+    Object? sentDate = freezed,
+    Object? viewedDate = freezed,
+    Object? openedDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       clientContactId: clientContactId == freezed
           ? _value.clientContactId
-          : clientContactId as String,
-      key: key == freezed ? _value.key : key as String,
-      url: url == freezed ? _value.url : url as String,
-      sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
-      viewedDate:
-          viewedDate == freezed ? _value.viewedDate : viewedDate as String,
-      openedDate:
-          openedDate == freezed ? _value.openedDate : openedDate as String,
+          : clientContactId // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      sentDate: sentDate == freezed
+          ? _value.sentDate
+          : sentDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      viewedDate: viewedDate == freezed
+          ? _value.viewedDate
+          : viewedDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      openedDate: openedDate == freezed
+          ? _value.openedDate
+          : openedDate // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$QuoteInvitationCopyWith<$Res>
     implements $QuoteInvitationCopyWith<$Res> {
   factory _$QuoteInvitationCopyWith(
@@ -1541,6 +1722,7 @@ abstract class _$QuoteInvitationCopyWith<$Res>
       @JsonKey(name: 'opened_date') String openedDate});
 }
 
+/// @nodoc
 class __$QuoteInvitationCopyWithImpl<$Res>
     extends _$QuoteInvitationCopyWithImpl<$Res>
     implements _$QuoteInvitationCopyWith<$Res> {
@@ -1553,31 +1735,50 @@ class __$QuoteInvitationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object clientContactId = freezed,
-    Object key = freezed,
-    Object url = freezed,
-    Object sentDate = freezed,
-    Object viewedDate = freezed,
-    Object openedDate = freezed,
+    Object? id = freezed,
+    Object? clientContactId = freezed,
+    Object? key = freezed,
+    Object? url = freezed,
+    Object? sentDate = freezed,
+    Object? viewedDate = freezed,
+    Object? openedDate = freezed,
   }) {
     return _then(_QuoteInvitation(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       clientContactId: clientContactId == freezed
           ? _value.clientContactId
-          : clientContactId as String,
-      key: key == freezed ? _value.key : key as String,
-      url: url == freezed ? _value.url : url as String,
-      sentDate: sentDate == freezed ? _value.sentDate : sentDate as String,
-      viewedDate:
-          viewedDate == freezed ? _value.viewedDate : viewedDate as String,
-      openedDate:
-          openedDate == freezed ? _value.openedDate : openedDate as String,
+          : clientContactId // ignore: cast_nullable_to_non_nullable
+              as String,
+      key: key == freezed
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      sentDate: sentDate == freezed
+          ? _value.sentDate
+          : sentDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      viewedDate: viewedDate == freezed
+          ? _value.viewedDate
+          : viewedDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      openedDate: openedDate == freezed
+          ? _value.openedDate
+          : openedDate // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
   _$_QuoteInvitation(
       {this.id = '',
@@ -1587,14 +1788,7 @@ class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
       @JsonKey(name: 'sent_date') this.sentDate = '',
       @JsonKey(name: 'viewed_date') this.viewedDate = '',
       @JsonKey(name: 'opened_date') this.openedDate = ''})
-      : assert(id != null),
-        assert(clientContactId != null),
-        assert(key != null),
-        assert(url != null),
-        assert(sentDate != null),
-        assert(viewedDate != null),
-        assert(openedDate != null),
-        super._();
+      : super._();
 
   factory _$_QuoteInvitation.fromJson(Map<String, dynamic> json) =>
       _$_$_QuoteInvitationFromJson(json);
@@ -1675,6 +1869,7 @@ class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(viewedDate) ^
       const DeepCollectionEquality().hash(openedDate);
 
+  @JsonKey(ignore: true)
   @override
   _$QuoteInvitationCopyWith<_QuoteInvitation> get copyWith =>
       __$QuoteInvitationCopyWithImpl<_QuoteInvitation>(this, _$identity);
@@ -1686,7 +1881,6 @@ class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
 }
 
 abstract class _QuoteInvitation extends QuoteInvitation {
-  _QuoteInvitation._() : super._();
   factory _QuoteInvitation(
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
@@ -1695,64 +1889,76 @@ abstract class _QuoteInvitation extends QuoteInvitation {
       @JsonKey(name: 'sent_date') String sentDate,
       @JsonKey(name: 'viewed_date') String viewedDate,
       @JsonKey(name: 'opened_date') String openedDate}) = _$_QuoteInvitation;
+  _QuoteInvitation._() : super._();
 
   factory _QuoteInvitation.fromJson(Map<String, dynamic> json) =
       _$_QuoteInvitation.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'client_contact_id')
-  String get clientContactId;
+  String get clientContactId => throw _privateConstructorUsedError;
   @override
-  String get key;
+  String get key => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'link')
-  String get url;
+  String get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'sent_date')
-  String get sentDate;
+  String get sentDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'viewed_date')
-  String get viewedDate;
+  String get viewedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'opened_date')
-  String get openedDate;
+  String get openedDate => throw _privateConstructorUsedError;
   @override
-  _$QuoteInvitationCopyWith<_QuoteInvitation> get copyWith;
+  @JsonKey(ignore: true)
+  _$QuoteInvitationCopyWith<_QuoteInvitation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 QuoteList _$QuoteListFromJson(Map<String, dynamic> json) {
   return _QuoteList.fromJson(json);
 }
 
+/// @nodoc
 class _$QuoteListTearOff {
   const _$QuoteListTearOff();
 
-// ignore: unused_element
-  _QuoteList call({List<Quote> data}) {
+  _QuoteList call({required List<Quote> data}) {
     return _QuoteList(
       data: data,
     );
   }
+
+  QuoteList fromJson(Map<String, Object> json) {
+    return QuoteList.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $QuoteList = _$QuoteListTearOff();
 
+/// @nodoc
 mixin _$QuoteList {
-  List<Quote> get data;
+  List<Quote> get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $QuoteListCopyWith<QuoteList> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteListCopyWith<QuoteList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $QuoteListCopyWith<$Res> {
   factory $QuoteListCopyWith(QuoteList value, $Res Function(QuoteList) then) =
       _$QuoteListCopyWithImpl<$Res>;
   $Res call({List<Quote> data});
 }
 
+/// @nodoc
 class _$QuoteListCopyWithImpl<$Res> implements $QuoteListCopyWith<$Res> {
   _$QuoteListCopyWithImpl(this._value, this._then);
 
@@ -1762,14 +1968,18 @@ class _$QuoteListCopyWithImpl<$Res> implements $QuoteListCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as List<Quote>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Quote>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$QuoteListCopyWith<$Res> implements $QuoteListCopyWith<$Res> {
   factory _$QuoteListCopyWith(
           _QuoteList value, $Res Function(_QuoteList) then) =
@@ -1778,6 +1988,7 @@ abstract class _$QuoteListCopyWith<$Res> implements $QuoteListCopyWith<$Res> {
   $Res call({List<Quote> data});
 }
 
+/// @nodoc
 class __$QuoteListCopyWithImpl<$Res> extends _$QuoteListCopyWithImpl<$Res>
     implements _$QuoteListCopyWith<$Res> {
   __$QuoteListCopyWithImpl(_QuoteList _value, $Res Function(_QuoteList) _then)
@@ -1788,17 +1999,22 @@ class __$QuoteListCopyWithImpl<$Res> extends _$QuoteListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_QuoteList(
-      data: data == freezed ? _value.data : data as List<Quote>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Quote>,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuoteList with DiagnosticableTreeMixin implements _QuoteList {
-  _$_QuoteList({this.data});
+  _$_QuoteList({required this.data});
 
   factory _$_QuoteList.fromJson(Map<String, dynamic> json) =>
       _$_$_QuoteListFromJson(json);
@@ -1831,6 +2047,7 @@ class _$_QuoteList with DiagnosticableTreeMixin implements _QuoteList {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$QuoteListCopyWith<_QuoteList> get copyWith =>
       __$QuoteListCopyWithImpl<_QuoteList>(this, _$identity);
@@ -1842,42 +2059,52 @@ class _$_QuoteList with DiagnosticableTreeMixin implements _QuoteList {
 }
 
 abstract class _QuoteList implements QuoteList {
-  factory _QuoteList({List<Quote> data}) = _$_QuoteList;
+  factory _QuoteList({required List<Quote> data}) = _$_QuoteList;
 
   factory _QuoteList.fromJson(Map<String, dynamic> json) =
       _$_QuoteList.fromJson;
 
   @override
-  List<Quote> get data;
+  List<Quote> get data => throw _privateConstructorUsedError;
   @override
-  _$QuoteListCopyWith<_QuoteList> get copyWith;
+  @JsonKey(ignore: true)
+  _$QuoteListCopyWith<_QuoteList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 QuoteItem _$QuoteItemFromJson(Map<String, dynamic> json) {
   return _QuoteItem.fromJson(json);
 }
 
+/// @nodoc
 class _$QuoteItemTearOff {
   const _$QuoteItemTearOff();
 
-// ignore: unused_element
   _QuoteItem call(Quote data) {
     return _QuoteItem(
       data,
     );
   }
+
+  QuoteItem fromJson(Map<String, Object> json) {
+    return QuoteItem.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $QuoteItem = _$QuoteItemTearOff();
 
+/// @nodoc
 mixin _$QuoteItem {
-  Quote get data;
+  Quote get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $QuoteItemCopyWith<QuoteItem> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteItemCopyWith<QuoteItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $QuoteItemCopyWith<$Res> {
   factory $QuoteItemCopyWith(QuoteItem value, $Res Function(QuoteItem) then) =
       _$QuoteItemCopyWithImpl<$Res>;
@@ -1886,6 +2113,7 @@ abstract class $QuoteItemCopyWith<$Res> {
   $QuoteCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class _$QuoteItemCopyWithImpl<$Res> implements $QuoteItemCopyWith<$Res> {
   _$QuoteItemCopyWithImpl(this._value, this._then);
 
@@ -1895,24 +2123,25 @@ class _$QuoteItemCopyWithImpl<$Res> implements $QuoteItemCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as Quote,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Quote,
     ));
   }
 
   @override
   $QuoteCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
     return $QuoteCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
 }
 
+/// @nodoc
 abstract class _$QuoteItemCopyWith<$Res> implements $QuoteItemCopyWith<$Res> {
   factory _$QuoteItemCopyWith(
           _QuoteItem value, $Res Function(_QuoteItem) then) =
@@ -1924,6 +2153,7 @@ abstract class _$QuoteItemCopyWith<$Res> implements $QuoteItemCopyWith<$Res> {
   $QuoteCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class __$QuoteItemCopyWithImpl<$Res> extends _$QuoteItemCopyWithImpl<$Res>
     implements _$QuoteItemCopyWith<$Res> {
   __$QuoteItemCopyWithImpl(_QuoteItem _value, $Res Function(_QuoteItem) _then)
@@ -1934,17 +2164,22 @@ class __$QuoteItemCopyWithImpl<$Res> extends _$QuoteItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_QuoteItem(
-      data == freezed ? _value.data : data as Quote,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Quote,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_QuoteItem with DiagnosticableTreeMixin implements _QuoteItem {
-  _$_QuoteItem(this.data) : assert(data != null);
+  _$_QuoteItem(this.data);
 
   factory _$_QuoteItem.fromJson(Map<String, dynamic> json) =>
       _$_$_QuoteItemFromJson(json);
@@ -1977,6 +2212,7 @@ class _$_QuoteItem with DiagnosticableTreeMixin implements _QuoteItem {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$QuoteItemCopyWith<_QuoteItem> get copyWith =>
       __$QuoteItemCopyWithImpl<_QuoteItem>(this, _$identity);
@@ -1994,7 +2230,9 @@ abstract class _QuoteItem implements QuoteItem {
       _$_QuoteItem.fromJson;
 
   @override
-  Quote get data;
+  Quote get data => throw _privateConstructorUsedError;
   @override
-  _$QuoteItemCopyWith<_QuoteItem> get copyWith;
+  @JsonKey(ignore: true)
+  _$QuoteItemCopyWith<_QuoteItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }

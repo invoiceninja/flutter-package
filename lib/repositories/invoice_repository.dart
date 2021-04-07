@@ -55,7 +55,7 @@ class InvoiceAdminRepository {
   }
 
   /// Find an invoice by its id
-  Future<Invoice> findById(String id) async {
+  Future<Invoice?> findById(String id) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/invoices/$id',
         token: InvoiceNinjaAdmin.token);
@@ -64,7 +64,7 @@ class InvoiceAdminRepository {
   }
 
   /// Find an invoice by its number
-  Future<Invoice> findByNumber(String number) async {
+  Future<Invoice?> findByNumber(String number) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/invoices?invoice_number=$number',
         token: InvoiceNinjaAdmin.token);

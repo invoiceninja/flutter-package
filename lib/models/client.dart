@@ -52,7 +52,7 @@ abstract class Client implements _$Client {
     @JsonKey(name: 'shipping_postal_code')
         String shippingPostalCode,
     @Default('') @JsonKey(name: 'shipping_country_id') String shippingCountryId,
-    ClientSettings settings,
+    //@Default(ClientSettings) ClientSettings settings,
     @Default('') @JsonKey(name: 'id_number') String idNumber,
     @Default('') @JsonKey(name: 'vat_number') String vatNumber,
     @Default(<ClientContact>[]) List<ClientContact> contacts,
@@ -85,7 +85,7 @@ abstract class Client implements _$Client {
 
 /// ClientContact class
 @freezed
-abstract class ClientContact with _$ClientContact {
+class ClientContact with _$ClientContact {
   /// ClientContact factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientContact({
@@ -111,24 +111,26 @@ abstract class ClientContact with _$ClientContact {
       _$ClientContactFromJson(json);
 }
 
+/*
 /// ClientSettings class
 @freezed
-abstract class ClientSettings with _$ClientSettings {
+class ClientSettings with _$ClientSettings {
   /// ClientSettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
     @nullable @Default('') @JsonKey(name: 'currency_id') String currencyId,
-    @nullable @Default('') @JsonKey(name: 'language_id') String languageId,
+    @nullable @Default('') @JsonKey(name: 'language_id') String languageId
   }) = _ClientSettings;
 
   /// Create a ClientSettings from JSON
   factory ClientSettings.fromJson(Map<String, dynamic> json) =>
       _$ClientSettingsFromJson(json);
 }
+*/
 
 /// Multi-item client response
 @freezed
-abstract class ClientList with _$ClientList {
+class ClientList with _$ClientList {
   /// ClientList factory constructor
   factory ClientList(List<Client> data) = _ClientList;
 
@@ -139,7 +141,7 @@ abstract class ClientList with _$ClientList {
 
 /// Single-item client response
 @freezed
-abstract class ClientItem with _$ClientItem {
+class ClientItem with _$ClientItem {
   /// ClientItem factory constructor
   factory ClientItem(Client data) = _ClientItem;
 

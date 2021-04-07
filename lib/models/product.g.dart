@@ -8,7 +8,7 @@ part of 'product.dart';
 
 _$_Product _$_$_ProductFromJson(Map<String, dynamic> json) {
   return _$_Product(
-    id: json['id'] as String ?? '',
+    id: json['id'] as String? ?? '',
     createdById: json['user_id'] as String,
     assignedToId: json['assigned_user_id'] as String,
     createdAt: json['created_at'] as int,
@@ -20,20 +20,19 @@ _$_Product _$_$_ProductFromJson(Map<String, dynamic> json) {
     customValue3: json['custom_value3'] as String,
     customValue4: json['custom_value4'] as String,
     productKey: json['product_key'] as String,
-    notes: json['notes'] as String ?? '',
-    cost: (json['cost'] as num)?.toDouble() ?? 0,
-    price: (json['price'] as num)?.toDouble() ?? 0,
-    quantity: (json['quantity'] as num)?.toDouble() ?? 0,
+    notes: json['notes'] as String? ?? '',
+    cost: (json['cost'] as num?)?.toDouble() ?? 0,
+    price: (json['price'] as num?)?.toDouble() ?? 0,
+    quantity: (json['quantity'] as num?)?.toDouble() ?? 0,
     taxName1: json['tax_name1'] as String,
-    taxRate1: (json['tax_rate1'] as num)?.toDouble(),
+    taxRate1: (json['tax_rate1'] as num).toDouble(),
     taxName2: json['tax_name2'] as String,
-    taxRate2: (json['tax_rate2'] as num)?.toDouble(),
+    taxRate2: (json['tax_rate2'] as num).toDouble(),
     taxName3: json['tax_name3'] as String,
-    taxRate3: (json['tax_rate3'] as num)?.toDouble(),
-    documents: (json['documents'] as List)
-            ?.map((e) =>
-                e == null ? null : Document.fromJson(e as Map<String, dynamic>))
-            ?.toList() ??
+    taxRate3: (json['tax_rate3'] as num).toDouble(),
+    documents: (json['documents'] as List<dynamic>?)
+            ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
+            .toList() ??
         [],
   );
 }
@@ -62,15 +61,14 @@ Map<String, dynamic> _$_$_ProductToJson(_$_Product instance) =>
       'tax_rate2': instance.taxRate2,
       'tax_name3': instance.taxName3,
       'tax_rate3': instance.taxRate3,
-      'documents': instance.documents?.map((e) => e?.toJson())?.toList(),
+      'documents': instance.documents.map((e) => e.toJson()).toList(),
     };
 
 _$_ProductList _$_$_ProductListFromJson(Map<String, dynamic> json) {
   return _$_ProductList(
-    data: (json['data'] as List)
-        ?.map((e) =>
-            e == null ? null : Product.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
+    data: (json['data'] as List<dynamic>)
+        .map((e) => Product.fromJson(e as Map<String, dynamic>))
+        .toList(),
   );
 }
 
@@ -81,9 +79,7 @@ Map<String, dynamic> _$_$_ProductListToJson(_$_ProductList instance) =>
 
 _$_ProductItem _$_$_ProductItemFromJson(Map<String, dynamic> json) {
   return _$_ProductItem(
-    json['data'] == null
-        ? null
-        : Product.fromJson(json['data'] as Map<String, dynamic>),
+    Product.fromJson(json['data'] as Map<String, dynamic>),
   );
 }
 

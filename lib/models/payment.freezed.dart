@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'payment.dart';
 
@@ -8,14 +8,18 @@ part of 'payment.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Payment _$PaymentFromJson(Map<String, dynamic> json) {
   return _Payment.fromJson(json);
 }
 
+/// @nodoc
 class _$PaymentTearOff {
   const _$PaymentTearOff();
 
-// ignore: unused_element
   _Payment call(
       {String id = '',
       @JsonKey(name: 'user_id')
@@ -99,69 +103,76 @@ class _$PaymentTearOff {
       documents: documents,
     );
   }
+
+  Payment fromJson(Map<String, Object> json) {
+    return Payment.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Payment = _$PaymentTearOff();
 
+/// @nodoc
 mixin _$Payment {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @JsonKey(name: 'client_id')
-  String get clientId;
+  String get clientId => throw _privateConstructorUsedError;
   @JsonKey(name: 'invitation_id')
-  String get invitationId;
+  String get invitationId => throw _privateConstructorUsedError;
   @JsonKey(name: 'client_contact_id')
-  String get clientContactId;
+  String get clientContactId => throw _privateConstructorUsedError;
   @JsonKey(name: 'type_id')
-  String get typeId;
+  String get typeId => throw _privateConstructorUsedError;
   @JsonKey(name: 'date')
-  String get date;
+  String get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'transaction_reference')
-  String get transactionReference;
+  String get transactionReference => throw _privateConstructorUsedError;
   @JsonKey(name: 'private_notes')
-  String get privateNotes;
+  String get privateNotes => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_manual')
-  bool get isManual;
+  bool get isManual => throw _privateConstructorUsedError;
   @JsonKey(name: 'amount')
-  double get amount;
+  double get amount => throw _privateConstructorUsedError;
   @JsonKey(name: 'applied')
-  double get applied;
+  double get applied => throw _privateConstructorUsedError;
   @JsonKey(name: 'refunded')
-  double get refunded;
+  double get refunded => throw _privateConstructorUsedError;
   @JsonKey(name: 'company_gateway_id')
-  double get companyGatewayId;
+  double get companyGatewayId => throw _privateConstructorUsedError;
   @JsonKey(name: 'paymentables')
-  List<Paymentable> get paymentables;
+  List<Paymentable> get paymentables => throw _privateConstructorUsedError;
   @JsonKey(name: 'invoices')
-  List<Paymentable> get invoices;
+  List<Paymentable> get invoices => throw _privateConstructorUsedError;
   @JsonKey(name: 'credits')
-  List<Paymentable> get credits;
-  List<Document> get documents;
+  List<Paymentable> get credits => throw _privateConstructorUsedError;
+  List<Document> get documents => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PaymentCopyWith<Payment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PaymentCopyWith<Payment> get copyWith => throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentCopyWith<$Res> {
   factory $PaymentCopyWith(Payment value, $Res Function(Payment) then) =
       _$PaymentCopyWithImpl<$Res>;
@@ -195,6 +206,7 @@ abstract class $PaymentCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
   _$PaymentCopyWithImpl(this._value, this._then);
 
@@ -204,92 +216,148 @@ class _$PaymentCopyWithImpl<$Res> implements $PaymentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object clientId = freezed,
-    Object invitationId = freezed,
-    Object clientContactId = freezed,
-    Object typeId = freezed,
-    Object date = freezed,
-    Object transactionReference = freezed,
-    Object privateNotes = freezed,
-    Object isManual = freezed,
-    Object amount = freezed,
-    Object applied = freezed,
-    Object refunded = freezed,
-    Object companyGatewayId = freezed,
-    Object paymentables = freezed,
-    Object invoices = freezed,
-    Object credits = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? clientId = freezed,
+    Object? invitationId = freezed,
+    Object? clientContactId = freezed,
+    Object? typeId = freezed,
+    Object? date = freezed,
+    Object? transactionReference = freezed,
+    Object? privateNotes = freezed,
+    Object? isManual = freezed,
+    Object? amount = freezed,
+    Object? applied = freezed,
+    Object? refunded = freezed,
+    Object? companyGatewayId = freezed,
+    Object? paymentables = freezed,
+    Object? invoices = freezed,
+    Object? credits = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      clientId: clientId == freezed ? _value.clientId : clientId as String,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      clientId: clientId == freezed
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String,
       invitationId: invitationId == freezed
           ? _value.invitationId
-          : invitationId as String,
+          : invitationId // ignore: cast_nullable_to_non_nullable
+              as String,
       clientContactId: clientContactId == freezed
           ? _value.clientContactId
-          : clientContactId as String,
-      typeId: typeId == freezed ? _value.typeId : typeId as String,
-      date: date == freezed ? _value.date : date as String,
+          : clientContactId // ignore: cast_nullable_to_non_nullable
+              as String,
+      typeId: typeId == freezed
+          ? _value.typeId
+          : typeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       transactionReference: transactionReference == freezed
           ? _value.transactionReference
-          : transactionReference as String,
+          : transactionReference // ignore: cast_nullable_to_non_nullable
+              as String,
       privateNotes: privateNotes == freezed
           ? _value.privateNotes
-          : privateNotes as String,
-      isManual: isManual == freezed ? _value.isManual : isManual as bool,
-      amount: amount == freezed ? _value.amount : amount as double,
-      applied: applied == freezed ? _value.applied : applied as double,
-      refunded: refunded == freezed ? _value.refunded : refunded as double,
+          : privateNotes // ignore: cast_nullable_to_non_nullable
+              as String,
+      isManual: isManual == freezed
+          ? _value.isManual
+          : isManual // ignore: cast_nullable_to_non_nullable
+              as bool,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      applied: applied == freezed
+          ? _value.applied
+          : applied // ignore: cast_nullable_to_non_nullable
+              as double,
+      refunded: refunded == freezed
+          ? _value.refunded
+          : refunded // ignore: cast_nullable_to_non_nullable
+              as double,
       companyGatewayId: companyGatewayId == freezed
           ? _value.companyGatewayId
-          : companyGatewayId as double,
+          : companyGatewayId // ignore: cast_nullable_to_non_nullable
+              as double,
       paymentables: paymentables == freezed
           ? _value.paymentables
-          : paymentables as List<Paymentable>,
-      invoices:
-          invoices == freezed ? _value.invoices : invoices as List<Paymentable>,
-      credits:
-          credits == freezed ? _value.credits : credits as List<Paymentable>,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : paymentables // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      invoices: invoices == freezed
+          ? _value.invoices
+          : invoices // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      credits: credits == freezed
+          ? _value.credits
+          : credits // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$PaymentCopyWith<$Res> implements $PaymentCopyWith<$Res> {
   factory _$PaymentCopyWith(_Payment value, $Res Function(_Payment) then) =
       __$PaymentCopyWithImpl<$Res>;
@@ -324,6 +392,7 @@ abstract class _$PaymentCopyWith<$Res> implements $PaymentCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class __$PaymentCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
     implements _$PaymentCopyWith<$Res> {
   __$PaymentCopyWithImpl(_Payment _value, $Res Function(_Payment) _then)
@@ -334,93 +403,150 @@ class __$PaymentCopyWithImpl<$Res> extends _$PaymentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object clientId = freezed,
-    Object invitationId = freezed,
-    Object clientContactId = freezed,
-    Object typeId = freezed,
-    Object date = freezed,
-    Object transactionReference = freezed,
-    Object privateNotes = freezed,
-    Object isManual = freezed,
-    Object amount = freezed,
-    Object applied = freezed,
-    Object refunded = freezed,
-    Object companyGatewayId = freezed,
-    Object paymentables = freezed,
-    Object invoices = freezed,
-    Object credits = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? clientId = freezed,
+    Object? invitationId = freezed,
+    Object? clientContactId = freezed,
+    Object? typeId = freezed,
+    Object? date = freezed,
+    Object? transactionReference = freezed,
+    Object? privateNotes = freezed,
+    Object? isManual = freezed,
+    Object? amount = freezed,
+    Object? applied = freezed,
+    Object? refunded = freezed,
+    Object? companyGatewayId = freezed,
+    Object? paymentables = freezed,
+    Object? invoices = freezed,
+    Object? credits = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_Payment(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      clientId: clientId == freezed ? _value.clientId : clientId as String,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      clientId: clientId == freezed
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as String,
       invitationId: invitationId == freezed
           ? _value.invitationId
-          : invitationId as String,
+          : invitationId // ignore: cast_nullable_to_non_nullable
+              as String,
       clientContactId: clientContactId == freezed
           ? _value.clientContactId
-          : clientContactId as String,
-      typeId: typeId == freezed ? _value.typeId : typeId as String,
-      date: date == freezed ? _value.date : date as String,
+          : clientContactId // ignore: cast_nullable_to_non_nullable
+              as String,
+      typeId: typeId == freezed
+          ? _value.typeId
+          : typeId // ignore: cast_nullable_to_non_nullable
+              as String,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as String,
       transactionReference: transactionReference == freezed
           ? _value.transactionReference
-          : transactionReference as String,
+          : transactionReference // ignore: cast_nullable_to_non_nullable
+              as String,
       privateNotes: privateNotes == freezed
           ? _value.privateNotes
-          : privateNotes as String,
-      isManual: isManual == freezed ? _value.isManual : isManual as bool,
-      amount: amount == freezed ? _value.amount : amount as double,
-      applied: applied == freezed ? _value.applied : applied as double,
-      refunded: refunded == freezed ? _value.refunded : refunded as double,
+          : privateNotes // ignore: cast_nullable_to_non_nullable
+              as String,
+      isManual: isManual == freezed
+          ? _value.isManual
+          : isManual // ignore: cast_nullable_to_non_nullable
+              as bool,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      applied: applied == freezed
+          ? _value.applied
+          : applied // ignore: cast_nullable_to_non_nullable
+              as double,
+      refunded: refunded == freezed
+          ? _value.refunded
+          : refunded // ignore: cast_nullable_to_non_nullable
+              as double,
       companyGatewayId: companyGatewayId == freezed
           ? _value.companyGatewayId
-          : companyGatewayId as double,
+          : companyGatewayId // ignore: cast_nullable_to_non_nullable
+              as double,
       paymentables: paymentables == freezed
           ? _value.paymentables
-          : paymentables as List<Paymentable>,
-      invoices:
-          invoices == freezed ? _value.invoices : invoices as List<Paymentable>,
-      credits:
-          credits == freezed ? _value.credits : credits as List<Paymentable>,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : paymentables // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      invoices: invoices == freezed
+          ? _value.invoices
+          : invoices // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      credits: credits == freezed
+          ? _value.credits
+          : credits // ignore: cast_nullable_to_non_nullable
+              as List<Paymentable>,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_Payment extends _Payment with DiagnosticableTreeMixin {
   _$_Payment(
       {this.id = '',
@@ -450,34 +576,7 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
       @JsonKey(name: 'invoices') this.invoices = const <Paymentable>[],
       @JsonKey(name: 'credits') this.credits = const <Paymentable>[],
       this.documents = const <Document>[]})
-      : assert(id != null),
-        assert(createdById != null),
-        assert(assignedToId != null),
-        assert(createdAt != null),
-        assert(updatedAt != null),
-        assert(archivedAt != null),
-        assert(isDeleted != null),
-        assert(customValue1 != null),
-        assert(customValue2 != null),
-        assert(customValue3 != null),
-        assert(customValue4 != null),
-        assert(clientId != null),
-        assert(invitationId != null),
-        assert(clientContactId != null),
-        assert(typeId != null),
-        assert(date != null),
-        assert(transactionReference != null),
-        assert(privateNotes != null),
-        assert(isManual != null),
-        assert(amount != null),
-        assert(applied != null),
-        assert(refunded != null),
-        assert(companyGatewayId != null),
-        assert(paymentables != null),
-        assert(invoices != null),
-        assert(credits != null),
-        assert(documents != null),
-        super._();
+      : super._();
 
   factory _$_Payment.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentFromJson(json);
@@ -710,6 +809,7 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(credits) ^
       const DeepCollectionEquality().hash(documents);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentCopyWith<_Payment> get copyWith =>
       __$PaymentCopyWithImpl<_Payment>(this, _$identity);
@@ -721,7 +821,6 @@ class _$_Payment extends _Payment with DiagnosticableTreeMixin {
 }
 
 abstract class _Payment extends Payment {
-  _Payment._() : super._();
   factory _Payment(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -750,100 +849,103 @@ abstract class _Payment extends Payment {
       @JsonKey(name: 'invoices') List<Paymentable> invoices,
       @JsonKey(name: 'credits') List<Paymentable> credits,
       List<Document> documents}) = _$_Payment;
+  _Payment._() : super._();
 
   factory _Payment.fromJson(Map<String, dynamic> json) = _$_Payment.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'client_id')
-  String get clientId;
+  String get clientId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'invitation_id')
-  String get invitationId;
+  String get invitationId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'client_contact_id')
-  String get clientContactId;
+  String get clientContactId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type_id')
-  String get typeId;
+  String get typeId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'date')
-  String get date;
+  String get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'transaction_reference')
-  String get transactionReference;
+  String get transactionReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'private_notes')
-  String get privateNotes;
+  String get privateNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_manual')
-  bool get isManual;
+  bool get isManual => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'amount')
-  double get amount;
+  double get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'applied')
-  double get applied;
+  double get applied => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'refunded')
-  double get refunded;
+  double get refunded => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'company_gateway_id')
-  double get companyGatewayId;
+  double get companyGatewayId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'paymentables')
-  List<Paymentable> get paymentables;
+  List<Paymentable> get paymentables => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'invoices')
-  List<Paymentable> get invoices;
+  List<Paymentable> get invoices => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'credits')
-  List<Paymentable> get credits;
+  List<Paymentable> get credits => throw _privateConstructorUsedError;
   @override
-  List<Document> get documents;
+  List<Document> get documents => throw _privateConstructorUsedError;
   @override
-  _$PaymentCopyWith<_Payment> get copyWith;
+  @JsonKey(ignore: true)
+  _$PaymentCopyWith<_Payment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Paymentable _$PaymentableFromJson(Map<String, dynamic> json) {
   return _Paymentable.fromJson(json);
 }
 
+/// @nodoc
 class _$PaymentableTearOff {
   const _$PaymentableTearOff();
 
-// ignore: unused_element
   _Paymentable call(
       {String id = '',
       @JsonKey(name: 'invoice_id') String invoiceId = '',
@@ -862,28 +964,36 @@ class _$PaymentableTearOff {
       updatedAt: updatedAt,
     );
   }
+
+  Paymentable fromJson(Map<String, Object> json) {
+    return Paymentable.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Paymentable = _$PaymentableTearOff();
 
+/// @nodoc
 mixin _$Paymentable {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'invoice_id')
-  String get invoiceId;
+  String get invoiceId => throw _privateConstructorUsedError;
   @JsonKey(name: 'credit_id')
-  String get creditId;
-  double get amount;
-  double get refunded;
+  String get creditId => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
+  double get refunded => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PaymentableCopyWith<Paymentable> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PaymentableCopyWith<Paymentable> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentableCopyWith<$Res> {
   factory $PaymentableCopyWith(
           Paymentable value, $Res Function(Paymentable) then) =
@@ -898,6 +1008,7 @@ abstract class $PaymentableCopyWith<$Res> {
       @JsonKey(name: 'updated_at') int updatedAt});
 }
 
+/// @nodoc
 class _$PaymentableCopyWithImpl<$Res> implements $PaymentableCopyWith<$Res> {
   _$PaymentableCopyWithImpl(this._value, this._then);
 
@@ -907,26 +1018,48 @@ class _$PaymentableCopyWithImpl<$Res> implements $PaymentableCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object invoiceId = freezed,
-    Object creditId = freezed,
-    Object amount = freezed,
-    Object refunded = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
+    Object? id = freezed,
+    Object? invoiceId = freezed,
+    Object? creditId = freezed,
+    Object? amount = freezed,
+    Object? refunded = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      invoiceId: invoiceId == freezed ? _value.invoiceId : invoiceId as String,
-      creditId: creditId == freezed ? _value.creditId : creditId as String,
-      amount: amount == freezed ? _value.amount : amount as double,
-      refunded: refunded == freezed ? _value.refunded : refunded as double,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      invoiceId: invoiceId == freezed
+          ? _value.invoiceId
+          : invoiceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      creditId: creditId == freezed
+          ? _value.creditId
+          : creditId // ignore: cast_nullable_to_non_nullable
+              as String,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      refunded: refunded == freezed
+          ? _value.refunded
+          : refunded // ignore: cast_nullable_to_non_nullable
+              as double,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$PaymentableCopyWith<$Res>
     implements $PaymentableCopyWith<$Res> {
   factory _$PaymentableCopyWith(
@@ -943,6 +1076,7 @@ abstract class _$PaymentableCopyWith<$Res>
       @JsonKey(name: 'updated_at') int updatedAt});
 }
 
+/// @nodoc
 class __$PaymentableCopyWithImpl<$Res> extends _$PaymentableCopyWithImpl<$Res>
     implements _$PaymentableCopyWith<$Res> {
   __$PaymentableCopyWithImpl(
@@ -954,27 +1088,50 @@ class __$PaymentableCopyWithImpl<$Res> extends _$PaymentableCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object invoiceId = freezed,
-    Object creditId = freezed,
-    Object amount = freezed,
-    Object refunded = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
+    Object? id = freezed,
+    Object? invoiceId = freezed,
+    Object? creditId = freezed,
+    Object? amount = freezed,
+    Object? refunded = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
   }) {
     return _then(_Paymentable(
-      id: id == freezed ? _value.id : id as String,
-      invoiceId: invoiceId == freezed ? _value.invoiceId : invoiceId as String,
-      creditId: creditId == freezed ? _value.creditId : creditId as String,
-      amount: amount == freezed ? _value.amount : amount as double,
-      refunded: refunded == freezed ? _value.refunded : refunded as double,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      invoiceId: invoiceId == freezed
+          ? _value.invoiceId
+          : invoiceId // ignore: cast_nullable_to_non_nullable
+              as String,
+      creditId: creditId == freezed
+          ? _value.creditId
+          : creditId // ignore: cast_nullable_to_non_nullable
+              as String,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as double,
+      refunded: refunded == freezed
+          ? _value.refunded
+          : refunded // ignore: cast_nullable_to_non_nullable
+              as double,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_Paymentable with DiagnosticableTreeMixin implements _Paymentable {
   _$_Paymentable(
       {this.id = '',
@@ -983,14 +1140,7 @@ class _$_Paymentable with DiagnosticableTreeMixin implements _Paymentable {
       this.amount = 0,
       this.refunded = 0,
       @JsonKey(name: 'created_at') this.createdAt = 0,
-      @JsonKey(name: 'updated_at') this.updatedAt = 0})
-      : assert(id != null),
-        assert(invoiceId != null),
-        assert(creditId != null),
-        assert(amount != null),
-        assert(refunded != null),
-        assert(createdAt != null),
-        assert(updatedAt != null);
+      @JsonKey(name: 'updated_at') this.updatedAt = 0});
 
   factory _$_Paymentable.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentableFromJson(json);
@@ -1072,6 +1222,7 @@ class _$_Paymentable with DiagnosticableTreeMixin implements _Paymentable {
       const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(updatedAt);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentableCopyWith<_Paymentable> get copyWith =>
       __$PaymentableCopyWithImpl<_Paymentable>(this, _$identity);
@@ -1096,52 +1247,62 @@ abstract class _Paymentable implements Paymentable {
       _$_Paymentable.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'invoice_id')
-  String get invoiceId;
+  String get invoiceId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'credit_id')
-  String get creditId;
+  String get creditId => throw _privateConstructorUsedError;
   @override
-  double get amount;
+  double get amount => throw _privateConstructorUsedError;
   @override
-  double get refunded;
+  double get refunded => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @override
-  _$PaymentableCopyWith<_Paymentable> get copyWith;
+  @JsonKey(ignore: true)
+  _$PaymentableCopyWith<_Paymentable> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PaymentList _$PaymentListFromJson(Map<String, dynamic> json) {
   return _PaymentList.fromJson(json);
 }
 
+/// @nodoc
 class _$PaymentListTearOff {
   const _$PaymentListTearOff();
 
-// ignore: unused_element
-  _PaymentList call({List<Payment> data}) {
+  _PaymentList call({required List<Payment> data}) {
     return _PaymentList(
       data: data,
     );
   }
+
+  PaymentList fromJson(Map<String, Object> json) {
+    return PaymentList.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $PaymentList = _$PaymentListTearOff();
 
+/// @nodoc
 mixin _$PaymentList {
-  List<Payment> get data;
+  List<Payment> get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PaymentListCopyWith<PaymentList> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PaymentListCopyWith<PaymentList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentListCopyWith<$Res> {
   factory $PaymentListCopyWith(
           PaymentList value, $Res Function(PaymentList) then) =
@@ -1149,6 +1310,7 @@ abstract class $PaymentListCopyWith<$Res> {
   $Res call({List<Payment> data});
 }
 
+/// @nodoc
 class _$PaymentListCopyWithImpl<$Res> implements $PaymentListCopyWith<$Res> {
   _$PaymentListCopyWithImpl(this._value, this._then);
 
@@ -1158,14 +1320,18 @@ class _$PaymentListCopyWithImpl<$Res> implements $PaymentListCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as List<Payment>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Payment>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$PaymentListCopyWith<$Res>
     implements $PaymentListCopyWith<$Res> {
   factory _$PaymentListCopyWith(
@@ -1175,6 +1341,7 @@ abstract class _$PaymentListCopyWith<$Res>
   $Res call({List<Payment> data});
 }
 
+/// @nodoc
 class __$PaymentListCopyWithImpl<$Res> extends _$PaymentListCopyWithImpl<$Res>
     implements _$PaymentListCopyWith<$Res> {
   __$PaymentListCopyWithImpl(
@@ -1186,17 +1353,22 @@ class __$PaymentListCopyWithImpl<$Res> extends _$PaymentListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_PaymentList(
-      data: data == freezed ? _value.data : data as List<Payment>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Payment>,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PaymentList with DiagnosticableTreeMixin implements _PaymentList {
-  _$_PaymentList({this.data});
+  _$_PaymentList({required this.data});
 
   factory _$_PaymentList.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentListFromJson(json);
@@ -1229,6 +1401,7 @@ class _$_PaymentList with DiagnosticableTreeMixin implements _PaymentList {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentListCopyWith<_PaymentList> get copyWith =>
       __$PaymentListCopyWithImpl<_PaymentList>(this, _$identity);
@@ -1240,42 +1413,52 @@ class _$_PaymentList with DiagnosticableTreeMixin implements _PaymentList {
 }
 
 abstract class _PaymentList implements PaymentList {
-  factory _PaymentList({List<Payment> data}) = _$_PaymentList;
+  factory _PaymentList({required List<Payment> data}) = _$_PaymentList;
 
   factory _PaymentList.fromJson(Map<String, dynamic> json) =
       _$_PaymentList.fromJson;
 
   @override
-  List<Payment> get data;
+  List<Payment> get data => throw _privateConstructorUsedError;
   @override
-  _$PaymentListCopyWith<_PaymentList> get copyWith;
+  @JsonKey(ignore: true)
+  _$PaymentListCopyWith<_PaymentList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PaymentItem _$PaymentItemFromJson(Map<String, dynamic> json) {
   return _PaymentItem.fromJson(json);
 }
 
+/// @nodoc
 class _$PaymentItemTearOff {
   const _$PaymentItemTearOff();
 
-// ignore: unused_element
   _PaymentItem call(Payment data) {
     return _PaymentItem(
       data,
     );
   }
+
+  PaymentItem fromJson(Map<String, Object> json) {
+    return PaymentItem.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $PaymentItem = _$PaymentItemTearOff();
 
+/// @nodoc
 mixin _$PaymentItem {
-  Payment get data;
+  Payment get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PaymentItemCopyWith<PaymentItem> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PaymentItemCopyWith<PaymentItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentItemCopyWith<$Res> {
   factory $PaymentItemCopyWith(
           PaymentItem value, $Res Function(PaymentItem) then) =
@@ -1285,6 +1468,7 @@ abstract class $PaymentItemCopyWith<$Res> {
   $PaymentCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class _$PaymentItemCopyWithImpl<$Res> implements $PaymentItemCopyWith<$Res> {
   _$PaymentItemCopyWithImpl(this._value, this._then);
 
@@ -1294,24 +1478,25 @@ class _$PaymentItemCopyWithImpl<$Res> implements $PaymentItemCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as Payment,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Payment,
     ));
   }
 
   @override
   $PaymentCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
     return $PaymentCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
 }
 
+/// @nodoc
 abstract class _$PaymentItemCopyWith<$Res>
     implements $PaymentItemCopyWith<$Res> {
   factory _$PaymentItemCopyWith(
@@ -1324,6 +1509,7 @@ abstract class _$PaymentItemCopyWith<$Res>
   $PaymentCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class __$PaymentItemCopyWithImpl<$Res> extends _$PaymentItemCopyWithImpl<$Res>
     implements _$PaymentItemCopyWith<$Res> {
   __$PaymentItemCopyWithImpl(
@@ -1335,17 +1521,22 @@ class __$PaymentItemCopyWithImpl<$Res> extends _$PaymentItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_PaymentItem(
-      data == freezed ? _value.data : data as Payment,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Payment,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_PaymentItem with DiagnosticableTreeMixin implements _PaymentItem {
-  _$_PaymentItem(this.data) : assert(data != null);
+  _$_PaymentItem(this.data);
 
   factory _$_PaymentItem.fromJson(Map<String, dynamic> json) =>
       _$_$_PaymentItemFromJson(json);
@@ -1378,6 +1569,7 @@ class _$_PaymentItem with DiagnosticableTreeMixin implements _PaymentItem {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$PaymentItemCopyWith<_PaymentItem> get copyWith =>
       __$PaymentItemCopyWithImpl<_PaymentItem>(this, _$identity);
@@ -1395,7 +1587,9 @@ abstract class _PaymentItem implements PaymentItem {
       _$_PaymentItem.fromJson;
 
   @override
-  Payment get data;
+  Payment get data => throw _privateConstructorUsedError;
   @override
-  _$PaymentItemCopyWith<_PaymentItem> get copyWith;
+  @JsonKey(ignore: true)
+  _$PaymentItemCopyWith<_PaymentItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }

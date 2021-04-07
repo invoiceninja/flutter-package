@@ -42,7 +42,7 @@ class PaymentAdminRepository {
   }
 
   /// Find a payment by its transaction reference
-  Future<Payment> findByTransactionReference(
+  Future<Payment?> findByTransactionReference(
       String transactionReference) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/payments?transaction_reference=$transactionReference',

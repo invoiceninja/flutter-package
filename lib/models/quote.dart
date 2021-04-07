@@ -36,7 +36,6 @@ abstract class Quote implements _$Quote {
     @Default(<QuoteInvitation>[]) List<QuoteInvitation> invitations,
     @Default(0) double amount,
     @Default(0) double balance,
-    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
     @Default('') @JsonKey(name: 'status_id') String statusId,
     @Default('') @JsonKey(name: 'design_id') String designId,
     @Default('') String number,
@@ -88,10 +87,10 @@ abstract class Quote implements _$Quote {
   String get url => invitations.first.url;
 
   /// Create an invoice for a client
-  factory Quote.forClient(Client client, {List<Product> products}) {
+  factory Quote.forClient(Client client, {required List<Product> products}) {
     return Quote(
       clientId: client.id,
-      lineItems: (products ?? []).map((product) => product.toLineItem).toList(),
+      lineItems: (products).map((product) => product.toLineItem).toList(),
     );
   }
 
@@ -135,9 +134,9 @@ abstract class QuoteInvitation implements _$QuoteInvitation {
 
 /// Multi-item quote response
 @freezed
-abstract class QuoteList with _$QuoteList {
+class QuoteList with _$QuoteList {
   /// QuoteList factory constructor
-  factory QuoteList({List<Quote> data}) = _QuoteList;
+  factory QuoteList({required List<Quote> data}) = _QuoteList;
 
   /// Create an QuoteList from JSON
   factory QuoteList.fromJson(Map<String, dynamic> json) =>
@@ -146,7 +145,7 @@ abstract class QuoteList with _$QuoteList {
 
 /// Single-item quote response
 @freezed
-abstract class QuoteItem with _$QuoteItem {
+class QuoteItem with _$QuoteItem {
   /// QuoteItem factory constructor
   factory QuoteItem(Quote data) = _QuoteItem;
 

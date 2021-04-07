@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'product.dart';
 
@@ -8,14 +8,18 @@ part of 'product.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Product _$ProductFromJson(Map<String, dynamic> json) {
   return _Product.fromJson(json);
 }
 
+/// @nodoc
 class _$ProductTearOff {
   const _$ProductTearOff();
 
-// ignore: unused_element
   _Product call(
       {String id = '',
       @JsonKey(name: 'user_id') String createdById = '',
@@ -66,57 +70,64 @@ class _$ProductTearOff {
       documents: documents,
     );
   }
+
+  Product fromJson(Map<String, Object> json) {
+    return Product.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Product = _$ProductTearOff();
 
+/// @nodoc
 mixin _$Product {
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @JsonKey(name: 'product_key')
-  String get productKey;
-  String get notes;
-  double get cost;
-  double get price;
-  double get quantity;
+  String get productKey => throw _privateConstructorUsedError;
+  String get notes => throw _privateConstructorUsedError;
+  double get cost => throw _privateConstructorUsedError;
+  double get price => throw _privateConstructorUsedError;
+  double get quantity => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name1')
-  String get taxName1;
+  String get taxName1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
+  double get taxRate1 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name2')
-  String get taxName2;
+  String get taxName2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
+  double get taxRate2 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_name3')
-  String get taxName3;
+  String get taxName3 => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
-  List<Document> get documents;
+  double get taxRate3 => throw _privateConstructorUsedError;
+  List<Document> get documents => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ProductCopyWith<Product> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ProductCopyWith<Product> get copyWith => throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
       _$ProductCopyWithImpl<$Res>;
@@ -146,6 +157,7 @@ abstract class $ProductCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
   _$ProductCopyWithImpl(this._value, this._then);
 
@@ -155,71 +167,128 @@ class _$ProductCopyWithImpl<$Res> implements $ProductCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object productKey = freezed,
-    Object notes = freezed,
-    Object cost = freezed,
-    Object price = freezed,
-    Object quantity = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? productKey = freezed,
+    Object? notes = freezed,
+    Object? cost = freezed,
+    Object? price = freezed,
+    Object? quantity = freezed,
+    Object? taxName1 = freezed,
+    Object? taxRate1 = freezed,
+    Object? taxName2 = freezed,
+    Object? taxRate2 = freezed,
+    Object? taxName3 = freezed,
+    Object? taxRate3 = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      productKey:
-          productKey == freezed ? _value.productKey : productKey as String,
-      notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
-      price: price == freezed ? _value.price : price as double,
-      quantity: quantity == freezed ? _value.quantity : quantity as double,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      productKey: productKey == freezed
+          ? _value.productKey
+          : productKey // ignore: cast_nullable_to_non_nullable
+              as String,
+      notes: notes == freezed
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String,
+      cost: cost == freezed
+          ? _value.cost
+          : cost // ignore: cast_nullable_to_non_nullable
+              as double,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName1: taxName1 == freezed
+          ? _value.taxName1
+          : taxName1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate1: taxRate1 == freezed
+          ? _value.taxRate1
+          : taxRate1 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName2: taxName2 == freezed
+          ? _value.taxName2
+          : taxName2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate2: taxRate2 == freezed
+          ? _value.taxRate2
+          : taxRate2 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName3: taxName3 == freezed
+          ? _value.taxName3
+          : taxName3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate3: taxRate3 == freezed
+          ? _value.taxRate3
+          : taxRate3 // ignore: cast_nullable_to_non_nullable
+              as double,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
   factory _$ProductCopyWith(_Product value, $Res Function(_Product) then) =
       __$ProductCopyWithImpl<$Res>;
@@ -250,6 +319,7 @@ abstract class _$ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       List<Document> documents});
 }
 
+/// @nodoc
 class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
     implements _$ProductCopyWith<$Res> {
   __$ProductCopyWithImpl(_Product _value, $Res Function(_Product) _then)
@@ -260,72 +330,130 @@ class __$ProductCopyWithImpl<$Res> extends _$ProductCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object customValue1 = freezed,
-    Object customValue2 = freezed,
-    Object customValue3 = freezed,
-    Object customValue4 = freezed,
-    Object productKey = freezed,
-    Object notes = freezed,
-    Object cost = freezed,
-    Object price = freezed,
-    Object quantity = freezed,
-    Object taxName1 = freezed,
-    Object taxRate1 = freezed,
-    Object taxName2 = freezed,
-    Object taxRate2 = freezed,
-    Object taxName3 = freezed,
-    Object taxRate3 = freezed,
-    Object documents = freezed,
+    Object? id = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? customValue1 = freezed,
+    Object? customValue2 = freezed,
+    Object? customValue3 = freezed,
+    Object? customValue4 = freezed,
+    Object? productKey = freezed,
+    Object? notes = freezed,
+    Object? cost = freezed,
+    Object? price = freezed,
+    Object? quantity = freezed,
+    Object? taxName1 = freezed,
+    Object? taxRate1 = freezed,
+    Object? taxName2 = freezed,
+    Object? taxRate2 = freezed,
+    Object? taxName3 = freezed,
+    Object? taxRate3 = freezed,
+    Object? documents = freezed,
   }) {
     return _then(_Product(
-      id: id == freezed ? _value.id : id as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
       customValue1: customValue1 == freezed
           ? _value.customValue1
-          : customValue1 as String,
+          : customValue1 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue2: customValue2 == freezed
           ? _value.customValue2
-          : customValue2 as String,
+          : customValue2 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue3: customValue3 == freezed
           ? _value.customValue3
-          : customValue3 as String,
+          : customValue3 // ignore: cast_nullable_to_non_nullable
+              as String,
       customValue4: customValue4 == freezed
           ? _value.customValue4
-          : customValue4 as String,
-      productKey:
-          productKey == freezed ? _value.productKey : productKey as String,
-      notes: notes == freezed ? _value.notes : notes as String,
-      cost: cost == freezed ? _value.cost : cost as double,
-      price: price == freezed ? _value.price : price as double,
-      quantity: quantity == freezed ? _value.quantity : quantity as double,
-      taxName1: taxName1 == freezed ? _value.taxName1 : taxName1 as String,
-      taxRate1: taxRate1 == freezed ? _value.taxRate1 : taxRate1 as double,
-      taxName2: taxName2 == freezed ? _value.taxName2 : taxName2 as String,
-      taxRate2: taxRate2 == freezed ? _value.taxRate2 : taxRate2 as double,
-      taxName3: taxName3 == freezed ? _value.taxName3 : taxName3 as String,
-      taxRate3: taxRate3 == freezed ? _value.taxRate3 : taxRate3 as double,
-      documents:
-          documents == freezed ? _value.documents : documents as List<Document>,
+          : customValue4 // ignore: cast_nullable_to_non_nullable
+              as String,
+      productKey: productKey == freezed
+          ? _value.productKey
+          : productKey // ignore: cast_nullable_to_non_nullable
+              as String,
+      notes: notes == freezed
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String,
+      cost: cost == freezed
+          ? _value.cost
+          : cost // ignore: cast_nullable_to_non_nullable
+              as double,
+      price: price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName1: taxName1 == freezed
+          ? _value.taxName1
+          : taxName1 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate1: taxRate1 == freezed
+          ? _value.taxRate1
+          : taxRate1 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName2: taxName2 == freezed
+          ? _value.taxName2
+          : taxName2 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate2: taxRate2 == freezed
+          ? _value.taxRate2
+          : taxRate2 // ignore: cast_nullable_to_non_nullable
+              as double,
+      taxName3: taxName3 == freezed
+          ? _value.taxName3
+          : taxName3 // ignore: cast_nullable_to_non_nullable
+              as String,
+      taxRate3: taxRate3 == freezed
+          ? _value.taxRate3
+          : taxRate3 // ignore: cast_nullable_to_non_nullable
+              as double,
+      documents: documents == freezed
+          ? _value.documents
+          : documents // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_Product extends _Product with DiagnosticableTreeMixin {
   _$_Product(
       {this.id = '',
@@ -351,30 +479,7 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
       @JsonKey(name: 'tax_name3') this.taxName3 = '',
       @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
       this.documents = const <Document>[]})
-      : assert(id != null),
-        assert(createdById != null),
-        assert(assignedToId != null),
-        assert(createdAt != null),
-        assert(updatedAt != null),
-        assert(archivedAt != null),
-        assert(isDeleted != null),
-        assert(customValue1 != null),
-        assert(customValue2 != null),
-        assert(customValue3 != null),
-        assert(customValue4 != null),
-        assert(productKey != null),
-        assert(notes != null),
-        assert(cost != null),
-        assert(price != null),
-        assert(quantity != null),
-        assert(taxName1 != null),
-        assert(taxRate1 != null),
-        assert(taxName2 != null),
-        assert(taxRate2 != null),
-        assert(taxName3 != null),
-        assert(taxRate3 != null),
-        assert(documents != null),
-        super._();
+      : super._();
 
   factory _$_Product.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductFromJson(json);
@@ -582,6 +687,7 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(taxRate3) ^
       const DeepCollectionEquality().hash(documents);
 
+  @JsonKey(ignore: true)
   @override
   _$ProductCopyWith<_Product> get copyWith =>
       __$ProductCopyWithImpl<_Product>(this, _$identity);
@@ -593,7 +699,6 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
 }
 
 abstract class _Product extends Product {
-  _Product._() : super._();
   factory _Product(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -618,101 +723,112 @@ abstract class _Product extends Product {
       @JsonKey(name: 'tax_name3') String taxName3,
       @JsonKey(name: 'tax_rate3') double taxRate3,
       List<Document> documents}) = _$_Product;
+  _Product._() : super._();
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1;
+  String get customValue1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2;
+  String get customValue2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3;
+  String get customValue3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4;
+  String get customValue4 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'product_key')
-  String get productKey;
+  String get productKey => throw _privateConstructorUsedError;
   @override
-  String get notes;
+  String get notes => throw _privateConstructorUsedError;
   @override
-  double get cost;
+  double get cost => throw _privateConstructorUsedError;
   @override
-  double get price;
+  double get price => throw _privateConstructorUsedError;
   @override
-  double get quantity;
+  double get quantity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name1')
-  String get taxName1;
+  String get taxName1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1;
+  double get taxRate1 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name2')
-  String get taxName2;
+  String get taxName2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2;
+  double get taxRate2 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_name3')
-  String get taxName3;
+  String get taxName3 => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3;
+  double get taxRate3 => throw _privateConstructorUsedError;
   @override
-  List<Document> get documents;
+  List<Document> get documents => throw _privateConstructorUsedError;
   @override
-  _$ProductCopyWith<_Product> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProductCopyWith<_Product> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProductList _$ProductListFromJson(Map<String, dynamic> json) {
   return _ProductList.fromJson(json);
 }
 
+/// @nodoc
 class _$ProductListTearOff {
   const _$ProductListTearOff();
 
-// ignore: unused_element
-  _ProductList call({List<Product> data}) {
+  _ProductList call({required List<Product> data}) {
     return _ProductList(
       data: data,
     );
   }
+
+  ProductList fromJson(Map<String, Object> json) {
+    return ProductList.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $ProductList = _$ProductListTearOff();
 
+/// @nodoc
 mixin _$ProductList {
-  List<Product> get data;
+  List<Product> get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ProductListCopyWith<ProductList> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ProductListCopyWith<ProductList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ProductListCopyWith<$Res> {
   factory $ProductListCopyWith(
           ProductList value, $Res Function(ProductList) then) =
@@ -720,6 +836,7 @@ abstract class $ProductListCopyWith<$Res> {
   $Res call({List<Product> data});
 }
 
+/// @nodoc
 class _$ProductListCopyWithImpl<$Res> implements $ProductListCopyWith<$Res> {
   _$ProductListCopyWithImpl(this._value, this._then);
 
@@ -729,14 +846,18 @@ class _$ProductListCopyWithImpl<$Res> implements $ProductListCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as List<Product>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$ProductListCopyWith<$Res>
     implements $ProductListCopyWith<$Res> {
   factory _$ProductListCopyWith(
@@ -746,6 +867,7 @@ abstract class _$ProductListCopyWith<$Res>
   $Res call({List<Product> data});
 }
 
+/// @nodoc
 class __$ProductListCopyWithImpl<$Res> extends _$ProductListCopyWithImpl<$Res>
     implements _$ProductListCopyWith<$Res> {
   __$ProductListCopyWithImpl(
@@ -757,17 +879,22 @@ class __$ProductListCopyWithImpl<$Res> extends _$ProductListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_ProductList(
-      data: data == freezed ? _value.data : data as List<Product>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProductList with DiagnosticableTreeMixin implements _ProductList {
-  _$_ProductList({this.data});
+  _$_ProductList({required this.data});
 
   factory _$_ProductList.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductListFromJson(json);
@@ -800,6 +927,7 @@ class _$_ProductList with DiagnosticableTreeMixin implements _ProductList {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$ProductListCopyWith<_ProductList> get copyWith =>
       __$ProductListCopyWithImpl<_ProductList>(this, _$identity);
@@ -811,42 +939,52 @@ class _$_ProductList with DiagnosticableTreeMixin implements _ProductList {
 }
 
 abstract class _ProductList implements ProductList {
-  factory _ProductList({List<Product> data}) = _$_ProductList;
+  factory _ProductList({required List<Product> data}) = _$_ProductList;
 
   factory _ProductList.fromJson(Map<String, dynamic> json) =
       _$_ProductList.fromJson;
 
   @override
-  List<Product> get data;
+  List<Product> get data => throw _privateConstructorUsedError;
   @override
-  _$ProductListCopyWith<_ProductList> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProductListCopyWith<_ProductList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProductItem _$ProductItemFromJson(Map<String, dynamic> json) {
   return _ProductItem.fromJson(json);
 }
 
+/// @nodoc
 class _$ProductItemTearOff {
   const _$ProductItemTearOff();
 
-// ignore: unused_element
   _ProductItem call(Product data) {
     return _ProductItem(
       data,
     );
   }
+
+  ProductItem fromJson(Map<String, Object> json) {
+    return ProductItem.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $ProductItem = _$ProductItemTearOff();
 
+/// @nodoc
 mixin _$ProductItem {
-  Product get data;
+  Product get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ProductItemCopyWith<ProductItem> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ProductItemCopyWith<ProductItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ProductItemCopyWith<$Res> {
   factory $ProductItemCopyWith(
           ProductItem value, $Res Function(ProductItem) then) =
@@ -856,6 +994,7 @@ abstract class $ProductItemCopyWith<$Res> {
   $ProductCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class _$ProductItemCopyWithImpl<$Res> implements $ProductItemCopyWith<$Res> {
   _$ProductItemCopyWithImpl(this._value, this._then);
 
@@ -865,24 +1004,25 @@ class _$ProductItemCopyWithImpl<$Res> implements $ProductItemCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as Product,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Product,
     ));
   }
 
   @override
   $ProductCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
     return $ProductCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
 }
 
+/// @nodoc
 abstract class _$ProductItemCopyWith<$Res>
     implements $ProductItemCopyWith<$Res> {
   factory _$ProductItemCopyWith(
@@ -895,6 +1035,7 @@ abstract class _$ProductItemCopyWith<$Res>
   $ProductCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class __$ProductItemCopyWithImpl<$Res> extends _$ProductItemCopyWithImpl<$Res>
     implements _$ProductItemCopyWith<$Res> {
   __$ProductItemCopyWithImpl(
@@ -906,17 +1047,22 @@ class __$ProductItemCopyWithImpl<$Res> extends _$ProductItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_ProductItem(
-      data == freezed ? _value.data : data as Product,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Product,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ProductItem with DiagnosticableTreeMixin implements _ProductItem {
-  _$_ProductItem(this.data) : assert(data != null);
+  _$_ProductItem(this.data);
 
   factory _$_ProductItem.fromJson(Map<String, dynamic> json) =>
       _$_$_ProductItemFromJson(json);
@@ -949,6 +1095,7 @@ class _$_ProductItem with DiagnosticableTreeMixin implements _ProductItem {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$ProductItemCopyWith<_ProductItem> get copyWith =>
       __$ProductItemCopyWithImpl<_ProductItem>(this, _$identity);
@@ -966,7 +1113,9 @@ abstract class _ProductItem implements ProductItem {
       _$_ProductItem.fromJson;
 
   @override
-  Product get data;
+  Product get data => throw _privateConstructorUsedError;
   @override
-  _$ProductItemCopyWith<_ProductItem> get copyWith;
+  @JsonKey(ignore: true)
+  _$ProductItemCopyWith<_ProductItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -35,7 +35,6 @@ abstract class Invoice implements _$Invoice {
     @Default(<InvoiceInvitation>[]) List<InvoiceInvitation> invitations,
     @Default(0) double amount,
     @Default(0) double balance,
-    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
     @Default('') @JsonKey(name: 'status_id') String statusId,
     @Default('') @JsonKey(name: 'design_id') String designId,
     @Default('') String number,
@@ -84,10 +83,10 @@ abstract class Invoice implements _$Invoice {
   }) = _Invoice;
 
   /// Create an invoice for a client
-  factory Invoice.forClient(Client client, {List<Product> products}) {
+  factory Invoice.forClient(Client client, {required List<Product> products}) {
     return Invoice(
       clientId: client.id,
-      lineItems: (products ?? []).map((product) => product.toLineItem).toList(),
+      lineItems: (products).map((product) => product.toLineItem).toList(),
     );
   }
 
@@ -165,9 +164,9 @@ abstract class InvoiceInvitation implements _$InvoiceInvitation {
 
 /// Multi-item invoice response
 @freezed
-abstract class InvoiceList with _$InvoiceList {
+class InvoiceList with _$InvoiceList {
   /// InvoiceList factory constructor
-  factory InvoiceList({List<Invoice> data}) = _InvoiceList;
+  factory InvoiceList({required List<Invoice> data}) = _InvoiceList;
 
   /// Create an InvoiceList from JSON
   factory InvoiceList.fromJson(Map<String, dynamic> json) =>
@@ -176,7 +175,7 @@ abstract class InvoiceList with _$InvoiceList {
 
 /// Single-item invoice response
 @freezed
-abstract class InvoiceItem with _$InvoiceItem {
+class InvoiceItem with _$InvoiceItem {
   /// InvoiceItem factory constructor
   factory InvoiceItem(Invoice data) = _InvoiceItem;
 

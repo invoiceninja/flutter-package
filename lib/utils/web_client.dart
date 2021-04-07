@@ -7,11 +7,11 @@ class WebClient {
   const WebClient();
 
   /// Send a GET web request
-  Future<dynamic> get(String url, {String companyKey, String token}) async {
+  Future<dynamic> get(String url, {String? companyKey, String? token}) async {
     _checkInitialized();
 
     final http.Response response = await http.Client().get(
-      url,
+      Uri.parse(url),
       headers: _getHeaders(companyKey: companyKey, token: token),
     );
 
@@ -28,14 +28,14 @@ class WebClient {
   /// Send a POST web request
   Future<dynamic> post(
     String url, {
-    String companyKey,
-    String token,
+    String? companyKey,
+    String? token,
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .post(url,
+        .post(Uri.parse(url),
             body: json.encode(data),
             headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
@@ -53,14 +53,14 @@ class WebClient {
   /// Send a PUT web request
   Future<dynamic> put(
     String url, {
-    String companyKey,
-    String token,
+    String? companyKey,
+    String? token,
     dynamic data,
   }) async {
     _checkInitialized();
 
     final http.Response response = await http.Client()
-        .put(url,
+        .put(Uri.parse(url),
             body: json.encode(data),
             headers: _getHeaders(companyKey: companyKey, token: token))
         .timeout(const Duration(seconds: 60));
@@ -77,7 +77,7 @@ class WebClient {
 }
 
 /// Determine headers for request
-Map<String, String> _getHeaders({String companyKey, String token}) {
+Map<String, String> _getHeaders({String? companyKey, String? token}) {
   final data = {
     'X-Requested-With': 'XMLHttpRequest',
     'Content-Type': 'application/json',
@@ -85,9 +85,9 @@ Map<String, String> _getHeaders({String companyKey, String token}) {
   };
 
   if ((token ?? '').isNotEmpty) {
-    data['X-API-Token'] = token;
+    data['X-API-Token'] = token ?? '';
   } else if ((companyKey ?? '').isNotEmpty) {
-    data['X-API-COMPANY-KEY'] = companyKey;
+    data['X-API-COMPANY-KEY'] = companyKey ?? '';
   } else {
     throw 'Invoice Ninja error: the package is not initialized';
   }

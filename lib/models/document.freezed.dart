@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'document.dart';
 
@@ -8,14 +8,18 @@ part of 'document.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Document _$DocumentFromJson(Map<String, dynamic> json) {
   return _Document.fromJson(json);
 }
 
+/// @nodoc
 class _$DocumentTearOff {
   const _$DocumentTearOff();
 
-// ignore: unused_element
   _Document call(
       {String id = '',
       String name = '',
@@ -29,8 +33,6 @@ class _$DocumentTearOff {
       String hash = '',
       @JsonKey(name: 'user_id') String createdById = '',
       @JsonKey(name: 'assigned_user_id') String assignedToId = '',
-      @JsonKey(name: 'project_id') String projectId = '',
-      @JsonKey(name: 'vendor_id') String vendorId = '',
       @JsonKey(name: 'created_at') int createdAt = 0,
       @JsonKey(name: 'updated_at') int updatedAt = 0,
       @JsonKey(name: 'archived_at') int archivedAt = 0,
@@ -49,8 +51,6 @@ class _$DocumentTearOff {
       hash: hash,
       createdById: createdById,
       assignedToId: assignedToId,
-      projectId: projectId,
-      vendorId: vendorId,
       createdAt: createdAt,
       updatedAt: updatedAt,
       archivedAt: archivedAt,
@@ -58,45 +58,49 @@ class _$DocumentTearOff {
       isDefault: isDefault,
     );
   }
+
+  Document fromJson(Map<String, Object> json) {
+    return Document.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Document = _$DocumentTearOff();
 
+/// @nodoc
 mixin _$Document {
-  String get id;
-  String get name;
-  String get type;
-  String get url;
-  int get width;
-  int get height;
-  int get size;
-  String get preview;
-  String get disk;
-  String get hash;
+  String get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
+  int get size => throw _privateConstructorUsedError;
+  String get preview => throw _privateConstructorUsedError;
+  String get disk => throw _privateConstructorUsedError;
+  String get hash => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
-  @JsonKey(name: 'project_id')
-  String get projectId;
-  @JsonKey(name: 'vendor_id')
-  String get vendorId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_default')
-  bool get isDefault;
+  bool get isDefault => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DocumentCopyWith<Document> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DocumentCopyWith<Document> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $DocumentCopyWith<$Res> {
   factory $DocumentCopyWith(Document value, $Res Function(Document) then) =
       _$DocumentCopyWithImpl<$Res>;
@@ -113,8 +117,6 @@ abstract class $DocumentCopyWith<$Res> {
       String hash,
       @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'assigned_user_id') String assignedToId,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'created_at') int createdAt,
       @JsonKey(name: 'updated_at') int updatedAt,
       @JsonKey(name: 'archived_at') int archivedAt,
@@ -122,6 +124,7 @@ abstract class $DocumentCopyWith<$Res> {
       @JsonKey(name: 'is_default') bool isDefault});
 }
 
+/// @nodoc
 class _$DocumentCopyWithImpl<$Res> implements $DocumentCopyWith<$Res> {
   _$DocumentCopyWithImpl(this._value, this._then);
 
@@ -131,53 +134,98 @@ class _$DocumentCopyWithImpl<$Res> implements $DocumentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object type = freezed,
-    Object url = freezed,
-    Object width = freezed,
-    Object height = freezed,
-    Object size = freezed,
-    Object preview = freezed,
-    Object disk = freezed,
-    Object hash = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object projectId = freezed,
-    Object vendorId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object isDefault = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? size = freezed,
+    Object? preview = freezed,
+    Object? disk = freezed,
+    Object? hash = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? isDefault = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as String,
-      url: url == freezed ? _value.url : url as String,
-      width: width == freezed ? _value.width : width as int,
-      height: height == freezed ? _value.height : height as int,
-      size: size == freezed ? _value.size : size as int,
-      preview: preview == freezed ? _value.preview : preview as String,
-      disk: disk == freezed ? _value.disk : disk as String,
-      hash: hash == freezed ? _value.hash : hash as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as int,
+      preview: preview == freezed
+          ? _value.preview
+          : preview // ignore: cast_nullable_to_non_nullable
+              as String,
+      disk: disk == freezed
+          ? _value.disk
+          : disk // ignore: cast_nullable_to_non_nullable
+              as String,
+      hash: hash == freezed
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
-      vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
-      isDefault: isDefault == freezed ? _value.isDefault : isDefault as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isDefault: isDefault == freezed
+          ? _value.isDefault
+          : isDefault // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$DocumentCopyWith<$Res> implements $DocumentCopyWith<$Res> {
   factory _$DocumentCopyWith(_Document value, $Res Function(_Document) then) =
       __$DocumentCopyWithImpl<$Res>;
@@ -195,8 +243,6 @@ abstract class _$DocumentCopyWith<$Res> implements $DocumentCopyWith<$Res> {
       String hash,
       @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'assigned_user_id') String assignedToId,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'created_at') int createdAt,
       @JsonKey(name: 'updated_at') int updatedAt,
       @JsonKey(name: 'archived_at') int archivedAt,
@@ -204,6 +250,7 @@ abstract class _$DocumentCopyWith<$Res> implements $DocumentCopyWith<$Res> {
       @JsonKey(name: 'is_default') bool isDefault});
 }
 
+/// @nodoc
 class __$DocumentCopyWithImpl<$Res> extends _$DocumentCopyWithImpl<$Res>
     implements _$DocumentCopyWith<$Res> {
   __$DocumentCopyWithImpl(_Document _value, $Res Function(_Document) _then)
@@ -214,54 +261,100 @@ class __$DocumentCopyWithImpl<$Res> extends _$DocumentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object type = freezed,
-    Object url = freezed,
-    Object width = freezed,
-    Object height = freezed,
-    Object size = freezed,
-    Object preview = freezed,
-    Object disk = freezed,
-    Object hash = freezed,
-    Object createdById = freezed,
-    Object assignedToId = freezed,
-    Object projectId = freezed,
-    Object vendorId = freezed,
-    Object createdAt = freezed,
-    Object updatedAt = freezed,
-    Object archivedAt = freezed,
-    Object isDeleted = freezed,
-    Object isDefault = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
+    Object? url = freezed,
+    Object? width = freezed,
+    Object? height = freezed,
+    Object? size = freezed,
+    Object? preview = freezed,
+    Object? disk = freezed,
+    Object? hash = freezed,
+    Object? createdById = freezed,
+    Object? assignedToId = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? archivedAt = freezed,
+    Object? isDeleted = freezed,
+    Object? isDefault = freezed,
   }) {
     return _then(_Document(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
-      type: type == freezed ? _value.type : type as String,
-      url: url == freezed ? _value.url : url as String,
-      width: width == freezed ? _value.width : width as int,
-      height: height == freezed ? _value.height : height as int,
-      size: size == freezed ? _value.size : size as int,
-      preview: preview == freezed ? _value.preview : preview as String,
-      disk: disk == freezed ? _value.disk : disk as String,
-      hash: hash == freezed ? _value.hash : hash as String,
-      createdById:
-          createdById == freezed ? _value.createdById : createdById as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      size: size == freezed
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as int,
+      preview: preview == freezed
+          ? _value.preview
+          : preview // ignore: cast_nullable_to_non_nullable
+              as String,
+      disk: disk == freezed
+          ? _value.disk
+          : disk // ignore: cast_nullable_to_non_nullable
+              as String,
+      hash: hash == freezed
+          ? _value.hash
+          : hash // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdById: createdById == freezed
+          ? _value.createdById
+          : createdById // ignore: cast_nullable_to_non_nullable
+              as String,
       assignedToId: assignedToId == freezed
           ? _value.assignedToId
-          : assignedToId as String,
-      projectId: projectId == freezed ? _value.projectId : projectId as String,
-      vendorId: vendorId == freezed ? _value.vendorId : vendorId as String,
-      createdAt: createdAt == freezed ? _value.createdAt : createdAt as int,
-      updatedAt: updatedAt == freezed ? _value.updatedAt : updatedAt as int,
-      archivedAt: archivedAt == freezed ? _value.archivedAt : archivedAt as int,
-      isDeleted: isDeleted == freezed ? _value.isDeleted : isDeleted as bool,
-      isDefault: isDefault == freezed ? _value.isDefault : isDefault as bool,
+          : assignedToId // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      updatedAt: updatedAt == freezed
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      archivedAt: archivedAt == freezed
+          ? _value.archivedAt
+          : archivedAt // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDeleted: isDeleted == freezed
+          ? _value.isDeleted
+          : isDeleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isDefault: isDefault == freezed
+          ? _value.isDefault
+          : isDefault // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 @JsonSerializable(explicitToJson: true)
+
+/// @nodoc
 class _$_Document extends _Document with DiagnosticableTreeMixin {
   _$_Document(
       {this.id = '',
@@ -276,33 +369,12 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
       this.hash = '',
       @JsonKey(name: 'user_id') this.createdById = '',
       @JsonKey(name: 'assigned_user_id') this.assignedToId = '',
-      @JsonKey(name: 'project_id') this.projectId = '',
-      @JsonKey(name: 'vendor_id') this.vendorId = '',
       @JsonKey(name: 'created_at') this.createdAt = 0,
       @JsonKey(name: 'updated_at') this.updatedAt = 0,
       @JsonKey(name: 'archived_at') this.archivedAt = 0,
       @JsonKey(name: 'is_deleted') this.isDeleted = false,
       @JsonKey(name: 'is_default') this.isDefault = false})
-      : assert(id != null),
-        assert(name != null),
-        assert(type != null),
-        assert(url != null),
-        assert(width != null),
-        assert(height != null),
-        assert(size != null),
-        assert(preview != null),
-        assert(disk != null),
-        assert(hash != null),
-        assert(createdById != null),
-        assert(assignedToId != null),
-        assert(projectId != null),
-        assert(vendorId != null),
-        assert(createdAt != null),
-        assert(updatedAt != null),
-        assert(archivedAt != null),
-        assert(isDeleted != null),
-        assert(isDefault != null),
-        super._();
+      : super._();
 
   factory _$_Document.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentFromJson(json);
@@ -344,12 +416,6 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
   @JsonKey(name: 'assigned_user_id')
   final String assignedToId;
   @override
-  @JsonKey(name: 'project_id')
-  final String projectId;
-  @override
-  @JsonKey(name: 'vendor_id')
-  final String vendorId;
-  @override
   @JsonKey(name: 'created_at')
   final int createdAt;
   @override
@@ -367,7 +433,7 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Document(id: $id, name: $name, type: $type, url: $url, width: $width, height: $height, size: $size, preview: $preview, disk: $disk, hash: $hash, createdById: $createdById, assignedToId: $assignedToId, projectId: $projectId, vendorId: $vendorId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, isDefault: $isDefault)';
+    return 'Document(id: $id, name: $name, type: $type, url: $url, width: $width, height: $height, size: $size, preview: $preview, disk: $disk, hash: $hash, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, isDefault: $isDefault)';
   }
 
   @override
@@ -387,8 +453,6 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('hash', hash))
       ..add(DiagnosticsProperty('createdById', createdById))
       ..add(DiagnosticsProperty('assignedToId', assignedToId))
-      ..add(DiagnosticsProperty('projectId', projectId))
-      ..add(DiagnosticsProperty('vendorId', vendorId))
       ..add(DiagnosticsProperty('createdAt', createdAt))
       ..add(DiagnosticsProperty('updatedAt', updatedAt))
       ..add(DiagnosticsProperty('archivedAt', archivedAt))
@@ -427,12 +491,6 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
             (identical(other.assignedToId, assignedToId) ||
                 const DeepCollectionEquality()
                     .equals(other.assignedToId, assignedToId)) &&
-            (identical(other.projectId, projectId) ||
-                const DeepCollectionEquality()
-                    .equals(other.projectId, projectId)) &&
-            (identical(other.vendorId, vendorId) ||
-                const DeepCollectionEquality()
-                    .equals(other.vendorId, vendorId)) &&
             (identical(other.createdAt, createdAt) ||
                 const DeepCollectionEquality()
                     .equals(other.createdAt, createdAt)) &&
@@ -465,14 +523,13 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(hash) ^
       const DeepCollectionEquality().hash(createdById) ^
       const DeepCollectionEquality().hash(assignedToId) ^
-      const DeepCollectionEquality().hash(projectId) ^
-      const DeepCollectionEquality().hash(vendorId) ^
       const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(updatedAt) ^
       const DeepCollectionEquality().hash(archivedAt) ^
       const DeepCollectionEquality().hash(isDeleted) ^
       const DeepCollectionEquality().hash(isDefault);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentCopyWith<_Document> get copyWith =>
       __$DocumentCopyWithImpl<_Document>(this, _$identity);
@@ -484,7 +541,6 @@ class _$_Document extends _Document with DiagnosticableTreeMixin {
 }
 
 abstract class _Document extends Document {
-  _Document._() : super._();
   factory _Document(
       {String id,
       String name,
@@ -498,92 +554,95 @@ abstract class _Document extends Document {
       String hash,
       @JsonKey(name: 'user_id') String createdById,
       @JsonKey(name: 'assigned_user_id') String assignedToId,
-      @JsonKey(name: 'project_id') String projectId,
-      @JsonKey(name: 'vendor_id') String vendorId,
       @JsonKey(name: 'created_at') int createdAt,
       @JsonKey(name: 'updated_at') int updatedAt,
       @JsonKey(name: 'archived_at') int archivedAt,
       @JsonKey(name: 'is_deleted') bool isDeleted,
       @JsonKey(name: 'is_default') bool isDefault}) = _$_Document;
+  _Document._() : super._();
 
   factory _Document.fromJson(Map<String, dynamic> json) = _$_Document.fromJson;
 
   @override
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get type;
+  String get type => throw _privateConstructorUsedError;
   @override
-  String get url;
+  String get url => throw _privateConstructorUsedError;
   @override
-  int get width;
+  int get width => throw _privateConstructorUsedError;
   @override
-  int get height;
+  int get height => throw _privateConstructorUsedError;
   @override
-  int get size;
+  int get size => throw _privateConstructorUsedError;
   @override
-  String get preview;
+  String get preview => throw _privateConstructorUsedError;
   @override
-  String get disk;
+  String get disk => throw _privateConstructorUsedError;
   @override
-  String get hash;
+  String get hash => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById;
+  String get createdById => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId;
-  @override
-  @JsonKey(name: 'project_id')
-  String get projectId;
-  @override
-  @JsonKey(name: 'vendor_id')
-  String get vendorId;
+  String get assignedToId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt;
+  int get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt;
+  int get updatedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt;
+  int get archivedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted;
+  bool get isDeleted => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_default')
-  bool get isDefault;
+  bool get isDefault => throw _privateConstructorUsedError;
   @override
-  _$DocumentCopyWith<_Document> get copyWith;
+  @JsonKey(ignore: true)
+  _$DocumentCopyWith<_Document> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DocumentList _$DocumentListFromJson(Map<String, dynamic> json) {
   return _DocumentList.fromJson(json);
 }
 
+/// @nodoc
 class _$DocumentListTearOff {
   const _$DocumentListTearOff();
 
-// ignore: unused_element
-  _DocumentList call({List<Document> data}) {
+  _DocumentList call({required List<Document> data}) {
     return _DocumentList(
       data: data,
     );
   }
+
+  DocumentList fromJson(Map<String, Object> json) {
+    return DocumentList.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $DocumentList = _$DocumentListTearOff();
 
+/// @nodoc
 mixin _$DocumentList {
-  List<Document> get data;
+  List<Document> get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DocumentListCopyWith<DocumentList> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DocumentListCopyWith<DocumentList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $DocumentListCopyWith<$Res> {
   factory $DocumentListCopyWith(
           DocumentList value, $Res Function(DocumentList) then) =
@@ -591,6 +650,7 @@ abstract class $DocumentListCopyWith<$Res> {
   $Res call({List<Document> data});
 }
 
+/// @nodoc
 class _$DocumentListCopyWithImpl<$Res> implements $DocumentListCopyWith<$Res> {
   _$DocumentListCopyWithImpl(this._value, this._then);
 
@@ -600,14 +660,18 @@ class _$DocumentListCopyWithImpl<$Res> implements $DocumentListCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as List<Document>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
+/// @nodoc
 abstract class _$DocumentListCopyWith<$Res>
     implements $DocumentListCopyWith<$Res> {
   factory _$DocumentListCopyWith(
@@ -617,6 +681,7 @@ abstract class _$DocumentListCopyWith<$Res>
   $Res call({List<Document> data});
 }
 
+/// @nodoc
 class __$DocumentListCopyWithImpl<$Res> extends _$DocumentListCopyWithImpl<$Res>
     implements _$DocumentListCopyWith<$Res> {
   __$DocumentListCopyWithImpl(
@@ -628,17 +693,22 @@ class __$DocumentListCopyWithImpl<$Res> extends _$DocumentListCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_DocumentList(
-      data: data == freezed ? _value.data : data as List<Document>,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Document>,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DocumentList with DiagnosticableTreeMixin implements _DocumentList {
-  _$_DocumentList({this.data});
+  _$_DocumentList({required this.data});
 
   factory _$_DocumentList.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentListFromJson(json);
@@ -671,6 +741,7 @@ class _$_DocumentList with DiagnosticableTreeMixin implements _DocumentList {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentListCopyWith<_DocumentList> get copyWith =>
       __$DocumentListCopyWithImpl<_DocumentList>(this, _$identity);
@@ -682,42 +753,52 @@ class _$_DocumentList with DiagnosticableTreeMixin implements _DocumentList {
 }
 
 abstract class _DocumentList implements DocumentList {
-  factory _DocumentList({List<Document> data}) = _$_DocumentList;
+  factory _DocumentList({required List<Document> data}) = _$_DocumentList;
 
   factory _DocumentList.fromJson(Map<String, dynamic> json) =
       _$_DocumentList.fromJson;
 
   @override
-  List<Document> get data;
+  List<Document> get data => throw _privateConstructorUsedError;
   @override
-  _$DocumentListCopyWith<_DocumentList> get copyWith;
+  @JsonKey(ignore: true)
+  _$DocumentListCopyWith<_DocumentList> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DocumentItem _$DocumentItemFromJson(Map<String, dynamic> json) {
   return _DocumentItem.fromJson(json);
 }
 
+/// @nodoc
 class _$DocumentItemTearOff {
   const _$DocumentItemTearOff();
 
-// ignore: unused_element
   _DocumentItem call(Document data) {
     return _DocumentItem(
       data,
     );
   }
+
+  DocumentItem fromJson(Map<String, Object> json) {
+    return DocumentItem.fromJson(json);
+  }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $DocumentItem = _$DocumentItemTearOff();
 
+/// @nodoc
 mixin _$DocumentItem {
-  Document get data;
+  Document get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DocumentItemCopyWith<DocumentItem> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DocumentItemCopyWith<DocumentItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $DocumentItemCopyWith<$Res> {
   factory $DocumentItemCopyWith(
           DocumentItem value, $Res Function(DocumentItem) then) =
@@ -727,6 +808,7 @@ abstract class $DocumentItemCopyWith<$Res> {
   $DocumentCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class _$DocumentItemCopyWithImpl<$Res> implements $DocumentItemCopyWith<$Res> {
   _$DocumentItemCopyWithImpl(this._value, this._then);
 
@@ -736,24 +818,25 @@ class _$DocumentItemCopyWithImpl<$Res> implements $DocumentItemCopyWith<$Res> {
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed ? _value.data : data as Document,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Document,
     ));
   }
 
   @override
   $DocumentCopyWith<$Res> get data {
-    if (_value.data == null) {
-      return null;
-    }
     return $DocumentCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
 }
 
+/// @nodoc
 abstract class _$DocumentItemCopyWith<$Res>
     implements $DocumentItemCopyWith<$Res> {
   factory _$DocumentItemCopyWith(
@@ -766,6 +849,7 @@ abstract class _$DocumentItemCopyWith<$Res>
   $DocumentCopyWith<$Res> get data;
 }
 
+/// @nodoc
 class __$DocumentItemCopyWithImpl<$Res> extends _$DocumentItemCopyWithImpl<$Res>
     implements _$DocumentItemCopyWith<$Res> {
   __$DocumentItemCopyWithImpl(
@@ -777,17 +861,22 @@ class __$DocumentItemCopyWithImpl<$Res> extends _$DocumentItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object data = freezed,
+    Object? data = freezed,
   }) {
     return _then(_DocumentItem(
-      data == freezed ? _value.data : data as Document,
+      data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as Document,
     ));
   }
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_DocumentItem with DiagnosticableTreeMixin implements _DocumentItem {
-  _$_DocumentItem(this.data) : assert(data != null);
+  _$_DocumentItem(this.data);
 
   factory _$_DocumentItem.fromJson(Map<String, dynamic> json) =>
       _$_$_DocumentItemFromJson(json);
@@ -820,6 +909,7 @@ class _$_DocumentItem with DiagnosticableTreeMixin implements _DocumentItem {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
+  @JsonKey(ignore: true)
   @override
   _$DocumentItemCopyWith<_DocumentItem> get copyWith =>
       __$DocumentItemCopyWithImpl<_DocumentItem>(this, _$identity);
@@ -837,7 +927,9 @@ abstract class _DocumentItem implements DocumentItem {
       _$_DocumentItem.fromJson;
 
   @override
-  Document get data;
+  Document get data => throw _privateConstructorUsedError;
   @override
-  _$DocumentItemCopyWith<_DocumentItem> get copyWith;
+  @JsonKey(ignore: true)
+  _$DocumentItemCopyWith<_DocumentItem> get copyWith =>
+      throw _privateConstructorUsedError;
 }

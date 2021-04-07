@@ -1,3 +1,7 @@
+## 0.0.9
+
+* Add support for null safety
+
 ## 0.0.8
 
 * Fixed debug bug for admin API

@@ -16,7 +16,7 @@ abstract class Company implements _$Company {
   @JsonSerializable(explicitToJson: true)
   factory Company({
     @Default('') @JsonKey(name: 'company_key') String key,
-    CompanySettings settings,
+    //@Default(CompanySettings) CompanySettings settings,
   }) = _Company;
 
   /// Create a Company from JSON
@@ -24,9 +24,10 @@ abstract class Company implements _$Company {
       _$CompanyFromJson(json);
 }
 
+/*
 /// CompanySettings class
 @freezed
-abstract class CompanySettings with _$CompanySettings {
+class CompanySettings with _$CompanySettings {
   /// CompanySettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory CompanySettings({
@@ -57,10 +58,11 @@ abstract class CompanySettings with _$CompanySettings {
   factory CompanySettings.fromJson(Map<String, dynamic> json) =>
       _$CompanySettingsFromJson(json);
 }
+*/
 
 /// Multi-item company response
 @freezed
-abstract class CompanyList with _$CompanyList {
+class CompanyList with _$CompanyList {
   /// CompanyList factory constructor
   factory CompanyList(List<Company> data) = _CompanyList;
 
@@ -71,7 +73,7 @@ abstract class CompanyList with _$CompanyList {
 
 /// Single-item company response
 @freezed
-abstract class CompanyItem with _$CompanyItem {
+class CompanyItem with _$CompanyItem {
   /// CompanyItem factory constructor
   factory CompanyItem(Company data) = _CompanyItem;
 

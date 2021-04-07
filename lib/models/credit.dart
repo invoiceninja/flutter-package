@@ -37,7 +37,6 @@ abstract class Credit implements _$Credit {
     @Default(<CreditInvitation>[]) List<CreditInvitation> invitations,
     @Default(0) double amount,
     @Default(0) double balance,
-    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
     @Default('') @JsonKey(name: 'status_id') String statusId,
     @Default('') @JsonKey(name: 'design_id') String designId,
     @Default('') String number,
@@ -88,10 +87,10 @@ abstract class Credit implements _$Credit {
   String get url => invitations.first.url;
 
   /// Create an invoice for a client
-  factory Credit.forClient(Client client, {List<Product> products}) {
+  factory Credit.forClient(Client client, {required List<Product> products}) {
     return Credit(
       clientId: client.id,
-      lineItems: (products ?? []).map((product) => product.toLineItem).toList(),
+      lineItems: (products).map((product) => product.toLineItem).toList(),
     );
   }
 
@@ -135,9 +134,9 @@ abstract class CreditInvitation implements _$CreditInvitation {
 
 /// Multi-item credit response
 @freezed
-abstract class CreditList with _$CreditList {
+class CreditList with _$CreditList {
   /// CreditList factory constructor
-  factory CreditList({List<Credit> data}) = _CreditList;
+  factory CreditList({required List<Credit> data}) = _CreditList;
 
   /// Create an CreditList from JSON
   factory CreditList.fromJson(Map<String, dynamic> json) =>
@@ -146,7 +145,7 @@ abstract class CreditList with _$CreditList {
 
 /// Single-item credit response
 @freezed
-abstract class CreditItem with _$CreditItem {
+class CreditItem with _$CreditItem {
   /// CreditItem factory constructor
   factory CreditItem(Credit data) = _CreditItem;
 

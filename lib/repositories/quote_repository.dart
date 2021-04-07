@@ -34,7 +34,7 @@ class QuoteAdminRepository {
   }
 
   /// Find an quote by its id
-  Future<Quote> findById(String id) async {
+  Future<Quote?> findById(String id) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/quotes/$id',
         token: InvoiceNinjaAdmin.token);
@@ -43,7 +43,7 @@ class QuoteAdminRepository {
   }
 
   /// Find an quote by its number
-  Future<Quote> findByNumber(String number) async {
+  Future<Quote?> findByNumber(String number) async {
     final response = await WebClient().get(
         '${InvoiceNinjaAdmin.url}/api/v1/quotes?number=$number',
         token: InvoiceNinjaAdmin.token);

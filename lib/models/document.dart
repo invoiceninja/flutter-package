@@ -26,8 +26,6 @@ abstract class Document implements _$Document {
     @Default('') String hash,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
-    @Default('') @JsonKey(name: 'project_id') String projectId,
-    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
     @Default(0) @JsonKey(name: 'created_at') int createdAt,
     @Default(0) @JsonKey(name: 'updated_at') int updatedAt,
     @Default(0) @JsonKey(name: 'archived_at') int archivedAt,
@@ -42,9 +40,9 @@ abstract class Document implements _$Document {
 
 /// Multi-item document response
 @freezed
-abstract class DocumentList with _$DocumentList {
+class DocumentList with _$DocumentList {
   /// DocumentList factory constructor
-  factory DocumentList({List<Document> data}) = _DocumentList;
+  factory DocumentList({required List<Document> data}) = _DocumentList;
 
   /// Create an DocumentList from JSON
   factory DocumentList.fromJson(Map<String, dynamic> json) =>
@@ -53,7 +51,7 @@ abstract class DocumentList with _$DocumentList {
 
 /// Single-item document response
 @freezed
-abstract class DocumentItem with _$DocumentItem {
+class DocumentItem with _$DocumentItem {
   /// DocumentItem factory constructor
   factory DocumentItem(Document data) = _DocumentItem;
 

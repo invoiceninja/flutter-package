@@ -79,9 +79,9 @@ abstract class Paymentable implements _$Paymentable {
 
 /// Multi-item payment response
 @freezed
-abstract class PaymentList with _$PaymentList {
+class PaymentList with _$PaymentList {
   /// PaymentList factory constructor
-  factory PaymentList({List<Payment> data}) = _PaymentList;
+  factory PaymentList({required List<Payment> data}) = _PaymentList;
 
   /// Create an PaymentList from JSON
   factory PaymentList.fromJson(Map<String, dynamic> json) =>
@@ -90,7 +90,7 @@ abstract class PaymentList with _$PaymentList {
 
 /// Single-item payment response
 @freezed
-abstract class PaymentItem with _$PaymentItem {
+class PaymentItem with _$PaymentItem {
   /// PaymentItem factory constructor
   factory PaymentItem(Payment data) = _PaymentItem;
 

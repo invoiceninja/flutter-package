@@ -46,7 +46,7 @@ abstract class Product implements _$Product {
         productKey: productKey,
         notes: notes,
         cost: price,
-        quantity: quantity ?? 1,
+        quantity: quantity,
         customValue1: customValue1,
         customValue2: customValue2,
         customValue3: customValue3,
@@ -66,9 +66,9 @@ abstract class Product implements _$Product {
 
 /// Multi-item product response
 @freezed
-abstract class ProductList with _$ProductList {
+class ProductList with _$ProductList {
   /// ProductList factory constructor
-  factory ProductList({List<Product> data}) = _ProductList;
+  factory ProductList({required List<Product> data}) = _ProductList;
 
   /// Create a ProductList from JSON
   factory ProductList.fromJson(Map<String, dynamic> json) =>
@@ -77,7 +77,7 @@ abstract class ProductList with _$ProductList {
 
 /// Single-item product response
 @freezed
-abstract class ProductItem with _$ProductItem {
+class ProductItem with _$ProductItem {
   /// ProductItem factory constructor
   factory ProductItem(Product data) = _ProductItem;
 
