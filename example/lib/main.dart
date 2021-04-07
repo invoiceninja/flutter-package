@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -33,13 +33,13 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   List<Product> _products = [];
 
   String _email = '';
-  Product _product;
-  Invoice _invoice;
+  Product? _product;
+  Invoice? _invoice;
 
   @override
   initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance?.addObserver(this);
 
     InvoiceNinja.configure(
       'KEY', // Set your company key or use 'KEY' to test
@@ -55,10 +55,15 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   void _createInvoice() async {
+    if (_product == null) {
+      return;
+    }
+
+
     var client = Client.forContact(email: _email);
     client = await InvoiceNinja.clients.save(client);
 
-    var invoice = Invoice.forClient(client, products: [_product]);
+    var invoice = Invoice.forClient(client, products: [_product!]);
     invoice = await InvoiceNinja.invoices.save(invoice);
 
     setState(() {
@@ -67,14 +72,23 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   }
 
   void _viewPdf() {
+    if (_invoice == null) {
+      return;
+    }
+
+
     launch(
-      'https://docs.google.com/gview?embedded=true&url=${_invoice.pdfUrl}',
+      'https://docs.google.com/gview?embedded=true&url=${_invoice!.pdfUrl}',
       forceWebView: true,
     );
   }
 
   void _viewPortal() {
-    final invitation = _invoice.invitations.first;
+    if (_invoice == null) {
+      return;
+    }
+
+    final invitation = _invoice!.invitations.first;
     launch(invitation.url);
   }
 
@@ -84,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       return;
     }
 
-    final invoice = await InvoiceNinja.invoices.findByKey(_invoice.key);
+    final invoice = await InvoiceNinja.invoices.findByKey(_invoice!.key);
 
     if (invoice.isPaid) {
       // ...
@@ -93,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance?.removeObserver(this);
     super.dispose();
   }
 

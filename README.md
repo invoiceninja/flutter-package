@@ -25,7 +25,7 @@ This package makes it easy to create PDF invoices and accept payments in a Flutt
 
 ```yaml
 dependencies:
-  invoiceninja: ^0.0.8
+  invoiceninja: ^0.0.9
 ```
 
 ### Import
