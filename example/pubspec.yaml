@@ -24,10 +24,10 @@ dependencies:
   flutter:
     sdk: flutter
   url_launcher: ^6.0.3
-  #invoiceninja: ^0.0.9
-  invoiceninja:
-    git:
-      url: git://github.com/invoiceninja/flutter-package.git
+  invoiceninja: ^0.0.9
+  #invoiceninja:
+  #  git:
+  #    url: git://github.com/invoiceninja/flutter-package.git
 
 
   # The following adds the Cupertino Icons font to your application.
