@@ -43,6 +43,9 @@ _$_Client _$_$_ClientFromJson(Map<String, dynamic> json) {
     shippingState: json['shipping_state'] as String,
     shippingPostalCode: json['shipping_postal_code'] as String,
     shippingCountryId: json['shipping_country_id'] as String,
+    settings: json['settings'] == null
+        ? null
+        : ClientSettings.fromJson(json['settings'] as Map<String, dynamic>),
     idNumber: json['id_number'] as String,
     vatNumber: json['vat_number'] as String,
     contacts: (json['contacts'] as List<dynamic>?)
@@ -92,6 +95,7 @@ Map<String, dynamic> _$_$_ClientToJson(_$_Client instance) => <String, dynamic>{
       'shipping_state': instance.shippingState,
       'shipping_postal_code': instance.shippingPostalCode,
       'shipping_country_id': instance.shippingCountryId,
+      'settings': instance.settings?.toJson(),
       'id_number': instance.idNumber,
       'vat_number': instance.vatNumber,
       'contacts': instance.contacts.map((e) => e.toJson()).toList(),
@@ -135,6 +139,19 @@ Map<String, dynamic> _$_$_ClientContactToJson(_$_ClientContact instance) =>
       'send_email': instance.sendEmail,
       'last_login': instance.lastLogin,
       'password': instance.password,
+    };
+
+_$_ClientSettings _$_$_ClientSettingsFromJson(Map<String, dynamic> json) {
+  return _$_ClientSettings(
+    currencyId: json['currency_id'] as String?,
+    languageId: json['language_id'] as String?,
+  );
+}
+
+Map<String, dynamic> _$_$_ClientSettingsToJson(_$_ClientSettings instance) =>
+    <String, dynamic>{
+      'currency_id': instance.currencyId,
+      'language_id': instance.languageId,
     };
 
 _$_ClientList _$_$_ClientListFromJson(Map<String, dynamic> json) {

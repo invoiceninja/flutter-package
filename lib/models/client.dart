@@ -52,7 +52,7 @@ abstract class Client implements _$Client {
     @JsonKey(name: 'shipping_postal_code')
         String shippingPostalCode,
     @Default('') @JsonKey(name: 'shipping_country_id') String shippingCountryId,
-    //@Default(ClientSettings) ClientSettings settings,
+    ClientSettings? settings,
     @Default('') @JsonKey(name: 'id_number') String idNumber,
     @Default('') @JsonKey(name: 'vat_number') String vatNumber,
     @Default(<ClientContact>[]) List<ClientContact> contacts,
@@ -111,22 +111,20 @@ class ClientContact with _$ClientContact {
       _$ClientContactFromJson(json);
 }
 
-/*
 /// ClientSettings class
 @freezed
 class ClientSettings with _$ClientSettings {
   /// ClientSettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory ClientSettings({
-    @nullable @Default('') @JsonKey(name: 'currency_id') String currencyId,
-    @nullable @Default('') @JsonKey(name: 'language_id') String languageId
+    @Default('') @JsonKey(name: 'currency_id') String? currencyId,
+    @Default('') @JsonKey(name: 'language_id') String? languageId
   }) = _ClientSettings;
 
   /// Create a ClientSettings from JSON
   factory ClientSettings.fromJson(Map<String, dynamic> json) =>
       _$ClientSettingsFromJson(json);
 }
-*/
 
 /// Multi-item client response
 @freezed

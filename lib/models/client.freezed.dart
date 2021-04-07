@@ -56,6 +56,7 @@ class _$ClientTearOff {
       @JsonKey(name: 'shipping_state') String shippingState = '',
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode = '',
       @JsonKey(name: 'shipping_country_id') String shippingCountryId = '',
+      ClientSettings? settings,
       @JsonKey(name: 'id_number') String idNumber = '',
       @JsonKey(name: 'vat_number') String vatNumber = '',
       List<ClientContact> contacts = const <ClientContact>[],
@@ -96,6 +97,7 @@ class _$ClientTearOff {
       shippingState: shippingState,
       shippingPostalCode: shippingPostalCode,
       shippingCountryId: shippingCountryId,
+      settings: settings,
       idNumber: idNumber,
       vatNumber: vatNumber,
       contacts: contacts,
@@ -173,8 +175,8 @@ mixin _$Client {
   @JsonKey(name: 'shipping_postal_code')
   String get shippingPostalCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipping_country_id')
-  String get shippingCountryId =>
-      throw _privateConstructorUsedError; //@Default(ClientSettings) ClientSettings settings,
+  String get shippingCountryId => throw _privateConstructorUsedError;
+  ClientSettings? get settings => throw _privateConstructorUsedError;
   @JsonKey(name: 'id_number')
   String get idNumber => throw _privateConstructorUsedError;
   @JsonKey(name: 'vat_number')
@@ -227,10 +229,13 @@ abstract class $ClientCopyWith<$Res> {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings? settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
       List<ClientContact> contacts,
       List<Document> documents});
+
+  $ClientSettingsCopyWith<$Res>? get settings;
 }
 
 /// @nodoc
@@ -278,6 +283,7 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
     Object? shippingState = freezed,
     Object? shippingPostalCode = freezed,
     Object? shippingCountryId = freezed,
+    Object? settings = freezed,
     Object? idNumber = freezed,
     Object? vatNumber = freezed,
     Object? contacts = freezed,
@@ -424,6 +430,10 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
           ? _value.shippingCountryId
           : shippingCountryId // ignore: cast_nullable_to_non_nullable
               as String,
+      settings: settings == freezed
+          ? _value.settings
+          : settings // ignore: cast_nullable_to_non_nullable
+              as ClientSettings?,
       idNumber: idNumber == freezed
           ? _value.idNumber
           : idNumber // ignore: cast_nullable_to_non_nullable
@@ -441,6 +451,17 @@ class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
     ));
+  }
+
+  @override
+  $ClientSettingsCopyWith<$Res>? get settings {
+    if (_value.settings == null) {
+      return null;
+    }
+
+    return $ClientSettingsCopyWith<$Res>(_value.settings!, (value) {
+      return _then(_value.copyWith(settings: value));
+    });
   }
 }
 
@@ -485,10 +506,14 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings? settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
       List<ClientContact> contacts,
       List<Document> documents});
+
+  @override
+  $ClientSettingsCopyWith<$Res>? get settings;
 }
 
 /// @nodoc
@@ -537,6 +562,7 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
     Object? shippingState = freezed,
     Object? shippingPostalCode = freezed,
     Object? shippingCountryId = freezed,
+    Object? settings = freezed,
     Object? idNumber = freezed,
     Object? vatNumber = freezed,
     Object? contacts = freezed,
@@ -683,6 +709,10 @@ class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
           ? _value.shippingCountryId
           : shippingCountryId // ignore: cast_nullable_to_non_nullable
               as String,
+      settings: settings == freezed
+          ? _value.settings
+          : settings // ignore: cast_nullable_to_non_nullable
+              as ClientSettings?,
       idNumber: idNumber == freezed
           ? _value.idNumber
           : idNumber // ignore: cast_nullable_to_non_nullable
@@ -743,6 +773,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       @JsonKey(name: 'shipping_state') this.shippingState = '',
       @JsonKey(name: 'shipping_postal_code') this.shippingPostalCode = '',
       @JsonKey(name: 'shipping_country_id') this.shippingCountryId = '',
+      this.settings,
       @JsonKey(name: 'id_number') this.idNumber = '',
       @JsonKey(name: 'vat_number') this.vatNumber = '',
       this.contacts = const <ClientContact>[],
@@ -857,7 +888,9 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'shipping_country_id')
   final String shippingCountryId;
-  @override //@Default(ClientSettings) ClientSettings settings,
+  @override
+  final ClientSettings? settings;
+  @override
   @JsonKey(name: 'id_number')
   final String idNumber;
   @override
@@ -872,7 +905,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts, documents: $documents)';
+    return 'Client(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, name: $name, website: $website, privateNotes: $privateNotes, balance: $balance, groupId: $groupId, paidToDate: $paidToDate, creditBalance: $creditBalance, lastLogin: $lastLogin, sizeId: $sizeId, publicNotes: $publicNotes, phone: $phone, address1: $address1, address2: $address2, city: $city, state: $state, postalCode: $postalCode, countryId: $countryId, industryId: $industryId, shippingAddress1: $shippingAddress1, shippingAddress2: $shippingAddress2, shippingCity: $shippingCity, shippingState: $shippingState, shippingPostalCode: $shippingPostalCode, shippingCountryId: $shippingCountryId, settings: $settings, idNumber: $idNumber, vatNumber: $vatNumber, contacts: $contacts, documents: $documents)';
   }
 
   @override
@@ -915,6 +948,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('shippingState', shippingState))
       ..add(DiagnosticsProperty('shippingPostalCode', shippingPostalCode))
       ..add(DiagnosticsProperty('shippingCountryId', shippingCountryId))
+      ..add(DiagnosticsProperty('settings', settings))
       ..add(DiagnosticsProperty('idNumber', idNumber))
       ..add(DiagnosticsProperty('vatNumber', vatNumber))
       ..add(DiagnosticsProperty('contacts', contacts))
@@ -1003,6 +1037,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
             (identical(other.shippingState, shippingState) || const DeepCollectionEquality().equals(other.shippingState, shippingState)) &&
             (identical(other.shippingPostalCode, shippingPostalCode) || const DeepCollectionEquality().equals(other.shippingPostalCode, shippingPostalCode)) &&
             (identical(other.shippingCountryId, shippingCountryId) || const DeepCollectionEquality().equals(other.shippingCountryId, shippingCountryId)) &&
+            (identical(other.settings, settings) || const DeepCollectionEquality().equals(other.settings, settings)) &&
             (identical(other.idNumber, idNumber) || const DeepCollectionEquality().equals(other.idNumber, idNumber)) &&
             (identical(other.vatNumber, vatNumber) || const DeepCollectionEquality().equals(other.vatNumber, vatNumber)) &&
             (identical(other.contacts, contacts) || const DeepCollectionEquality().equals(other.contacts, contacts)) &&
@@ -1047,6 +1082,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(shippingState) ^
       const DeepCollectionEquality().hash(shippingPostalCode) ^
       const DeepCollectionEquality().hash(shippingCountryId) ^
+      const DeepCollectionEquality().hash(settings) ^
       const DeepCollectionEquality().hash(idNumber) ^
       const DeepCollectionEquality().hash(vatNumber) ^
       const DeepCollectionEquality().hash(contacts) ^
@@ -1100,6 +1136,7 @@ abstract class _Client extends Client {
       @JsonKey(name: 'shipping_state') String shippingState,
       @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
       @JsonKey(name: 'shipping_country_id') String shippingCountryId,
+      ClientSettings? settings,
       @JsonKey(name: 'id_number') String idNumber,
       @JsonKey(name: 'vat_number') String vatNumber,
       List<ClientContact> contacts,
@@ -1204,7 +1241,9 @@ abstract class _Client extends Client {
   @override
   @JsonKey(name: 'shipping_country_id')
   String get shippingCountryId => throw _privateConstructorUsedError;
-  @override //@Default(ClientSettings) ClientSettings settings,
+  @override
+  ClientSettings? get settings => throw _privateConstructorUsedError;
+  @override
   @JsonKey(name: 'id_number')
   String get idNumber => throw _privateConstructorUsedError;
   @override
@@ -1778,6 +1817,205 @@ abstract class _ClientContact implements ClientContact {
   @override
   @JsonKey(ignore: true)
   _$ClientContactCopyWith<_ClientContact> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ClientSettings _$ClientSettingsFromJson(Map<String, dynamic> json) {
+  return _ClientSettings.fromJson(json);
+}
+
+/// @nodoc
+class _$ClientSettingsTearOff {
+  const _$ClientSettingsTearOff();
+
+  _ClientSettings call(
+      {@JsonKey(name: 'currency_id') String? currencyId = '',
+      @JsonKey(name: 'language_id') String? languageId = ''}) {
+    return _ClientSettings(
+      currencyId: currencyId,
+      languageId: languageId,
+    );
+  }
+
+  ClientSettings fromJson(Map<String, Object> json) {
+    return ClientSettings.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ClientSettings = _$ClientSettingsTearOff();
+
+/// @nodoc
+mixin _$ClientSettings {
+  @JsonKey(name: 'currency_id')
+  String? get currencyId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'language_id')
+  String? get languageId => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ClientSettingsCopyWith<ClientSettings> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ClientSettingsCopyWith<$Res> {
+  factory $ClientSettingsCopyWith(
+          ClientSettings value, $Res Function(ClientSettings) then) =
+      _$ClientSettingsCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'currency_id') String? currencyId,
+      @JsonKey(name: 'language_id') String? languageId});
+}
+
+/// @nodoc
+class _$ClientSettingsCopyWithImpl<$Res>
+    implements $ClientSettingsCopyWith<$Res> {
+  _$ClientSettingsCopyWithImpl(this._value, this._then);
+
+  final ClientSettings _value;
+  // ignore: unused_field
+  final $Res Function(ClientSettings) _then;
+
+  @override
+  $Res call({
+    Object? currencyId = freezed,
+    Object? languageId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      currencyId: currencyId == freezed
+          ? _value.currencyId
+          : currencyId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      languageId: languageId == freezed
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ClientSettingsCopyWith<$Res>
+    implements $ClientSettingsCopyWith<$Res> {
+  factory _$ClientSettingsCopyWith(
+          _ClientSettings value, $Res Function(_ClientSettings) then) =
+      __$ClientSettingsCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'currency_id') String? currencyId,
+      @JsonKey(name: 'language_id') String? languageId});
+}
+
+/// @nodoc
+class __$ClientSettingsCopyWithImpl<$Res>
+    extends _$ClientSettingsCopyWithImpl<$Res>
+    implements _$ClientSettingsCopyWith<$Res> {
+  __$ClientSettingsCopyWithImpl(
+      _ClientSettings _value, $Res Function(_ClientSettings) _then)
+      : super(_value, (v) => _then(v as _ClientSettings));
+
+  @override
+  _ClientSettings get _value => super._value as _ClientSettings;
+
+  @override
+  $Res call({
+    Object? currencyId = freezed,
+    Object? languageId = freezed,
+  }) {
+    return _then(_ClientSettings(
+      currencyId: currencyId == freezed
+          ? _value.currencyId
+          : currencyId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      languageId: languageId == freezed
+          ? _value.languageId
+          : languageId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+
+/// @nodoc
+class _$_ClientSettings
+    with DiagnosticableTreeMixin
+    implements _ClientSettings {
+  _$_ClientSettings(
+      {@JsonKey(name: 'currency_id') this.currencyId = '',
+      @JsonKey(name: 'language_id') this.languageId = ''});
+
+  factory _$_ClientSettings.fromJson(Map<String, dynamic> json) =>
+      _$_$_ClientSettingsFromJson(json);
+
+  @override
+  @JsonKey(name: 'currency_id')
+  final String? currencyId;
+  @override
+  @JsonKey(name: 'language_id')
+  final String? languageId;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ClientSettings(currencyId: $currencyId, languageId: $languageId)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ClientSettings'))
+      ..add(DiagnosticsProperty('currencyId', currencyId))
+      ..add(DiagnosticsProperty('languageId', languageId));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ClientSettings &&
+            (identical(other.currencyId, currencyId) ||
+                const DeepCollectionEquality()
+                    .equals(other.currencyId, currencyId)) &&
+            (identical(other.languageId, languageId) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageId, languageId)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(currencyId) ^
+      const DeepCollectionEquality().hash(languageId);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ClientSettingsCopyWith<_ClientSettings> get copyWith =>
+      __$ClientSettingsCopyWithImpl<_ClientSettings>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ClientSettingsToJson(this);
+  }
+}
+
+abstract class _ClientSettings implements ClientSettings {
+  factory _ClientSettings(
+      {@JsonKey(name: 'currency_id') String? currencyId,
+      @JsonKey(name: 'language_id') String? languageId}) = _$_ClientSettings;
+
+  factory _ClientSettings.fromJson(Map<String, dynamic> json) =
+      _$_ClientSettings.fromJson;
+
+  @override
+  @JsonKey(name: 'currency_id')
+  String? get currencyId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'language_id')
+  String? get languageId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ClientSettingsCopyWith<_ClientSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

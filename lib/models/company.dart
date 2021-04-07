@@ -16,7 +16,7 @@ abstract class Company implements _$Company {
   @JsonSerializable(explicitToJson: true)
   factory Company({
     @Default('') @JsonKey(name: 'company_key') String key,
-    //@Default(CompanySettings) CompanySettings settings,
+    CompanySettings? settings,
   }) = _Company;
 
   /// Create a Company from JSON
@@ -24,31 +24,29 @@ abstract class Company implements _$Company {
       _$CompanyFromJson(json);
 }
 
-/*
 /// CompanySettings class
 @freezed
 class CompanySettings with _$CompanySettings {
   /// CompanySettings factory constructor
   @JsonSerializable(explicitToJson: true)
   factory CompanySettings({
-    @nullable @Default('') String name,
-    @nullable @Default('') String address1,
-    @nullable @Default('') String address2,
-    @nullable @Default('') String city,
-    @nullable @Default('') String state,
-    @nullable @Default('') String phone,
-    @nullable @Default('') String email,
-    @nullable @Default('') String website,
-    @nullable @Default('') @JsonKey(name: 'custom_value1') String customValue1,
-    @nullable @Default('') @JsonKey(name: 'custom_value2') String customValue2,
-    @nullable @Default('') @JsonKey(name: 'custom_value3') String customValue3,
-    @nullable @Default('') @JsonKey(name: 'custom_value4') String customValue4,
-    @nullable @Default('') @JsonKey(name: 'company_logo') String companyLogo,
-    @nullable @Default('') @JsonKey(name: 'postal_code') String postalCode,
-    @nullable @Default('') @JsonKey(name: 'country_id') String countryId,
-    @nullable @Default('') @JsonKey(name: 'vat_number') String vatNumber,
+    @Default('') String? name,
+    @Default('') String? address1,
+    @Default('') String? address2,
+    @Default('') String? city,
+    @Default('') String? state,
+    @Default('') String? phone,
+    @Default('') String? email,
+    @Default('') String? website,
+    @Default('') @JsonKey(name: 'custom_value1') String? customValue1,
+    @Default('') @JsonKey(name: 'custom_value2') String? customValue2,
+    @Default('') @JsonKey(name: 'custom_value3') String? customValue3,
+    @Default('') @JsonKey(name: 'custom_value4') String? customValue4,
+    @Default('') @JsonKey(name: 'company_logo') String? companyLogo,
+    @Default('') @JsonKey(name: 'postal_code') String? postalCode,
+    @Default('') @JsonKey(name: 'country_id') String? countryId,
+    @Default('') @JsonKey(name: 'vat_number') String? vatNumber,
     @Default(<Document>[]) List<Document> documents,
-    @nullable
     @Default({})
     @JsonKey(name: 'custom_fields')
         Map<String, String> customFields,
@@ -58,7 +56,6 @@ class CompanySettings with _$CompanySettings {
   factory CompanySettings.fromJson(Map<String, dynamic> json) =>
       _$CompanySettingsFromJson(json);
 }
-*/
 
 /// Multi-item company response
 @freezed
