@@ -1,5 +1,5 @@
 name: invoiceninja
-description: This package makes it easy to sell products in a Flutter app
+description: Create PDF invoices and accept payments in a Flutter app
 version: 0.0.9
 homepage: https://invoiceninja.com
 repository: https://github.com/invoiceninja/flutter-package

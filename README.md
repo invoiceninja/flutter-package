@@ -1,6 +1,8 @@
 # Invoice Ninja 
 
 This package makes it easy to create PDF invoices and accept payments in a Flutter app   
+
+https://www.youtube.com/watch?v=iefk6TOU-Ts
   
 <p align="center">
     <img src="https://raw.githubusercontent.com/invoiceninja/flutter-package/master/assets/sample.gif" alt="Sample" width="300"/>
