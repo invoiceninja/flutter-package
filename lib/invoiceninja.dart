@@ -20,6 +20,7 @@ class InvoiceNinja {
   static InvoiceRepository invoices = InvoiceRepository();
 
   /// Configure the Invoice Ninja package
+  /// The key can be generated on Settings > Client Portal
   static void configure(
     String companyKey, {
     bool debugEnabled = false,
@@ -55,6 +56,7 @@ class InvoiceNinjaAdmin {
   static CreditAdminRepository credits = CreditAdminRepository();
 
   /// Configure the Invoice Ninja package
+  /// Tokens can be managed on Settings > Account Management
   static void configure(
     String token, {
     bool debugEnabled = false,
