@@ -1,8 +1,9 @@
 ## 0.0.10
+- Added optional `action` parameter to save methods
 
 ## 0.0.9
 
-* Add support for null safety
+* Added support for null safety
 
 ## 0.0.8
 
