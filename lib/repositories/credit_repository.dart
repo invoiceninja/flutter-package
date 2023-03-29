@@ -15,19 +15,28 @@ class CreditAdminRepository {
   }
 
   /// Persist credit to the server
-  Future<Credit> save(Credit credit) async {
+  Future<Credit> save(Credit credit, {CreditAction? action}) async {
     dynamic response;
+    String url;
 
     if (credit.id.isEmpty) {
-      response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/credits',
-          token: InvoiceNinjaAdmin.token,
-          data: credit.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/credits';
     } else {
-      response = await WebClient().put(
-          '${InvoiceNinjaAdmin.url}/api/v1/credits/${credit.id}',
-          token: InvoiceNinjaAdmin.token,
-          data: credit.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/credits/${credit.id}';
+    }
+
+    if (action == CreditAction.markSent) {
+      url += '?mark_sent=true';
+    } else if (action == CreditAction.sendEmail) {
+      url += '?send_email=true';
+    }
+
+    if (credit.id.isEmpty) {
+      response = await WebClient()
+          .post(url, token: InvoiceNinjaAdmin.token, data: credit.toJson());
+    } else {
+      response = await WebClient()
+          .put(url, token: InvoiceNinjaAdmin.token, data: credit.toJson());
     }
 
     return CreditItem.fromJson(response).data;

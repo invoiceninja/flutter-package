@@ -153,3 +153,8 @@ class CreditItem with _$CreditItem {
   factory CreditItem.fromJson(Map<String, dynamic> json) =>
       _$CreditItemFromJson(json);
 }
+
+enum CreditAction {
+  sendEmail,
+  markSent,
+}

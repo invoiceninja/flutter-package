@@ -14,19 +14,26 @@ class PaymentAdminRepository {
   }
 
   /// Persist payment to the server
-  Future<Payment> save(Payment payment) async {
+  Future<Payment> save(Payment payment, {PaymentAction? action}) async {
     dynamic response;
+    String url;
 
     if (payment.id.isEmpty) {
-      response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/payments',
-          token: InvoiceNinjaAdmin.token,
-          data: payment.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/payments';
     } else {
-      response = await WebClient().put(
-          '${InvoiceNinjaAdmin.url}/api/v1/payments/${payment.id}',
-          token: InvoiceNinjaAdmin.token,
-          data: payment.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/payments/${payment.id}';
+    }
+
+    if (action == PaymentAction.sendEmail) {
+      url += '?email_receipt=true';
+    }
+
+    if (payment.id.isEmpty) {
+      response = await WebClient()
+          .post(url, token: InvoiceNinjaAdmin.token, data: payment.toJson());
+    } else {
+      response = await WebClient()
+          .put(url, token: InvoiceNinjaAdmin.token, data: payment.toJson());
     }
 
     return PaymentItem.fromJson(response).data;

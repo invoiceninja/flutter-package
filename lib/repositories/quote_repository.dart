@@ -15,19 +15,32 @@ class QuoteAdminRepository {
   }
 
   /// Persist quote to the server
-  Future<Quote> save(Quote quote) async {
+  Future<Quote> save(Quote quote, {QuoteAction? action}) async {
     dynamic response;
+    String url;
 
     if (quote.id.isEmpty) {
-      response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/quotes',
-          token: InvoiceNinjaAdmin.token,
-          data: quote.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/quotes';
     } else {
-      response = await WebClient().put(
-          '${InvoiceNinjaAdmin.url}/api/v1/quotes/${quote.id}',
-          token: InvoiceNinjaAdmin.token,
-          data: quote.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/quotes/${quote.id}';
+    }
+
+    if (action == QuoteAction.approve) {
+      url += '?approve=true';
+    } else if (action == QuoteAction.markSent) {
+      url += '?mark_sent=true';
+    } else if (action == QuoteAction.convertToInvoice) {
+      url += '?convert=true';
+    } else if (action == QuoteAction.sendEmail) {
+      url += '?send_email=true';
+    }
+
+    if (quote.id.isEmpty) {
+      response = await WebClient()
+          .post(url, token: InvoiceNinjaAdmin.token, data: quote.toJson());
+    } else {
+      response = await WebClient()
+          .put(url, token: InvoiceNinjaAdmin.token, data: quote.toJson());
     }
 
     return QuoteItem.fromJson(response).data;

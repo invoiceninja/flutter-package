@@ -36,19 +36,35 @@ class InvoiceAdminRepository {
   }
 
   /// Persist invoice to the server
-  Future<Invoice> save(Invoice invoice) async {
+  Future<Invoice> save(
+    Invoice invoice, {
+    InvoiceAction? action,
+  }) async {
     dynamic response;
+    String url;
 
     if (invoice.id.isEmpty) {
-      response = await WebClient().post(
-          '${InvoiceNinjaAdmin.url}/api/v1/invoices',
-          token: InvoiceNinjaAdmin.token,
-          data: invoice.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/invoices';
     } else {
-      response = await WebClient().put(
-          '${InvoiceNinjaAdmin.url}/api/v1/invoices/${invoice.id}',
-          token: InvoiceNinjaAdmin.token,
-          data: invoice.toJson());
+      url = '${InvoiceNinjaAdmin.url}/api/v1/invoices/${invoice.id}';
+    }
+
+    if (action == InvoiceAction.markPaid) {
+      url += '?paid=true';
+    } else if (action == InvoiceAction.markSent) {
+      url += '?mark_sent=true';
+    } else if (action == InvoiceAction.sendEmail) {
+      url += '?send_email=true';
+    } else if (action == InvoiceAction.autoBill) {
+      url += '?auto_bill=true';
+    }
+
+    if (invoice.id.isEmpty) {
+      response = await WebClient()
+          .post(url, token: InvoiceNinjaAdmin.token, data: invoice.toJson());
+    } else {
+      response = await WebClient()
+          .put(url, token: InvoiceNinjaAdmin.token, data: invoice.toJson());
     }
 
     return InvoiceItem.fromJson(response).data;

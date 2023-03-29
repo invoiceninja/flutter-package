@@ -153,3 +153,10 @@ class QuoteItem with _$QuoteItem {
   factory QuoteItem.fromJson(Map<String, dynamic> json) =>
       _$QuoteItemFromJson(json);
 }
+
+enum QuoteAction {
+  sendEmail,
+  markSent,
+  convertToInvoice,
+  approve,
+}

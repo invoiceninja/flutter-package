@@ -42,13 +42,13 @@ abstract class Payment implements _$Payment {
     @Default(0.0) @JsonKey(name: 'company_gateway_id') double companyGatewayId,
     @Default(<Paymentable>[])
     @JsonKey(name: 'paymentables')
-    List<Paymentable> paymentables,
+        List<Paymentable> paymentables,
     @Default(<Paymentable>[])
     @JsonKey(name: 'invoices')
-    List<Paymentable> invoices,
+        List<Paymentable> invoices,
     @Default(<Paymentable>[])
     @JsonKey(name: 'credits')
-    List<Paymentable> credits,
+        List<Paymentable> credits,
     @Default(<Document>[]) List<Document> documents,
   }) = _Payment;
 
@@ -97,4 +97,8 @@ class PaymentItem with _$PaymentItem {
   /// Create an PaymentItem from JSON
   factory PaymentItem.fromJson(Map<String, dynamic> json) =>
       _$PaymentItemFromJson(json);
+}
+
+enum PaymentAction {
+  sendEmail,
 }

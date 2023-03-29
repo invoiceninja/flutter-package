@@ -183,3 +183,10 @@ class InvoiceItem with _$InvoiceItem {
   factory InvoiceItem.fromJson(Map<String, dynamic> json) =>
       _$InvoiceItemFromJson(json);
 }
+
+enum InvoiceAction {
+  sendEmail,
+  markSent,
+  markPaid,
+  autoBill,
+}
