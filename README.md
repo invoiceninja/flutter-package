@@ -143,6 +143,6 @@ final payment = await InvoiceNinjaAdmin.payments.findById(id);
 ### Create/persist an invoice and auto-bill it
 
 ```dart
-var quote = Invoice.forClient(client, products: [product]);
-quote = await InvoiceNinjaAdmin.invoices.save(invoice, action: InvoiceAction.autoBill);
+var invoice = Invoice.forClient(client, products: [product]);
+invoice = await InvoiceNinjaAdmin.invoices.save(invoice, action: InvoiceAction.autoBill);
 ``` 
