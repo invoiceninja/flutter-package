@@ -36,7 +36,7 @@ import 'package:invoiceninja/invoiceninja.dart';
 
 The package provides two main classes:
 * `InvoiceNinja`: Supports the public 'Storefront' routes which allow reading the list of products and creating/finding clients and invoice 
-* `InvoiceNinjaAdmin`: Supports the [REST Admin API](https://app.swaggerhub.com/apis/invoiceninja/invoiceninja) which uses token based security 
+* `InvoiceNinjaAdmin`: Supports the [REST Admin API](https://api-docs.invoicing.co) which uses token based security 
 
 ## Storefront API
 
