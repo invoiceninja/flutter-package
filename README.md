@@ -4,7 +4,9 @@ This package makes it easy to create PDF invoices and accept payments in a Flutt
 
 [![YouTube Video](https://img.youtube.com/vi/iefk6TOU-Ts/0.jpg)](https://www.youtube.com/watch?v=iefk6TOU-Ts)
   
+<p>
     <img src="https://raw.githubusercontent.com/invoiceninja/flutter-package/master/assets/sample.gif" alt="Sample" width="300"/>
+</p>  
 
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
