@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   @override
   initState() {
     super.initState();
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
 
     InvoiceNinja.configure(
       // Set your company key or use 'KEY' to test
@@ -61,7 +61,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       return;
     }
 
-
     var client = Client.forContact(email: _email);
     client = await InvoiceNinja.clients.save(client);
 
@@ -77,7 +76,6 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     if (_invoice == null) {
       return;
     }
-
 
     launch(
       'https://docs.google.com/gview?embedded=true&url=${_invoice!.pdfUrl}',
@@ -109,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
@@ -150,17 +148,17 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
                         .toList(),
                   ),
                   SizedBox(height: 16),
-                  OutlineButton(
+                  OutlinedButton(
                     child: Text('Create Invoice'),
                     onPressed: (_email.isNotEmpty && _product != null)
                         ? () => _createInvoice()
                         : null,
                   ),
-                  OutlineButton(
+                  OutlinedButton(
                     child: Text('View PDF'),
                     onPressed: (_invoice != null) ? () => _viewPdf() : null,
                   ),
-                  OutlineButton(
+                  OutlinedButton(
                     child: Text('View Portal'),
                     onPressed: (_invoice != null) ? () => _viewPortal() : null,
                   ),

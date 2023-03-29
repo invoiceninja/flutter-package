@@ -12,7 +12,7 @@ import 'repositories/quote_repository.dart';
 class InvoiceNinja {
   static String url = 'https://app.invoicing.co';
   static late String companyKey;
-  static late bool debugEnabled;
+  static late bool? debugEnabled;
 
   static CompanyRepository company = CompanyRepository();
   static ProductRepository products = ProductRepository();
@@ -46,7 +46,7 @@ class InvoiceNinja {
 class InvoiceNinjaAdmin {
   static String url = 'https://app.invoicing.co';
   static late String token;
-  static late bool debugEnabled;
+  static late bool? debugEnabled;
 
   static ProductAdminRepository products = ProductAdminRepository();
   static ClientAdminRepository clients = ClientAdminRepository();
