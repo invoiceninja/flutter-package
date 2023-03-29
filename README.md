@@ -140,16 +140,9 @@ final payments = await InvoiceNinjaAdmin.payments.load();
 final payment = await InvoiceNinjaAdmin.payments.findById(id);
 ``` 
 
-### Create/persist a quote
+### Create/persist an invoice and auto-bill it
 
 ```dart
-var quote = Quote.forClient(client, products: [product]);
-quote = await InvoiceNinjaAdmin.quotes.save(quote);
+var quote = Invoice.forClient(client, products: [product]);
+quote = await InvoiceNinjaAdmin.invoices.save(invoice, action: InvoiceAction.autoBill);
 ``` 
-
-### Create/persist a credit
-
-```dart
-var credit = Credit.forClient(client, products: [product]);
-credit = await InvoiceNinjaAdmin.credits.save(quote);
-```
