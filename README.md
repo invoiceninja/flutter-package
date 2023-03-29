@@ -15,8 +15,6 @@ This package makes it easy to create PDF invoices and accept payments in a Flutt
 * Includes a self-service client portal
 * Many [more features](https://www.invoiceninja.com/invoicing-payment-features/)... 
 
-**Note: the package requires the new v5 version of the app [[Demo](https://demo.invoiceninja.com) | [More info](https://forum.invoiceninja.com/t/the-invoice-ninja-v5-beta-is-now-available/4066)]**
-
 ### To Do
 
 - [ ] Recurring billing
@@ -27,7 +25,7 @@ This package makes it easy to create PDF invoices and accept payments in a Flutt
 
 ```yaml
 dependencies:
-  invoiceninja: ^0.0.9
+  invoiceninja: ^0.0.10
 ```
 
 ### Import
