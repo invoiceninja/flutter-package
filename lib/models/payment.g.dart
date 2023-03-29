@@ -6,48 +6,49 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Payment _$_$_PaymentFromJson(Map<String, dynamic> json) {
-  return _$_Payment(
-    id: json['id'] as String? ?? '',
-    createdById: json['user_id'] as String,
-    assignedToId: json['assigned_user_id'] as String,
-    createdAt: json['created_at'] as int,
-    updatedAt: json['updated_at'] as int,
-    archivedAt: json['archived_at'] as int,
-    isDeleted: json['is_deleted'] as bool,
-    customValue1: json['custom_value1'] as String,
-    customValue2: json['custom_value2'] as String,
-    customValue3: json['custom_value3'] as String,
-    customValue4: json['custom_value4'] as String,
-    clientId: json['client_id'] as String,
-    invitationId: json['invitation_id'] as String,
-    clientContactId: json['client_contact_id'] as String,
-    typeId: json['type_id'] as String,
-    date: json['date'] as String,
-    transactionReference: json['transaction_reference'] as String,
-    privateNotes: json['private_notes'] as String,
-    isManual: json['is_manual'] as bool,
-    amount: (json['amount'] as num).toDouble(),
-    applied: (json['applied'] as num).toDouble(),
-    refunded: (json['refunded'] as num).toDouble(),
-    companyGatewayId: (json['company_gateway_id'] as num).toDouble(),
-    paymentables: (json['paymentables'] as List<dynamic>)
-        .map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    invoices: (json['invoices'] as List<dynamic>)
-        .map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    credits: (json['credits'] as List<dynamic>)
-        .map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    documents: (json['documents'] as List<dynamic>?)
-            ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
-            .toList() ??
-        [],
-  );
-}
+_$_Payment _$$_PaymentFromJson(Map<String, dynamic> json) => _$_Payment(
+      id: json['id'] as String? ?? '',
+      createdById: json['user_id'] as String? ?? '',
+      assignedToId: json['assigned_user_id'] as String? ?? '',
+      createdAt: json['created_at'] as int? ?? 0,
+      updatedAt: json['updated_at'] as int? ?? 0,
+      archivedAt: json['archived_at'] as int? ?? 0,
+      isDeleted: json['is_deleted'] as bool? ?? false,
+      customValue1: json['custom_value1'] as String? ?? '',
+      customValue2: json['custom_value2'] as String? ?? '',
+      customValue3: json['custom_value3'] as String? ?? '',
+      customValue4: json['custom_value4'] as String? ?? '',
+      clientId: json['client_id'] as String? ?? '',
+      invitationId: json['invitation_id'] as String? ?? '',
+      clientContactId: json['client_contact_id'] as String? ?? '',
+      typeId: json['type_id'] as String? ?? '',
+      date: json['date'] as String? ?? '',
+      transactionReference: json['transaction_reference'] as String? ?? '',
+      privateNotes: json['private_notes'] as String? ?? '',
+      isManual: json['is_manual'] as bool? ?? false,
+      amount: (json['amount'] as num?)?.toDouble() ?? 0.0,
+      applied: (json['applied'] as num?)?.toDouble() ?? 0.0,
+      refunded: (json['refunded'] as num?)?.toDouble() ?? 0.0,
+      companyGatewayId: (json['company_gateway_id'] as num?)?.toDouble() ?? 0.0,
+      paymentables: (json['paymentables'] as List<dynamic>?)
+              ?.map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Paymentable>[],
+      invoices: (json['invoices'] as List<dynamic>?)
+              ?.map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Paymentable>[],
+      credits: (json['credits'] as List<dynamic>?)
+              ?.map((e) => Paymentable.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Paymentable>[],
+      documents: (json['documents'] as List<dynamic>?)
+              ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Document>[],
+    );
 
-Map<String, dynamic> _$_$_PaymentToJson(_$_Payment instance) =>
+Map<String, dynamic> _$$_PaymentToJson(_$_Payment instance) =>
     <String, dynamic>{
       'id': instance.id,
       'user_id': instance.createdById,
@@ -78,19 +79,18 @@ Map<String, dynamic> _$_$_PaymentToJson(_$_Payment instance) =>
       'documents': instance.documents.map((e) => e.toJson()).toList(),
     };
 
-_$_Paymentable _$_$_PaymentableFromJson(Map<String, dynamic> json) {
-  return _$_Paymentable(
-    id: json['id'] as String? ?? '',
-    invoiceId: json['invoice_id'] as String,
-    creditId: json['credit_id'] as String,
-    amount: (json['amount'] as num?)?.toDouble() ?? 0,
-    refunded: (json['refunded'] as num?)?.toDouble() ?? 0,
-    createdAt: json['created_at'] as int,
-    updatedAt: json['updated_at'] as int,
-  );
-}
+_$_Paymentable _$$_PaymentableFromJson(Map<String, dynamic> json) =>
+    _$_Paymentable(
+      id: json['id'] as String? ?? '',
+      invoiceId: json['invoice_id'] as String? ?? '',
+      creditId: json['credit_id'] as String? ?? '',
+      amount: (json['amount'] as num?)?.toDouble() ?? 0,
+      refunded: (json['refunded'] as num?)?.toDouble() ?? 0,
+      createdAt: json['created_at'] as int? ?? 0,
+      updatedAt: json['updated_at'] as int? ?? 0,
+    );
 
-Map<String, dynamic> _$_$_PaymentableToJson(_$_Paymentable instance) =>
+Map<String, dynamic> _$$_PaymentableToJson(_$_Paymentable instance) =>
     <String, dynamic>{
       'id': instance.id,
       'invoice_id': instance.invoiceId,
@@ -101,26 +101,24 @@ Map<String, dynamic> _$_$_PaymentableToJson(_$_Paymentable instance) =>
       'updated_at': instance.updatedAt,
     };
 
-_$_PaymentList _$_$_PaymentListFromJson(Map<String, dynamic> json) {
-  return _$_PaymentList(
-    data: (json['data'] as List<dynamic>)
-        .map((e) => Payment.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_PaymentList _$$_PaymentListFromJson(Map<String, dynamic> json) =>
+    _$_PaymentList(
+      data: (json['data'] as List<dynamic>)
+          .map((e) => Payment.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_PaymentListToJson(_$_PaymentList instance) =>
+Map<String, dynamic> _$$_PaymentListToJson(_$_PaymentList instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
 
-_$_PaymentItem _$_$_PaymentItemFromJson(Map<String, dynamic> json) {
-  return _$_PaymentItem(
-    Payment.fromJson(json['data'] as Map<String, dynamic>),
-  );
-}
+_$_PaymentItem _$$_PaymentItemFromJson(Map<String, dynamic> json) =>
+    _$_PaymentItem(
+      Payment.fromJson(json['data'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_PaymentItemToJson(_$_PaymentItem instance) =>
+Map<String, dynamic> _$$_PaymentItemToJson(_$_PaymentItem instance) =>
     <String, dynamic>{
       'data': instance.data,
     };

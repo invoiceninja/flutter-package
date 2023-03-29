@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'invoice.dart';
 
@@ -10,170 +12,11 @@ part of 'invoice.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Invoice _$InvoiceFromJson(Map<String, dynamic> json) {
   return _Invoice.fromJson(json);
 }
-
-/// @nodoc
-class _$InvoiceTearOff {
-  const _$InvoiceTearOff();
-
-  _Invoice call(
-      {String id = '',
-      @JsonKey(name: 'user_id')
-          String createdById = '',
-      @JsonKey(name: 'assigned_user_id')
-          String assignedToId = '',
-      @JsonKey(name: 'created_at')
-          int createdAt = 0,
-      @JsonKey(name: 'updated_at')
-          int updatedAt = 0,
-      @JsonKey(name: 'archived_at')
-          int archivedAt = 0,
-      @JsonKey(name: 'is_deleted')
-          bool isDeleted = false,
-      @JsonKey(name: 'custom_value1')
-          String customValue1 = '',
-      @JsonKey(name: 'custom_value2')
-          String customValue2 = '',
-      @JsonKey(name: 'custom_value3')
-          String customValue3 = '',
-      @JsonKey(name: 'custom_value4')
-          String customValue4 = '',
-      @JsonKey(name: 'client_id')
-          String clientId = '',
-      @JsonKey(name: 'line_items')
-          List<InvoiceLineItem> lineItems = const <InvoiceLineItem>[],
-      List<InvoiceInvitation> invitations = const <InvoiceInvitation>[],
-      double amount = 0,
-      double balance = 0,
-      @JsonKey(name: 'status_id')
-          String statusId = '',
-      @JsonKey(name: 'design_id')
-          String designId = '',
-      String number = '',
-      double discount = 0,
-      @JsonKey(name: 'po_number')
-          String poNumber = '',
-      String date = '',
-      @JsonKey(name: 'last_sent_date')
-          String lastSentDate = '',
-      @JsonKey(name: 'next_send_date')
-          String nextSendDate = '',
-      @JsonKey(name: 'due_date')
-          String dueDate = '',
-      String terms = '',
-      @JsonKey(name: 'public_notes')
-          String publicNotes = '',
-      @JsonKey(name: 'private_notes')
-          String privateNotes = '',
-      @JsonKey(name: 'uses_inclusive_taxes')
-          bool usesInclusiveTaxes = false,
-      @JsonKey(name: 'tax_name1')
-          String taxName1 = '',
-      @JsonKey(name: 'tax_rate1')
-          double taxRate1 = 0,
-      @JsonKey(name: 'tax_name2')
-          String taxName2 = '',
-      @JsonKey(name: 'tax_rate2')
-          double taxRate2 = 0,
-      @JsonKey(name: 'tax_name3')
-          String taxName3 = '',
-      @JsonKey(name: 'tax_rate3')
-          double taxRate3 = 0,
-      @JsonKey(name: 'total_taxes')
-          double totalTaxes = 0,
-      @JsonKey(name: 'is_amount_discount')
-          bool isAmountDiscount = false,
-      String footer = '',
-      double partial = 0,
-      @JsonKey(name: 'partial_due_date')
-          String partialDueDate = '',
-      @JsonKey(name: 'has_tasks')
-          bool hasTasks = false,
-      @JsonKey(name: 'has_expenses')
-          bool hasExpenses = false,
-      @JsonKey(name: 'custom_surcharge1')
-          double customSurcharge1 = 0,
-      @JsonKey(name: 'custom_surcharge2')
-          double customSurcharge2 = 0,
-      @JsonKey(name: 'custom_surcharge3')
-          double customSurcharge3 = 0,
-      @JsonKey(name: 'custom_surcharge4')
-          double customSurcharge4 = 0,
-      @JsonKey(name: 'custom_surcharge_tax1')
-          bool customSurchargeTax1 = false,
-      @JsonKey(name: 'custom_surcharge_tax2')
-          bool customSurchargeTax2 = false,
-      @JsonKey(name: 'custom_surcharge_tax3')
-          bool customSurchargeTax3 = false,
-      @JsonKey(name: 'custom_surcharge_tax4')
-          bool customSurchargeTax4 = false,
-      List<Document> documents = const <Document>[]}) {
-    return _Invoice(
-      id: id,
-      createdById: createdById,
-      assignedToId: assignedToId,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
-      archivedAt: archivedAt,
-      isDeleted: isDeleted,
-      customValue1: customValue1,
-      customValue2: customValue2,
-      customValue3: customValue3,
-      customValue4: customValue4,
-      clientId: clientId,
-      lineItems: lineItems,
-      invitations: invitations,
-      amount: amount,
-      balance: balance,
-      statusId: statusId,
-      designId: designId,
-      number: number,
-      discount: discount,
-      poNumber: poNumber,
-      date: date,
-      lastSentDate: lastSentDate,
-      nextSendDate: nextSendDate,
-      dueDate: dueDate,
-      terms: terms,
-      publicNotes: publicNotes,
-      privateNotes: privateNotes,
-      usesInclusiveTaxes: usesInclusiveTaxes,
-      taxName1: taxName1,
-      taxRate1: taxRate1,
-      taxName2: taxName2,
-      taxRate2: taxRate2,
-      taxName3: taxName3,
-      taxRate3: taxRate3,
-      totalTaxes: totalTaxes,
-      isAmountDiscount: isAmountDiscount,
-      footer: footer,
-      partial: partial,
-      partialDueDate: partialDueDate,
-      hasTasks: hasTasks,
-      hasExpenses: hasExpenses,
-      customSurcharge1: customSurcharge1,
-      customSurcharge2: customSurcharge2,
-      customSurcharge3: customSurcharge3,
-      customSurcharge4: customSurcharge4,
-      customSurchargeTax1: customSurchargeTax1,
-      customSurchargeTax2: customSurchargeTax2,
-      customSurchargeTax3: customSurchargeTax3,
-      customSurchargeTax4: customSurchargeTax4,
-      documents: documents,
-    );
-  }
-
-  Invoice fromJson(Map<String, Object> json) {
-    return Invoice.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Invoice = _$InvoiceTearOff();
 
 /// @nodoc
 mixin _$Invoice {
@@ -277,7 +120,8 @@ mixin _$Invoice {
 /// @nodoc
 abstract class $InvoiceCopyWith<$Res> {
   factory $InvoiceCopyWith(Invoice value, $Res Function(Invoice) then) =
-      _$InvoiceCopyWithImpl<$Res>;
+      _$InvoiceCopyWithImpl<$Res, Invoice>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -333,281 +177,286 @@ abstract class $InvoiceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
+class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
+    implements $InvoiceCopyWith<$Res> {
   _$InvoiceCopyWithImpl(this._value, this._then);
 
-  final Invoice _value;
   // ignore: unused_field
-  final $Res Function(Invoice) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdById = freezed,
-    Object? assignedToId = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? archivedAt = freezed,
-    Object? isDeleted = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? clientId = freezed,
-    Object? lineItems = freezed,
-    Object? invitations = freezed,
-    Object? amount = freezed,
-    Object? balance = freezed,
-    Object? statusId = freezed,
-    Object? designId = freezed,
-    Object? number = freezed,
-    Object? discount = freezed,
-    Object? poNumber = freezed,
-    Object? date = freezed,
-    Object? lastSentDate = freezed,
-    Object? nextSendDate = freezed,
-    Object? dueDate = freezed,
-    Object? terms = freezed,
-    Object? publicNotes = freezed,
-    Object? privateNotes = freezed,
-    Object? usesInclusiveTaxes = freezed,
-    Object? taxName1 = freezed,
-    Object? taxRate1 = freezed,
-    Object? taxName2 = freezed,
-    Object? taxRate2 = freezed,
-    Object? taxName3 = freezed,
-    Object? taxRate3 = freezed,
-    Object? totalTaxes = freezed,
-    Object? isAmountDiscount = freezed,
-    Object? footer = freezed,
-    Object? partial = freezed,
-    Object? partialDueDate = freezed,
-    Object? hasTasks = freezed,
-    Object? hasExpenses = freezed,
-    Object? customSurcharge1 = freezed,
-    Object? customSurcharge2 = freezed,
-    Object? customSurcharge3 = freezed,
-    Object? customSurcharge4 = freezed,
-    Object? customSurchargeTax1 = freezed,
-    Object? customSurchargeTax2 = freezed,
-    Object? customSurchargeTax3 = freezed,
-    Object? customSurchargeTax4 = freezed,
-    Object? documents = freezed,
+    Object? id = null,
+    Object? createdById = null,
+    Object? assignedToId = null,
+    Object? createdAt = null,
+    Object? updatedAt = null,
+    Object? archivedAt = null,
+    Object? isDeleted = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? clientId = null,
+    Object? lineItems = null,
+    Object? invitations = null,
+    Object? amount = null,
+    Object? balance = null,
+    Object? statusId = null,
+    Object? designId = null,
+    Object? number = null,
+    Object? discount = null,
+    Object? poNumber = null,
+    Object? date = null,
+    Object? lastSentDate = null,
+    Object? nextSendDate = null,
+    Object? dueDate = null,
+    Object? terms = null,
+    Object? publicNotes = null,
+    Object? privateNotes = null,
+    Object? usesInclusiveTaxes = null,
+    Object? taxName1 = null,
+    Object? taxRate1 = null,
+    Object? taxName2 = null,
+    Object? taxRate2 = null,
+    Object? taxName3 = null,
+    Object? taxRate3 = null,
+    Object? totalTaxes = null,
+    Object? isAmountDiscount = null,
+    Object? footer = null,
+    Object? partial = null,
+    Object? partialDueDate = null,
+    Object? hasTasks = null,
+    Object? hasExpenses = null,
+    Object? customSurcharge1 = null,
+    Object? customSurcharge2 = null,
+    Object? customSurcharge3 = null,
+    Object? customSurcharge4 = null,
+    Object? customSurchargeTax1 = null,
+    Object? customSurchargeTax2 = null,
+    Object? customSurchargeTax3 = null,
+    Object? customSurchargeTax4 = null,
+    Object? documents = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdById: createdById == freezed
+      createdById: null == createdById
           ? _value.createdById
           : createdById // ignore: cast_nullable_to_non_nullable
               as String,
-      assignedToId: assignedToId == freezed
+      assignedToId: null == assignedToId
           ? _value.assignedToId
           : assignedToId // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as int,
-      updatedAt: updatedAt == freezed
+      updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      archivedAt: archivedAt == freezed
+      archivedAt: null == archivedAt
           ? _value.archivedAt
           : archivedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      clientId: clientId == freezed
+      clientId: null == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
               as String,
-      lineItems: lineItems == freezed
+      lineItems: null == lineItems
           ? _value.lineItems
           : lineItems // ignore: cast_nullable_to_non_nullable
               as List<InvoiceLineItem>,
-      invitations: invitations == freezed
+      invitations: null == invitations
           ? _value.invitations
           : invitations // ignore: cast_nullable_to_non_nullable
               as List<InvoiceInvitation>,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      balance: balance == freezed
+      balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as double,
-      statusId: statusId == freezed
+      statusId: null == statusId
           ? _value.statusId
           : statusId // ignore: cast_nullable_to_non_nullable
               as String,
-      designId: designId == freezed
+      designId: null == designId
           ? _value.designId
           : designId // ignore: cast_nullable_to_non_nullable
               as String,
-      number: number == freezed
+      number: null == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as String,
-      discount: discount == freezed
+      discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
-      poNumber: poNumber == freezed
+      poNumber: null == poNumber
           ? _value.poNumber
           : poNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
-      lastSentDate: lastSentDate == freezed
+      lastSentDate: null == lastSentDate
           ? _value.lastSentDate
           : lastSentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      nextSendDate: nextSendDate == freezed
+      nextSendDate: null == nextSendDate
           ? _value.nextSendDate
           : nextSendDate // ignore: cast_nullable_to_non_nullable
               as String,
-      dueDate: dueDate == freezed
+      dueDate: null == dueDate
           ? _value.dueDate
           : dueDate // ignore: cast_nullable_to_non_nullable
               as String,
-      terms: terms == freezed
+      terms: null == terms
           ? _value.terms
           : terms // ignore: cast_nullable_to_non_nullable
               as String,
-      publicNotes: publicNotes == freezed
+      publicNotes: null == publicNotes
           ? _value.publicNotes
           : publicNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      privateNotes: privateNotes == freezed
+      privateNotes: null == privateNotes
           ? _value.privateNotes
           : privateNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      usesInclusiveTaxes: usesInclusiveTaxes == freezed
+      usesInclusiveTaxes: null == usesInclusiveTaxes
           ? _value.usesInclusiveTaxes
           : usesInclusiveTaxes // ignore: cast_nullable_to_non_nullable
               as bool,
-      taxName1: taxName1 == freezed
+      taxName1: null == taxName1
           ? _value.taxName1
           : taxName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate1: taxRate1 == freezed
+      taxRate1: null == taxRate1
           ? _value.taxRate1
           : taxRate1 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName2: taxName2 == freezed
+      taxName2: null == taxName2
           ? _value.taxName2
           : taxName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate2: taxRate2 == freezed
+      taxRate2: null == taxRate2
           ? _value.taxRate2
           : taxRate2 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName3: taxName3 == freezed
+      taxName3: null == taxName3
           ? _value.taxName3
           : taxName3 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate3: taxRate3 == freezed
+      taxRate3: null == taxRate3
           ? _value.taxRate3
           : taxRate3 // ignore: cast_nullable_to_non_nullable
               as double,
-      totalTaxes: totalTaxes == freezed
+      totalTaxes: null == totalTaxes
           ? _value.totalTaxes
           : totalTaxes // ignore: cast_nullable_to_non_nullable
               as double,
-      isAmountDiscount: isAmountDiscount == freezed
+      isAmountDiscount: null == isAmountDiscount
           ? _value.isAmountDiscount
           : isAmountDiscount // ignore: cast_nullable_to_non_nullable
               as bool,
-      footer: footer == freezed
+      footer: null == footer
           ? _value.footer
           : footer // ignore: cast_nullable_to_non_nullable
               as String,
-      partial: partial == freezed
+      partial: null == partial
           ? _value.partial
           : partial // ignore: cast_nullable_to_non_nullable
               as double,
-      partialDueDate: partialDueDate == freezed
+      partialDueDate: null == partialDueDate
           ? _value.partialDueDate
           : partialDueDate // ignore: cast_nullable_to_non_nullable
               as String,
-      hasTasks: hasTasks == freezed
+      hasTasks: null == hasTasks
           ? _value.hasTasks
           : hasTasks // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasExpenses: hasExpenses == freezed
+      hasExpenses: null == hasExpenses
           ? _value.hasExpenses
           : hasExpenses // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurcharge1: customSurcharge1 == freezed
+      customSurcharge1: null == customSurcharge1
           ? _value.customSurcharge1
           : customSurcharge1 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge2: customSurcharge2 == freezed
+      customSurcharge2: null == customSurcharge2
           ? _value.customSurcharge2
           : customSurcharge2 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge3: customSurcharge3 == freezed
+      customSurcharge3: null == customSurcharge3
           ? _value.customSurcharge3
           : customSurcharge3 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge4: customSurcharge4 == freezed
+      customSurcharge4: null == customSurcharge4
           ? _value.customSurcharge4
           : customSurcharge4 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurchargeTax1: customSurchargeTax1 == freezed
+      customSurchargeTax1: null == customSurchargeTax1
           ? _value.customSurchargeTax1
           : customSurchargeTax1 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax2: customSurchargeTax2 == freezed
+      customSurchargeTax2: null == customSurchargeTax2
           ? _value.customSurchargeTax2
           : customSurchargeTax2 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax3: customSurchargeTax3 == freezed
+      customSurchargeTax3: null == customSurchargeTax3
           ? _value.customSurchargeTax3
           : customSurchargeTax3 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax4: customSurchargeTax4 == freezed
+      customSurchargeTax4: null == customSurchargeTax4
           ? _value.customSurchargeTax4
           : customSurchargeTax4 // ignore: cast_nullable_to_non_nullable
               as bool,
-      documents: documents == freezed
+      documents: null == documents
           ? _value.documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
-  factory _$InvoiceCopyWith(_Invoice value, $Res Function(_Invoice) then) =
-      __$InvoiceCopyWithImpl<$Res>;
+abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
+  factory _$$_InvoiceCopyWith(
+          _$_Invoice value, $Res Function(_$_Invoice) then) =
+      __$$_InvoiceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -663,340 +512,382 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
-    implements _$InvoiceCopyWith<$Res> {
-  __$InvoiceCopyWithImpl(_Invoice _value, $Res Function(_Invoice) _then)
-      : super(_value, (v) => _then(v as _Invoice));
+class __$$_InvoiceCopyWithImpl<$Res>
+    extends _$InvoiceCopyWithImpl<$Res, _$_Invoice>
+    implements _$$_InvoiceCopyWith<$Res> {
+  __$$_InvoiceCopyWithImpl(_$_Invoice _value, $Res Function(_$_Invoice) _then)
+      : super(_value, _then);
 
-  @override
-  _Invoice get _value => super._value as _Invoice;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdById = freezed,
-    Object? assignedToId = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? archivedAt = freezed,
-    Object? isDeleted = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? clientId = freezed,
-    Object? lineItems = freezed,
-    Object? invitations = freezed,
-    Object? amount = freezed,
-    Object? balance = freezed,
-    Object? statusId = freezed,
-    Object? designId = freezed,
-    Object? number = freezed,
-    Object? discount = freezed,
-    Object? poNumber = freezed,
-    Object? date = freezed,
-    Object? lastSentDate = freezed,
-    Object? nextSendDate = freezed,
-    Object? dueDate = freezed,
-    Object? terms = freezed,
-    Object? publicNotes = freezed,
-    Object? privateNotes = freezed,
-    Object? usesInclusiveTaxes = freezed,
-    Object? taxName1 = freezed,
-    Object? taxRate1 = freezed,
-    Object? taxName2 = freezed,
-    Object? taxRate2 = freezed,
-    Object? taxName3 = freezed,
-    Object? taxRate3 = freezed,
-    Object? totalTaxes = freezed,
-    Object? isAmountDiscount = freezed,
-    Object? footer = freezed,
-    Object? partial = freezed,
-    Object? partialDueDate = freezed,
-    Object? hasTasks = freezed,
-    Object? hasExpenses = freezed,
-    Object? customSurcharge1 = freezed,
-    Object? customSurcharge2 = freezed,
-    Object? customSurcharge3 = freezed,
-    Object? customSurcharge4 = freezed,
-    Object? customSurchargeTax1 = freezed,
-    Object? customSurchargeTax2 = freezed,
-    Object? customSurchargeTax3 = freezed,
-    Object? customSurchargeTax4 = freezed,
-    Object? documents = freezed,
+    Object? id = null,
+    Object? createdById = null,
+    Object? assignedToId = null,
+    Object? createdAt = null,
+    Object? updatedAt = null,
+    Object? archivedAt = null,
+    Object? isDeleted = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? clientId = null,
+    Object? lineItems = null,
+    Object? invitations = null,
+    Object? amount = null,
+    Object? balance = null,
+    Object? statusId = null,
+    Object? designId = null,
+    Object? number = null,
+    Object? discount = null,
+    Object? poNumber = null,
+    Object? date = null,
+    Object? lastSentDate = null,
+    Object? nextSendDate = null,
+    Object? dueDate = null,
+    Object? terms = null,
+    Object? publicNotes = null,
+    Object? privateNotes = null,
+    Object? usesInclusiveTaxes = null,
+    Object? taxName1 = null,
+    Object? taxRate1 = null,
+    Object? taxName2 = null,
+    Object? taxRate2 = null,
+    Object? taxName3 = null,
+    Object? taxRate3 = null,
+    Object? totalTaxes = null,
+    Object? isAmountDiscount = null,
+    Object? footer = null,
+    Object? partial = null,
+    Object? partialDueDate = null,
+    Object? hasTasks = null,
+    Object? hasExpenses = null,
+    Object? customSurcharge1 = null,
+    Object? customSurcharge2 = null,
+    Object? customSurcharge3 = null,
+    Object? customSurcharge4 = null,
+    Object? customSurchargeTax1 = null,
+    Object? customSurchargeTax2 = null,
+    Object? customSurchargeTax3 = null,
+    Object? customSurchargeTax4 = null,
+    Object? documents = null,
   }) {
-    return _then(_Invoice(
-      id: id == freezed
+    return _then(_$_Invoice(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdById: createdById == freezed
+      createdById: null == createdById
           ? _value.createdById
           : createdById // ignore: cast_nullable_to_non_nullable
               as String,
-      assignedToId: assignedToId == freezed
+      assignedToId: null == assignedToId
           ? _value.assignedToId
           : assignedToId // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as int,
-      updatedAt: updatedAt == freezed
+      updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      archivedAt: archivedAt == freezed
+      archivedAt: null == archivedAt
           ? _value.archivedAt
           : archivedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      clientId: clientId == freezed
+      clientId: null == clientId
           ? _value.clientId
           : clientId // ignore: cast_nullable_to_non_nullable
               as String,
-      lineItems: lineItems == freezed
-          ? _value.lineItems
+      lineItems: null == lineItems
+          ? _value._lineItems
           : lineItems // ignore: cast_nullable_to_non_nullable
               as List<InvoiceLineItem>,
-      invitations: invitations == freezed
-          ? _value.invitations
+      invitations: null == invitations
+          ? _value._invitations
           : invitations // ignore: cast_nullable_to_non_nullable
               as List<InvoiceInvitation>,
-      amount: amount == freezed
+      amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as double,
-      balance: balance == freezed
+      balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as double,
-      statusId: statusId == freezed
+      statusId: null == statusId
           ? _value.statusId
           : statusId // ignore: cast_nullable_to_non_nullable
               as String,
-      designId: designId == freezed
+      designId: null == designId
           ? _value.designId
           : designId // ignore: cast_nullable_to_non_nullable
               as String,
-      number: number == freezed
+      number: null == number
           ? _value.number
           : number // ignore: cast_nullable_to_non_nullable
               as String,
-      discount: discount == freezed
+      discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
-      poNumber: poNumber == freezed
+      poNumber: null == poNumber
           ? _value.poNumber
           : poNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as String,
-      lastSentDate: lastSentDate == freezed
+      lastSentDate: null == lastSentDate
           ? _value.lastSentDate
           : lastSentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      nextSendDate: nextSendDate == freezed
+      nextSendDate: null == nextSendDate
           ? _value.nextSendDate
           : nextSendDate // ignore: cast_nullable_to_non_nullable
               as String,
-      dueDate: dueDate == freezed
+      dueDate: null == dueDate
           ? _value.dueDate
           : dueDate // ignore: cast_nullable_to_non_nullable
               as String,
-      terms: terms == freezed
+      terms: null == terms
           ? _value.terms
           : terms // ignore: cast_nullable_to_non_nullable
               as String,
-      publicNotes: publicNotes == freezed
+      publicNotes: null == publicNotes
           ? _value.publicNotes
           : publicNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      privateNotes: privateNotes == freezed
+      privateNotes: null == privateNotes
           ? _value.privateNotes
           : privateNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      usesInclusiveTaxes: usesInclusiveTaxes == freezed
+      usesInclusiveTaxes: null == usesInclusiveTaxes
           ? _value.usesInclusiveTaxes
           : usesInclusiveTaxes // ignore: cast_nullable_to_non_nullable
               as bool,
-      taxName1: taxName1 == freezed
+      taxName1: null == taxName1
           ? _value.taxName1
           : taxName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate1: taxRate1 == freezed
+      taxRate1: null == taxRate1
           ? _value.taxRate1
           : taxRate1 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName2: taxName2 == freezed
+      taxName2: null == taxName2
           ? _value.taxName2
           : taxName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate2: taxRate2 == freezed
+      taxRate2: null == taxRate2
           ? _value.taxRate2
           : taxRate2 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName3: taxName3 == freezed
+      taxName3: null == taxName3
           ? _value.taxName3
           : taxName3 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate3: taxRate3 == freezed
+      taxRate3: null == taxRate3
           ? _value.taxRate3
           : taxRate3 // ignore: cast_nullable_to_non_nullable
               as double,
-      totalTaxes: totalTaxes == freezed
+      totalTaxes: null == totalTaxes
           ? _value.totalTaxes
           : totalTaxes // ignore: cast_nullable_to_non_nullable
               as double,
-      isAmountDiscount: isAmountDiscount == freezed
+      isAmountDiscount: null == isAmountDiscount
           ? _value.isAmountDiscount
           : isAmountDiscount // ignore: cast_nullable_to_non_nullable
               as bool,
-      footer: footer == freezed
+      footer: null == footer
           ? _value.footer
           : footer // ignore: cast_nullable_to_non_nullable
               as String,
-      partial: partial == freezed
+      partial: null == partial
           ? _value.partial
           : partial // ignore: cast_nullable_to_non_nullable
               as double,
-      partialDueDate: partialDueDate == freezed
+      partialDueDate: null == partialDueDate
           ? _value.partialDueDate
           : partialDueDate // ignore: cast_nullable_to_non_nullable
               as String,
-      hasTasks: hasTasks == freezed
+      hasTasks: null == hasTasks
           ? _value.hasTasks
           : hasTasks // ignore: cast_nullable_to_non_nullable
               as bool,
-      hasExpenses: hasExpenses == freezed
+      hasExpenses: null == hasExpenses
           ? _value.hasExpenses
           : hasExpenses // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurcharge1: customSurcharge1 == freezed
+      customSurcharge1: null == customSurcharge1
           ? _value.customSurcharge1
           : customSurcharge1 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge2: customSurcharge2 == freezed
+      customSurcharge2: null == customSurcharge2
           ? _value.customSurcharge2
           : customSurcharge2 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge3: customSurcharge3 == freezed
+      customSurcharge3: null == customSurcharge3
           ? _value.customSurcharge3
           : customSurcharge3 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurcharge4: customSurcharge4 == freezed
+      customSurcharge4: null == customSurcharge4
           ? _value.customSurcharge4
           : customSurcharge4 // ignore: cast_nullable_to_non_nullable
               as double,
-      customSurchargeTax1: customSurchargeTax1 == freezed
+      customSurchargeTax1: null == customSurchargeTax1
           ? _value.customSurchargeTax1
           : customSurchargeTax1 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax2: customSurchargeTax2 == freezed
+      customSurchargeTax2: null == customSurchargeTax2
           ? _value.customSurchargeTax2
           : customSurchargeTax2 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax3: customSurchargeTax3 == freezed
+      customSurchargeTax3: null == customSurchargeTax3
           ? _value.customSurchargeTax3
           : customSurchargeTax3 // ignore: cast_nullable_to_non_nullable
               as bool,
-      customSurchargeTax4: customSurchargeTax4 == freezed
+      customSurchargeTax4: null == customSurchargeTax4
           ? _value.customSurchargeTax4
           : customSurchargeTax4 // ignore: cast_nullable_to_non_nullable
               as bool,
-      documents: documents == freezed
-          ? _value.documents
+      documents: null == documents
+          ? _value._documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   _$_Invoice(
       {this.id = '',
-      @JsonKey(name: 'user_id') this.createdById = '',
-      @JsonKey(name: 'assigned_user_id') this.assignedToId = '',
-      @JsonKey(name: 'created_at') this.createdAt = 0,
-      @JsonKey(name: 'updated_at') this.updatedAt = 0,
-      @JsonKey(name: 'archived_at') this.archivedAt = 0,
-      @JsonKey(name: 'is_deleted') this.isDeleted = false,
-      @JsonKey(name: 'custom_value1') this.customValue1 = '',
-      @JsonKey(name: 'custom_value2') this.customValue2 = '',
-      @JsonKey(name: 'custom_value3') this.customValue3 = '',
-      @JsonKey(name: 'custom_value4') this.customValue4 = '',
-      @JsonKey(name: 'client_id') this.clientId = '',
-      @JsonKey(name: 'line_items') this.lineItems = const <InvoiceLineItem>[],
-      this.invitations = const <InvoiceInvitation>[],
+      @JsonKey(name: 'user_id')
+          this.createdById = '',
+      @JsonKey(name: 'assigned_user_id')
+          this.assignedToId = '',
+      @JsonKey(name: 'created_at')
+          this.createdAt = 0,
+      @JsonKey(name: 'updated_at')
+          this.updatedAt = 0,
+      @JsonKey(name: 'archived_at')
+          this.archivedAt = 0,
+      @JsonKey(name: 'is_deleted')
+          this.isDeleted = false,
+      @JsonKey(name: 'custom_value1')
+          this.customValue1 = '',
+      @JsonKey(name: 'custom_value2')
+          this.customValue2 = '',
+      @JsonKey(name: 'custom_value3')
+          this.customValue3 = '',
+      @JsonKey(name: 'custom_value4')
+          this.customValue4 = '',
+      @JsonKey(name: 'client_id')
+          this.clientId = '',
+      @JsonKey(name: 'line_items')
+          final List<InvoiceLineItem> lineItems = const <InvoiceLineItem>[],
+      final List<InvoiceInvitation> invitations = const <InvoiceInvitation>[],
       this.amount = 0,
       this.balance = 0,
-      @JsonKey(name: 'status_id') this.statusId = '',
-      @JsonKey(name: 'design_id') this.designId = '',
+      @JsonKey(name: 'status_id')
+          this.statusId = '',
+      @JsonKey(name: 'design_id')
+          this.designId = '',
       this.number = '',
       this.discount = 0,
-      @JsonKey(name: 'po_number') this.poNumber = '',
+      @JsonKey(name: 'po_number')
+          this.poNumber = '',
       this.date = '',
-      @JsonKey(name: 'last_sent_date') this.lastSentDate = '',
-      @JsonKey(name: 'next_send_date') this.nextSendDate = '',
-      @JsonKey(name: 'due_date') this.dueDate = '',
+      @JsonKey(name: 'last_sent_date')
+          this.lastSentDate = '',
+      @JsonKey(name: 'next_send_date')
+          this.nextSendDate = '',
+      @JsonKey(name: 'due_date')
+          this.dueDate = '',
       this.terms = '',
-      @JsonKey(name: 'public_notes') this.publicNotes = '',
-      @JsonKey(name: 'private_notes') this.privateNotes = '',
-      @JsonKey(name: 'uses_inclusive_taxes') this.usesInclusiveTaxes = false,
-      @JsonKey(name: 'tax_name1') this.taxName1 = '',
-      @JsonKey(name: 'tax_rate1') this.taxRate1 = 0,
-      @JsonKey(name: 'tax_name2') this.taxName2 = '',
-      @JsonKey(name: 'tax_rate2') this.taxRate2 = 0,
-      @JsonKey(name: 'tax_name3') this.taxName3 = '',
-      @JsonKey(name: 'tax_rate3') this.taxRate3 = 0,
-      @JsonKey(name: 'total_taxes') this.totalTaxes = 0,
-      @JsonKey(name: 'is_amount_discount') this.isAmountDiscount = false,
+      @JsonKey(name: 'public_notes')
+          this.publicNotes = '',
+      @JsonKey(name: 'private_notes')
+          this.privateNotes = '',
+      @JsonKey(name: 'uses_inclusive_taxes')
+          this.usesInclusiveTaxes = false,
+      @JsonKey(name: 'tax_name1')
+          this.taxName1 = '',
+      @JsonKey(name: 'tax_rate1')
+          this.taxRate1 = 0,
+      @JsonKey(name: 'tax_name2')
+          this.taxName2 = '',
+      @JsonKey(name: 'tax_rate2')
+          this.taxRate2 = 0,
+      @JsonKey(name: 'tax_name3')
+          this.taxName3 = '',
+      @JsonKey(name: 'tax_rate3')
+          this.taxRate3 = 0,
+      @JsonKey(name: 'total_taxes')
+          this.totalTaxes = 0,
+      @JsonKey(name: 'is_amount_discount')
+          this.isAmountDiscount = false,
       this.footer = '',
       this.partial = 0,
-      @JsonKey(name: 'partial_due_date') this.partialDueDate = '',
-      @JsonKey(name: 'has_tasks') this.hasTasks = false,
-      @JsonKey(name: 'has_expenses') this.hasExpenses = false,
-      @JsonKey(name: 'custom_surcharge1') this.customSurcharge1 = 0,
-      @JsonKey(name: 'custom_surcharge2') this.customSurcharge2 = 0,
-      @JsonKey(name: 'custom_surcharge3') this.customSurcharge3 = 0,
-      @JsonKey(name: 'custom_surcharge4') this.customSurcharge4 = 0,
-      @JsonKey(name: 'custom_surcharge_tax1') this.customSurchargeTax1 = false,
-      @JsonKey(name: 'custom_surcharge_tax2') this.customSurchargeTax2 = false,
-      @JsonKey(name: 'custom_surcharge_tax3') this.customSurchargeTax3 = false,
-      @JsonKey(name: 'custom_surcharge_tax4') this.customSurchargeTax4 = false,
-      this.documents = const <Document>[]})
-      : super._();
+      @JsonKey(name: 'partial_due_date')
+          this.partialDueDate = '',
+      @JsonKey(name: 'has_tasks')
+          this.hasTasks = false,
+      @JsonKey(name: 'has_expenses')
+          this.hasExpenses = false,
+      @JsonKey(name: 'custom_surcharge1')
+          this.customSurcharge1 = 0,
+      @JsonKey(name: 'custom_surcharge2')
+          this.customSurcharge2 = 0,
+      @JsonKey(name: 'custom_surcharge3')
+          this.customSurcharge3 = 0,
+      @JsonKey(name: 'custom_surcharge4')
+          this.customSurcharge4 = 0,
+      @JsonKey(name: 'custom_surcharge_tax1')
+          this.customSurchargeTax1 = false,
+      @JsonKey(name: 'custom_surcharge_tax2')
+          this.customSurchargeTax2 = false,
+      @JsonKey(name: 'custom_surcharge_tax3')
+          this.customSurchargeTax3 = false,
+      @JsonKey(name: 'custom_surcharge_tax4')
+          this.customSurchargeTax4 = false,
+      final List<Document> documents = const <Document>[]})
+      : _lineItems = lineItems,
+        _invitations = invitations,
+        _documents = documents,
+        super._();
 
   factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceFromJson(json);
+      _$$_InvoiceFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: 'user_id')
@@ -1031,17 +922,29 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'client_id')
   final String clientId;
+  final List<InvoiceLineItem> _lineItems;
   @override
   @JsonKey(name: 'line_items')
-  final List<InvoiceLineItem> lineItems;
-  @JsonKey(defaultValue: const <InvoiceInvitation>[])
+  List<InvoiceLineItem> get lineItems {
+    if (_lineItems is EqualUnmodifiableListView) return _lineItems;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_lineItems);
+  }
+
+  final List<InvoiceInvitation> _invitations;
   @override
-  final List<InvoiceInvitation> invitations;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
+  List<InvoiceInvitation> get invitations {
+    if (_invitations is EqualUnmodifiableListView) return _invitations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_invitations);
+  }
+
   @override
+  @JsonKey()
   final double amount;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double balance;
   @override
   @JsonKey(name: 'status_id')
@@ -1049,17 +952,17 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'design_id')
   final String designId;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String number;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double discount;
   @override
   @JsonKey(name: 'po_number')
   final String poNumber;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String date;
   @override
   @JsonKey(name: 'last_sent_date')
@@ -1070,8 +973,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'due_date')
   final String dueDate;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String terms;
   @override
   @JsonKey(name: 'public_notes')
@@ -1106,11 +1009,11 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'is_amount_discount')
   final bool isAmountDiscount;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String footer;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double partial;
   @override
   @JsonKey(name: 'partial_due_date')
@@ -1145,9 +1048,14 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'custom_surcharge_tax4')
   final bool customSurchargeTax4;
-  @JsonKey(defaultValue: const <Document>[])
+  final List<Document> _documents;
   @override
-  final List<Document> documents;
+  @JsonKey()
+  List<Document> get documents {
+    if (_documents is EqualUnmodifiableListView) return _documents;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_documents);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1215,428 +1123,382 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Invoice &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Invoice &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.createdById, createdById) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdById, createdById)) &&
+                other.createdById == createdById) &&
             (identical(other.assignedToId, assignedToId) ||
-                const DeepCollectionEquality()
-                    .equals(other.assignedToId, assignedToId)) &&
+                other.assignedToId == assignedToId) &&
             (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)) &&
+                other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.updatedAt, updatedAt)) &&
+                other.updatedAt == updatedAt) &&
             (identical(other.archivedAt, archivedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.archivedAt, archivedAt)) &&
+                other.archivedAt == archivedAt) &&
             (identical(other.isDeleted, isDeleted) ||
-                const DeepCollectionEquality()
-                    .equals(other.isDeleted, isDeleted)) &&
+                other.isDeleted == isDeleted) &&
             (identical(other.customValue1, customValue1) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue1, customValue1)) &&
+                other.customValue1 == customValue1) &&
             (identical(other.customValue2, customValue2) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue2, customValue2)) &&
+                other.customValue2 == customValue2) &&
             (identical(other.customValue3, customValue3) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue3, customValue3)) &&
+                other.customValue3 == customValue3) &&
             (identical(other.customValue4, customValue4) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue4, customValue4)) &&
+                other.customValue4 == customValue4) &&
             (identical(other.clientId, clientId) ||
-                const DeepCollectionEquality()
-                    .equals(other.clientId, clientId)) &&
-            (identical(other.lineItems, lineItems) ||
-                const DeepCollectionEquality()
-                    .equals(other.lineItems, lineItems)) &&
-            (identical(other.invitations, invitations) ||
-                const DeepCollectionEquality()
-                    .equals(other.invitations, invitations)) &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)) &&
-            (identical(other.balance, balance) ||
-                const DeepCollectionEquality()
-                    .equals(other.balance, balance)) &&
+                other.clientId == clientId) &&
+            const DeepCollectionEquality()
+                .equals(other._lineItems, _lineItems) &&
+            const DeepCollectionEquality()
+                .equals(other._invitations, _invitations) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.balance, balance) || other.balance == balance) &&
             (identical(other.statusId, statusId) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusId, statusId)) &&
+                other.statusId == statusId) &&
             (identical(other.designId, designId) ||
-                const DeepCollectionEquality()
-                    .equals(other.designId, designId)) &&
-            (identical(other.number, number) ||
-                const DeepCollectionEquality().equals(other.number, number)) &&
+                other.designId == designId) &&
+            (identical(other.number, number) || other.number == number) &&
             (identical(other.discount, discount) ||
-                const DeepCollectionEquality()
-                    .equals(other.discount, discount)) &&
+                other.discount == discount) &&
             (identical(other.poNumber, poNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.poNumber, poNumber)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.poNumber == poNumber) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.lastSentDate, lastSentDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastSentDate, lastSentDate)) &&
+                other.lastSentDate == lastSentDate) &&
             (identical(other.nextSendDate, nextSendDate) ||
-                const DeepCollectionEquality().equals(other.nextSendDate, nextSendDate)) &&
-            (identical(other.dueDate, dueDate) || const DeepCollectionEquality().equals(other.dueDate, dueDate)) &&
-            (identical(other.terms, terms) || const DeepCollectionEquality().equals(other.terms, terms)) &&
-            (identical(other.publicNotes, publicNotes) || const DeepCollectionEquality().equals(other.publicNotes, publicNotes)) &&
-            (identical(other.privateNotes, privateNotes) || const DeepCollectionEquality().equals(other.privateNotes, privateNotes)) &&
-            (identical(other.usesInclusiveTaxes, usesInclusiveTaxes) || const DeepCollectionEquality().equals(other.usesInclusiveTaxes, usesInclusiveTaxes)) &&
-            (identical(other.taxName1, taxName1) || const DeepCollectionEquality().equals(other.taxName1, taxName1)) &&
-            (identical(other.taxRate1, taxRate1) || const DeepCollectionEquality().equals(other.taxRate1, taxRate1)) &&
-            (identical(other.taxName2, taxName2) || const DeepCollectionEquality().equals(other.taxName2, taxName2)) &&
-            (identical(other.taxRate2, taxRate2) || const DeepCollectionEquality().equals(other.taxRate2, taxRate2)) &&
-            (identical(other.taxName3, taxName3) || const DeepCollectionEquality().equals(other.taxName3, taxName3)) &&
-            (identical(other.taxRate3, taxRate3) || const DeepCollectionEquality().equals(other.taxRate3, taxRate3)) &&
-            (identical(other.totalTaxes, totalTaxes) || const DeepCollectionEquality().equals(other.totalTaxes, totalTaxes)) &&
-            (identical(other.isAmountDiscount, isAmountDiscount) || const DeepCollectionEquality().equals(other.isAmountDiscount, isAmountDiscount)) &&
-            (identical(other.footer, footer) || const DeepCollectionEquality().equals(other.footer, footer)) &&
-            (identical(other.partial, partial) || const DeepCollectionEquality().equals(other.partial, partial)) &&
-            (identical(other.partialDueDate, partialDueDate) || const DeepCollectionEquality().equals(other.partialDueDate, partialDueDate)) &&
-            (identical(other.hasTasks, hasTasks) || const DeepCollectionEquality().equals(other.hasTasks, hasTasks)) &&
-            (identical(other.hasExpenses, hasExpenses) || const DeepCollectionEquality().equals(other.hasExpenses, hasExpenses)) &&
-            (identical(other.customSurcharge1, customSurcharge1) || const DeepCollectionEquality().equals(other.customSurcharge1, customSurcharge1)) &&
-            (identical(other.customSurcharge2, customSurcharge2) || const DeepCollectionEquality().equals(other.customSurcharge2, customSurcharge2)) &&
-            (identical(other.customSurcharge3, customSurcharge3) || const DeepCollectionEquality().equals(other.customSurcharge3, customSurcharge3)) &&
-            (identical(other.customSurcharge4, customSurcharge4) || const DeepCollectionEquality().equals(other.customSurcharge4, customSurcharge4)) &&
-            (identical(other.customSurchargeTax1, customSurchargeTax1) || const DeepCollectionEquality().equals(other.customSurchargeTax1, customSurchargeTax1)) &&
-            (identical(other.customSurchargeTax2, customSurchargeTax2) || const DeepCollectionEquality().equals(other.customSurchargeTax2, customSurchargeTax2)) &&
-            (identical(other.customSurchargeTax3, customSurchargeTax3) || const DeepCollectionEquality().equals(other.customSurchargeTax3, customSurchargeTax3)) &&
-            (identical(other.customSurchargeTax4, customSurchargeTax4) || const DeepCollectionEquality().equals(other.customSurchargeTax4, customSurchargeTax4)) &&
-            (identical(other.documents, documents) || const DeepCollectionEquality().equals(other.documents, documents)));
+                other.nextSendDate == nextSendDate) &&
+            (identical(other.dueDate, dueDate) || other.dueDate == dueDate) &&
+            (identical(other.terms, terms) || other.terms == terms) &&
+            (identical(other.publicNotes, publicNotes) ||
+                other.publicNotes == publicNotes) &&
+            (identical(other.privateNotes, privateNotes) ||
+                other.privateNotes == privateNotes) &&
+            (identical(other.usesInclusiveTaxes, usesInclusiveTaxes) ||
+                other.usesInclusiveTaxes == usesInclusiveTaxes) &&
+            (identical(other.taxName1, taxName1) ||
+                other.taxName1 == taxName1) &&
+            (identical(other.taxRate1, taxRate1) ||
+                other.taxRate1 == taxRate1) &&
+            (identical(other.taxName2, taxName2) ||
+                other.taxName2 == taxName2) &&
+            (identical(other.taxRate2, taxRate2) ||
+                other.taxRate2 == taxRate2) &&
+            (identical(other.taxName3, taxName3) ||
+                other.taxName3 == taxName3) &&
+            (identical(other.taxRate3, taxRate3) ||
+                other.taxRate3 == taxRate3) &&
+            (identical(other.totalTaxes, totalTaxes) ||
+                other.totalTaxes == totalTaxes) &&
+            (identical(other.isAmountDiscount, isAmountDiscount) ||
+                other.isAmountDiscount == isAmountDiscount) &&
+            (identical(other.footer, footer) || other.footer == footer) &&
+            (identical(other.partial, partial) || other.partial == partial) &&
+            (identical(other.partialDueDate, partialDueDate) ||
+                other.partialDueDate == partialDueDate) &&
+            (identical(other.hasTasks, hasTasks) ||
+                other.hasTasks == hasTasks) &&
+            (identical(other.hasExpenses, hasExpenses) ||
+                other.hasExpenses == hasExpenses) &&
+            (identical(other.customSurcharge1, customSurcharge1) ||
+                other.customSurcharge1 == customSurcharge1) &&
+            (identical(other.customSurcharge2, customSurcharge2) ||
+                other.customSurcharge2 == customSurcharge2) &&
+            (identical(other.customSurcharge3, customSurcharge3) ||
+                other.customSurcharge3 == customSurcharge3) &&
+            (identical(other.customSurcharge4, customSurcharge4) ||
+                other.customSurcharge4 == customSurcharge4) &&
+            (identical(other.customSurchargeTax1, customSurchargeTax1) ||
+                other.customSurchargeTax1 == customSurchargeTax1) &&
+            (identical(other.customSurchargeTax2, customSurchargeTax2) ||
+                other.customSurchargeTax2 == customSurchargeTax2) &&
+            (identical(other.customSurchargeTax3, customSurchargeTax3) ||
+                other.customSurchargeTax3 == customSurchargeTax3) &&
+            (identical(other.customSurchargeTax4, customSurchargeTax4) ||
+                other.customSurchargeTax4 == customSurchargeTax4) &&
+            const DeepCollectionEquality()
+                .equals(other._documents, _documents));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(createdById) ^
-      const DeepCollectionEquality().hash(assignedToId) ^
-      const DeepCollectionEquality().hash(createdAt) ^
-      const DeepCollectionEquality().hash(updatedAt) ^
-      const DeepCollectionEquality().hash(archivedAt) ^
-      const DeepCollectionEquality().hash(isDeleted) ^
-      const DeepCollectionEquality().hash(customValue1) ^
-      const DeepCollectionEquality().hash(customValue2) ^
-      const DeepCollectionEquality().hash(customValue3) ^
-      const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(clientId) ^
-      const DeepCollectionEquality().hash(lineItems) ^
-      const DeepCollectionEquality().hash(invitations) ^
-      const DeepCollectionEquality().hash(amount) ^
-      const DeepCollectionEquality().hash(balance) ^
-      const DeepCollectionEquality().hash(statusId) ^
-      const DeepCollectionEquality().hash(designId) ^
-      const DeepCollectionEquality().hash(number) ^
-      const DeepCollectionEquality().hash(discount) ^
-      const DeepCollectionEquality().hash(poNumber) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(lastSentDate) ^
-      const DeepCollectionEquality().hash(nextSendDate) ^
-      const DeepCollectionEquality().hash(dueDate) ^
-      const DeepCollectionEquality().hash(terms) ^
-      const DeepCollectionEquality().hash(publicNotes) ^
-      const DeepCollectionEquality().hash(privateNotes) ^
-      const DeepCollectionEquality().hash(usesInclusiveTaxes) ^
-      const DeepCollectionEquality().hash(taxName1) ^
-      const DeepCollectionEquality().hash(taxRate1) ^
-      const DeepCollectionEquality().hash(taxName2) ^
-      const DeepCollectionEquality().hash(taxRate2) ^
-      const DeepCollectionEquality().hash(taxName3) ^
-      const DeepCollectionEquality().hash(taxRate3) ^
-      const DeepCollectionEquality().hash(totalTaxes) ^
-      const DeepCollectionEquality().hash(isAmountDiscount) ^
-      const DeepCollectionEquality().hash(footer) ^
-      const DeepCollectionEquality().hash(partial) ^
-      const DeepCollectionEquality().hash(partialDueDate) ^
-      const DeepCollectionEquality().hash(hasTasks) ^
-      const DeepCollectionEquality().hash(hasExpenses) ^
-      const DeepCollectionEquality().hash(customSurcharge1) ^
-      const DeepCollectionEquality().hash(customSurcharge2) ^
-      const DeepCollectionEquality().hash(customSurcharge3) ^
-      const DeepCollectionEquality().hash(customSurcharge4) ^
-      const DeepCollectionEquality().hash(customSurchargeTax1) ^
-      const DeepCollectionEquality().hash(customSurchargeTax2) ^
-      const DeepCollectionEquality().hash(customSurchargeTax3) ^
-      const DeepCollectionEquality().hash(customSurchargeTax4) ^
-      const DeepCollectionEquality().hash(documents);
 
   @JsonKey(ignore: true)
   @override
-  _$InvoiceCopyWith<_Invoice> get copyWith =>
-      __$InvoiceCopyWithImpl<_Invoice>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        createdById,
+        assignedToId,
+        createdAt,
+        updatedAt,
+        archivedAt,
+        isDeleted,
+        customValue1,
+        customValue2,
+        customValue3,
+        customValue4,
+        clientId,
+        const DeepCollectionEquality().hash(_lineItems),
+        const DeepCollectionEquality().hash(_invitations),
+        amount,
+        balance,
+        statusId,
+        designId,
+        number,
+        discount,
+        poNumber,
+        date,
+        lastSentDate,
+        nextSendDate,
+        dueDate,
+        terms,
+        publicNotes,
+        privateNotes,
+        usesInclusiveTaxes,
+        taxName1,
+        taxRate1,
+        taxName2,
+        taxRate2,
+        taxName3,
+        taxRate3,
+        totalTaxes,
+        isAmountDiscount,
+        footer,
+        partial,
+        partialDueDate,
+        hasTasks,
+        hasExpenses,
+        customSurcharge1,
+        customSurcharge2,
+        customSurcharge3,
+        customSurcharge4,
+        customSurchargeTax1,
+        customSurchargeTax2,
+        customSurchargeTax3,
+        customSurchargeTax4,
+        const DeepCollectionEquality().hash(_documents)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InvoiceCopyWith<_$_Invoice> get copyWith =>
+      __$$_InvoiceCopyWithImpl<_$_Invoice>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceToJson(this);
+    return _$$_InvoiceToJson(
+      this,
+    );
   }
 }
 
 abstract class _Invoice extends Invoice {
   factory _Invoice(
-      {String id,
-      @JsonKey(name: 'user_id') String createdById,
-      @JsonKey(name: 'assigned_user_id') String assignedToId,
-      @JsonKey(name: 'created_at') int createdAt,
-      @JsonKey(name: 'updated_at') int updatedAt,
-      @JsonKey(name: 'archived_at') int archivedAt,
-      @JsonKey(name: 'is_deleted') bool isDeleted,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      @JsonKey(name: 'client_id') String clientId,
-      @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
-      List<InvoiceInvitation> invitations,
-      double amount,
-      double balance,
-      @JsonKey(name: 'status_id') String statusId,
-      @JsonKey(name: 'design_id') String designId,
-      String number,
-      double discount,
-      @JsonKey(name: 'po_number') String poNumber,
-      String date,
-      @JsonKey(name: 'last_sent_date') String lastSentDate,
-      @JsonKey(name: 'next_send_date') String nextSendDate,
-      @JsonKey(name: 'due_date') String dueDate,
-      String terms,
-      @JsonKey(name: 'public_notes') String publicNotes,
-      @JsonKey(name: 'private_notes') String privateNotes,
-      @JsonKey(name: 'uses_inclusive_taxes') bool usesInclusiveTaxes,
-      @JsonKey(name: 'tax_name1') String taxName1,
-      @JsonKey(name: 'tax_rate1') double taxRate1,
-      @JsonKey(name: 'tax_name2') String taxName2,
-      @JsonKey(name: 'tax_rate2') double taxRate2,
-      @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3,
-      @JsonKey(name: 'total_taxes') double totalTaxes,
-      @JsonKey(name: 'is_amount_discount') bool isAmountDiscount,
-      String footer,
-      double partial,
-      @JsonKey(name: 'partial_due_date') String partialDueDate,
-      @JsonKey(name: 'has_tasks') bool hasTasks,
-      @JsonKey(name: 'has_expenses') bool hasExpenses,
-      @JsonKey(name: 'custom_surcharge1') double customSurcharge1,
-      @JsonKey(name: 'custom_surcharge2') double customSurcharge2,
-      @JsonKey(name: 'custom_surcharge3') double customSurcharge3,
-      @JsonKey(name: 'custom_surcharge4') double customSurcharge4,
-      @JsonKey(name: 'custom_surcharge_tax1') bool customSurchargeTax1,
-      @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
-      @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
-      @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
-      List<Document> documents}) = _$_Invoice;
+      {final String id,
+      @JsonKey(name: 'user_id') final String createdById,
+      @JsonKey(name: 'assigned_user_id') final String assignedToId,
+      @JsonKey(name: 'created_at') final int createdAt,
+      @JsonKey(name: 'updated_at') final int updatedAt,
+      @JsonKey(name: 'archived_at') final int archivedAt,
+      @JsonKey(name: 'is_deleted') final bool isDeleted,
+      @JsonKey(name: 'custom_value1') final String customValue1,
+      @JsonKey(name: 'custom_value2') final String customValue2,
+      @JsonKey(name: 'custom_value3') final String customValue3,
+      @JsonKey(name: 'custom_value4') final String customValue4,
+      @JsonKey(name: 'client_id') final String clientId,
+      @JsonKey(name: 'line_items') final List<InvoiceLineItem> lineItems,
+      final List<InvoiceInvitation> invitations,
+      final double amount,
+      final double balance,
+      @JsonKey(name: 'status_id') final String statusId,
+      @JsonKey(name: 'design_id') final String designId,
+      final String number,
+      final double discount,
+      @JsonKey(name: 'po_number') final String poNumber,
+      final String date,
+      @JsonKey(name: 'last_sent_date') final String lastSentDate,
+      @JsonKey(name: 'next_send_date') final String nextSendDate,
+      @JsonKey(name: 'due_date') final String dueDate,
+      final String terms,
+      @JsonKey(name: 'public_notes') final String publicNotes,
+      @JsonKey(name: 'private_notes') final String privateNotes,
+      @JsonKey(name: 'uses_inclusive_taxes') final bool usesInclusiveTaxes,
+      @JsonKey(name: 'tax_name1') final String taxName1,
+      @JsonKey(name: 'tax_rate1') final double taxRate1,
+      @JsonKey(name: 'tax_name2') final String taxName2,
+      @JsonKey(name: 'tax_rate2') final double taxRate2,
+      @JsonKey(name: 'tax_name3') final String taxName3,
+      @JsonKey(name: 'tax_rate3') final double taxRate3,
+      @JsonKey(name: 'total_taxes') final double totalTaxes,
+      @JsonKey(name: 'is_amount_discount') final bool isAmountDiscount,
+      final String footer,
+      final double partial,
+      @JsonKey(name: 'partial_due_date') final String partialDueDate,
+      @JsonKey(name: 'has_tasks') final bool hasTasks,
+      @JsonKey(name: 'has_expenses') final bool hasExpenses,
+      @JsonKey(name: 'custom_surcharge1') final double customSurcharge1,
+      @JsonKey(name: 'custom_surcharge2') final double customSurcharge2,
+      @JsonKey(name: 'custom_surcharge3') final double customSurcharge3,
+      @JsonKey(name: 'custom_surcharge4') final double customSurcharge4,
+      @JsonKey(name: 'custom_surcharge_tax1') final bool customSurchargeTax1,
+      @JsonKey(name: 'custom_surcharge_tax2') final bool customSurchargeTax2,
+      @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
+      @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
+      final List<Document> documents}) = _$_Invoice;
   _Invoice._() : super._();
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById => throw _privateConstructorUsedError;
+  String get createdById;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId => throw _privateConstructorUsedError;
+  String get assignedToId;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt => throw _privateConstructorUsedError;
+  int get createdAt;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt => throw _privateConstructorUsedError;
+  int get updatedAt;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt => throw _privateConstructorUsedError;
+  int get archivedAt;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted => throw _privateConstructorUsedError;
+  bool get isDeleted;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1 => throw _privateConstructorUsedError;
+  String get customValue1;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2 => throw _privateConstructorUsedError;
+  String get customValue2;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3 => throw _privateConstructorUsedError;
+  String get customValue3;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4 => throw _privateConstructorUsedError;
+  String get customValue4;
   @override
   @JsonKey(name: 'client_id')
-  String get clientId => throw _privateConstructorUsedError;
+  String get clientId;
   @override
   @JsonKey(name: 'line_items')
-  List<InvoiceLineItem> get lineItems => throw _privateConstructorUsedError;
+  List<InvoiceLineItem> get lineItems;
   @override
-  List<InvoiceInvitation> get invitations => throw _privateConstructorUsedError;
+  List<InvoiceInvitation> get invitations;
   @override
-  double get amount => throw _privateConstructorUsedError;
+  double get amount;
   @override
-  double get balance => throw _privateConstructorUsedError;
+  double get balance;
   @override
   @JsonKey(name: 'status_id')
-  String get statusId => throw _privateConstructorUsedError;
+  String get statusId;
   @override
   @JsonKey(name: 'design_id')
-  String get designId => throw _privateConstructorUsedError;
+  String get designId;
   @override
-  String get number => throw _privateConstructorUsedError;
+  String get number;
   @override
-  double get discount => throw _privateConstructorUsedError;
+  double get discount;
   @override
   @JsonKey(name: 'po_number')
-  String get poNumber => throw _privateConstructorUsedError;
+  String get poNumber;
   @override
-  String get date => throw _privateConstructorUsedError;
+  String get date;
   @override
   @JsonKey(name: 'last_sent_date')
-  String get lastSentDate => throw _privateConstructorUsedError;
+  String get lastSentDate;
   @override
   @JsonKey(name: 'next_send_date')
-  String get nextSendDate => throw _privateConstructorUsedError;
+  String get nextSendDate;
   @override
   @JsonKey(name: 'due_date')
-  String get dueDate => throw _privateConstructorUsedError;
+  String get dueDate;
   @override
-  String get terms => throw _privateConstructorUsedError;
+  String get terms;
   @override
   @JsonKey(name: 'public_notes')
-  String get publicNotes => throw _privateConstructorUsedError;
+  String get publicNotes;
   @override
   @JsonKey(name: 'private_notes')
-  String get privateNotes => throw _privateConstructorUsedError;
+  String get privateNotes;
   @override
   @JsonKey(name: 'uses_inclusive_taxes')
-  bool get usesInclusiveTaxes => throw _privateConstructorUsedError;
+  bool get usesInclusiveTaxes;
   @override
   @JsonKey(name: 'tax_name1')
-  String get taxName1 => throw _privateConstructorUsedError;
+  String get taxName1;
   @override
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1 => throw _privateConstructorUsedError;
+  double get taxRate1;
   @override
   @JsonKey(name: 'tax_name2')
-  String get taxName2 => throw _privateConstructorUsedError;
+  String get taxName2;
   @override
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2 => throw _privateConstructorUsedError;
+  double get taxRate2;
   @override
   @JsonKey(name: 'tax_name3')
-  String get taxName3 => throw _privateConstructorUsedError;
+  String get taxName3;
   @override
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3 => throw _privateConstructorUsedError;
+  double get taxRate3;
   @override
   @JsonKey(name: 'total_taxes')
-  double get totalTaxes => throw _privateConstructorUsedError;
+  double get totalTaxes;
   @override
   @JsonKey(name: 'is_amount_discount')
-  bool get isAmountDiscount => throw _privateConstructorUsedError;
+  bool get isAmountDiscount;
   @override
-  String get footer => throw _privateConstructorUsedError;
+  String get footer;
   @override
-  double get partial => throw _privateConstructorUsedError;
+  double get partial;
   @override
   @JsonKey(name: 'partial_due_date')
-  String get partialDueDate => throw _privateConstructorUsedError;
+  String get partialDueDate;
   @override
   @JsonKey(name: 'has_tasks')
-  bool get hasTasks => throw _privateConstructorUsedError;
+  bool get hasTasks;
   @override
   @JsonKey(name: 'has_expenses')
-  bool get hasExpenses => throw _privateConstructorUsedError;
+  bool get hasExpenses;
   @override
   @JsonKey(name: 'custom_surcharge1')
-  double get customSurcharge1 => throw _privateConstructorUsedError;
+  double get customSurcharge1;
   @override
   @JsonKey(name: 'custom_surcharge2')
-  double get customSurcharge2 => throw _privateConstructorUsedError;
+  double get customSurcharge2;
   @override
   @JsonKey(name: 'custom_surcharge3')
-  double get customSurcharge3 => throw _privateConstructorUsedError;
+  double get customSurcharge3;
   @override
   @JsonKey(name: 'custom_surcharge4')
-  double get customSurcharge4 => throw _privateConstructorUsedError;
+  double get customSurcharge4;
   @override
   @JsonKey(name: 'custom_surcharge_tax1')
-  bool get customSurchargeTax1 => throw _privateConstructorUsedError;
+  bool get customSurchargeTax1;
   @override
   @JsonKey(name: 'custom_surcharge_tax2')
-  bool get customSurchargeTax2 => throw _privateConstructorUsedError;
+  bool get customSurchargeTax2;
   @override
   @JsonKey(name: 'custom_surcharge_tax3')
-  bool get customSurchargeTax3 => throw _privateConstructorUsedError;
+  bool get customSurchargeTax3;
   @override
   @JsonKey(name: 'custom_surcharge_tax4')
-  bool get customSurchargeTax4 => throw _privateConstructorUsedError;
+  bool get customSurchargeTax4;
   @override
-  List<Document> get documents => throw _privateConstructorUsedError;
+  List<Document> get documents;
   @override
   @JsonKey(ignore: true)
-  _$InvoiceCopyWith<_Invoice> get copyWith =>
+  _$$_InvoiceCopyWith<_$_Invoice> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 InvoiceLineItem _$InvoiceLineItemFromJson(Map<String, dynamic> json) {
   return _InvoiceLineItem.fromJson(json);
 }
-
-/// @nodoc
-class _$InvoiceLineItemTearOff {
-  const _$InvoiceLineItemTearOff();
-
-  _InvoiceLineItem call(
-      {String id = '',
-      @JsonKey(name: 'product_key') String productKey = '',
-      String notes = '',
-      double cost = 0,
-      double quantity = 0,
-      @JsonKey(name: 'tax_name1') String taxName1 = '',
-      @JsonKey(name: 'tax_rate1') double taxRate1 = 0,
-      @JsonKey(name: 'tax_name2') String taxName2 = '',
-      @JsonKey(name: 'tax_rate2') double taxRate2 = 0,
-      @JsonKey(name: 'tax_name3') String taxName3 = '',
-      @JsonKey(name: 'tax_rate3') double taxRate3 = 0,
-      @JsonKey(name: 'type_id') String typeId = '',
-      @JsonKey(name: 'custom_value1') String customValue1 = '',
-      @JsonKey(name: 'custom_value2') String customValue2 = '',
-      @JsonKey(name: 'custom_value3') String customValue3 = '',
-      @JsonKey(name: 'custom_value4') String customValue4 = '',
-      double discount = 0}) {
-    return _InvoiceLineItem(
-      id: id,
-      productKey: productKey,
-      notes: notes,
-      cost: cost,
-      quantity: quantity,
-      taxName1: taxName1,
-      taxRate1: taxRate1,
-      taxName2: taxName2,
-      taxRate2: taxRate2,
-      taxName3: taxName3,
-      taxRate3: taxRate3,
-      typeId: typeId,
-      customValue1: customValue1,
-      customValue2: customValue2,
-      customValue3: customValue3,
-      customValue4: customValue4,
-      discount: discount,
-    );
-  }
-
-  InvoiceLineItem fromJson(Map<String, Object> json) {
-    return InvoiceLineItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $InvoiceLineItem = _$InvoiceLineItemTearOff();
 
 /// @nodoc
 mixin _$InvoiceLineItem {
@@ -1680,7 +1542,8 @@ mixin _$InvoiceLineItem {
 abstract class $InvoiceLineItemCopyWith<$Res> {
   factory $InvoiceLineItemCopyWith(
           InvoiceLineItem value, $Res Function(InvoiceLineItem) then) =
-      _$InvoiceLineItemCopyWithImpl<$Res>;
+      _$InvoiceLineItemCopyWithImpl<$Res, InvoiceLineItem>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'product_key') String productKey,
@@ -1702,114 +1565,117 @@ abstract class $InvoiceLineItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InvoiceLineItemCopyWithImpl<$Res>
+class _$InvoiceLineItemCopyWithImpl<$Res, $Val extends InvoiceLineItem>
     implements $InvoiceLineItemCopyWith<$Res> {
   _$InvoiceLineItemCopyWithImpl(this._value, this._then);
 
-  final InvoiceLineItem _value;
   // ignore: unused_field
-  final $Res Function(InvoiceLineItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? productKey = freezed,
-    Object? notes = freezed,
-    Object? cost = freezed,
-    Object? quantity = freezed,
-    Object? taxName1 = freezed,
-    Object? taxRate1 = freezed,
-    Object? taxName2 = freezed,
-    Object? taxRate2 = freezed,
-    Object? taxName3 = freezed,
-    Object? taxRate3 = freezed,
-    Object? typeId = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? discount = freezed,
+    Object? id = null,
+    Object? productKey = null,
+    Object? notes = null,
+    Object? cost = null,
+    Object? quantity = null,
+    Object? taxName1 = null,
+    Object? taxRate1 = null,
+    Object? taxName2 = null,
+    Object? taxRate2 = null,
+    Object? taxName3 = null,
+    Object? taxRate3 = null,
+    Object? typeId = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? discount = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      productKey: productKey == freezed
+      productKey: null == productKey
           ? _value.productKey
           : productKey // ignore: cast_nullable_to_non_nullable
               as String,
-      notes: notes == freezed
+      notes: null == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String,
-      cost: cost == freezed
+      cost: null == cost
           ? _value.cost
           : cost // ignore: cast_nullable_to_non_nullable
               as double,
-      quantity: quantity == freezed
+      quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName1: taxName1 == freezed
+      taxName1: null == taxName1
           ? _value.taxName1
           : taxName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate1: taxRate1 == freezed
+      taxRate1: null == taxRate1
           ? _value.taxRate1
           : taxRate1 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName2: taxName2 == freezed
+      taxName2: null == taxName2
           ? _value.taxName2
           : taxName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate2: taxRate2 == freezed
+      taxRate2: null == taxRate2
           ? _value.taxRate2
           : taxRate2 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName3: taxName3 == freezed
+      taxName3: null == taxName3
           ? _value.taxName3
           : taxName3 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate3: taxRate3 == freezed
+      taxRate3: null == taxRate3
           ? _value.taxRate3
           : taxRate3 // ignore: cast_nullable_to_non_nullable
               as double,
-      typeId: typeId == freezed
+      typeId: null == typeId
           ? _value.typeId
           : typeId // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      discount: discount == freezed
+      discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$InvoiceLineItemCopyWith<$Res>
+abstract class _$$_InvoiceLineItemCopyWith<$Res>
     implements $InvoiceLineItemCopyWith<$Res> {
-  factory _$InvoiceLineItemCopyWith(
-          _InvoiceLineItem value, $Res Function(_InvoiceLineItem) then) =
-      __$InvoiceLineItemCopyWithImpl<$Res>;
+  factory _$$_InvoiceLineItemCopyWith(
+          _$_InvoiceLineItem value, $Res Function(_$_InvoiceLineItem) then) =
+      __$$_InvoiceLineItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'product_key') String productKey,
@@ -1831,102 +1697,100 @@ abstract class _$InvoiceLineItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$InvoiceLineItemCopyWithImpl<$Res>
-    extends _$InvoiceLineItemCopyWithImpl<$Res>
-    implements _$InvoiceLineItemCopyWith<$Res> {
-  __$InvoiceLineItemCopyWithImpl(
-      _InvoiceLineItem _value, $Res Function(_InvoiceLineItem) _then)
-      : super(_value, (v) => _then(v as _InvoiceLineItem));
+class __$$_InvoiceLineItemCopyWithImpl<$Res>
+    extends _$InvoiceLineItemCopyWithImpl<$Res, _$_InvoiceLineItem>
+    implements _$$_InvoiceLineItemCopyWith<$Res> {
+  __$$_InvoiceLineItemCopyWithImpl(
+      _$_InvoiceLineItem _value, $Res Function(_$_InvoiceLineItem) _then)
+      : super(_value, _then);
 
-  @override
-  _InvoiceLineItem get _value => super._value as _InvoiceLineItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? productKey = freezed,
-    Object? notes = freezed,
-    Object? cost = freezed,
-    Object? quantity = freezed,
-    Object? taxName1 = freezed,
-    Object? taxRate1 = freezed,
-    Object? taxName2 = freezed,
-    Object? taxRate2 = freezed,
-    Object? taxName3 = freezed,
-    Object? taxRate3 = freezed,
-    Object? typeId = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? discount = freezed,
+    Object? id = null,
+    Object? productKey = null,
+    Object? notes = null,
+    Object? cost = null,
+    Object? quantity = null,
+    Object? taxName1 = null,
+    Object? taxRate1 = null,
+    Object? taxName2 = null,
+    Object? taxRate2 = null,
+    Object? taxName3 = null,
+    Object? taxRate3 = null,
+    Object? typeId = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? discount = null,
   }) {
-    return _then(_InvoiceLineItem(
-      id: id == freezed
+    return _then(_$_InvoiceLineItem(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      productKey: productKey == freezed
+      productKey: null == productKey
           ? _value.productKey
           : productKey // ignore: cast_nullable_to_non_nullable
               as String,
-      notes: notes == freezed
+      notes: null == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String,
-      cost: cost == freezed
+      cost: null == cost
           ? _value.cost
           : cost // ignore: cast_nullable_to_non_nullable
               as double,
-      quantity: quantity == freezed
+      quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName1: taxName1 == freezed
+      taxName1: null == taxName1
           ? _value.taxName1
           : taxName1 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate1: taxRate1 == freezed
+      taxRate1: null == taxRate1
           ? _value.taxRate1
           : taxRate1 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName2: taxName2 == freezed
+      taxName2: null == taxName2
           ? _value.taxName2
           : taxName2 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate2: taxRate2 == freezed
+      taxRate2: null == taxRate2
           ? _value.taxRate2
           : taxRate2 // ignore: cast_nullable_to_non_nullable
               as double,
-      taxName3: taxName3 == freezed
+      taxName3: null == taxName3
           ? _value.taxName3
           : taxName3 // ignore: cast_nullable_to_non_nullable
               as String,
-      taxRate3: taxRate3 == freezed
+      taxRate3: null == taxRate3
           ? _value.taxRate3
           : taxRate3 // ignore: cast_nullable_to_non_nullable
               as double,
-      typeId: typeId == freezed
+      typeId: null == typeId
           ? _value.typeId
           : typeId // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      discount: discount == freezed
+      discount: null == discount
           ? _value.discount
           : discount // ignore: cast_nullable_to_non_nullable
               as double,
@@ -1934,9 +1798,9 @@ class __$InvoiceLineItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_InvoiceLineItem
     with DiagnosticableTreeMixin
     implements _InvoiceLineItem {
@@ -1960,22 +1824,22 @@ class _$_InvoiceLineItem
       this.discount = 0});
 
   factory _$_InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceLineItemFromJson(json);
+      _$$_InvoiceLineItemFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: 'product_key')
   final String productKey;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String notes;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double cost;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double quantity;
   @override
   @JsonKey(name: 'tax_name1')
@@ -2010,8 +1874,8 @@ class _$_InvoiceLineItem
   @override
   @JsonKey(name: 'custom_value4')
   final String customValue4;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double discount;
 
   @override
@@ -2046,197 +1910,154 @@ class _$_InvoiceLineItem
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InvoiceLineItem &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_InvoiceLineItem &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.productKey, productKey) ||
-                const DeepCollectionEquality()
-                    .equals(other.productKey, productKey)) &&
-            (identical(other.notes, notes) ||
-                const DeepCollectionEquality().equals(other.notes, notes)) &&
-            (identical(other.cost, cost) ||
-                const DeepCollectionEquality().equals(other.cost, cost)) &&
+                other.productKey == productKey) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
+            (identical(other.cost, cost) || other.cost == cost) &&
             (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
+                other.quantity == quantity) &&
             (identical(other.taxName1, taxName1) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName1, taxName1)) &&
+                other.taxName1 == taxName1) &&
             (identical(other.taxRate1, taxRate1) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate1, taxRate1)) &&
+                other.taxRate1 == taxRate1) &&
             (identical(other.taxName2, taxName2) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName2, taxName2)) &&
+                other.taxName2 == taxName2) &&
             (identical(other.taxRate2, taxRate2) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate2, taxRate2)) &&
+                other.taxRate2 == taxRate2) &&
             (identical(other.taxName3, taxName3) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxName3, taxName3)) &&
+                other.taxName3 == taxName3) &&
             (identical(other.taxRate3, taxRate3) ||
-                const DeepCollectionEquality()
-                    .equals(other.taxRate3, taxRate3)) &&
-            (identical(other.typeId, typeId) ||
-                const DeepCollectionEquality().equals(other.typeId, typeId)) &&
+                other.taxRate3 == taxRate3) &&
+            (identical(other.typeId, typeId) || other.typeId == typeId) &&
             (identical(other.customValue1, customValue1) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue1, customValue1)) &&
+                other.customValue1 == customValue1) &&
             (identical(other.customValue2, customValue2) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue2, customValue2)) &&
+                other.customValue2 == customValue2) &&
             (identical(other.customValue3, customValue3) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue3, customValue3)) &&
+                other.customValue3 == customValue3) &&
             (identical(other.customValue4, customValue4) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue4, customValue4)) &&
+                other.customValue4 == customValue4) &&
             (identical(other.discount, discount) ||
-                const DeepCollectionEquality()
-                    .equals(other.discount, discount)));
+                other.discount == discount));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(productKey) ^
-      const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(cost) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(taxName1) ^
-      const DeepCollectionEquality().hash(taxRate1) ^
-      const DeepCollectionEquality().hash(taxName2) ^
-      const DeepCollectionEquality().hash(taxRate2) ^
-      const DeepCollectionEquality().hash(taxName3) ^
-      const DeepCollectionEquality().hash(taxRate3) ^
-      const DeepCollectionEquality().hash(typeId) ^
-      const DeepCollectionEquality().hash(customValue1) ^
-      const DeepCollectionEquality().hash(customValue2) ^
-      const DeepCollectionEquality().hash(customValue3) ^
-      const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(discount);
 
   @JsonKey(ignore: true)
   @override
-  _$InvoiceLineItemCopyWith<_InvoiceLineItem> get copyWith =>
-      __$InvoiceLineItemCopyWithImpl<_InvoiceLineItem>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      productKey,
+      notes,
+      cost,
+      quantity,
+      taxName1,
+      taxRate1,
+      taxName2,
+      taxRate2,
+      taxName3,
+      taxRate3,
+      typeId,
+      customValue1,
+      customValue2,
+      customValue3,
+      customValue4,
+      discount);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InvoiceLineItemCopyWith<_$_InvoiceLineItem> get copyWith =>
+      __$$_InvoiceLineItemCopyWithImpl<_$_InvoiceLineItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceLineItemToJson(this);
+    return _$$_InvoiceLineItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _InvoiceLineItem implements InvoiceLineItem {
   factory _InvoiceLineItem(
-      {String id,
-      @JsonKey(name: 'product_key') String productKey,
-      String notes,
-      double cost,
-      double quantity,
-      @JsonKey(name: 'tax_name1') String taxName1,
-      @JsonKey(name: 'tax_rate1') double taxRate1,
-      @JsonKey(name: 'tax_name2') String taxName2,
-      @JsonKey(name: 'tax_rate2') double taxRate2,
-      @JsonKey(name: 'tax_name3') String taxName3,
-      @JsonKey(name: 'tax_rate3') double taxRate3,
-      @JsonKey(name: 'type_id') String typeId,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      double discount}) = _$_InvoiceLineItem;
+      {final String id,
+      @JsonKey(name: 'product_key') final String productKey,
+      final String notes,
+      final double cost,
+      final double quantity,
+      @JsonKey(name: 'tax_name1') final String taxName1,
+      @JsonKey(name: 'tax_rate1') final double taxRate1,
+      @JsonKey(name: 'tax_name2') final String taxName2,
+      @JsonKey(name: 'tax_rate2') final double taxRate2,
+      @JsonKey(name: 'tax_name3') final String taxName3,
+      @JsonKey(name: 'tax_rate3') final double taxRate3,
+      @JsonKey(name: 'type_id') final String typeId,
+      @JsonKey(name: 'custom_value1') final String customValue1,
+      @JsonKey(name: 'custom_value2') final String customValue2,
+      @JsonKey(name: 'custom_value3') final String customValue3,
+      @JsonKey(name: 'custom_value4') final String customValue4,
+      final double discount}) = _$_InvoiceLineItem;
 
   factory _InvoiceLineItem.fromJson(Map<String, dynamic> json) =
       _$_InvoiceLineItem.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'product_key')
-  String get productKey => throw _privateConstructorUsedError;
+  String get productKey;
   @override
-  String get notes => throw _privateConstructorUsedError;
+  String get notes;
   @override
-  double get cost => throw _privateConstructorUsedError;
+  double get cost;
   @override
-  double get quantity => throw _privateConstructorUsedError;
+  double get quantity;
   @override
   @JsonKey(name: 'tax_name1')
-  String get taxName1 => throw _privateConstructorUsedError;
+  String get taxName1;
   @override
   @JsonKey(name: 'tax_rate1')
-  double get taxRate1 => throw _privateConstructorUsedError;
+  double get taxRate1;
   @override
   @JsonKey(name: 'tax_name2')
-  String get taxName2 => throw _privateConstructorUsedError;
+  String get taxName2;
   @override
   @JsonKey(name: 'tax_rate2')
-  double get taxRate2 => throw _privateConstructorUsedError;
+  double get taxRate2;
   @override
   @JsonKey(name: 'tax_name3')
-  String get taxName3 => throw _privateConstructorUsedError;
+  String get taxName3;
   @override
   @JsonKey(name: 'tax_rate3')
-  double get taxRate3 => throw _privateConstructorUsedError;
+  double get taxRate3;
   @override
   @JsonKey(name: 'type_id')
-  String get typeId => throw _privateConstructorUsedError;
+  String get typeId;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1 => throw _privateConstructorUsedError;
+  String get customValue1;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2 => throw _privateConstructorUsedError;
+  String get customValue2;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3 => throw _privateConstructorUsedError;
+  String get customValue3;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4 => throw _privateConstructorUsedError;
+  String get customValue4;
   @override
-  double get discount => throw _privateConstructorUsedError;
+  double get discount;
   @override
   @JsonKey(ignore: true)
-  _$InvoiceLineItemCopyWith<_InvoiceLineItem> get copyWith =>
+  _$$_InvoiceLineItemCopyWith<_$_InvoiceLineItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 InvoiceInvitation _$InvoiceInvitationFromJson(Map<String, dynamic> json) {
   return _InvoiceInvitation.fromJson(json);
 }
-
-/// @nodoc
-class _$InvoiceInvitationTearOff {
-  const _$InvoiceInvitationTearOff();
-
-  _InvoiceInvitation call(
-      {String id = '',
-      @JsonKey(name: 'client_contact_id') String clientContactId = '',
-      String key = '',
-      @JsonKey(name: 'link') String url = '',
-      @JsonKey(name: 'sent_date') String sentDate = '',
-      @JsonKey(name: 'viewed_date') String viewedDate = '',
-      @JsonKey(name: 'opened_date') String openedDate = ''}) {
-    return _InvoiceInvitation(
-      id: id,
-      clientContactId: clientContactId,
-      key: key,
-      url: url,
-      sentDate: sentDate,
-      viewedDate: viewedDate,
-      openedDate: openedDate,
-    );
-  }
-
-  InvoiceInvitation fromJson(Map<String, Object> json) {
-    return InvoiceInvitation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $InvoiceInvitation = _$InvoiceInvitationTearOff();
 
 /// @nodoc
 mixin _$InvoiceInvitation {
@@ -2263,7 +2084,8 @@ mixin _$InvoiceInvitation {
 abstract class $InvoiceInvitationCopyWith<$Res> {
   factory $InvoiceInvitationCopyWith(
           InvoiceInvitation value, $Res Function(InvoiceInvitation) then) =
-      _$InvoiceInvitationCopyWithImpl<$Res>;
+      _$InvoiceInvitationCopyWithImpl<$Res, InvoiceInvitation>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
@@ -2275,64 +2097,67 @@ abstract class $InvoiceInvitationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InvoiceInvitationCopyWithImpl<$Res>
+class _$InvoiceInvitationCopyWithImpl<$Res, $Val extends InvoiceInvitation>
     implements $InvoiceInvitationCopyWith<$Res> {
   _$InvoiceInvitationCopyWithImpl(this._value, this._then);
 
-  final InvoiceInvitation _value;
   // ignore: unused_field
-  final $Res Function(InvoiceInvitation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? clientContactId = freezed,
-    Object? key = freezed,
-    Object? url = freezed,
-    Object? sentDate = freezed,
-    Object? viewedDate = freezed,
-    Object? openedDate = freezed,
+    Object? id = null,
+    Object? clientContactId = null,
+    Object? key = null,
+    Object? url = null,
+    Object? sentDate = null,
+    Object? viewedDate = null,
+    Object? openedDate = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      clientContactId: clientContactId == freezed
+      clientContactId: null == clientContactId
           ? _value.clientContactId
           : clientContactId // ignore: cast_nullable_to_non_nullable
               as String,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      sentDate: sentDate == freezed
+      sentDate: null == sentDate
           ? _value.sentDate
           : sentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      viewedDate: viewedDate == freezed
+      viewedDate: null == viewedDate
           ? _value.viewedDate
           : viewedDate // ignore: cast_nullable_to_non_nullable
               as String,
-      openedDate: openedDate == freezed
+      openedDate: null == openedDate
           ? _value.openedDate
           : openedDate // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$InvoiceInvitationCopyWith<$Res>
+abstract class _$$_InvoiceInvitationCopyWith<$Res>
     implements $InvoiceInvitationCopyWith<$Res> {
-  factory _$InvoiceInvitationCopyWith(
-          _InvoiceInvitation value, $Res Function(_InvoiceInvitation) then) =
-      __$InvoiceInvitationCopyWithImpl<$Res>;
+  factory _$$_InvoiceInvitationCopyWith(_$_InvoiceInvitation value,
+          $Res Function(_$_InvoiceInvitation) then) =
+      __$$_InvoiceInvitationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'client_contact_id') String clientContactId,
@@ -2344,52 +2169,50 @@ abstract class _$InvoiceInvitationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$InvoiceInvitationCopyWithImpl<$Res>
-    extends _$InvoiceInvitationCopyWithImpl<$Res>
-    implements _$InvoiceInvitationCopyWith<$Res> {
-  __$InvoiceInvitationCopyWithImpl(
-      _InvoiceInvitation _value, $Res Function(_InvoiceInvitation) _then)
-      : super(_value, (v) => _then(v as _InvoiceInvitation));
+class __$$_InvoiceInvitationCopyWithImpl<$Res>
+    extends _$InvoiceInvitationCopyWithImpl<$Res, _$_InvoiceInvitation>
+    implements _$$_InvoiceInvitationCopyWith<$Res> {
+  __$$_InvoiceInvitationCopyWithImpl(
+      _$_InvoiceInvitation _value, $Res Function(_$_InvoiceInvitation) _then)
+      : super(_value, _then);
 
-  @override
-  _InvoiceInvitation get _value => super._value as _InvoiceInvitation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? clientContactId = freezed,
-    Object? key = freezed,
-    Object? url = freezed,
-    Object? sentDate = freezed,
-    Object? viewedDate = freezed,
-    Object? openedDate = freezed,
+    Object? id = null,
+    Object? clientContactId = null,
+    Object? key = null,
+    Object? url = null,
+    Object? sentDate = null,
+    Object? viewedDate = null,
+    Object? openedDate = null,
   }) {
-    return _then(_InvoiceInvitation(
-      id: id == freezed
+    return _then(_$_InvoiceInvitation(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      clientContactId: clientContactId == freezed
+      clientContactId: null == clientContactId
           ? _value.clientContactId
           : clientContactId // ignore: cast_nullable_to_non_nullable
               as String,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      sentDate: sentDate == freezed
+      sentDate: null == sentDate
           ? _value.sentDate
           : sentDate // ignore: cast_nullable_to_non_nullable
               as String,
-      viewedDate: viewedDate == freezed
+      viewedDate: null == viewedDate
           ? _value.viewedDate
           : viewedDate // ignore: cast_nullable_to_non_nullable
               as String,
-      openedDate: openedDate == freezed
+      openedDate: null == openedDate
           ? _value.openedDate
           : openedDate // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2397,9 +2220,9 @@ class __$InvoiceInvitationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_InvoiceInvitation extends _InvoiceInvitation
     with DiagnosticableTreeMixin {
   _$_InvoiceInvitation(
@@ -2413,16 +2236,16 @@ class _$_InvoiceInvitation extends _InvoiceInvitation
       : super._();
 
   factory _$_InvoiceInvitation.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceInvitationFromJson(json);
+      _$$_InvoiceInvitationFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: 'client_contact_id')
   final String clientContactId;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String key;
   @override
   @JsonKey(name: 'link')
@@ -2459,109 +2282,84 @@ class _$_InvoiceInvitation extends _InvoiceInvitation
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InvoiceInvitation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_InvoiceInvitation &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.clientContactId, clientContactId) ||
-                const DeepCollectionEquality()
-                    .equals(other.clientContactId, clientContactId)) &&
-            (identical(other.key, key) ||
-                const DeepCollectionEquality().equals(other.key, key)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+                other.clientContactId == clientContactId) &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.sentDate, sentDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.sentDate, sentDate)) &&
+                other.sentDate == sentDate) &&
             (identical(other.viewedDate, viewedDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.viewedDate, viewedDate)) &&
+                other.viewedDate == viewedDate) &&
             (identical(other.openedDate, openedDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.openedDate, openedDate)));
+                other.openedDate == openedDate));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(clientContactId) ^
-      const DeepCollectionEquality().hash(key) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(sentDate) ^
-      const DeepCollectionEquality().hash(viewedDate) ^
-      const DeepCollectionEquality().hash(openedDate);
 
   @JsonKey(ignore: true)
   @override
-  _$InvoiceInvitationCopyWith<_InvoiceInvitation> get copyWith =>
-      __$InvoiceInvitationCopyWithImpl<_InvoiceInvitation>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, id, clientContactId, key, url,
+      sentDate, viewedDate, openedDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InvoiceInvitationCopyWith<_$_InvoiceInvitation> get copyWith =>
+      __$$_InvoiceInvitationCopyWithImpl<_$_InvoiceInvitation>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceInvitationToJson(this);
+    return _$$_InvoiceInvitationToJson(
+      this,
+    );
   }
 }
 
 abstract class _InvoiceInvitation extends InvoiceInvitation {
   factory _InvoiceInvitation(
-      {String id,
-      @JsonKey(name: 'client_contact_id') String clientContactId,
-      String key,
-      @JsonKey(name: 'link') String url,
-      @JsonKey(name: 'sent_date') String sentDate,
-      @JsonKey(name: 'viewed_date') String viewedDate,
-      @JsonKey(name: 'opened_date') String openedDate}) = _$_InvoiceInvitation;
+          {final String id,
+          @JsonKey(name: 'client_contact_id') final String clientContactId,
+          final String key,
+          @JsonKey(name: 'link') final String url,
+          @JsonKey(name: 'sent_date') final String sentDate,
+          @JsonKey(name: 'viewed_date') final String viewedDate,
+          @JsonKey(name: 'opened_date') final String openedDate}) =
+      _$_InvoiceInvitation;
   _InvoiceInvitation._() : super._();
 
   factory _InvoiceInvitation.fromJson(Map<String, dynamic> json) =
       _$_InvoiceInvitation.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'client_contact_id')
-  String get clientContactId => throw _privateConstructorUsedError;
+  String get clientContactId;
   @override
-  String get key => throw _privateConstructorUsedError;
+  String get key;
   @override
   @JsonKey(name: 'link')
-  String get url => throw _privateConstructorUsedError;
+  String get url;
   @override
   @JsonKey(name: 'sent_date')
-  String get sentDate => throw _privateConstructorUsedError;
+  String get sentDate;
   @override
   @JsonKey(name: 'viewed_date')
-  String get viewedDate => throw _privateConstructorUsedError;
+  String get viewedDate;
   @override
   @JsonKey(name: 'opened_date')
-  String get openedDate => throw _privateConstructorUsedError;
+  String get openedDate;
   @override
   @JsonKey(ignore: true)
-  _$InvoiceInvitationCopyWith<_InvoiceInvitation> get copyWith =>
+  _$$_InvoiceInvitationCopyWith<_$_InvoiceInvitation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 InvoiceList _$InvoiceListFromJson(Map<String, dynamic> json) {
   return _InvoiceList.fromJson(json);
 }
-
-/// @nodoc
-class _$InvoiceListTearOff {
-  const _$InvoiceListTearOff();
-
-  _InvoiceList call({required List<Invoice> data}) {
-    return _InvoiceList(
-      data: data,
-    );
-  }
-
-  InvoiceList fromJson(Map<String, Object> json) {
-    return InvoiceList.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $InvoiceList = _$InvoiceListTearOff();
 
 /// @nodoc
 mixin _$InvoiceList {
@@ -2577,75 +2375,83 @@ mixin _$InvoiceList {
 abstract class $InvoiceListCopyWith<$Res> {
   factory $InvoiceListCopyWith(
           InvoiceList value, $Res Function(InvoiceList) then) =
-      _$InvoiceListCopyWithImpl<$Res>;
+      _$InvoiceListCopyWithImpl<$Res, InvoiceList>;
+  @useResult
   $Res call({List<Invoice> data});
 }
 
 /// @nodoc
-class _$InvoiceListCopyWithImpl<$Res> implements $InvoiceListCopyWith<$Res> {
+class _$InvoiceListCopyWithImpl<$Res, $Val extends InvoiceList>
+    implements $InvoiceListCopyWith<$Res> {
   _$InvoiceListCopyWithImpl(this._value, this._then);
 
-  final InvoiceList _value;
   // ignore: unused_field
-  final $Res Function(InvoiceList) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Invoice>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$InvoiceListCopyWith<$Res>
+abstract class _$$_InvoiceListCopyWith<$Res>
     implements $InvoiceListCopyWith<$Res> {
-  factory _$InvoiceListCopyWith(
-          _InvoiceList value, $Res Function(_InvoiceList) then) =
-      __$InvoiceListCopyWithImpl<$Res>;
+  factory _$$_InvoiceListCopyWith(
+          _$_InvoiceList value, $Res Function(_$_InvoiceList) then) =
+      __$$_InvoiceListCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Invoice> data});
 }
 
 /// @nodoc
-class __$InvoiceListCopyWithImpl<$Res> extends _$InvoiceListCopyWithImpl<$Res>
-    implements _$InvoiceListCopyWith<$Res> {
-  __$InvoiceListCopyWithImpl(
-      _InvoiceList _value, $Res Function(_InvoiceList) _then)
-      : super(_value, (v) => _then(v as _InvoiceList));
+class __$$_InvoiceListCopyWithImpl<$Res>
+    extends _$InvoiceListCopyWithImpl<$Res, _$_InvoiceList>
+    implements _$$_InvoiceListCopyWith<$Res> {
+  __$$_InvoiceListCopyWithImpl(
+      _$_InvoiceList _value, $Res Function(_$_InvoiceList) _then)
+      : super(_value, _then);
 
-  @override
-  _InvoiceList get _value => super._value as _InvoiceList;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
-    return _then(_InvoiceList(
-      data: data == freezed
-          ? _value.data
+    return _then(_$_InvoiceList(
+      data: null == data
+          ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Invoice>,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_InvoiceList with DiagnosticableTreeMixin implements _InvoiceList {
-  _$_InvoiceList({required this.data});
+  _$_InvoiceList({required final List<Invoice> data}) : _data = data;
 
   factory _$_InvoiceList.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceListFromJson(json);
+      _$$_InvoiceListFromJson(json);
 
+  final List<Invoice> _data;
   @override
-  final List<Invoice> data;
+  List<Invoice> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2663,61 +2469,47 @@ class _$_InvoiceList with DiagnosticableTreeMixin implements _InvoiceList {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InvoiceList &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _$_InvoiceList &&
+            const DeepCollectionEquality().equals(other._data, _data));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
   @JsonKey(ignore: true)
   @override
-  _$InvoiceListCopyWith<_InvoiceList> get copyWith =>
-      __$InvoiceListCopyWithImpl<_InvoiceList>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InvoiceListCopyWith<_$_InvoiceList> get copyWith =>
+      __$$_InvoiceListCopyWithImpl<_$_InvoiceList>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceListToJson(this);
+    return _$$_InvoiceListToJson(
+      this,
+    );
   }
 }
 
 abstract class _InvoiceList implements InvoiceList {
-  factory _InvoiceList({required List<Invoice> data}) = _$_InvoiceList;
+  factory _InvoiceList({required final List<Invoice> data}) = _$_InvoiceList;
 
   factory _InvoiceList.fromJson(Map<String, dynamic> json) =
       _$_InvoiceList.fromJson;
 
   @override
-  List<Invoice> get data => throw _privateConstructorUsedError;
+  List<Invoice> get data;
   @override
   @JsonKey(ignore: true)
-  _$InvoiceListCopyWith<_InvoiceList> get copyWith =>
+  _$$_InvoiceListCopyWith<_$_InvoiceList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 InvoiceItem _$InvoiceItemFromJson(Map<String, dynamic> json) {
   return _InvoiceItem.fromJson(json);
 }
-
-/// @nodoc
-class _$InvoiceItemTearOff {
-  const _$InvoiceItemTearOff();
-
-  _InvoiceItem call(Invoice data) {
-    return _InvoiceItem(
-      data,
-    );
-  }
-
-  InvoiceItem fromJson(Map<String, Object> json) {
-    return InvoiceItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $InvoiceItem = _$InvoiceItemTearOff();
 
 /// @nodoc
 mixin _$InvoiceItem {
@@ -2733,47 +2525,53 @@ mixin _$InvoiceItem {
 abstract class $InvoiceItemCopyWith<$Res> {
   factory $InvoiceItemCopyWith(
           InvoiceItem value, $Res Function(InvoiceItem) then) =
-      _$InvoiceItemCopyWithImpl<$Res>;
+      _$InvoiceItemCopyWithImpl<$Res, InvoiceItem>;
+  @useResult
   $Res call({Invoice data});
 
   $InvoiceCopyWith<$Res> get data;
 }
 
 /// @nodoc
-class _$InvoiceItemCopyWithImpl<$Res> implements $InvoiceItemCopyWith<$Res> {
+class _$InvoiceItemCopyWithImpl<$Res, $Val extends InvoiceItem>
+    implements $InvoiceItemCopyWith<$Res> {
   _$InvoiceItemCopyWithImpl(this._value, this._then);
 
-  final InvoiceItem _value;
   // ignore: unused_field
-  final $Res Function(InvoiceItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Invoice,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $InvoiceCopyWith<$Res> get data {
     return $InvoiceCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
+      return _then(_value.copyWith(data: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$InvoiceItemCopyWith<$Res>
+abstract class _$$_InvoiceItemCopyWith<$Res>
     implements $InvoiceItemCopyWith<$Res> {
-  factory _$InvoiceItemCopyWith(
-          _InvoiceItem value, $Res Function(_InvoiceItem) then) =
-      __$InvoiceItemCopyWithImpl<$Res>;
+  factory _$$_InvoiceItemCopyWith(
+          _$_InvoiceItem value, $Res Function(_$_InvoiceItem) then) =
+      __$$_InvoiceItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Invoice data});
 
   @override
@@ -2781,21 +2579,20 @@ abstract class _$InvoiceItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$InvoiceItemCopyWithImpl<$Res> extends _$InvoiceItemCopyWithImpl<$Res>
-    implements _$InvoiceItemCopyWith<$Res> {
-  __$InvoiceItemCopyWithImpl(
-      _InvoiceItem _value, $Res Function(_InvoiceItem) _then)
-      : super(_value, (v) => _then(v as _InvoiceItem));
+class __$$_InvoiceItemCopyWithImpl<$Res>
+    extends _$InvoiceItemCopyWithImpl<$Res, _$_InvoiceItem>
+    implements _$$_InvoiceItemCopyWith<$Res> {
+  __$$_InvoiceItemCopyWithImpl(
+      _$_InvoiceItem _value, $Res Function(_$_InvoiceItem) _then)
+      : super(_value, _then);
 
-  @override
-  _InvoiceItem get _value => super._value as _InvoiceItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
-    return _then(_InvoiceItem(
-      data == freezed
+    return _then(_$_InvoiceItem(
+      null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Invoice,
@@ -2803,14 +2600,13 @@ class __$InvoiceItemCopyWithImpl<$Res> extends _$InvoiceItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_InvoiceItem with DiagnosticableTreeMixin implements _InvoiceItem {
   _$_InvoiceItem(this.data);
 
   factory _$_InvoiceItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_InvoiceItemFromJson(json);
+      _$$_InvoiceItemFromJson(json);
 
   @override
   final Invoice data;
@@ -2831,36 +2627,39 @@ class _$_InvoiceItem with DiagnosticableTreeMixin implements _InvoiceItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InvoiceItem &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _$_InvoiceItem &&
+            (identical(other.data, data) || other.data == data));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
   @JsonKey(ignore: true)
   @override
-  _$InvoiceItemCopyWith<_InvoiceItem> get copyWith =>
-      __$InvoiceItemCopyWithImpl<_InvoiceItem>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InvoiceItemCopyWith<_$_InvoiceItem> get copyWith =>
+      __$$_InvoiceItemCopyWithImpl<_$_InvoiceItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_InvoiceItemToJson(this);
+    return _$$_InvoiceItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _InvoiceItem implements InvoiceItem {
-  factory _InvoiceItem(Invoice data) = _$_InvoiceItem;
+  factory _InvoiceItem(final Invoice data) = _$_InvoiceItem;
 
   factory _InvoiceItem.fromJson(Map<String, dynamic> json) =
       _$_InvoiceItem.fromJson;
 
   @override
-  Invoice get data => throw _privateConstructorUsedError;
+  Invoice get data;
   @override
   @JsonKey(ignore: true)
-  _$InvoiceItemCopyWith<_InvoiceItem> get copyWith =>
+  _$$_InvoiceItemCopyWith<_$_InvoiceItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

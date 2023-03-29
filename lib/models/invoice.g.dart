@@ -6,71 +6,71 @@ part of 'invoice.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Invoice _$_$_InvoiceFromJson(Map<String, dynamic> json) {
-  return _$_Invoice(
-    id: json['id'] as String? ?? '',
-    createdById: json['user_id'] as String,
-    assignedToId: json['assigned_user_id'] as String,
-    createdAt: json['created_at'] as int,
-    updatedAt: json['updated_at'] as int,
-    archivedAt: json['archived_at'] as int,
-    isDeleted: json['is_deleted'] as bool,
-    customValue1: json['custom_value1'] as String,
-    customValue2: json['custom_value2'] as String,
-    customValue3: json['custom_value3'] as String,
-    customValue4: json['custom_value4'] as String,
-    clientId: json['client_id'] as String,
-    lineItems: (json['line_items'] as List<dynamic>)
-        .map((e) => InvoiceLineItem.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    invitations: (json['invitations'] as List<dynamic>?)
-            ?.map((e) => InvoiceInvitation.fromJson(e as Map<String, dynamic>))
-            .toList() ??
-        [],
-    amount: (json['amount'] as num?)?.toDouble() ?? 0,
-    balance: (json['balance'] as num?)?.toDouble() ?? 0,
-    statusId: json['status_id'] as String,
-    designId: json['design_id'] as String,
-    number: json['number'] as String? ?? '',
-    discount: (json['discount'] as num?)?.toDouble() ?? 0,
-    poNumber: json['po_number'] as String,
-    date: json['date'] as String? ?? '',
-    lastSentDate: json['last_sent_date'] as String,
-    nextSendDate: json['next_send_date'] as String,
-    dueDate: json['due_date'] as String,
-    terms: json['terms'] as String? ?? '',
-    publicNotes: json['public_notes'] as String,
-    privateNotes: json['private_notes'] as String,
-    usesInclusiveTaxes: json['uses_inclusive_taxes'] as bool,
-    taxName1: json['tax_name1'] as String,
-    taxRate1: (json['tax_rate1'] as num).toDouble(),
-    taxName2: json['tax_name2'] as String,
-    taxRate2: (json['tax_rate2'] as num).toDouble(),
-    taxName3: json['tax_name3'] as String,
-    taxRate3: (json['tax_rate3'] as num).toDouble(),
-    totalTaxes: (json['total_taxes'] as num).toDouble(),
-    isAmountDiscount: json['is_amount_discount'] as bool,
-    footer: json['footer'] as String? ?? '',
-    partial: (json['partial'] as num?)?.toDouble() ?? 0,
-    partialDueDate: json['partial_due_date'] as String,
-    hasTasks: json['has_tasks'] as bool,
-    hasExpenses: json['has_expenses'] as bool,
-    customSurcharge1: (json['custom_surcharge1'] as num).toDouble(),
-    customSurcharge2: (json['custom_surcharge2'] as num).toDouble(),
-    customSurcharge3: (json['custom_surcharge3'] as num).toDouble(),
-    customSurcharge4: (json['custom_surcharge4'] as num).toDouble(),
-    customSurchargeTax1: json['custom_surcharge_tax1'] as bool,
-    customSurchargeTax2: json['custom_surcharge_tax2'] as bool,
-    customSurchargeTax3: json['custom_surcharge_tax3'] as bool,
-    customSurchargeTax4: json['custom_surcharge_tax4'] as bool,
-    documents: (json['documents'] as List<dynamic>?)
-            ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
-            .toList() ??
-        [],
-  );
-}
+_$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
+      id: json['id'] as String? ?? '',
+      createdById: json['user_id'] as String? ?? '',
+      assignedToId: json['assigned_user_id'] as String? ?? '',
+      createdAt: json['created_at'] as int? ?? 0,
+      updatedAt: json['updated_at'] as int? ?? 0,
+      archivedAt: json['archived_at'] as int? ?? 0,
+      isDeleted: json['is_deleted'] as bool? ?? false,
+      customValue1: json['custom_value1'] as String? ?? '',
+      customValue2: json['custom_value2'] as String? ?? '',
+      customValue3: json['custom_value3'] as String? ?? '',
+      customValue4: json['custom_value4'] as String? ?? '',
+      clientId: json['client_id'] as String? ?? '',
+      lineItems: (json['line_items'] as List<dynamic>?)
+              ?.map((e) => InvoiceLineItem.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <InvoiceLineItem>[],
+      invitations: (json['invitations'] as List<dynamic>?)
+              ?.map(
+                  (e) => InvoiceInvitation.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <InvoiceInvitation>[],
+      amount: (json['amount'] as num?)?.toDouble() ?? 0,
+      balance: (json['balance'] as num?)?.toDouble() ?? 0,
+      statusId: json['status_id'] as String? ?? '',
+      designId: json['design_id'] as String? ?? '',
+      number: json['number'] as String? ?? '',
+      discount: (json['discount'] as num?)?.toDouble() ?? 0,
+      poNumber: json['po_number'] as String? ?? '',
+      date: json['date'] as String? ?? '',
+      lastSentDate: json['last_sent_date'] as String? ?? '',
+      nextSendDate: json['next_send_date'] as String? ?? '',
+      dueDate: json['due_date'] as String? ?? '',
+      terms: json['terms'] as String? ?? '',
+      publicNotes: json['public_notes'] as String? ?? '',
+      privateNotes: json['private_notes'] as String? ?? '',
+      usesInclusiveTaxes: json['uses_inclusive_taxes'] as bool? ?? false,
+      taxName1: json['tax_name1'] as String? ?? '',
+      taxRate1: (json['tax_rate1'] as num?)?.toDouble() ?? 0,
+      taxName2: json['tax_name2'] as String? ?? '',
+      taxRate2: (json['tax_rate2'] as num?)?.toDouble() ?? 0,
+      taxName3: json['tax_name3'] as String? ?? '',
+      taxRate3: (json['tax_rate3'] as num?)?.toDouble() ?? 0,
+      totalTaxes: (json['total_taxes'] as num?)?.toDouble() ?? 0,
+      isAmountDiscount: json['is_amount_discount'] as bool? ?? false,
+      footer: json['footer'] as String? ?? '',
+      partial: (json['partial'] as num?)?.toDouble() ?? 0,
+      partialDueDate: json['partial_due_date'] as String? ?? '',
+      hasTasks: json['has_tasks'] as bool? ?? false,
+      hasExpenses: json['has_expenses'] as bool? ?? false,
+      customSurcharge1: (json['custom_surcharge1'] as num?)?.toDouble() ?? 0,
+      customSurcharge2: (json['custom_surcharge2'] as num?)?.toDouble() ?? 0,
+      customSurcharge3: (json['custom_surcharge3'] as num?)?.toDouble() ?? 0,
+      customSurcharge4: (json['custom_surcharge4'] as num?)?.toDouble() ?? 0,
+      customSurchargeTax1: json['custom_surcharge_tax1'] as bool? ?? false,
+      customSurchargeTax2: json['custom_surcharge_tax2'] as bool? ?? false,
+      customSurchargeTax3: json['custom_surcharge_tax3'] as bool? ?? false,
+      customSurchargeTax4: json['custom_surcharge_tax4'] as bool? ?? false,
+      documents: (json['documents'] as List<dynamic>?)
+              ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Document>[],
+    );
 
-Map<String, dynamic> _$_$_InvoiceToJson(_$_Invoice instance) =>
+Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) =>
     <String, dynamic>{
       'id': instance.id,
       'user_id': instance.createdById,
@@ -125,29 +125,28 @@ Map<String, dynamic> _$_$_InvoiceToJson(_$_Invoice instance) =>
       'documents': instance.documents.map((e) => e.toJson()).toList(),
     };
 
-_$_InvoiceLineItem _$_$_InvoiceLineItemFromJson(Map<String, dynamic> json) {
-  return _$_InvoiceLineItem(
-    id: json['id'] as String? ?? '',
-    productKey: json['product_key'] as String,
-    notes: json['notes'] as String? ?? '',
-    cost: (json['cost'] as num?)?.toDouble() ?? 0,
-    quantity: (json['quantity'] as num?)?.toDouble() ?? 0,
-    taxName1: json['tax_name1'] as String,
-    taxRate1: (json['tax_rate1'] as num).toDouble(),
-    taxName2: json['tax_name2'] as String,
-    taxRate2: (json['tax_rate2'] as num).toDouble(),
-    taxName3: json['tax_name3'] as String,
-    taxRate3: (json['tax_rate3'] as num).toDouble(),
-    typeId: json['type_id'] as String,
-    customValue1: json['custom_value1'] as String,
-    customValue2: json['custom_value2'] as String,
-    customValue3: json['custom_value3'] as String,
-    customValue4: json['custom_value4'] as String,
-    discount: (json['discount'] as num?)?.toDouble() ?? 0,
-  );
-}
+_$_InvoiceLineItem _$$_InvoiceLineItemFromJson(Map<String, dynamic> json) =>
+    _$_InvoiceLineItem(
+      id: json['id'] as String? ?? '',
+      productKey: json['product_key'] as String? ?? '',
+      notes: json['notes'] as String? ?? '',
+      cost: (json['cost'] as num?)?.toDouble() ?? 0,
+      quantity: (json['quantity'] as num?)?.toDouble() ?? 0,
+      taxName1: json['tax_name1'] as String? ?? '',
+      taxRate1: (json['tax_rate1'] as num?)?.toDouble() ?? 0,
+      taxName2: json['tax_name2'] as String? ?? '',
+      taxRate2: (json['tax_rate2'] as num?)?.toDouble() ?? 0,
+      taxName3: json['tax_name3'] as String? ?? '',
+      taxRate3: (json['tax_rate3'] as num?)?.toDouble() ?? 0,
+      typeId: json['type_id'] as String? ?? '',
+      customValue1: json['custom_value1'] as String? ?? '',
+      customValue2: json['custom_value2'] as String? ?? '',
+      customValue3: json['custom_value3'] as String? ?? '',
+      customValue4: json['custom_value4'] as String? ?? '',
+      discount: (json['discount'] as num?)?.toDouble() ?? 0,
+    );
 
-Map<String, dynamic> _$_$_InvoiceLineItemToJson(_$_InvoiceLineItem instance) =>
+Map<String, dynamic> _$$_InvoiceLineItemToJson(_$_InvoiceLineItem instance) =>
     <String, dynamic>{
       'id': instance.id,
       'product_key': instance.productKey,
@@ -168,19 +167,18 @@ Map<String, dynamic> _$_$_InvoiceLineItemToJson(_$_InvoiceLineItem instance) =>
       'discount': instance.discount,
     };
 
-_$_InvoiceInvitation _$_$_InvoiceInvitationFromJson(Map<String, dynamic> json) {
-  return _$_InvoiceInvitation(
-    id: json['id'] as String? ?? '',
-    clientContactId: json['client_contact_id'] as String,
-    key: json['key'] as String? ?? '',
-    url: json['link'] as String,
-    sentDate: json['sent_date'] as String,
-    viewedDate: json['viewed_date'] as String,
-    openedDate: json['opened_date'] as String,
-  );
-}
+_$_InvoiceInvitation _$$_InvoiceInvitationFromJson(Map<String, dynamic> json) =>
+    _$_InvoiceInvitation(
+      id: json['id'] as String? ?? '',
+      clientContactId: json['client_contact_id'] as String? ?? '',
+      key: json['key'] as String? ?? '',
+      url: json['link'] as String? ?? '',
+      sentDate: json['sent_date'] as String? ?? '',
+      viewedDate: json['viewed_date'] as String? ?? '',
+      openedDate: json['opened_date'] as String? ?? '',
+    );
 
-Map<String, dynamic> _$_$_InvoiceInvitationToJson(
+Map<String, dynamic> _$$_InvoiceInvitationToJson(
         _$_InvoiceInvitation instance) =>
     <String, dynamic>{
       'id': instance.id,
@@ -192,26 +190,24 @@ Map<String, dynamic> _$_$_InvoiceInvitationToJson(
       'opened_date': instance.openedDate,
     };
 
-_$_InvoiceList _$_$_InvoiceListFromJson(Map<String, dynamic> json) {
-  return _$_InvoiceList(
-    data: (json['data'] as List<dynamic>)
-        .map((e) => Invoice.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_InvoiceList _$$_InvoiceListFromJson(Map<String, dynamic> json) =>
+    _$_InvoiceList(
+      data: (json['data'] as List<dynamic>)
+          .map((e) => Invoice.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_InvoiceListToJson(_$_InvoiceList instance) =>
+Map<String, dynamic> _$$_InvoiceListToJson(_$_InvoiceList instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
 
-_$_InvoiceItem _$_$_InvoiceItemFromJson(Map<String, dynamic> json) {
-  return _$_InvoiceItem(
-    Invoice.fromJson(json['data'] as Map<String, dynamic>),
-  );
-}
+_$_InvoiceItem _$$_InvoiceItemFromJson(Map<String, dynamic> json) =>
+    _$_InvoiceItem(
+      Invoice.fromJson(json['data'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_InvoiceItemToJson(_$_InvoiceItem instance) =>
+Map<String, dynamic> _$$_InvoiceItemToJson(_$_InvoiceItem instance) =>
     <String, dynamic>{
       'data': instance.data,
     };

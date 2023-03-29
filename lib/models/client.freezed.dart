@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'client.dart';
 
@@ -10,108 +12,11 @@ part of 'client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Client _$ClientFromJson(Map<String, dynamic> json) {
   return _Client.fromJson(json);
 }
-
-/// @nodoc
-class _$ClientTearOff {
-  const _$ClientTearOff();
-
-  _Client call(
-      {String id = '',
-      @JsonKey(name: 'user_id') String createdById = '',
-      @JsonKey(name: 'assigned_user_id') String assignedToId = '',
-      @JsonKey(name: 'created_at') int createdAt = 0,
-      @JsonKey(name: 'updated_at') int updatedAt = 0,
-      @JsonKey(name: 'archived_at') int archivedAt = 0,
-      @JsonKey(name: 'is_deleted') bool isDeleted = false,
-      @JsonKey(name: 'custom_value1') String customValue1 = '',
-      @JsonKey(name: 'custom_value2') String customValue2 = '',
-      @JsonKey(name: 'custom_value3') String customValue3 = '',
-      @JsonKey(name: 'custom_value4') String customValue4 = '',
-      String name = '',
-      String website = '',
-      @JsonKey(name: 'private_notes') String privateNotes = '',
-      double balance = 0,
-      @JsonKey(name: 'group_settings_id') String groupId = '',
-      @JsonKey(name: 'paid_to_date') double paidToDate = 0,
-      @JsonKey(name: 'credit_balance') double creditBalance = 0,
-      @JsonKey(name: 'last_login') int lastLogin = 0,
-      @JsonKey(name: 'size_id') String sizeId = '',
-      @JsonKey(name: 'public_notes') String publicNotes = '',
-      String phone = '',
-      String address1 = '',
-      String address2 = '',
-      String city = '',
-      String state = '',
-      @JsonKey(name: 'postal_code') String postalCode = '',
-      @JsonKey(name: 'country_id') String countryId = '',
-      @JsonKey(name: 'industry_id') String industryId = '',
-      @JsonKey(name: 'shipping_address1') String shippingAddress1 = '',
-      @JsonKey(name: 'shipping_address2') String shippingAddress2 = '',
-      @JsonKey(name: 'shipping_city') String shippingCity = '',
-      @JsonKey(name: 'shipping_state') String shippingState = '',
-      @JsonKey(name: 'shipping_postal_code') String shippingPostalCode = '',
-      @JsonKey(name: 'shipping_country_id') String shippingCountryId = '',
-      ClientSettings? settings,
-      @JsonKey(name: 'id_number') String idNumber = '',
-      @JsonKey(name: 'vat_number') String vatNumber = '',
-      List<ClientContact> contacts = const <ClientContact>[],
-      List<Document> documents = const <Document>[]}) {
-    return _Client(
-      id: id,
-      createdById: createdById,
-      assignedToId: assignedToId,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
-      archivedAt: archivedAt,
-      isDeleted: isDeleted,
-      customValue1: customValue1,
-      customValue2: customValue2,
-      customValue3: customValue3,
-      customValue4: customValue4,
-      name: name,
-      website: website,
-      privateNotes: privateNotes,
-      balance: balance,
-      groupId: groupId,
-      paidToDate: paidToDate,
-      creditBalance: creditBalance,
-      lastLogin: lastLogin,
-      sizeId: sizeId,
-      publicNotes: publicNotes,
-      phone: phone,
-      address1: address1,
-      address2: address2,
-      city: city,
-      state: state,
-      postalCode: postalCode,
-      countryId: countryId,
-      industryId: industryId,
-      shippingAddress1: shippingAddress1,
-      shippingAddress2: shippingAddress2,
-      shippingCity: shippingCity,
-      shippingState: shippingState,
-      shippingPostalCode: shippingPostalCode,
-      shippingCountryId: shippingCountryId,
-      settings: settings,
-      idNumber: idNumber,
-      vatNumber: vatNumber,
-      contacts: contacts,
-      documents: documents,
-    );
-  }
-
-  Client fromJson(Map<String, Object> json) {
-    return Client.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Client = _$ClientTearOff();
 
 /// @nodoc
 mixin _$Client {
@@ -192,7 +97,8 @@ mixin _$Client {
 /// @nodoc
 abstract class $ClientCopyWith<$Res> {
   factory $ClientCopyWith(Client value, $Res Function(Client) then) =
-      _$ClientCopyWithImpl<$Res>;
+      _$ClientCopyWithImpl<$Res, Client>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -239,237 +145,242 @@ abstract class $ClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ClientCopyWithImpl<$Res> implements $ClientCopyWith<$Res> {
+class _$ClientCopyWithImpl<$Res, $Val extends Client>
+    implements $ClientCopyWith<$Res> {
   _$ClientCopyWithImpl(this._value, this._then);
 
-  final Client _value;
   // ignore: unused_field
-  final $Res Function(Client) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdById = freezed,
-    Object? assignedToId = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? archivedAt = freezed,
-    Object? isDeleted = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? name = freezed,
-    Object? website = freezed,
-    Object? privateNotes = freezed,
-    Object? balance = freezed,
-    Object? groupId = freezed,
-    Object? paidToDate = freezed,
-    Object? creditBalance = freezed,
-    Object? lastLogin = freezed,
-    Object? sizeId = freezed,
-    Object? publicNotes = freezed,
-    Object? phone = freezed,
-    Object? address1 = freezed,
-    Object? address2 = freezed,
-    Object? city = freezed,
-    Object? state = freezed,
-    Object? postalCode = freezed,
-    Object? countryId = freezed,
-    Object? industryId = freezed,
-    Object? shippingAddress1 = freezed,
-    Object? shippingAddress2 = freezed,
-    Object? shippingCity = freezed,
-    Object? shippingState = freezed,
-    Object? shippingPostalCode = freezed,
-    Object? shippingCountryId = freezed,
+    Object? id = null,
+    Object? createdById = null,
+    Object? assignedToId = null,
+    Object? createdAt = null,
+    Object? updatedAt = null,
+    Object? archivedAt = null,
+    Object? isDeleted = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? name = null,
+    Object? website = null,
+    Object? privateNotes = null,
+    Object? balance = null,
+    Object? groupId = null,
+    Object? paidToDate = null,
+    Object? creditBalance = null,
+    Object? lastLogin = null,
+    Object? sizeId = null,
+    Object? publicNotes = null,
+    Object? phone = null,
+    Object? address1 = null,
+    Object? address2 = null,
+    Object? city = null,
+    Object? state = null,
+    Object? postalCode = null,
+    Object? countryId = null,
+    Object? industryId = null,
+    Object? shippingAddress1 = null,
+    Object? shippingAddress2 = null,
+    Object? shippingCity = null,
+    Object? shippingState = null,
+    Object? shippingPostalCode = null,
+    Object? shippingCountryId = null,
     Object? settings = freezed,
-    Object? idNumber = freezed,
-    Object? vatNumber = freezed,
-    Object? contacts = freezed,
-    Object? documents = freezed,
+    Object? idNumber = null,
+    Object? vatNumber = null,
+    Object? contacts = null,
+    Object? documents = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdById: createdById == freezed
+      createdById: null == createdById
           ? _value.createdById
           : createdById // ignore: cast_nullable_to_non_nullable
               as String,
-      assignedToId: assignedToId == freezed
+      assignedToId: null == assignedToId
           ? _value.assignedToId
           : assignedToId // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as int,
-      updatedAt: updatedAt == freezed
+      updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      archivedAt: archivedAt == freezed
+      archivedAt: null == archivedAt
           ? _value.archivedAt
           : archivedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      website: website == freezed
+      website: null == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String,
-      privateNotes: privateNotes == freezed
+      privateNotes: null == privateNotes
           ? _value.privateNotes
           : privateNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      balance: balance == freezed
+      balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as double,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      paidToDate: paidToDate == freezed
+      paidToDate: null == paidToDate
           ? _value.paidToDate
           : paidToDate // ignore: cast_nullable_to_non_nullable
               as double,
-      creditBalance: creditBalance == freezed
+      creditBalance: null == creditBalance
           ? _value.creditBalance
           : creditBalance // ignore: cast_nullable_to_non_nullable
               as double,
-      lastLogin: lastLogin == freezed
+      lastLogin: null == lastLogin
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
               as int,
-      sizeId: sizeId == freezed
+      sizeId: null == sizeId
           ? _value.sizeId
           : sizeId // ignore: cast_nullable_to_non_nullable
               as String,
-      publicNotes: publicNotes == freezed
+      publicNotes: null == publicNotes
           ? _value.publicNotes
           : publicNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      phone: phone == freezed
+      phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
-      address1: address1 == freezed
+      address1: null == address1
           ? _value.address1
           : address1 // ignore: cast_nullable_to_non_nullable
               as String,
-      address2: address2 == freezed
+      address2: null == address2
           ? _value.address2
           : address2 // ignore: cast_nullable_to_non_nullable
               as String,
-      city: city == freezed
+      city: null == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      state: state == freezed
+      state: null == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as String,
-      postalCode: postalCode == freezed
+      postalCode: null == postalCode
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
               as String,
-      countryId: countryId == freezed
+      countryId: null == countryId
           ? _value.countryId
           : countryId // ignore: cast_nullable_to_non_nullable
               as String,
-      industryId: industryId == freezed
+      industryId: null == industryId
           ? _value.industryId
           : industryId // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingAddress1: shippingAddress1 == freezed
+      shippingAddress1: null == shippingAddress1
           ? _value.shippingAddress1
           : shippingAddress1 // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingAddress2: shippingAddress2 == freezed
+      shippingAddress2: null == shippingAddress2
           ? _value.shippingAddress2
           : shippingAddress2 // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingCity: shippingCity == freezed
+      shippingCity: null == shippingCity
           ? _value.shippingCity
           : shippingCity // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingState: shippingState == freezed
+      shippingState: null == shippingState
           ? _value.shippingState
           : shippingState // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingPostalCode: shippingPostalCode == freezed
+      shippingPostalCode: null == shippingPostalCode
           ? _value.shippingPostalCode
           : shippingPostalCode // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingCountryId: shippingCountryId == freezed
+      shippingCountryId: null == shippingCountryId
           ? _value.shippingCountryId
           : shippingCountryId // ignore: cast_nullable_to_non_nullable
               as String,
-      settings: settings == freezed
+      settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
               as ClientSettings?,
-      idNumber: idNumber == freezed
+      idNumber: null == idNumber
           ? _value.idNumber
           : idNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      vatNumber: vatNumber == freezed
+      vatNumber: null == vatNumber
           ? _value.vatNumber
           : vatNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      contacts: contacts == freezed
+      contacts: null == contacts
           ? _value.contacts
           : contacts // ignore: cast_nullable_to_non_nullable
               as List<ClientContact>,
-      documents: documents == freezed
+      documents: null == documents
           ? _value.documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ClientSettingsCopyWith<$Res>? get settings {
     if (_value.settings == null) {
       return null;
     }
 
     return $ClientSettingsCopyWith<$Res>(_value.settings!, (value) {
-      return _then(_value.copyWith(settings: value));
+      return _then(_value.copyWith(settings: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
-  factory _$ClientCopyWith(_Client value, $Res Function(_Client) then) =
-      __$ClientCopyWithImpl<$Res>;
+abstract class _$$_ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
+  factory _$$_ClientCopyWith(_$_Client value, $Res Function(_$_Client) then) =
+      __$$_ClientCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'user_id') String createdById,
@@ -517,225 +428,224 @@ abstract class _$ClientCopyWith<$Res> implements $ClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ClientCopyWithImpl<$Res> extends _$ClientCopyWithImpl<$Res>
-    implements _$ClientCopyWith<$Res> {
-  __$ClientCopyWithImpl(_Client _value, $Res Function(_Client) _then)
-      : super(_value, (v) => _then(v as _Client));
+class __$$_ClientCopyWithImpl<$Res>
+    extends _$ClientCopyWithImpl<$Res, _$_Client>
+    implements _$$_ClientCopyWith<$Res> {
+  __$$_ClientCopyWithImpl(_$_Client _value, $Res Function(_$_Client) _then)
+      : super(_value, _then);
 
-  @override
-  _Client get _value => super._value as _Client;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? createdById = freezed,
-    Object? assignedToId = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? archivedAt = freezed,
-    Object? isDeleted = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? name = freezed,
-    Object? website = freezed,
-    Object? privateNotes = freezed,
-    Object? balance = freezed,
-    Object? groupId = freezed,
-    Object? paidToDate = freezed,
-    Object? creditBalance = freezed,
-    Object? lastLogin = freezed,
-    Object? sizeId = freezed,
-    Object? publicNotes = freezed,
-    Object? phone = freezed,
-    Object? address1 = freezed,
-    Object? address2 = freezed,
-    Object? city = freezed,
-    Object? state = freezed,
-    Object? postalCode = freezed,
-    Object? countryId = freezed,
-    Object? industryId = freezed,
-    Object? shippingAddress1 = freezed,
-    Object? shippingAddress2 = freezed,
-    Object? shippingCity = freezed,
-    Object? shippingState = freezed,
-    Object? shippingPostalCode = freezed,
-    Object? shippingCountryId = freezed,
+    Object? id = null,
+    Object? createdById = null,
+    Object? assignedToId = null,
+    Object? createdAt = null,
+    Object? updatedAt = null,
+    Object? archivedAt = null,
+    Object? isDeleted = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? name = null,
+    Object? website = null,
+    Object? privateNotes = null,
+    Object? balance = null,
+    Object? groupId = null,
+    Object? paidToDate = null,
+    Object? creditBalance = null,
+    Object? lastLogin = null,
+    Object? sizeId = null,
+    Object? publicNotes = null,
+    Object? phone = null,
+    Object? address1 = null,
+    Object? address2 = null,
+    Object? city = null,
+    Object? state = null,
+    Object? postalCode = null,
+    Object? countryId = null,
+    Object? industryId = null,
+    Object? shippingAddress1 = null,
+    Object? shippingAddress2 = null,
+    Object? shippingCity = null,
+    Object? shippingState = null,
+    Object? shippingPostalCode = null,
+    Object? shippingCountryId = null,
     Object? settings = freezed,
-    Object? idNumber = freezed,
-    Object? vatNumber = freezed,
-    Object? contacts = freezed,
-    Object? documents = freezed,
+    Object? idNumber = null,
+    Object? vatNumber = null,
+    Object? contacts = null,
+    Object? documents = null,
   }) {
-    return _then(_Client(
-      id: id == freezed
+    return _then(_$_Client(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      createdById: createdById == freezed
+      createdById: null == createdById
           ? _value.createdById
           : createdById // ignore: cast_nullable_to_non_nullable
               as String,
-      assignedToId: assignedToId == freezed
+      assignedToId: null == assignedToId
           ? _value.assignedToId
           : assignedToId // ignore: cast_nullable_to_non_nullable
               as String,
-      createdAt: createdAt == freezed
+      createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as int,
-      updatedAt: updatedAt == freezed
+      updatedAt: null == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      archivedAt: archivedAt == freezed
+      archivedAt: null == archivedAt
           ? _value.archivedAt
           : archivedAt // ignore: cast_nullable_to_non_nullable
               as int,
-      isDeleted: isDeleted == freezed
+      isDeleted: null == isDeleted
           ? _value.isDeleted
           : isDeleted // ignore: cast_nullable_to_non_nullable
               as bool,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      website: website == freezed
+      website: null == website
           ? _value.website
           : website // ignore: cast_nullable_to_non_nullable
               as String,
-      privateNotes: privateNotes == freezed
+      privateNotes: null == privateNotes
           ? _value.privateNotes
           : privateNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      balance: balance == freezed
+      balance: null == balance
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as double,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      paidToDate: paidToDate == freezed
+      paidToDate: null == paidToDate
           ? _value.paidToDate
           : paidToDate // ignore: cast_nullable_to_non_nullable
               as double,
-      creditBalance: creditBalance == freezed
+      creditBalance: null == creditBalance
           ? _value.creditBalance
           : creditBalance // ignore: cast_nullable_to_non_nullable
               as double,
-      lastLogin: lastLogin == freezed
+      lastLogin: null == lastLogin
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
               as int,
-      sizeId: sizeId == freezed
+      sizeId: null == sizeId
           ? _value.sizeId
           : sizeId // ignore: cast_nullable_to_non_nullable
               as String,
-      publicNotes: publicNotes == freezed
+      publicNotes: null == publicNotes
           ? _value.publicNotes
           : publicNotes // ignore: cast_nullable_to_non_nullable
               as String,
-      phone: phone == freezed
+      phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
-      address1: address1 == freezed
+      address1: null == address1
           ? _value.address1
           : address1 // ignore: cast_nullable_to_non_nullable
               as String,
-      address2: address2 == freezed
+      address2: null == address2
           ? _value.address2
           : address2 // ignore: cast_nullable_to_non_nullable
               as String,
-      city: city == freezed
+      city: null == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      state: state == freezed
+      state: null == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as String,
-      postalCode: postalCode == freezed
+      postalCode: null == postalCode
           ? _value.postalCode
           : postalCode // ignore: cast_nullable_to_non_nullable
               as String,
-      countryId: countryId == freezed
+      countryId: null == countryId
           ? _value.countryId
           : countryId // ignore: cast_nullable_to_non_nullable
               as String,
-      industryId: industryId == freezed
+      industryId: null == industryId
           ? _value.industryId
           : industryId // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingAddress1: shippingAddress1 == freezed
+      shippingAddress1: null == shippingAddress1
           ? _value.shippingAddress1
           : shippingAddress1 // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingAddress2: shippingAddress2 == freezed
+      shippingAddress2: null == shippingAddress2
           ? _value.shippingAddress2
           : shippingAddress2 // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingCity: shippingCity == freezed
+      shippingCity: null == shippingCity
           ? _value.shippingCity
           : shippingCity // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingState: shippingState == freezed
+      shippingState: null == shippingState
           ? _value.shippingState
           : shippingState // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingPostalCode: shippingPostalCode == freezed
+      shippingPostalCode: null == shippingPostalCode
           ? _value.shippingPostalCode
           : shippingPostalCode // ignore: cast_nullable_to_non_nullable
               as String,
-      shippingCountryId: shippingCountryId == freezed
+      shippingCountryId: null == shippingCountryId
           ? _value.shippingCountryId
           : shippingCountryId // ignore: cast_nullable_to_non_nullable
               as String,
-      settings: settings == freezed
+      settings: freezed == settings
           ? _value.settings
           : settings // ignore: cast_nullable_to_non_nullable
               as ClientSettings?,
-      idNumber: idNumber == freezed
+      idNumber: null == idNumber
           ? _value.idNumber
           : idNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      vatNumber: vatNumber == freezed
+      vatNumber: null == vatNumber
           ? _value.vatNumber
           : vatNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      contacts: contacts == freezed
-          ? _value.contacts
+      contacts: null == contacts
+          ? _value._contacts
           : contacts // ignore: cast_nullable_to_non_nullable
               as List<ClientContact>,
-      documents: documents == freezed
-          ? _value.documents
+      documents: null == documents
+          ? _value._documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
     ));
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_Client extends _Client with DiagnosticableTreeMixin {
   _$_Client(
       {this.id = '',
@@ -776,15 +686,17 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
       this.settings,
       @JsonKey(name: 'id_number') this.idNumber = '',
       @JsonKey(name: 'vat_number') this.vatNumber = '',
-      this.contacts = const <ClientContact>[],
-      this.documents = const <Document>[]})
-      : super._();
+      final List<ClientContact> contacts = const <ClientContact>[],
+      final List<Document> documents = const <Document>[]})
+      : _contacts = contacts,
+        _documents = documents,
+        super._();
 
   factory _$_Client.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientFromJson(json);
+      _$$_ClientFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: 'user_id')
@@ -816,17 +728,17 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'custom_value4')
   final String customValue4;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String name;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String website;
   @override
   @JsonKey(name: 'private_notes')
   final String privateNotes;
-  @JsonKey(defaultValue: 0)
   @override
+  @JsonKey()
   final double balance;
   @override
   @JsonKey(name: 'group_settings_id')
@@ -846,20 +758,20 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'public_notes')
   final String publicNotes;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String phone;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String address1;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String address2;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String city;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String state;
   @override
   @JsonKey(name: 'postal_code')
@@ -896,12 +808,23 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @override
   @JsonKey(name: 'vat_number')
   final String vatNumber;
-  @JsonKey(defaultValue: const <ClientContact>[])
+  final List<ClientContact> _contacts;
   @override
-  final List<ClientContact> contacts;
-  @JsonKey(defaultValue: const <Document>[])
+  @JsonKey()
+  List<ClientContact> get contacts {
+    if (_contacts is EqualUnmodifiableListView) return _contacts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_contacts);
+  }
+
+  final List<Document> _documents;
   @override
-  final List<Document> documents;
+  @JsonKey()
+  List<Document> get documents {
+    if (_documents is EqualUnmodifiableListView) return _documents;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_documents);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -958,356 +881,303 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Client &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Client &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.createdById, createdById) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdById, createdById)) &&
+                other.createdById == createdById) &&
             (identical(other.assignedToId, assignedToId) ||
-                const DeepCollectionEquality()
-                    .equals(other.assignedToId, assignedToId)) &&
+                other.assignedToId == assignedToId) &&
             (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)) &&
+                other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.updatedAt, updatedAt)) &&
+                other.updatedAt == updatedAt) &&
             (identical(other.archivedAt, archivedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.archivedAt, archivedAt)) &&
+                other.archivedAt == archivedAt) &&
             (identical(other.isDeleted, isDeleted) ||
-                const DeepCollectionEquality()
-                    .equals(other.isDeleted, isDeleted)) &&
+                other.isDeleted == isDeleted) &&
             (identical(other.customValue1, customValue1) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue1, customValue1)) &&
+                other.customValue1 == customValue1) &&
             (identical(other.customValue2, customValue2) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue2, customValue2)) &&
+                other.customValue2 == customValue2) &&
             (identical(other.customValue3, customValue3) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue3, customValue3)) &&
+                other.customValue3 == customValue3) &&
             (identical(other.customValue4, customValue4) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue4, customValue4)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.website, website) ||
-                const DeepCollectionEquality()
-                    .equals(other.website, website)) &&
+                other.customValue4 == customValue4) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.website, website) || other.website == website) &&
             (identical(other.privateNotes, privateNotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.privateNotes, privateNotes)) &&
-            (identical(other.balance, balance) ||
-                const DeepCollectionEquality()
-                    .equals(other.balance, balance)) &&
-            (identical(other.groupId, groupId) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupId, groupId)) &&
+                other.privateNotes == privateNotes) &&
+            (identical(other.balance, balance) || other.balance == balance) &&
+            (identical(other.groupId, groupId) || other.groupId == groupId) &&
             (identical(other.paidToDate, paidToDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.paidToDate, paidToDate)) &&
+                other.paidToDate == paidToDate) &&
             (identical(other.creditBalance, creditBalance) ||
-                const DeepCollectionEquality()
-                    .equals(other.creditBalance, creditBalance)) &&
+                other.creditBalance == creditBalance) &&
             (identical(other.lastLogin, lastLogin) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastLogin, lastLogin)) &&
-            (identical(other.sizeId, sizeId) ||
-                const DeepCollectionEquality().equals(other.sizeId, sizeId)) &&
+                other.lastLogin == lastLogin) &&
+            (identical(other.sizeId, sizeId) || other.sizeId == sizeId) &&
             (identical(other.publicNotes, publicNotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.publicNotes, publicNotes)) &&
-            (identical(other.phone, phone) ||
-                const DeepCollectionEquality().equals(other.phone, phone)) &&
+                other.publicNotes == publicNotes) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
             (identical(other.address1, address1) ||
-                const DeepCollectionEquality()
-                    .equals(other.address1, address1)) &&
+                other.address1 == address1) &&
             (identical(other.address2, address2) ||
-                const DeepCollectionEquality().equals(other.address2, address2)) &&
-            (identical(other.city, city) || const DeepCollectionEquality().equals(other.city, city)) &&
-            (identical(other.state, state) || const DeepCollectionEquality().equals(other.state, state)) &&
-            (identical(other.postalCode, postalCode) || const DeepCollectionEquality().equals(other.postalCode, postalCode)) &&
-            (identical(other.countryId, countryId) || const DeepCollectionEquality().equals(other.countryId, countryId)) &&
-            (identical(other.industryId, industryId) || const DeepCollectionEquality().equals(other.industryId, industryId)) &&
-            (identical(other.shippingAddress1, shippingAddress1) || const DeepCollectionEquality().equals(other.shippingAddress1, shippingAddress1)) &&
-            (identical(other.shippingAddress2, shippingAddress2) || const DeepCollectionEquality().equals(other.shippingAddress2, shippingAddress2)) &&
-            (identical(other.shippingCity, shippingCity) || const DeepCollectionEquality().equals(other.shippingCity, shippingCity)) &&
-            (identical(other.shippingState, shippingState) || const DeepCollectionEquality().equals(other.shippingState, shippingState)) &&
-            (identical(other.shippingPostalCode, shippingPostalCode) || const DeepCollectionEquality().equals(other.shippingPostalCode, shippingPostalCode)) &&
-            (identical(other.shippingCountryId, shippingCountryId) || const DeepCollectionEquality().equals(other.shippingCountryId, shippingCountryId)) &&
-            (identical(other.settings, settings) || const DeepCollectionEquality().equals(other.settings, settings)) &&
-            (identical(other.idNumber, idNumber) || const DeepCollectionEquality().equals(other.idNumber, idNumber)) &&
-            (identical(other.vatNumber, vatNumber) || const DeepCollectionEquality().equals(other.vatNumber, vatNumber)) &&
-            (identical(other.contacts, contacts) || const DeepCollectionEquality().equals(other.contacts, contacts)) &&
-            (identical(other.documents, documents) || const DeepCollectionEquality().equals(other.documents, documents)));
+                other.address2 == address2) &&
+            (identical(other.city, city) || other.city == city) &&
+            (identical(other.state, state) || other.state == state) &&
+            (identical(other.postalCode, postalCode) ||
+                other.postalCode == postalCode) &&
+            (identical(other.countryId, countryId) ||
+                other.countryId == countryId) &&
+            (identical(other.industryId, industryId) ||
+                other.industryId == industryId) &&
+            (identical(other.shippingAddress1, shippingAddress1) ||
+                other.shippingAddress1 == shippingAddress1) &&
+            (identical(other.shippingAddress2, shippingAddress2) ||
+                other.shippingAddress2 == shippingAddress2) &&
+            (identical(other.shippingCity, shippingCity) ||
+                other.shippingCity == shippingCity) &&
+            (identical(other.shippingState, shippingState) ||
+                other.shippingState == shippingState) &&
+            (identical(other.shippingPostalCode, shippingPostalCode) ||
+                other.shippingPostalCode == shippingPostalCode) &&
+            (identical(other.shippingCountryId, shippingCountryId) ||
+                other.shippingCountryId == shippingCountryId) &&
+            (identical(other.settings, settings) ||
+                other.settings == settings) &&
+            (identical(other.idNumber, idNumber) ||
+                other.idNumber == idNumber) &&
+            (identical(other.vatNumber, vatNumber) ||
+                other.vatNumber == vatNumber) &&
+            const DeepCollectionEquality().equals(other._contacts, _contacts) &&
+            const DeepCollectionEquality()
+                .equals(other._documents, _documents));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(createdById) ^
-      const DeepCollectionEquality().hash(assignedToId) ^
-      const DeepCollectionEquality().hash(createdAt) ^
-      const DeepCollectionEquality().hash(updatedAt) ^
-      const DeepCollectionEquality().hash(archivedAt) ^
-      const DeepCollectionEquality().hash(isDeleted) ^
-      const DeepCollectionEquality().hash(customValue1) ^
-      const DeepCollectionEquality().hash(customValue2) ^
-      const DeepCollectionEquality().hash(customValue3) ^
-      const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(website) ^
-      const DeepCollectionEquality().hash(privateNotes) ^
-      const DeepCollectionEquality().hash(balance) ^
-      const DeepCollectionEquality().hash(groupId) ^
-      const DeepCollectionEquality().hash(paidToDate) ^
-      const DeepCollectionEquality().hash(creditBalance) ^
-      const DeepCollectionEquality().hash(lastLogin) ^
-      const DeepCollectionEquality().hash(sizeId) ^
-      const DeepCollectionEquality().hash(publicNotes) ^
-      const DeepCollectionEquality().hash(phone) ^
-      const DeepCollectionEquality().hash(address1) ^
-      const DeepCollectionEquality().hash(address2) ^
-      const DeepCollectionEquality().hash(city) ^
-      const DeepCollectionEquality().hash(state) ^
-      const DeepCollectionEquality().hash(postalCode) ^
-      const DeepCollectionEquality().hash(countryId) ^
-      const DeepCollectionEquality().hash(industryId) ^
-      const DeepCollectionEquality().hash(shippingAddress1) ^
-      const DeepCollectionEquality().hash(shippingAddress2) ^
-      const DeepCollectionEquality().hash(shippingCity) ^
-      const DeepCollectionEquality().hash(shippingState) ^
-      const DeepCollectionEquality().hash(shippingPostalCode) ^
-      const DeepCollectionEquality().hash(shippingCountryId) ^
-      const DeepCollectionEquality().hash(settings) ^
-      const DeepCollectionEquality().hash(idNumber) ^
-      const DeepCollectionEquality().hash(vatNumber) ^
-      const DeepCollectionEquality().hash(contacts) ^
-      const DeepCollectionEquality().hash(documents);
 
   @JsonKey(ignore: true)
   @override
-  _$ClientCopyWith<_Client> get copyWith =>
-      __$ClientCopyWithImpl<_Client>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        createdById,
+        assignedToId,
+        createdAt,
+        updatedAt,
+        archivedAt,
+        isDeleted,
+        customValue1,
+        customValue2,
+        customValue3,
+        customValue4,
+        name,
+        website,
+        privateNotes,
+        balance,
+        groupId,
+        paidToDate,
+        creditBalance,
+        lastLogin,
+        sizeId,
+        publicNotes,
+        phone,
+        address1,
+        address2,
+        city,
+        state,
+        postalCode,
+        countryId,
+        industryId,
+        shippingAddress1,
+        shippingAddress2,
+        shippingCity,
+        shippingState,
+        shippingPostalCode,
+        shippingCountryId,
+        settings,
+        idNumber,
+        vatNumber,
+        const DeepCollectionEquality().hash(_contacts),
+        const DeepCollectionEquality().hash(_documents)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClientCopyWith<_$_Client> get copyWith =>
+      __$$_ClientCopyWithImpl<_$_Client>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientToJson(this);
+    return _$$_ClientToJson(
+      this,
+    );
   }
 }
 
 abstract class _Client extends Client {
   factory _Client(
-      {String id,
-      @JsonKey(name: 'user_id') String createdById,
-      @JsonKey(name: 'assigned_user_id') String assignedToId,
-      @JsonKey(name: 'created_at') int createdAt,
-      @JsonKey(name: 'updated_at') int updatedAt,
-      @JsonKey(name: 'archived_at') int archivedAt,
-      @JsonKey(name: 'is_deleted') bool isDeleted,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      String name,
-      String website,
-      @JsonKey(name: 'private_notes') String privateNotes,
-      double balance,
-      @JsonKey(name: 'group_settings_id') String groupId,
-      @JsonKey(name: 'paid_to_date') double paidToDate,
-      @JsonKey(name: 'credit_balance') double creditBalance,
-      @JsonKey(name: 'last_login') int lastLogin,
-      @JsonKey(name: 'size_id') String sizeId,
-      @JsonKey(name: 'public_notes') String publicNotes,
-      String phone,
-      String address1,
-      String address2,
-      String city,
-      String state,
-      @JsonKey(name: 'postal_code') String postalCode,
-      @JsonKey(name: 'country_id') String countryId,
-      @JsonKey(name: 'industry_id') String industryId,
-      @JsonKey(name: 'shipping_address1') String shippingAddress1,
-      @JsonKey(name: 'shipping_address2') String shippingAddress2,
-      @JsonKey(name: 'shipping_city') String shippingCity,
-      @JsonKey(name: 'shipping_state') String shippingState,
-      @JsonKey(name: 'shipping_postal_code') String shippingPostalCode,
-      @JsonKey(name: 'shipping_country_id') String shippingCountryId,
-      ClientSettings? settings,
-      @JsonKey(name: 'id_number') String idNumber,
-      @JsonKey(name: 'vat_number') String vatNumber,
-      List<ClientContact> contacts,
-      List<Document> documents}) = _$_Client;
+      {final String id,
+      @JsonKey(name: 'user_id') final String createdById,
+      @JsonKey(name: 'assigned_user_id') final String assignedToId,
+      @JsonKey(name: 'created_at') final int createdAt,
+      @JsonKey(name: 'updated_at') final int updatedAt,
+      @JsonKey(name: 'archived_at') final int archivedAt,
+      @JsonKey(name: 'is_deleted') final bool isDeleted,
+      @JsonKey(name: 'custom_value1') final String customValue1,
+      @JsonKey(name: 'custom_value2') final String customValue2,
+      @JsonKey(name: 'custom_value3') final String customValue3,
+      @JsonKey(name: 'custom_value4') final String customValue4,
+      final String name,
+      final String website,
+      @JsonKey(name: 'private_notes') final String privateNotes,
+      final double balance,
+      @JsonKey(name: 'group_settings_id') final String groupId,
+      @JsonKey(name: 'paid_to_date') final double paidToDate,
+      @JsonKey(name: 'credit_balance') final double creditBalance,
+      @JsonKey(name: 'last_login') final int lastLogin,
+      @JsonKey(name: 'size_id') final String sizeId,
+      @JsonKey(name: 'public_notes') final String publicNotes,
+      final String phone,
+      final String address1,
+      final String address2,
+      final String city,
+      final String state,
+      @JsonKey(name: 'postal_code') final String postalCode,
+      @JsonKey(name: 'country_id') final String countryId,
+      @JsonKey(name: 'industry_id') final String industryId,
+      @JsonKey(name: 'shipping_address1') final String shippingAddress1,
+      @JsonKey(name: 'shipping_address2') final String shippingAddress2,
+      @JsonKey(name: 'shipping_city') final String shippingCity,
+      @JsonKey(name: 'shipping_state') final String shippingState,
+      @JsonKey(name: 'shipping_postal_code') final String shippingPostalCode,
+      @JsonKey(name: 'shipping_country_id') final String shippingCountryId,
+      final ClientSettings? settings,
+      @JsonKey(name: 'id_number') final String idNumber,
+      @JsonKey(name: 'vat_number') final String vatNumber,
+      final List<ClientContact> contacts,
+      final List<Document> documents}) = _$_Client;
   _Client._() : super._();
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$_Client.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'user_id')
-  String get createdById => throw _privateConstructorUsedError;
+  String get createdById;
   @override
   @JsonKey(name: 'assigned_user_id')
-  String get assignedToId => throw _privateConstructorUsedError;
+  String get assignedToId;
   @override
   @JsonKey(name: 'created_at')
-  int get createdAt => throw _privateConstructorUsedError;
+  int get createdAt;
   @override
   @JsonKey(name: 'updated_at')
-  int get updatedAt => throw _privateConstructorUsedError;
+  int get updatedAt;
   @override
   @JsonKey(name: 'archived_at')
-  int get archivedAt => throw _privateConstructorUsedError;
+  int get archivedAt;
   @override
   @JsonKey(name: 'is_deleted')
-  bool get isDeleted => throw _privateConstructorUsedError;
+  bool get isDeleted;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1 => throw _privateConstructorUsedError;
+  String get customValue1;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2 => throw _privateConstructorUsedError;
+  String get customValue2;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3 => throw _privateConstructorUsedError;
+  String get customValue3;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4 => throw _privateConstructorUsedError;
+  String get customValue4;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get website => throw _privateConstructorUsedError;
+  String get website;
   @override
   @JsonKey(name: 'private_notes')
-  String get privateNotes => throw _privateConstructorUsedError;
+  String get privateNotes;
   @override
-  double get balance => throw _privateConstructorUsedError;
+  double get balance;
   @override
   @JsonKey(name: 'group_settings_id')
-  String get groupId => throw _privateConstructorUsedError;
+  String get groupId;
   @override
   @JsonKey(name: 'paid_to_date')
-  double get paidToDate => throw _privateConstructorUsedError;
+  double get paidToDate;
   @override
   @JsonKey(name: 'credit_balance')
-  double get creditBalance => throw _privateConstructorUsedError;
+  double get creditBalance;
   @override
   @JsonKey(name: 'last_login')
-  int get lastLogin => throw _privateConstructorUsedError;
+  int get lastLogin;
   @override
   @JsonKey(name: 'size_id')
-  String get sizeId => throw _privateConstructorUsedError;
+  String get sizeId;
   @override
   @JsonKey(name: 'public_notes')
-  String get publicNotes => throw _privateConstructorUsedError;
+  String get publicNotes;
   @override
-  String get phone => throw _privateConstructorUsedError;
+  String get phone;
   @override
-  String get address1 => throw _privateConstructorUsedError;
+  String get address1;
   @override
-  String get address2 => throw _privateConstructorUsedError;
+  String get address2;
   @override
-  String get city => throw _privateConstructorUsedError;
+  String get city;
   @override
-  String get state => throw _privateConstructorUsedError;
+  String get state;
   @override
   @JsonKey(name: 'postal_code')
-  String get postalCode => throw _privateConstructorUsedError;
+  String get postalCode;
   @override
   @JsonKey(name: 'country_id')
-  String get countryId => throw _privateConstructorUsedError;
+  String get countryId;
   @override
   @JsonKey(name: 'industry_id')
-  String get industryId => throw _privateConstructorUsedError;
+  String get industryId;
   @override
   @JsonKey(name: 'shipping_address1')
-  String get shippingAddress1 => throw _privateConstructorUsedError;
+  String get shippingAddress1;
   @override
   @JsonKey(name: 'shipping_address2')
-  String get shippingAddress2 => throw _privateConstructorUsedError;
+  String get shippingAddress2;
   @override
   @JsonKey(name: 'shipping_city')
-  String get shippingCity => throw _privateConstructorUsedError;
+  String get shippingCity;
   @override
   @JsonKey(name: 'shipping_state')
-  String get shippingState => throw _privateConstructorUsedError;
+  String get shippingState;
   @override
   @JsonKey(name: 'shipping_postal_code')
-  String get shippingPostalCode => throw _privateConstructorUsedError;
+  String get shippingPostalCode;
   @override
   @JsonKey(name: 'shipping_country_id')
-  String get shippingCountryId => throw _privateConstructorUsedError;
+  String get shippingCountryId;
   @override
-  ClientSettings? get settings => throw _privateConstructorUsedError;
+  ClientSettings? get settings;
   @override
   @JsonKey(name: 'id_number')
-  String get idNumber => throw _privateConstructorUsedError;
+  String get idNumber;
   @override
   @JsonKey(name: 'vat_number')
-  String get vatNumber => throw _privateConstructorUsedError;
+  String get vatNumber;
   @override
-  List<ClientContact> get contacts => throw _privateConstructorUsedError;
+  List<ClientContact> get contacts;
   @override
-  List<Document> get documents => throw _privateConstructorUsedError;
+  List<Document> get documents;
   @override
   @JsonKey(ignore: true)
-  _$ClientCopyWith<_Client> get copyWith => throw _privateConstructorUsedError;
+  _$$_ClientCopyWith<_$_Client> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ClientContact _$ClientContactFromJson(Map<String, dynamic> json) {
   return _ClientContact.fromJson(json);
 }
-
-/// @nodoc
-class _$ClientContactTearOff {
-  const _$ClientContactTearOff();
-
-  _ClientContact call(
-      {String id = '',
-      @JsonKey(name: 'custom_value1') String customValue1 = '',
-      @JsonKey(name: 'custom_value2') String customValue2 = '',
-      @JsonKey(name: 'custom_value3') String customValue3 = '',
-      @JsonKey(name: 'custom_value4') String customValue4 = '',
-      @JsonKey(name: 'first_name') String firstName = '',
-      @JsonKey(name: 'last_name') String lastName = '',
-      String email = '',
-      @JsonKey(name: 'is_primary') bool isPrimary = false,
-      @JsonKey(name: 'is_locked') bool isLocked = false,
-      String phone = '',
-      @JsonKey(name: 'contact_key') String key = '',
-      @JsonKey(name: 'send_email') bool sendEmail = true,
-      @JsonKey(name: 'last_login') int lastLogin = 0,
-      String password = ''}) {
-    return _ClientContact(
-      id: id,
-      customValue1: customValue1,
-      customValue2: customValue2,
-      customValue3: customValue3,
-      customValue4: customValue4,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      isPrimary: isPrimary,
-      isLocked: isLocked,
-      phone: phone,
-      key: key,
-      sendEmail: sendEmail,
-      lastLogin: lastLogin,
-      password: password,
-    );
-  }
-
-  ClientContact fromJson(Map<String, Object> json) {
-    return ClientContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ClientContact = _$ClientContactTearOff();
 
 /// @nodoc
 mixin _$ClientContact {
@@ -1348,7 +1218,8 @@ mixin _$ClientContact {
 abstract class $ClientContactCopyWith<$Res> {
   factory $ClientContactCopyWith(
           ClientContact value, $Res Function(ClientContact) then) =
-      _$ClientContactCopyWithImpl<$Res>;
+      _$ClientContactCopyWithImpl<$Res, ClientContact>;
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'custom_value1') String customValue1,
@@ -1368,104 +1239,107 @@ abstract class $ClientContactCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ClientContactCopyWithImpl<$Res>
+class _$ClientContactCopyWithImpl<$Res, $Val extends ClientContact>
     implements $ClientContactCopyWith<$Res> {
   _$ClientContactCopyWithImpl(this._value, this._then);
 
-  final ClientContact _value;
   // ignore: unused_field
-  final $Res Function(ClientContact) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
-    Object? email = freezed,
-    Object? isPrimary = freezed,
-    Object? isLocked = freezed,
-    Object? phone = freezed,
-    Object? key = freezed,
-    Object? sendEmail = freezed,
-    Object? lastLogin = freezed,
-    Object? password = freezed,
+    Object? id = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? email = null,
+    Object? isPrimary = null,
+    Object? isLocked = null,
+    Object? phone = null,
+    Object? key = null,
+    Object? sendEmail = null,
+    Object? lastLogin = null,
+    Object? password = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: firstName == freezed
+      firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: lastName == freezed
+      lastName: null == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      isPrimary: isPrimary == freezed
+      isPrimary: null == isPrimary
           ? _value.isPrimary
           : isPrimary // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLocked: isLocked == freezed
+      isLocked: null == isLocked
           ? _value.isLocked
           : isLocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      phone: phone == freezed
+      phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      sendEmail: sendEmail == freezed
+      sendEmail: null == sendEmail
           ? _value.sendEmail
           : sendEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      lastLogin: lastLogin == freezed
+      lastLogin: null == lastLogin
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
               as int,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ClientContactCopyWith<$Res>
+abstract class _$$_ClientContactCopyWith<$Res>
     implements $ClientContactCopyWith<$Res> {
-  factory _$ClientContactCopyWith(
-          _ClientContact value, $Res Function(_ClientContact) then) =
-      __$ClientContactCopyWithImpl<$Res>;
+  factory _$$_ClientContactCopyWith(
+          _$_ClientContact value, $Res Function(_$_ClientContact) then) =
+      __$$_ClientContactCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       @JsonKey(name: 'custom_value1') String customValue1,
@@ -1485,92 +1359,90 @@ abstract class _$ClientContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ClientContactCopyWithImpl<$Res>
-    extends _$ClientContactCopyWithImpl<$Res>
-    implements _$ClientContactCopyWith<$Res> {
-  __$ClientContactCopyWithImpl(
-      _ClientContact _value, $Res Function(_ClientContact) _then)
-      : super(_value, (v) => _then(v as _ClientContact));
+class __$$_ClientContactCopyWithImpl<$Res>
+    extends _$ClientContactCopyWithImpl<$Res, _$_ClientContact>
+    implements _$$_ClientContactCopyWith<$Res> {
+  __$$_ClientContactCopyWithImpl(
+      _$_ClientContact _value, $Res Function(_$_ClientContact) _then)
+      : super(_value, _then);
 
-  @override
-  _ClientContact get _value => super._value as _ClientContact;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? customValue1 = freezed,
-    Object? customValue2 = freezed,
-    Object? customValue3 = freezed,
-    Object? customValue4 = freezed,
-    Object? firstName = freezed,
-    Object? lastName = freezed,
-    Object? email = freezed,
-    Object? isPrimary = freezed,
-    Object? isLocked = freezed,
-    Object? phone = freezed,
-    Object? key = freezed,
-    Object? sendEmail = freezed,
-    Object? lastLogin = freezed,
-    Object? password = freezed,
+    Object? id = null,
+    Object? customValue1 = null,
+    Object? customValue2 = null,
+    Object? customValue3 = null,
+    Object? customValue4 = null,
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? email = null,
+    Object? isPrimary = null,
+    Object? isLocked = null,
+    Object? phone = null,
+    Object? key = null,
+    Object? sendEmail = null,
+    Object? lastLogin = null,
+    Object? password = null,
   }) {
-    return _then(_ClientContact(
-      id: id == freezed
+    return _then(_$_ClientContact(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue1: customValue1 == freezed
+      customValue1: null == customValue1
           ? _value.customValue1
           : customValue1 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue2: customValue2 == freezed
+      customValue2: null == customValue2
           ? _value.customValue2
           : customValue2 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue3: customValue3 == freezed
+      customValue3: null == customValue3
           ? _value.customValue3
           : customValue3 // ignore: cast_nullable_to_non_nullable
               as String,
-      customValue4: customValue4 == freezed
+      customValue4: null == customValue4
           ? _value.customValue4
           : customValue4 // ignore: cast_nullable_to_non_nullable
               as String,
-      firstName: firstName == freezed
+      firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
               as String,
-      lastName: lastName == freezed
+      lastName: null == lastName
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
               as String,
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      isPrimary: isPrimary == freezed
+      isPrimary: null == isPrimary
           ? _value.isPrimary
           : isPrimary // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLocked: isLocked == freezed
+      isLocked: null == isLocked
           ? _value.isLocked
           : isLocked // ignore: cast_nullable_to_non_nullable
               as bool,
-      phone: phone == freezed
+      phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String,
-      key: key == freezed
+      key: null == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
-      sendEmail: sendEmail == freezed
+      sendEmail: null == sendEmail
           ? _value.sendEmail
           : sendEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      lastLogin: lastLogin == freezed
+      lastLogin: null == lastLogin
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
               as int,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1578,9 +1450,9 @@ class __$ClientContactCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   _$_ClientContact(
       {this.id = '',
@@ -1600,10 +1472,10 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
       this.password = ''});
 
   factory _$_ClientContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientContactFromJson(json);
+      _$$_ClientContactFromJson(json);
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String id;
   @override
   @JsonKey(name: 'custom_value1')
@@ -1623,8 +1495,8 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   @override
   @JsonKey(name: 'last_name')
   final String lastName;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String email;
   @override
   @JsonKey(name: 'is_primary')
@@ -1632,8 +1504,8 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   @override
   @JsonKey(name: 'is_locked')
   final bool isLocked;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String phone;
   @override
   @JsonKey(name: 'contact_key')
@@ -1644,8 +1516,8 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   @override
   @JsonKey(name: 'last_login')
   final int lastLogin;
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String password;
 
   @override
@@ -1678,172 +1550,141 @@ class _$_ClientContact with DiagnosticableTreeMixin implements _ClientContact {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClientContact &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ClientContact &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.customValue1, customValue1) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue1, customValue1)) &&
+                other.customValue1 == customValue1) &&
             (identical(other.customValue2, customValue2) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue2, customValue2)) &&
+                other.customValue2 == customValue2) &&
             (identical(other.customValue3, customValue3) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue3, customValue3)) &&
+                other.customValue3 == customValue3) &&
             (identical(other.customValue4, customValue4) ||
-                const DeepCollectionEquality()
-                    .equals(other.customValue4, customValue4)) &&
+                other.customValue4 == customValue4) &&
             (identical(other.firstName, firstName) ||
-                const DeepCollectionEquality()
-                    .equals(other.firstName, firstName)) &&
+                other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastName, lastName)) &&
-            (identical(other.email, email) ||
-                const DeepCollectionEquality().equals(other.email, email)) &&
+                other.lastName == lastName) &&
+            (identical(other.email, email) || other.email == email) &&
             (identical(other.isPrimary, isPrimary) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPrimary, isPrimary)) &&
+                other.isPrimary == isPrimary) &&
             (identical(other.isLocked, isLocked) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLocked, isLocked)) &&
-            (identical(other.phone, phone) ||
-                const DeepCollectionEquality().equals(other.phone, phone)) &&
-            (identical(other.key, key) ||
-                const DeepCollectionEquality().equals(other.key, key)) &&
+                other.isLocked == isLocked) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.key, key) || other.key == key) &&
             (identical(other.sendEmail, sendEmail) ||
-                const DeepCollectionEquality()
-                    .equals(other.sendEmail, sendEmail)) &&
+                other.sendEmail == sendEmail) &&
             (identical(other.lastLogin, lastLogin) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastLogin, lastLogin)) &&
+                other.lastLogin == lastLogin) &&
             (identical(other.password, password) ||
-                const DeepCollectionEquality()
-                    .equals(other.password, password)));
+                other.password == password));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(customValue1) ^
-      const DeepCollectionEquality().hash(customValue2) ^
-      const DeepCollectionEquality().hash(customValue3) ^
-      const DeepCollectionEquality().hash(customValue4) ^
-      const DeepCollectionEquality().hash(firstName) ^
-      const DeepCollectionEquality().hash(lastName) ^
-      const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(isPrimary) ^
-      const DeepCollectionEquality().hash(isLocked) ^
-      const DeepCollectionEquality().hash(phone) ^
-      const DeepCollectionEquality().hash(key) ^
-      const DeepCollectionEquality().hash(sendEmail) ^
-      const DeepCollectionEquality().hash(lastLogin) ^
-      const DeepCollectionEquality().hash(password);
 
   @JsonKey(ignore: true)
   @override
-  _$ClientContactCopyWith<_ClientContact> get copyWith =>
-      __$ClientContactCopyWithImpl<_ClientContact>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      customValue1,
+      customValue2,
+      customValue3,
+      customValue4,
+      firstName,
+      lastName,
+      email,
+      isPrimary,
+      isLocked,
+      phone,
+      key,
+      sendEmail,
+      lastLogin,
+      password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClientContactCopyWith<_$_ClientContact> get copyWith =>
+      __$$_ClientContactCopyWithImpl<_$_ClientContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientContactToJson(this);
+    return _$$_ClientContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _ClientContact implements ClientContact {
   factory _ClientContact(
-      {String id,
-      @JsonKey(name: 'custom_value1') String customValue1,
-      @JsonKey(name: 'custom_value2') String customValue2,
-      @JsonKey(name: 'custom_value3') String customValue3,
-      @JsonKey(name: 'custom_value4') String customValue4,
-      @JsonKey(name: 'first_name') String firstName,
-      @JsonKey(name: 'last_name') String lastName,
-      String email,
-      @JsonKey(name: 'is_primary') bool isPrimary,
-      @JsonKey(name: 'is_locked') bool isLocked,
-      String phone,
-      @JsonKey(name: 'contact_key') String key,
-      @JsonKey(name: 'send_email') bool sendEmail,
-      @JsonKey(name: 'last_login') int lastLogin,
-      String password}) = _$_ClientContact;
+      {final String id,
+      @JsonKey(name: 'custom_value1') final String customValue1,
+      @JsonKey(name: 'custom_value2') final String customValue2,
+      @JsonKey(name: 'custom_value3') final String customValue3,
+      @JsonKey(name: 'custom_value4') final String customValue4,
+      @JsonKey(name: 'first_name') final String firstName,
+      @JsonKey(name: 'last_name') final String lastName,
+      final String email,
+      @JsonKey(name: 'is_primary') final bool isPrimary,
+      @JsonKey(name: 'is_locked') final bool isLocked,
+      final String phone,
+      @JsonKey(name: 'contact_key') final String key,
+      @JsonKey(name: 'send_email') final bool sendEmail,
+      @JsonKey(name: 'last_login') final int lastLogin,
+      final String password}) = _$_ClientContact;
 
   factory _ClientContact.fromJson(Map<String, dynamic> json) =
       _$_ClientContact.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(name: 'custom_value1')
-  String get customValue1 => throw _privateConstructorUsedError;
+  String get customValue1;
   @override
   @JsonKey(name: 'custom_value2')
-  String get customValue2 => throw _privateConstructorUsedError;
+  String get customValue2;
   @override
   @JsonKey(name: 'custom_value3')
-  String get customValue3 => throw _privateConstructorUsedError;
+  String get customValue3;
   @override
   @JsonKey(name: 'custom_value4')
-  String get customValue4 => throw _privateConstructorUsedError;
+  String get customValue4;
   @override
   @JsonKey(name: 'first_name')
-  String get firstName => throw _privateConstructorUsedError;
+  String get firstName;
   @override
   @JsonKey(name: 'last_name')
-  String get lastName => throw _privateConstructorUsedError;
+  String get lastName;
   @override
-  String get email => throw _privateConstructorUsedError;
+  String get email;
   @override
   @JsonKey(name: 'is_primary')
-  bool get isPrimary => throw _privateConstructorUsedError;
+  bool get isPrimary;
   @override
   @JsonKey(name: 'is_locked')
-  bool get isLocked => throw _privateConstructorUsedError;
+  bool get isLocked;
   @override
-  String get phone => throw _privateConstructorUsedError;
+  String get phone;
   @override
   @JsonKey(name: 'contact_key')
-  String get key => throw _privateConstructorUsedError;
+  String get key;
   @override
   @JsonKey(name: 'send_email')
-  bool get sendEmail => throw _privateConstructorUsedError;
+  bool get sendEmail;
   @override
   @JsonKey(name: 'last_login')
-  int get lastLogin => throw _privateConstructorUsedError;
+  int get lastLogin;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
   @JsonKey(ignore: true)
-  _$ClientContactCopyWith<_ClientContact> get copyWith =>
+  _$$_ClientContactCopyWith<_$_ClientContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ClientSettings _$ClientSettingsFromJson(Map<String, dynamic> json) {
   return _ClientSettings.fromJson(json);
 }
-
-/// @nodoc
-class _$ClientSettingsTearOff {
-  const _$ClientSettingsTearOff();
-
-  _ClientSettings call(
-      {@JsonKey(name: 'currency_id') String? currencyId = '',
-      @JsonKey(name: 'language_id') String? languageId = ''}) {
-    return _ClientSettings(
-      currencyId: currencyId,
-      languageId: languageId,
-    );
-  }
-
-  ClientSettings fromJson(Map<String, Object> json) {
-    return ClientSettings.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ClientSettings = _$ClientSettingsTearOff();
 
 /// @nodoc
 mixin _$ClientSettings {
@@ -1862,73 +1703,75 @@ mixin _$ClientSettings {
 abstract class $ClientSettingsCopyWith<$Res> {
   factory $ClientSettingsCopyWith(
           ClientSettings value, $Res Function(ClientSettings) then) =
-      _$ClientSettingsCopyWithImpl<$Res>;
+      _$ClientSettingsCopyWithImpl<$Res, ClientSettings>;
+  @useResult
   $Res call(
       {@JsonKey(name: 'currency_id') String? currencyId,
       @JsonKey(name: 'language_id') String? languageId});
 }
 
 /// @nodoc
-class _$ClientSettingsCopyWithImpl<$Res>
+class _$ClientSettingsCopyWithImpl<$Res, $Val extends ClientSettings>
     implements $ClientSettingsCopyWith<$Res> {
   _$ClientSettingsCopyWithImpl(this._value, this._then);
 
-  final ClientSettings _value;
   // ignore: unused_field
-  final $Res Function(ClientSettings) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? currencyId = freezed,
     Object? languageId = freezed,
   }) {
     return _then(_value.copyWith(
-      currencyId: currencyId == freezed
+      currencyId: freezed == currencyId
           ? _value.currencyId
           : currencyId // ignore: cast_nullable_to_non_nullable
               as String?,
-      languageId: languageId == freezed
+      languageId: freezed == languageId
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ClientSettingsCopyWith<$Res>
+abstract class _$$_ClientSettingsCopyWith<$Res>
     implements $ClientSettingsCopyWith<$Res> {
-  factory _$ClientSettingsCopyWith(
-          _ClientSettings value, $Res Function(_ClientSettings) then) =
-      __$ClientSettingsCopyWithImpl<$Res>;
+  factory _$$_ClientSettingsCopyWith(
+          _$_ClientSettings value, $Res Function(_$_ClientSettings) then) =
+      __$$_ClientSettingsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(name: 'currency_id') String? currencyId,
       @JsonKey(name: 'language_id') String? languageId});
 }
 
 /// @nodoc
-class __$ClientSettingsCopyWithImpl<$Res>
-    extends _$ClientSettingsCopyWithImpl<$Res>
-    implements _$ClientSettingsCopyWith<$Res> {
-  __$ClientSettingsCopyWithImpl(
-      _ClientSettings _value, $Res Function(_ClientSettings) _then)
-      : super(_value, (v) => _then(v as _ClientSettings));
+class __$$_ClientSettingsCopyWithImpl<$Res>
+    extends _$ClientSettingsCopyWithImpl<$Res, _$_ClientSettings>
+    implements _$$_ClientSettingsCopyWith<$Res> {
+  __$$_ClientSettingsCopyWithImpl(
+      _$_ClientSettings _value, $Res Function(_$_ClientSettings) _then)
+      : super(_value, _then);
 
-  @override
-  _ClientSettings get _value => super._value as _ClientSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? currencyId = freezed,
     Object? languageId = freezed,
   }) {
-    return _then(_ClientSettings(
-      currencyId: currencyId == freezed
+    return _then(_$_ClientSettings(
+      currencyId: freezed == currencyId
           ? _value.currencyId
           : currencyId // ignore: cast_nullable_to_non_nullable
               as String?,
-      languageId: languageId == freezed
+      languageId: freezed == languageId
           ? _value.languageId
           : languageId // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1936,9 +1779,9 @@ class __$ClientSettingsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_ClientSettings
     with DiagnosticableTreeMixin
     implements _ClientSettings {
@@ -1947,7 +1790,7 @@ class _$_ClientSettings
       @JsonKey(name: 'language_id') this.languageId = ''});
 
   factory _$_ClientSettings.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientSettingsFromJson(json);
+      _$$_ClientSettingsFromJson(json);
 
   @override
   @JsonKey(name: 'currency_id')
@@ -1973,73 +1816,56 @@ class _$_ClientSettings
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClientSettings &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ClientSettings &&
             (identical(other.currencyId, currencyId) ||
-                const DeepCollectionEquality()
-                    .equals(other.currencyId, currencyId)) &&
+                other.currencyId == currencyId) &&
             (identical(other.languageId, languageId) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageId, languageId)));
+                other.languageId == languageId));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(currencyId) ^
-      const DeepCollectionEquality().hash(languageId);
 
   @JsonKey(ignore: true)
   @override
-  _$ClientSettingsCopyWith<_ClientSettings> get copyWith =>
-      __$ClientSettingsCopyWithImpl<_ClientSettings>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, currencyId, languageId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClientSettingsCopyWith<_$_ClientSettings> get copyWith =>
+      __$$_ClientSettingsCopyWithImpl<_$_ClientSettings>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientSettingsToJson(this);
+    return _$$_ClientSettingsToJson(
+      this,
+    );
   }
 }
 
 abstract class _ClientSettings implements ClientSettings {
   factory _ClientSettings(
-      {@JsonKey(name: 'currency_id') String? currencyId,
-      @JsonKey(name: 'language_id') String? languageId}) = _$_ClientSettings;
+          {@JsonKey(name: 'currency_id') final String? currencyId,
+          @JsonKey(name: 'language_id') final String? languageId}) =
+      _$_ClientSettings;
 
   factory _ClientSettings.fromJson(Map<String, dynamic> json) =
       _$_ClientSettings.fromJson;
 
   @override
   @JsonKey(name: 'currency_id')
-  String? get currencyId => throw _privateConstructorUsedError;
+  String? get currencyId;
   @override
   @JsonKey(name: 'language_id')
-  String? get languageId => throw _privateConstructorUsedError;
+  String? get languageId;
   @override
   @JsonKey(ignore: true)
-  _$ClientSettingsCopyWith<_ClientSettings> get copyWith =>
+  _$$_ClientSettingsCopyWith<_$_ClientSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ClientList _$ClientListFromJson(Map<String, dynamic> json) {
   return _ClientList.fromJson(json);
 }
-
-/// @nodoc
-class _$ClientListTearOff {
-  const _$ClientListTearOff();
-
-  _ClientList call(List<Client> data) {
-    return _ClientList(
-      data,
-    );
-  }
-
-  ClientList fromJson(Map<String, Object> json) {
-    return ClientList.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ClientList = _$ClientListTearOff();
 
 /// @nodoc
 mixin _$ClientList {
@@ -2055,74 +1881,83 @@ mixin _$ClientList {
 abstract class $ClientListCopyWith<$Res> {
   factory $ClientListCopyWith(
           ClientList value, $Res Function(ClientList) then) =
-      _$ClientListCopyWithImpl<$Res>;
+      _$ClientListCopyWithImpl<$Res, ClientList>;
+  @useResult
   $Res call({List<Client> data});
 }
 
 /// @nodoc
-class _$ClientListCopyWithImpl<$Res> implements $ClientListCopyWith<$Res> {
+class _$ClientListCopyWithImpl<$Res, $Val extends ClientList>
+    implements $ClientListCopyWith<$Res> {
   _$ClientListCopyWithImpl(this._value, this._then);
 
-  final ClientList _value;
   // ignore: unused_field
-  final $Res Function(ClientList) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Client>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ClientListCopyWith<$Res> implements $ClientListCopyWith<$Res> {
-  factory _$ClientListCopyWith(
-          _ClientList value, $Res Function(_ClientList) then) =
-      __$ClientListCopyWithImpl<$Res>;
+abstract class _$$_ClientListCopyWith<$Res>
+    implements $ClientListCopyWith<$Res> {
+  factory _$$_ClientListCopyWith(
+          _$_ClientList value, $Res Function(_$_ClientList) then) =
+      __$$_ClientListCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Client> data});
 }
 
 /// @nodoc
-class __$ClientListCopyWithImpl<$Res> extends _$ClientListCopyWithImpl<$Res>
-    implements _$ClientListCopyWith<$Res> {
-  __$ClientListCopyWithImpl(
-      _ClientList _value, $Res Function(_ClientList) _then)
-      : super(_value, (v) => _then(v as _ClientList));
+class __$$_ClientListCopyWithImpl<$Res>
+    extends _$ClientListCopyWithImpl<$Res, _$_ClientList>
+    implements _$$_ClientListCopyWith<$Res> {
+  __$$_ClientListCopyWithImpl(
+      _$_ClientList _value, $Res Function(_$_ClientList) _then)
+      : super(_value, _then);
 
-  @override
-  _ClientList get _value => super._value as _ClientList;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
-    return _then(_ClientList(
-      data == freezed
-          ? _value.data
+    return _then(_$_ClientList(
+      null == data
+          ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Client>,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClientList with DiagnosticableTreeMixin implements _ClientList {
-  _$_ClientList(this.data);
+  _$_ClientList(final List<Client> data) : _data = data;
 
   factory _$_ClientList.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientListFromJson(json);
+      _$$_ClientListFromJson(json);
 
+  final List<Client> _data;
   @override
-  final List<Client> data;
+  List<Client> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2140,61 +1975,47 @@ class _$_ClientList with DiagnosticableTreeMixin implements _ClientList {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClientList &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _$_ClientList &&
+            const DeepCollectionEquality().equals(other._data, _data));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
   @JsonKey(ignore: true)
   @override
-  _$ClientListCopyWith<_ClientList> get copyWith =>
-      __$ClientListCopyWithImpl<_ClientList>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClientListCopyWith<_$_ClientList> get copyWith =>
+      __$$_ClientListCopyWithImpl<_$_ClientList>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientListToJson(this);
+    return _$$_ClientListToJson(
+      this,
+    );
   }
 }
 
 abstract class _ClientList implements ClientList {
-  factory _ClientList(List<Client> data) = _$_ClientList;
+  factory _ClientList(final List<Client> data) = _$_ClientList;
 
   factory _ClientList.fromJson(Map<String, dynamic> json) =
       _$_ClientList.fromJson;
 
   @override
-  List<Client> get data => throw _privateConstructorUsedError;
+  List<Client> get data;
   @override
   @JsonKey(ignore: true)
-  _$ClientListCopyWith<_ClientList> get copyWith =>
+  _$$_ClientListCopyWith<_$_ClientList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ClientItem _$ClientItemFromJson(Map<String, dynamic> json) {
   return _ClientItem.fromJson(json);
 }
-
-/// @nodoc
-class _$ClientItemTearOff {
-  const _$ClientItemTearOff();
-
-  _ClientItem call(Client data) {
-    return _ClientItem(
-      data,
-    );
-  }
-
-  ClientItem fromJson(Map<String, Object> json) {
-    return ClientItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ClientItem = _$ClientItemTearOff();
 
 /// @nodoc
 mixin _$ClientItem {
@@ -2210,46 +2031,53 @@ mixin _$ClientItem {
 abstract class $ClientItemCopyWith<$Res> {
   factory $ClientItemCopyWith(
           ClientItem value, $Res Function(ClientItem) then) =
-      _$ClientItemCopyWithImpl<$Res>;
+      _$ClientItemCopyWithImpl<$Res, ClientItem>;
+  @useResult
   $Res call({Client data});
 
   $ClientCopyWith<$Res> get data;
 }
 
 /// @nodoc
-class _$ClientItemCopyWithImpl<$Res> implements $ClientItemCopyWith<$Res> {
+class _$ClientItemCopyWithImpl<$Res, $Val extends ClientItem>
+    implements $ClientItemCopyWith<$Res> {
   _$ClientItemCopyWithImpl(this._value, this._then);
 
-  final ClientItem _value;
   // ignore: unused_field
-  final $Res Function(ClientItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Client,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ClientCopyWith<$Res> get data {
     return $ClientCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
+      return _then(_value.copyWith(data: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ClientItemCopyWith<$Res> implements $ClientItemCopyWith<$Res> {
-  factory _$ClientItemCopyWith(
-          _ClientItem value, $Res Function(_ClientItem) then) =
-      __$ClientItemCopyWithImpl<$Res>;
+abstract class _$$_ClientItemCopyWith<$Res>
+    implements $ClientItemCopyWith<$Res> {
+  factory _$$_ClientItemCopyWith(
+          _$_ClientItem value, $Res Function(_$_ClientItem) then) =
+      __$$_ClientItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Client data});
 
   @override
@@ -2257,21 +2085,20 @@ abstract class _$ClientItemCopyWith<$Res> implements $ClientItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ClientItemCopyWithImpl<$Res> extends _$ClientItemCopyWithImpl<$Res>
-    implements _$ClientItemCopyWith<$Res> {
-  __$ClientItemCopyWithImpl(
-      _ClientItem _value, $Res Function(_ClientItem) _then)
-      : super(_value, (v) => _then(v as _ClientItem));
+class __$$_ClientItemCopyWithImpl<$Res>
+    extends _$ClientItemCopyWithImpl<$Res, _$_ClientItem>
+    implements _$$_ClientItemCopyWith<$Res> {
+  __$$_ClientItemCopyWithImpl(
+      _$_ClientItem _value, $Res Function(_$_ClientItem) _then)
+      : super(_value, _then);
 
-  @override
-  _ClientItem get _value => super._value as _ClientItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
-    return _then(_ClientItem(
-      data == freezed
+    return _then(_$_ClientItem(
+      null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Client,
@@ -2279,14 +2106,13 @@ class __$ClientItemCopyWithImpl<$Res> extends _$ClientItemCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ClientItem with DiagnosticableTreeMixin implements _ClientItem {
   _$_ClientItem(this.data);
 
   factory _$_ClientItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ClientItemFromJson(json);
+      _$$_ClientItemFromJson(json);
 
   @override
   final Client data;
@@ -2307,36 +2133,39 @@ class _$_ClientItem with DiagnosticableTreeMixin implements _ClientItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ClientItem &&
-            (identical(other.data, data) ||
-                const DeepCollectionEquality().equals(other.data, data)));
+        (other.runtimeType == runtimeType &&
+            other is _$_ClientItem &&
+            (identical(other.data, data) || other.data == data));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(data);
 
   @JsonKey(ignore: true)
   @override
-  _$ClientItemCopyWith<_ClientItem> get copyWith =>
-      __$ClientItemCopyWithImpl<_ClientItem>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, data);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ClientItemCopyWith<_$_ClientItem> get copyWith =>
+      __$$_ClientItemCopyWithImpl<_$_ClientItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ClientItemToJson(this);
+    return _$$_ClientItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _ClientItem implements ClientItem {
-  factory _ClientItem(Client data) = _$_ClientItem;
+  factory _ClientItem(final Client data) = _$_ClientItem;
 
   factory _ClientItem.fromJson(Map<String, dynamic> json) =
       _$_ClientItem.fromJson;
 
   @override
-  Client get data => throw _privateConstructorUsedError;
+  Client get data;
   @override
   @JsonKey(ignore: true)
-  _$ClientItemCopyWith<_ClientItem> get copyWith =>
+  _$$_ClientItemCopyWith<_$_ClientItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
