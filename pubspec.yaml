@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.1
+  http: ^0.13.5
   freezed_annotation: ^2.2.0
   json_serializable: ^6.6.1
   json_annotation: ^4.8.0
