@@ -19,7 +19,6 @@ Create PDF invoices and accept payments in a Flutter app
 
 ### To Do
 
-- [ ] Recurring billing
 - [ ] Images/documents
 - [ ] Tasks and expenses  
 
