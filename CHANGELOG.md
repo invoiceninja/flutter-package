@@ -1,5 +1,6 @@
 ## 0.0.10
 - Added optional `action` parameter to save methods
+- Added recurring invoices
 
 ## 0.0.9
 
