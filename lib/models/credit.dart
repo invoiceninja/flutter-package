@@ -81,6 +81,7 @@ class Credit with _$Credit {
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
     @Default(<Document>[]) List<Document> documents,
+    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
   }) = _Credit;
 
   /// Get the default invitation URL

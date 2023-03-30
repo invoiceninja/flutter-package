@@ -111,6 +111,8 @@ mixin _$Invoice {
   @JsonKey(name: 'custom_surcharge_tax4')
   bool get customSurchargeTax4 => throw _privateConstructorUsedError;
   List<Document> get documents => throw _privateConstructorUsedError;
+  @JsonKey(name: 'vendor_id')
+  String get vendorId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -173,7 +175,8 @@ abstract class $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
-      List<Document> documents});
+      List<Document> documents,
+      @JsonKey(name: 'vendor_id') String vendorId});
 }
 
 /// @nodoc
@@ -240,6 +243,7 @@ class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
     Object? customSurchargeTax3 = null,
     Object? customSurchargeTax4 = null,
     Object? documents = null,
+    Object? vendorId = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -446,6 +450,10 @@ class _$InvoiceCopyWithImpl<$Res, $Val extends Invoice>
           ? _value.documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
+      vendorId: null == vendorId
+          ? _value.vendorId
+          : vendorId // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -508,7 +516,8 @@ abstract class _$$_InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
-      List<Document> documents});
+      List<Document> documents,
+      @JsonKey(name: 'vendor_id') String vendorId});
 }
 
 /// @nodoc
@@ -572,6 +581,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
     Object? customSurchargeTax3 = null,
     Object? customSurchargeTax4 = null,
     Object? documents = null,
+    Object? vendorId = null,
   }) {
     return _then(_$_Invoice(
       id: null == id
@@ -778,6 +788,10 @@ class __$$_InvoiceCopyWithImpl<$Res>
           ? _value._documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
+      vendorId: null == vendorId
+          ? _value.vendorId
+          : vendorId // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -877,7 +891,9 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
           this.customSurchargeTax3 = false,
       @JsonKey(name: 'custom_surcharge_tax4')
           this.customSurchargeTax4 = false,
-      final List<Document> documents = const <Document>[]})
+      final List<Document> documents = const <Document>[],
+      @JsonKey(name: 'vendor_id')
+          this.vendorId = ''})
       : _lineItems = lineItems,
         _invitations = invitations,
         _documents = documents,
@@ -1058,8 +1074,12 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
   }
 
   @override
+  @JsonKey(name: 'vendor_id')
+  final String vendorId;
+
+  @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
+    return 'Invoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents, vendorId: $vendorId)';
   }
 
   @override
@@ -1117,7 +1137,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('customSurchargeTax2', customSurchargeTax2))
       ..add(DiagnosticsProperty('customSurchargeTax3', customSurchargeTax3))
       ..add(DiagnosticsProperty('customSurchargeTax4', customSurchargeTax4))
-      ..add(DiagnosticsProperty('documents', documents));
+      ..add(DiagnosticsProperty('documents', documents))
+      ..add(DiagnosticsProperty('vendorId', vendorId));
   }
 
   @override
@@ -1217,7 +1238,9 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
             (identical(other.customSurchargeTax4, customSurchargeTax4) ||
                 other.customSurchargeTax4 == customSurchargeTax4) &&
             const DeepCollectionEquality()
-                .equals(other._documents, _documents));
+                .equals(other._documents, _documents) &&
+            (identical(other.vendorId, vendorId) ||
+                other.vendorId == vendorId));
   }
 
   @JsonKey(ignore: true)
@@ -1274,7 +1297,8 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
         customSurchargeTax2,
         customSurchargeTax3,
         customSurchargeTax4,
-        const DeepCollectionEquality().hash(_documents)
+        const DeepCollectionEquality().hash(_documents),
+        vendorId
       ]);
 
   @JsonKey(ignore: true)
@@ -1343,7 +1367,8 @@ abstract class _Invoice extends Invoice {
       @JsonKey(name: 'custom_surcharge_tax2') final bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
-      final List<Document> documents}) = _$_Invoice;
+      final List<Document> documents,
+      @JsonKey(name: 'vendor_id') final String vendorId}) = _$_Invoice;
   const _Invoice._() : super._();
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
@@ -1490,6 +1515,9 @@ abstract class _Invoice extends Invoice {
   bool get customSurchargeTax4;
   @override
   List<Document> get documents;
+  @override
+  @JsonKey(name: 'vendor_id')
+  String get vendorId;
   @override
   @JsonKey(ignore: true)
   _$$_InvoiceCopyWith<_$_Invoice> get copyWith =>

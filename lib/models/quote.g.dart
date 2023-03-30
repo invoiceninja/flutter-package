@@ -68,6 +68,7 @@ _$_Quote _$$_QuoteFromJson(Map<String, dynamic> json) => _$_Quote(
               ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <Document>[],
+      vendorId: json['vendor_id'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
@@ -122,6 +123,7 @@ Map<String, dynamic> _$$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
       'documents': instance.documents.map((e) => e.toJson()).toList(),
+      'vendor_id': instance.vendorId,
     };
 
 _$_QuoteList _$$_QuoteListFromJson(Map<String, dynamic> json) => _$_QuoteList(

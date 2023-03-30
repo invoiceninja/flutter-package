@@ -81,6 +81,7 @@ class RecurringInvoice with _$RecurringInvoice {
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
     @Default(<Document>[]) List<Document> documents,
+    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
     @Default('') @JsonKey(name: 'frequency_id') String frequencyId,
     @Default(0) @JsonKey(name: 'remaining_cycles') int remainingCycles,
     @Default('') @JsonKey(name: 'due_date_days') String dueDateDays,

@@ -80,6 +80,7 @@ class Invoice with _$Invoice {
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
     @Default(<Document>[]) List<Document> documents,
+    @Default('') @JsonKey(name: 'vendor_id') String vendorId,
   }) = _Invoice;
 
   /// Create an invoice for a client

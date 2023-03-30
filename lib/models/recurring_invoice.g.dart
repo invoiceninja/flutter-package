@@ -69,6 +69,7 @@ _$_RecurringInvoice _$$_RecurringInvoiceFromJson(Map<String, dynamic> json) =>
               ?.map((e) => Document.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const <Document>[],
+      vendorId: json['vendor_id'] as String? ?? '',
       frequencyId: json['frequency_id'] as String? ?? '',
       remainingCycles: json['remaining_cycles'] as int? ?? 0,
       dueDateDays: json['due_date_days'] as String? ?? '',
@@ -127,6 +128,7 @@ Map<String, dynamic> _$$_RecurringInvoiceToJson(_$_RecurringInvoice instance) =>
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
       'documents': instance.documents.map((e) => e.toJson()).toList(),
+      'vendor_id': instance.vendorId,
       'frequency_id': instance.frequencyId,
       'remaining_cycles': instance.remainingCycles,
       'due_date_days': instance.dueDateDays,
