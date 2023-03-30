@@ -24,9 +24,10 @@ _$_Quote _$$_QuoteFromJson(Map<String, dynamic> json) => _$_Quote(
               .toList() ??
           const <InvoiceLineItem>[],
       invitations: (json['invitations'] as List<dynamic>?)
-              ?.map((e) => QuoteInvitation.fromJson(e as Map<String, dynamic>))
+              ?.map(
+                  (e) => InvoiceInvitation.fromJson(e as Map<String, dynamic>))
               .toList() ??
-          const <QuoteInvitation>[],
+          const <InvoiceInvitation>[],
       amount: (json['amount'] as num?)?.toDouble() ?? 0,
       balance: (json['balance'] as num?)?.toDouble() ?? 0,
       statusId: json['status_id'] as String? ?? '',
@@ -121,28 +122,6 @@ Map<String, dynamic> _$$_QuoteToJson(_$_Quote instance) => <String, dynamic>{
       'custom_surcharge_tax3': instance.customSurchargeTax3,
       'custom_surcharge_tax4': instance.customSurchargeTax4,
       'documents': instance.documents.map((e) => e.toJson()).toList(),
-    };
-
-_$_QuoteInvitation _$$_QuoteInvitationFromJson(Map<String, dynamic> json) =>
-    _$_QuoteInvitation(
-      id: json['id'] as String? ?? '',
-      clientContactId: json['client_contact_id'] as String? ?? '',
-      key: json['key'] as String? ?? '',
-      url: json['link'] as String? ?? '',
-      sentDate: json['sent_date'] as String? ?? '',
-      viewedDate: json['viewed_date'] as String? ?? '',
-      openedDate: json['opened_date'] as String? ?? '',
-    );
-
-Map<String, dynamic> _$$_QuoteInvitationToJson(_$_QuoteInvitation instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'client_contact_id': instance.clientContactId,
-      'key': instance.key,
-      'link': instance.url,
-      'sent_date': instance.sentDate,
-      'viewed_date': instance.viewedDate,
-      'opened_date': instance.openedDate,
     };
 
 _$_QuoteList _$$_QuoteListFromJson(Map<String, dynamic> json) => _$_QuoteList(

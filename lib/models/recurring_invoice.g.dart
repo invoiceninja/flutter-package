@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'credit.dart';
+part of 'recurring_invoice.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Credit _$$_CreditFromJson(Map<String, dynamic> json) => _$_Credit(
+_$_RecurringInvoice _$$_RecurringInvoiceFromJson(Map<String, dynamic> json) =>
+    _$_RecurringInvoice(
       id: json['id'] as String? ?? '',
       createdById: json['user_id'] as String? ?? '',
       assignedToId: json['assigned_user_id'] as String? ?? '',
@@ -38,6 +39,7 @@ _$_Credit _$$_CreditFromJson(Map<String, dynamic> json) => _$_Credit(
       date: json['date'] as String? ?? '',
       lastSentDate: json['last_sent_date'] as String? ?? '',
       nextSendDate: json['next_send_date'] as String? ?? '',
+      dueDate: json['due_date'] as String? ?? '',
       terms: json['terms'] as String? ?? '',
       publicNotes: json['public_notes'] as String? ?? '',
       privateNotes: json['private_notes'] as String? ?? '',
@@ -69,7 +71,8 @@ _$_Credit _$$_CreditFromJson(Map<String, dynamic> json) => _$_Credit(
           const <Document>[],
     );
 
-Map<String, dynamic> _$$_CreditToJson(_$_Credit instance) => <String, dynamic>{
+Map<String, dynamic> _$$_RecurringInvoiceToJson(_$_RecurringInvoice instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'user_id': instance.createdById,
       'assigned_user_id': instance.assignedToId,
@@ -94,6 +97,7 @@ Map<String, dynamic> _$$_CreditToJson(_$_Credit instance) => <String, dynamic>{
       'date': instance.date,
       'last_sent_date': instance.lastSentDate,
       'next_send_date': instance.nextSendDate,
+      'due_date': instance.dueDate,
       'terms': instance.terms,
       'public_notes': instance.publicNotes,
       'private_notes': instance.privateNotes,
@@ -122,24 +126,28 @@ Map<String, dynamic> _$$_CreditToJson(_$_Credit instance) => <String, dynamic>{
       'documents': instance.documents.map((e) => e.toJson()).toList(),
     };
 
-_$_CreditList _$$_CreditListFromJson(Map<String, dynamic> json) =>
-    _$_CreditList(
+_$_RecurringInvoiceList _$$_RecurringInvoiceListFromJson(
+        Map<String, dynamic> json) =>
+    _$_RecurringInvoiceList(
       data: (json['data'] as List<dynamic>)
-          .map((e) => Credit.fromJson(e as Map<String, dynamic>))
+          .map((e) => RecurringInvoice.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_CreditListToJson(_$_CreditList instance) =>
+Map<String, dynamic> _$$_RecurringInvoiceListToJson(
+        _$_RecurringInvoiceList instance) =>
     <String, dynamic>{
       'data': instance.data,
     };
 
-_$_CreditItem _$$_CreditItemFromJson(Map<String, dynamic> json) =>
-    _$_CreditItem(
-      Credit.fromJson(json['data'] as Map<String, dynamic>),
+_$_RecurringInvoiceItem _$$_RecurringInvoiceItemFromJson(
+        Map<String, dynamic> json) =>
+    _$_RecurringInvoiceItem(
+      RecurringInvoice.fromJson(json['data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CreditItemToJson(_$_CreditItem instance) =>
+Map<String, dynamic> _$$_RecurringInvoiceItemToJson(
+        _$_RecurringInvoiceItem instance) =>
     <String, dynamic>{
       'data': instance.data,
     };

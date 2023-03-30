@@ -2,23 +2,22 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 import 'package:invoiceninja/models/client.dart';
 import 'package:invoiceninja/models/document.dart';
+import 'package:invoiceninja/models/invoice.dart';
 import 'package:invoiceninja/models/product.dart';
 
-import 'invoice.dart';
+part 'recurring_invoice.freezed.dart';
 
-part 'credit.freezed.dart';
+part 'recurring_invoice.g.dart';
 
-part 'credit.g.dart';
-
-/// Credit class
+/// RecurringInvoice class
 @freezed
-class Credit with _$Credit {
+class RecurringInvoice with _$RecurringInvoice {
   /// Default constructor
-  const Credit._();
+  const RecurringInvoice._();
 
-  /// Credit factory constructor
+  /// RecurringInvoice factory constructor
   @JsonSerializable(explicitToJson: true)
-  const factory Credit({
+  const factory RecurringInvoice({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
@@ -45,6 +44,7 @@ class Credit with _$Credit {
     @Default('') String date,
     @Default('') @JsonKey(name: 'last_sent_date') String lastSentDate,
     @Default('') @JsonKey(name: 'next_send_date') String nextSendDate,
+    @Default('') @JsonKey(name: 'due_date') String dueDate,
     @Default('') String terms,
     @Default('') @JsonKey(name: 'public_notes') String publicNotes,
     @Default('') @JsonKey(name: 'private_notes') String privateNotes,
@@ -81,18 +81,19 @@ class Credit with _$Credit {
     @JsonKey(name: 'custom_surcharge_tax4')
         bool customSurchargeTax4,
     @Default(<Document>[]) List<Document> documents,
-  }) = _Credit;
-
-  /// Get the default invitation URL
-  String get url => invitations.first.url;
+  }) = _RecurringInvoice;
 
   /// Create an invoice for a client
-  factory Credit.forClient(Client client, {required List<Product> products}) {
-    return Credit(
+  factory RecurringInvoice.forClient(Client client,
+      {required List<Product> products}) {
+    return RecurringInvoice(
       clientId: client.id,
       lineItems: (products).map((product) => product.toLineItem).toList(),
     );
   }
+
+  /// Get the default invitation URL
+  String get url => invitations.first.url;
 
   /// Get the default invitation PDF URL
   String get pdfUrl => invitations.first.pdfUrl;
@@ -100,36 +101,39 @@ class Credit with _$Credit {
   /// Get the default invitation key
   String get key => invitations.first.key;
 
-  /// Determine if the credit is paid
+  /// Determine if the invoice is paid
   bool get isPaid => statusId == '4';
 
-  /// Create an Credit from JSON
-  factory Credit.fromJson(Map<String, dynamic> json) => _$CreditFromJson(json);
+  /// Create an RecurringInvoice from JSON
+  factory RecurringInvoice.fromJson(Map<String, dynamic> json) =>
+      _$RecurringInvoiceFromJson(json);
 }
 
-/// Multi-item credit response
+/// Multi-item invoice response
 @freezed
-class CreditList with _$CreditList {
-  /// CreditList factory constructor
-  factory CreditList({required List<Credit> data}) = _CreditList;
+class RecurringInvoiceList with _$RecurringInvoiceList {
+  /// RecurringInvoiceList factory constructor
+  factory RecurringInvoiceList({required List<RecurringInvoice> data}) =
+      _RecurringInvoiceList;
 
-  /// Create an CreditList from JSON
-  factory CreditList.fromJson(Map<String, dynamic> json) =>
-      _$CreditListFromJson(json);
+  /// Create an RecurringInvoiceList from JSON
+  factory RecurringInvoiceList.fromJson(Map<String, dynamic> json) =>
+      _$RecurringInvoiceListFromJson(json);
 }
 
-/// Single-item credit response
+/// Single-item invoice response
 @freezed
-class CreditItem with _$CreditItem {
-  /// CreditItem factory constructor
-  factory CreditItem(Credit data) = _CreditItem;
+class RecurringInvoiceItem with _$RecurringInvoiceItem {
+  /// RecurringInvoiceItem factory constructor
+  factory RecurringInvoiceItem(RecurringInvoice data) = _RecurringInvoiceItem;
 
-  /// Create an CreditItem from JSON
-  factory CreditItem.fromJson(Map<String, dynamic> json) =>
-      _$CreditItemFromJson(json);
+  /// Create an RecurringInvoiceItem from JSON
+  factory RecurringInvoiceItem.fromJson(Map<String, dynamic> json) =>
+      _$RecurringInvoiceItemFromJson(json);
 }
 
-enum CreditAction {
-  sendEmail,
-  markSent,
+enum RecurringInvoiceAction {
+  start,
+  stop,
+  sendNow,
 }

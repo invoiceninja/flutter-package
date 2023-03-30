@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'credit.dart';
+part of 'recurring_invoice.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Credit _$CreditFromJson(Map<String, dynamic> json) {
-  return _Credit.fromJson(json);
+RecurringInvoice _$RecurringInvoiceFromJson(Map<String, dynamic> json) {
+  return _RecurringInvoice.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Credit {
+mixin _$RecurringInvoice {
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
   String get createdById => throw _privateConstructorUsedError;
@@ -61,6 +61,8 @@ mixin _$Credit {
   String get lastSentDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'next_send_date')
   String get nextSendDate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'due_date')
+  String get dueDate => throw _privateConstructorUsedError;
   String get terms => throw _privateConstructorUsedError;
   @JsonKey(name: 'public_notes')
   String get publicNotes => throw _privateConstructorUsedError;
@@ -112,13 +114,15 @@ mixin _$Credit {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreditCopyWith<Credit> get copyWith => throw _privateConstructorUsedError;
+  $RecurringInvoiceCopyWith<RecurringInvoice> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreditCopyWith<$Res> {
-  factory $CreditCopyWith(Credit value, $Res Function(Credit) then) =
-      _$CreditCopyWithImpl<$Res, Credit>;
+abstract class $RecurringInvoiceCopyWith<$Res> {
+  factory $RecurringInvoiceCopyWith(
+          RecurringInvoice value, $Res Function(RecurringInvoice) then) =
+      _$RecurringInvoiceCopyWithImpl<$Res, RecurringInvoice>;
   @useResult
   $Res call(
       {String id,
@@ -145,6 +149,7 @@ abstract class $CreditCopyWith<$Res> {
       String date,
       @JsonKey(name: 'last_sent_date') String lastSentDate,
       @JsonKey(name: 'next_send_date') String nextSendDate,
+      @JsonKey(name: 'due_date') String dueDate,
       String terms,
       @JsonKey(name: 'public_notes') String publicNotes,
       @JsonKey(name: 'private_notes') String privateNotes,
@@ -174,9 +179,9 @@ abstract class $CreditCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CreditCopyWithImpl<$Res, $Val extends Credit>
-    implements $CreditCopyWith<$Res> {
-  _$CreditCopyWithImpl(this._value, this._then);
+class _$RecurringInvoiceCopyWithImpl<$Res, $Val extends RecurringInvoice>
+    implements $RecurringInvoiceCopyWith<$Res> {
+  _$RecurringInvoiceCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -210,6 +215,7 @@ class _$CreditCopyWithImpl<$Res, $Val extends Credit>
     Object? date = null,
     Object? lastSentDate = null,
     Object? nextSendDate = null,
+    Object? dueDate = null,
     Object? terms = null,
     Object? publicNotes = null,
     Object? privateNotes = null,
@@ -334,6 +340,10 @@ class _$CreditCopyWithImpl<$Res, $Val extends Credit>
           ? _value.nextSendDate
           : nextSendDate // ignore: cast_nullable_to_non_nullable
               as String,
+      dueDate: null == dueDate
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
+              as String,
       terms: null == terms
           ? _value.terms
           : terms // ignore: cast_nullable_to_non_nullable
@@ -443,9 +453,11 @@ class _$CreditCopyWithImpl<$Res, $Val extends Credit>
 }
 
 /// @nodoc
-abstract class _$$_CreditCopyWith<$Res> implements $CreditCopyWith<$Res> {
-  factory _$$_CreditCopyWith(_$_Credit value, $Res Function(_$_Credit) then) =
-      __$$_CreditCopyWithImpl<$Res>;
+abstract class _$$_RecurringInvoiceCopyWith<$Res>
+    implements $RecurringInvoiceCopyWith<$Res> {
+  factory _$$_RecurringInvoiceCopyWith(
+          _$_RecurringInvoice value, $Res Function(_$_RecurringInvoice) then) =
+      __$$_RecurringInvoiceCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -473,6 +485,7 @@ abstract class _$$_CreditCopyWith<$Res> implements $CreditCopyWith<$Res> {
       String date,
       @JsonKey(name: 'last_sent_date') String lastSentDate,
       @JsonKey(name: 'next_send_date') String nextSendDate,
+      @JsonKey(name: 'due_date') String dueDate,
       String terms,
       @JsonKey(name: 'public_notes') String publicNotes,
       @JsonKey(name: 'private_notes') String privateNotes,
@@ -502,10 +515,11 @@ abstract class _$$_CreditCopyWith<$Res> implements $CreditCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CreditCopyWithImpl<$Res>
-    extends _$CreditCopyWithImpl<$Res, _$_Credit>
-    implements _$$_CreditCopyWith<$Res> {
-  __$$_CreditCopyWithImpl(_$_Credit _value, $Res Function(_$_Credit) _then)
+class __$$_RecurringInvoiceCopyWithImpl<$Res>
+    extends _$RecurringInvoiceCopyWithImpl<$Res, _$_RecurringInvoice>
+    implements _$$_RecurringInvoiceCopyWith<$Res> {
+  __$$_RecurringInvoiceCopyWithImpl(
+      _$_RecurringInvoice _value, $Res Function(_$_RecurringInvoice) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -535,6 +549,7 @@ class __$$_CreditCopyWithImpl<$Res>
     Object? date = null,
     Object? lastSentDate = null,
     Object? nextSendDate = null,
+    Object? dueDate = null,
     Object? terms = null,
     Object? publicNotes = null,
     Object? privateNotes = null,
@@ -562,7 +577,7 @@ class __$$_CreditCopyWithImpl<$Res>
     Object? customSurchargeTax4 = null,
     Object? documents = null,
   }) {
-    return _then(_$_Credit(
+    return _then(_$_RecurringInvoice(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -658,6 +673,10 @@ class __$$_CreditCopyWithImpl<$Res>
       nextSendDate: null == nextSendDate
           ? _value.nextSendDate
           : nextSendDate // ignore: cast_nullable_to_non_nullable
+              as String,
+      dueDate: null == dueDate
+          ? _value.dueDate
+          : dueDate // ignore: cast_nullable_to_non_nullable
               as String,
       terms: null == terms
           ? _value.terms
@@ -770,8 +789,9 @@ class __$$_CreditCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Credit extends _Credit with DiagnosticableTreeMixin {
-  const _$_Credit(
+class _$_RecurringInvoice extends _RecurringInvoice
+    with DiagnosticableTreeMixin {
+  const _$_RecurringInvoice(
       {this.id = '',
       @JsonKey(name: 'user_id')
           this.createdById = '',
@@ -813,6 +833,8 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
           this.lastSentDate = '',
       @JsonKey(name: 'next_send_date')
           this.nextSendDate = '',
+      @JsonKey(name: 'due_date')
+          this.dueDate = '',
       this.terms = '',
       @JsonKey(name: 'public_notes')
           this.publicNotes = '',
@@ -866,8 +888,8 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
         _documents = documents,
         super._();
 
-  factory _$_Credit.fromJson(Map<String, dynamic> json) =>
-      _$$_CreditFromJson(json);
+  factory _$_RecurringInvoice.fromJson(Map<String, dynamic> json) =>
+      _$$_RecurringInvoiceFromJson(json);
 
   @override
   @JsonKey()
@@ -954,6 +976,9 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
   @JsonKey(name: 'next_send_date')
   final String nextSendDate;
   @override
+  @JsonKey(name: 'due_date')
+  final String dueDate;
+  @override
   @JsonKey()
   final String terms;
   @override
@@ -1039,14 +1064,14 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Credit(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
+    return 'RecurringInvoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Credit'))
+      ..add(DiagnosticsProperty('type', 'RecurringInvoice'))
       ..add(DiagnosticsProperty('id', id))
       ..add(DiagnosticsProperty('createdById', createdById))
       ..add(DiagnosticsProperty('assignedToId', assignedToId))
@@ -1071,6 +1096,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('date', date))
       ..add(DiagnosticsProperty('lastSentDate', lastSentDate))
       ..add(DiagnosticsProperty('nextSendDate', nextSendDate))
+      ..add(DiagnosticsProperty('dueDate', dueDate))
       ..add(DiagnosticsProperty('terms', terms))
       ..add(DiagnosticsProperty('publicNotes', publicNotes))
       ..add(DiagnosticsProperty('privateNotes', privateNotes))
@@ -1103,7 +1129,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Credit &&
+            other is _$_RecurringInvoice &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdById, createdById) ||
                 other.createdById == createdById) &&
@@ -1147,6 +1173,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
                 other.lastSentDate == lastSentDate) &&
             (identical(other.nextSendDate, nextSendDate) ||
                 other.nextSendDate == nextSendDate) &&
+            (identical(other.dueDate, dueDate) || other.dueDate == dueDate) &&
             (identical(other.terms, terms) || other.terms == terms) &&
             (identical(other.publicNotes, publicNotes) ||
                 other.publicNotes == publicNotes) &&
@@ -1226,6 +1253,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
         date,
         lastSentDate,
         nextSendDate,
+        dueDate,
         terms,
         publicNotes,
         privateNotes,
@@ -1257,19 +1285,19 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CreditCopyWith<_$_Credit> get copyWith =>
-      __$$_CreditCopyWithImpl<_$_Credit>(this, _$identity);
+  _$$_RecurringInvoiceCopyWith<_$_RecurringInvoice> get copyWith =>
+      __$$_RecurringInvoiceCopyWithImpl<_$_RecurringInvoice>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreditToJson(
+    return _$$_RecurringInvoiceToJson(
       this,
     );
   }
 }
 
-abstract class _Credit extends Credit {
-  const factory _Credit(
+abstract class _RecurringInvoice extends RecurringInvoice {
+  const factory _RecurringInvoice(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -1294,6 +1322,7 @@ abstract class _Credit extends Credit {
       final String date,
       @JsonKey(name: 'last_sent_date') final String lastSentDate,
       @JsonKey(name: 'next_send_date') final String nextSendDate,
+      @JsonKey(name: 'due_date') final String dueDate,
       final String terms,
       @JsonKey(name: 'public_notes') final String publicNotes,
       @JsonKey(name: 'private_notes') final String privateNotes,
@@ -1319,10 +1348,11 @@ abstract class _Credit extends Credit {
       @JsonKey(name: 'custom_surcharge_tax2') final bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
-      final List<Document> documents}) = _$_Credit;
-  const _Credit._() : super._();
+      final List<Document> documents}) = _$_RecurringInvoice;
+  const _RecurringInvoice._() : super._();
 
-  factory _Credit.fromJson(Map<String, dynamic> json) = _$_Credit.fromJson;
+  factory _RecurringInvoice.fromJson(Map<String, dynamic> json) =
+      _$_RecurringInvoice.fromJson;
 
   @override
   String get id;
@@ -1389,6 +1419,9 @@ abstract class _Credit extends Credit {
   @override
   @JsonKey(name: 'next_send_date')
   String get nextSendDate;
+  @override
+  @JsonKey(name: 'due_date')
+  String get dueDate;
   @override
   String get terms;
   @override
@@ -1465,37 +1498,38 @@ abstract class _Credit extends Credit {
   List<Document> get documents;
   @override
   @JsonKey(ignore: true)
-  _$$_CreditCopyWith<_$_Credit> get copyWith =>
+  _$$_RecurringInvoiceCopyWith<_$_RecurringInvoice> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-CreditList _$CreditListFromJson(Map<String, dynamic> json) {
-  return _CreditList.fromJson(json);
+RecurringInvoiceList _$RecurringInvoiceListFromJson(Map<String, dynamic> json) {
+  return _RecurringInvoiceList.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CreditList {
-  List<Credit> get data => throw _privateConstructorUsedError;
+mixin _$RecurringInvoiceList {
+  List<RecurringInvoice> get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreditListCopyWith<CreditList> get copyWith =>
+  $RecurringInvoiceListCopyWith<RecurringInvoiceList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreditListCopyWith<$Res> {
-  factory $CreditListCopyWith(
-          CreditList value, $Res Function(CreditList) then) =
-      _$CreditListCopyWithImpl<$Res, CreditList>;
+abstract class $RecurringInvoiceListCopyWith<$Res> {
+  factory $RecurringInvoiceListCopyWith(RecurringInvoiceList value,
+          $Res Function(RecurringInvoiceList) then) =
+      _$RecurringInvoiceListCopyWithImpl<$Res, RecurringInvoiceList>;
   @useResult
-  $Res call({List<Credit> data});
+  $Res call({List<RecurringInvoice> data});
 }
 
 /// @nodoc
-class _$CreditListCopyWithImpl<$Res, $Val extends CreditList>
-    implements $CreditListCopyWith<$Res> {
-  _$CreditListCopyWithImpl(this._value, this._then);
+class _$RecurringInvoiceListCopyWithImpl<$Res,
+        $Val extends RecurringInvoiceList>
+    implements $RecurringInvoiceListCopyWith<$Res> {
+  _$RecurringInvoiceListCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1511,28 +1545,28 @@ class _$CreditListCopyWithImpl<$Res, $Val extends CreditList>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<Credit>,
+              as List<RecurringInvoice>,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_CreditListCopyWith<$Res>
-    implements $CreditListCopyWith<$Res> {
-  factory _$$_CreditListCopyWith(
-          _$_CreditList value, $Res Function(_$_CreditList) then) =
-      __$$_CreditListCopyWithImpl<$Res>;
+abstract class _$$_RecurringInvoiceListCopyWith<$Res>
+    implements $RecurringInvoiceListCopyWith<$Res> {
+  factory _$$_RecurringInvoiceListCopyWith(_$_RecurringInvoiceList value,
+          $Res Function(_$_RecurringInvoiceList) then) =
+      __$$_RecurringInvoiceListCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Credit> data});
+  $Res call({List<RecurringInvoice> data});
 }
 
 /// @nodoc
-class __$$_CreditListCopyWithImpl<$Res>
-    extends _$CreditListCopyWithImpl<$Res, _$_CreditList>
-    implements _$$_CreditListCopyWith<$Res> {
-  __$$_CreditListCopyWithImpl(
-      _$_CreditList _value, $Res Function(_$_CreditList) _then)
+class __$$_RecurringInvoiceListCopyWithImpl<$Res>
+    extends _$RecurringInvoiceListCopyWithImpl<$Res, _$_RecurringInvoiceList>
+    implements _$$_RecurringInvoiceListCopyWith<$Res> {
+  __$$_RecurringInvoiceListCopyWithImpl(_$_RecurringInvoiceList _value,
+      $Res Function(_$_RecurringInvoiceList) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1540,26 +1574,29 @@ class __$$_CreditListCopyWithImpl<$Res>
   $Res call({
     Object? data = null,
   }) {
-    return _then(_$_CreditList(
+    return _then(_$_RecurringInvoiceList(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<Credit>,
+              as List<RecurringInvoice>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_CreditList with DiagnosticableTreeMixin implements _CreditList {
-  _$_CreditList({required final List<Credit> data}) : _data = data;
+class _$_RecurringInvoiceList
+    with DiagnosticableTreeMixin
+    implements _RecurringInvoiceList {
+  _$_RecurringInvoiceList({required final List<RecurringInvoice> data})
+      : _data = data;
 
-  factory _$_CreditList.fromJson(Map<String, dynamic> json) =>
-      _$$_CreditListFromJson(json);
+  factory _$_RecurringInvoiceList.fromJson(Map<String, dynamic> json) =>
+      _$$_RecurringInvoiceListFromJson(json);
 
-  final List<Credit> _data;
+  final List<RecurringInvoice> _data;
   @override
-  List<Credit> get data {
+  List<RecurringInvoice> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -1567,14 +1604,14 @@ class _$_CreditList with DiagnosticableTreeMixin implements _CreditList {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CreditList(data: $data)';
+    return 'RecurringInvoiceList(data: $data)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'CreditList'))
+      ..add(DiagnosticsProperty('type', 'RecurringInvoiceList'))
       ..add(DiagnosticsProperty('data', data));
   }
 
@@ -1582,7 +1619,7 @@ class _$_CreditList with DiagnosticableTreeMixin implements _CreditList {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CreditList &&
+            other is _$_RecurringInvoiceList &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
@@ -1594,60 +1631,63 @@ class _$_CreditList with DiagnosticableTreeMixin implements _CreditList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CreditListCopyWith<_$_CreditList> get copyWith =>
-      __$$_CreditListCopyWithImpl<_$_CreditList>(this, _$identity);
+  _$$_RecurringInvoiceListCopyWith<_$_RecurringInvoiceList> get copyWith =>
+      __$$_RecurringInvoiceListCopyWithImpl<_$_RecurringInvoiceList>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreditListToJson(
+    return _$$_RecurringInvoiceListToJson(
       this,
     );
   }
 }
 
-abstract class _CreditList implements CreditList {
-  factory _CreditList({required final List<Credit> data}) = _$_CreditList;
+abstract class _RecurringInvoiceList implements RecurringInvoiceList {
+  factory _RecurringInvoiceList({required final List<RecurringInvoice> data}) =
+      _$_RecurringInvoiceList;
 
-  factory _CreditList.fromJson(Map<String, dynamic> json) =
-      _$_CreditList.fromJson;
+  factory _RecurringInvoiceList.fromJson(Map<String, dynamic> json) =
+      _$_RecurringInvoiceList.fromJson;
 
   @override
-  List<Credit> get data;
+  List<RecurringInvoice> get data;
   @override
   @JsonKey(ignore: true)
-  _$$_CreditListCopyWith<_$_CreditList> get copyWith =>
+  _$$_RecurringInvoiceListCopyWith<_$_RecurringInvoiceList> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-CreditItem _$CreditItemFromJson(Map<String, dynamic> json) {
-  return _CreditItem.fromJson(json);
+RecurringInvoiceItem _$RecurringInvoiceItemFromJson(Map<String, dynamic> json) {
+  return _RecurringInvoiceItem.fromJson(json);
 }
 
 /// @nodoc
-mixin _$CreditItem {
-  Credit get data => throw _privateConstructorUsedError;
+mixin _$RecurringInvoiceItem {
+  RecurringInvoice get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CreditItemCopyWith<CreditItem> get copyWith =>
+  $RecurringInvoiceItemCopyWith<RecurringInvoiceItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $CreditItemCopyWith<$Res> {
-  factory $CreditItemCopyWith(
-          CreditItem value, $Res Function(CreditItem) then) =
-      _$CreditItemCopyWithImpl<$Res, CreditItem>;
+abstract class $RecurringInvoiceItemCopyWith<$Res> {
+  factory $RecurringInvoiceItemCopyWith(RecurringInvoiceItem value,
+          $Res Function(RecurringInvoiceItem) then) =
+      _$RecurringInvoiceItemCopyWithImpl<$Res, RecurringInvoiceItem>;
   @useResult
-  $Res call({Credit data});
+  $Res call({RecurringInvoice data});
 
-  $CreditCopyWith<$Res> get data;
+  $RecurringInvoiceCopyWith<$Res> get data;
 }
 
 /// @nodoc
-class _$CreditItemCopyWithImpl<$Res, $Val extends CreditItem>
-    implements $CreditItemCopyWith<$Res> {
-  _$CreditItemCopyWithImpl(this._value, this._then);
+class _$RecurringInvoiceItemCopyWithImpl<$Res,
+        $Val extends RecurringInvoiceItem>
+    implements $RecurringInvoiceItemCopyWith<$Res> {
+  _$RecurringInvoiceItemCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1663,39 +1703,39 @@ class _$CreditItemCopyWithImpl<$Res, $Val extends CreditItem>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Credit,
+              as RecurringInvoice,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CreditCopyWith<$Res> get data {
-    return $CreditCopyWith<$Res>(_value.data, (value) {
+  $RecurringInvoiceCopyWith<$Res> get data {
+    return $RecurringInvoiceCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_CreditItemCopyWith<$Res>
-    implements $CreditItemCopyWith<$Res> {
-  factory _$$_CreditItemCopyWith(
-          _$_CreditItem value, $Res Function(_$_CreditItem) then) =
-      __$$_CreditItemCopyWithImpl<$Res>;
+abstract class _$$_RecurringInvoiceItemCopyWith<$Res>
+    implements $RecurringInvoiceItemCopyWith<$Res> {
+  factory _$$_RecurringInvoiceItemCopyWith(_$_RecurringInvoiceItem value,
+          $Res Function(_$_RecurringInvoiceItem) then) =
+      __$$_RecurringInvoiceItemCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Credit data});
+  $Res call({RecurringInvoice data});
 
   @override
-  $CreditCopyWith<$Res> get data;
+  $RecurringInvoiceCopyWith<$Res> get data;
 }
 
 /// @nodoc
-class __$$_CreditItemCopyWithImpl<$Res>
-    extends _$CreditItemCopyWithImpl<$Res, _$_CreditItem>
-    implements _$$_CreditItemCopyWith<$Res> {
-  __$$_CreditItemCopyWithImpl(
-      _$_CreditItem _value, $Res Function(_$_CreditItem) _then)
+class __$$_RecurringInvoiceItemCopyWithImpl<$Res>
+    extends _$RecurringInvoiceItemCopyWithImpl<$Res, _$_RecurringInvoiceItem>
+    implements _$$_RecurringInvoiceItemCopyWith<$Res> {
+  __$$_RecurringInvoiceItemCopyWithImpl(_$_RecurringInvoiceItem _value,
+      $Res Function(_$_RecurringInvoiceItem) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1703,36 +1743,38 @@ class __$$_CreditItemCopyWithImpl<$Res>
   $Res call({
     Object? data = null,
   }) {
-    return _then(_$_CreditItem(
+    return _then(_$_RecurringInvoiceItem(
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Credit,
+              as RecurringInvoice,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_CreditItem with DiagnosticableTreeMixin implements _CreditItem {
-  _$_CreditItem(this.data);
+class _$_RecurringInvoiceItem
+    with DiagnosticableTreeMixin
+    implements _RecurringInvoiceItem {
+  _$_RecurringInvoiceItem(this.data);
 
-  factory _$_CreditItem.fromJson(Map<String, dynamic> json) =>
-      _$$_CreditItemFromJson(json);
+  factory _$_RecurringInvoiceItem.fromJson(Map<String, dynamic> json) =>
+      _$$_RecurringInvoiceItemFromJson(json);
 
   @override
-  final Credit data;
+  final RecurringInvoice data;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CreditItem(data: $data)';
+    return 'RecurringInvoiceItem(data: $data)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'CreditItem'))
+      ..add(DiagnosticsProperty('type', 'RecurringInvoiceItem'))
       ..add(DiagnosticsProperty('data', data));
   }
 
@@ -1740,7 +1782,7 @@ class _$_CreditItem with DiagnosticableTreeMixin implements _CreditItem {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CreditItem &&
+            other is _$_RecurringInvoiceItem &&
             (identical(other.data, data) || other.data == data));
   }
 
@@ -1751,27 +1793,29 @@ class _$_CreditItem with DiagnosticableTreeMixin implements _CreditItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CreditItemCopyWith<_$_CreditItem> get copyWith =>
-      __$$_CreditItemCopyWithImpl<_$_CreditItem>(this, _$identity);
+  _$$_RecurringInvoiceItemCopyWith<_$_RecurringInvoiceItem> get copyWith =>
+      __$$_RecurringInvoiceItemCopyWithImpl<_$_RecurringInvoiceItem>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreditItemToJson(
+    return _$$_RecurringInvoiceItemToJson(
       this,
     );
   }
 }
 
-abstract class _CreditItem implements CreditItem {
-  factory _CreditItem(final Credit data) = _$_CreditItem;
+abstract class _RecurringInvoiceItem implements RecurringInvoiceItem {
+  factory _RecurringInvoiceItem(final RecurringInvoice data) =
+      _$_RecurringInvoiceItem;
 
-  factory _CreditItem.fromJson(Map<String, dynamic> json) =
-      _$_CreditItem.fromJson;
+  factory _RecurringInvoiceItem.fromJson(Map<String, dynamic> json) =
+      _$_RecurringInvoiceItem.fromJson;
 
   @override
-  Credit get data;
+  RecurringInvoice get data;
   @override
   @JsonKey(ignore: true)
-  _$$_CreditItemCopyWith<_$_CreditItem> get copyWith =>
+  _$$_RecurringInvoiceItemCopyWith<_$_RecurringInvoiceItem> get copyWith =>
       throw _privateConstructorUsedError;
 }

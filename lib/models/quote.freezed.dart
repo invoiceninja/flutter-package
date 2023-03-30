@@ -45,7 +45,7 @@ mixin _$Quote {
   String get clientId => throw _privateConstructorUsedError;
   @JsonKey(name: 'line_items')
   List<InvoiceLineItem> get lineItems => throw _privateConstructorUsedError;
-  List<QuoteInvitation> get invitations => throw _privateConstructorUsedError;
+  List<InvoiceInvitation> get invitations => throw _privateConstructorUsedError;
   double get amount => throw _privateConstructorUsedError;
   double get balance => throw _privateConstructorUsedError;
   @JsonKey(name: 'status_id')
@@ -136,7 +136,7 @@ abstract class $QuoteCopyWith<$Res> {
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
       @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
-      List<QuoteInvitation> invitations,
+      List<InvoiceInvitation> invitations,
       double amount,
       double balance,
       @JsonKey(name: 'status_id') String statusId,
@@ -297,7 +297,7 @@ class _$QuoteCopyWithImpl<$Res, $Val extends Quote>
       invitations: null == invitations
           ? _value.invitations
           : invitations // ignore: cast_nullable_to_non_nullable
-              as List<QuoteInvitation>,
+              as List<InvoiceInvitation>,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -470,7 +470,7 @@ abstract class _$$_QuoteCopyWith<$Res> implements $QuoteCopyWith<$Res> {
       @JsonKey(name: 'custom_value4') String customValue4,
       @JsonKey(name: 'client_id') String clientId,
       @JsonKey(name: 'line_items') List<InvoiceLineItem> lineItems,
-      List<QuoteInvitation> invitations,
+      List<InvoiceInvitation> invitations,
       double amount,
       double balance,
       @JsonKey(name: 'status_id') String statusId,
@@ -627,7 +627,7 @@ class __$$_QuoteCopyWithImpl<$Res> extends _$QuoteCopyWithImpl<$Res, _$_Quote>
       invitations: null == invitations
           ? _value._invitations
           : invitations // ignore: cast_nullable_to_non_nullable
-              as List<QuoteInvitation>,
+              as List<InvoiceInvitation>,
       amount: null == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
@@ -810,7 +810,7 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
           this.clientId = '',
       @JsonKey(name: 'line_items')
           final List<InvoiceLineItem> lineItems = const <InvoiceLineItem>[],
-      final List<QuoteInvitation> invitations = const <QuoteInvitation>[],
+      final List<InvoiceInvitation> invitations = const <InvoiceInvitation>[],
       this.amount = 0,
       this.balance = 0,
       @JsonKey(name: 'status_id')
@@ -929,10 +929,10 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
     return EqualUnmodifiableListView(_lineItems);
   }
 
-  final List<QuoteInvitation> _invitations;
+  final List<InvoiceInvitation> _invitations;
   @override
   @JsonKey()
-  List<QuoteInvitation> get invitations {
+  List<InvoiceInvitation> get invitations {
     if (_invitations is EqualUnmodifiableListView) return _invitations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_invitations);
@@ -1305,7 +1305,7 @@ abstract class _Quote extends Quote {
       @JsonKey(name: 'custom_value4') final String customValue4,
       @JsonKey(name: 'client_id') final String clientId,
       @JsonKey(name: 'line_items') final List<InvoiceLineItem> lineItems,
-      final List<QuoteInvitation> invitations,
+      final List<InvoiceInvitation> invitations,
       final double amount,
       final double balance,
       @JsonKey(name: 'status_id') final String statusId,
@@ -1386,7 +1386,7 @@ abstract class _Quote extends Quote {
   @JsonKey(name: 'line_items')
   List<InvoiceLineItem> get lineItems;
   @override
-  List<QuoteInvitation> get invitations;
+  List<InvoiceInvitation> get invitations;
   @override
   double get amount;
   @override
@@ -1492,306 +1492,6 @@ abstract class _Quote extends Quote {
   @override
   @JsonKey(ignore: true)
   _$$_QuoteCopyWith<_$_Quote> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-QuoteInvitation _$QuoteInvitationFromJson(Map<String, dynamic> json) {
-  return _QuoteInvitation.fromJson(json);
-}
-
-/// @nodoc
-mixin _$QuoteInvitation {
-  String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'client_contact_id')
-  String get clientContactId => throw _privateConstructorUsedError;
-  String get key => throw _privateConstructorUsedError;
-  @JsonKey(name: 'link')
-  String get url => throw _privateConstructorUsedError;
-  @JsonKey(name: 'sent_date')
-  String get sentDate => throw _privateConstructorUsedError;
-  @JsonKey(name: 'viewed_date')
-  String get viewedDate => throw _privateConstructorUsedError;
-  @JsonKey(name: 'opened_date')
-  String get openedDate => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $QuoteInvitationCopyWith<QuoteInvitation> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $QuoteInvitationCopyWith<$Res> {
-  factory $QuoteInvitationCopyWith(
-          QuoteInvitation value, $Res Function(QuoteInvitation) then) =
-      _$QuoteInvitationCopyWithImpl<$Res, QuoteInvitation>;
-  @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: 'client_contact_id') String clientContactId,
-      String key,
-      @JsonKey(name: 'link') String url,
-      @JsonKey(name: 'sent_date') String sentDate,
-      @JsonKey(name: 'viewed_date') String viewedDate,
-      @JsonKey(name: 'opened_date') String openedDate});
-}
-
-/// @nodoc
-class _$QuoteInvitationCopyWithImpl<$Res, $Val extends QuoteInvitation>
-    implements $QuoteInvitationCopyWith<$Res> {
-  _$QuoteInvitationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? clientContactId = null,
-    Object? key = null,
-    Object? url = null,
-    Object? sentDate = null,
-    Object? viewedDate = null,
-    Object? openedDate = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      clientContactId: null == clientContactId
-          ? _value.clientContactId
-          : clientContactId // ignore: cast_nullable_to_non_nullable
-              as String,
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      sentDate: null == sentDate
-          ? _value.sentDate
-          : sentDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      viewedDate: null == viewedDate
-          ? _value.viewedDate
-          : viewedDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      openedDate: null == openedDate
-          ? _value.openedDate
-          : openedDate // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$_QuoteInvitationCopyWith<$Res>
-    implements $QuoteInvitationCopyWith<$Res> {
-  factory _$$_QuoteInvitationCopyWith(
-          _$_QuoteInvitation value, $Res Function(_$_QuoteInvitation) then) =
-      __$$_QuoteInvitationCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: 'client_contact_id') String clientContactId,
-      String key,
-      @JsonKey(name: 'link') String url,
-      @JsonKey(name: 'sent_date') String sentDate,
-      @JsonKey(name: 'viewed_date') String viewedDate,
-      @JsonKey(name: 'opened_date') String openedDate});
-}
-
-/// @nodoc
-class __$$_QuoteInvitationCopyWithImpl<$Res>
-    extends _$QuoteInvitationCopyWithImpl<$Res, _$_QuoteInvitation>
-    implements _$$_QuoteInvitationCopyWith<$Res> {
-  __$$_QuoteInvitationCopyWithImpl(
-      _$_QuoteInvitation _value, $Res Function(_$_QuoteInvitation) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? clientContactId = null,
-    Object? key = null,
-    Object? url = null,
-    Object? sentDate = null,
-    Object? viewedDate = null,
-    Object? openedDate = null,
-  }) {
-    return _then(_$_QuoteInvitation(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      clientContactId: null == clientContactId
-          ? _value.clientContactId
-          : clientContactId // ignore: cast_nullable_to_non_nullable
-              as String,
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      sentDate: null == sentDate
-          ? _value.sentDate
-          : sentDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      viewedDate: null == viewedDate
-          ? _value.viewedDate
-          : viewedDate // ignore: cast_nullable_to_non_nullable
-              as String,
-      openedDate: null == openedDate
-          ? _value.openedDate
-          : openedDate // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(explicitToJson: true)
-class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
-  const _$_QuoteInvitation(
-      {this.id = '',
-      @JsonKey(name: 'client_contact_id') this.clientContactId = '',
-      this.key = '',
-      @JsonKey(name: 'link') this.url = '',
-      @JsonKey(name: 'sent_date') this.sentDate = '',
-      @JsonKey(name: 'viewed_date') this.viewedDate = '',
-      @JsonKey(name: 'opened_date') this.openedDate = ''})
-      : super._();
-
-  factory _$_QuoteInvitation.fromJson(Map<String, dynamic> json) =>
-      _$$_QuoteInvitationFromJson(json);
-
-  @override
-  @JsonKey()
-  final String id;
-  @override
-  @JsonKey(name: 'client_contact_id')
-  final String clientContactId;
-  @override
-  @JsonKey()
-  final String key;
-  @override
-  @JsonKey(name: 'link')
-  final String url;
-  @override
-  @JsonKey(name: 'sent_date')
-  final String sentDate;
-  @override
-  @JsonKey(name: 'viewed_date')
-  final String viewedDate;
-  @override
-  @JsonKey(name: 'opened_date')
-  final String openedDate;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'QuoteInvitation(id: $id, clientContactId: $clientContactId, key: $key, url: $url, sentDate: $sentDate, viewedDate: $viewedDate, openedDate: $openedDate)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'QuoteInvitation'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('clientContactId', clientContactId))
-      ..add(DiagnosticsProperty('key', key))
-      ..add(DiagnosticsProperty('url', url))
-      ..add(DiagnosticsProperty('sentDate', sentDate))
-      ..add(DiagnosticsProperty('viewedDate', viewedDate))
-      ..add(DiagnosticsProperty('openedDate', openedDate));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_QuoteInvitation &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.clientContactId, clientContactId) ||
-                other.clientContactId == clientContactId) &&
-            (identical(other.key, key) || other.key == key) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.sentDate, sentDate) ||
-                other.sentDate == sentDate) &&
-            (identical(other.viewedDate, viewedDate) ||
-                other.viewedDate == viewedDate) &&
-            (identical(other.openedDate, openedDate) ||
-                other.openedDate == openedDate));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, clientContactId, key, url,
-      sentDate, viewedDate, openedDate);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_QuoteInvitationCopyWith<_$_QuoteInvitation> get copyWith =>
-      __$$_QuoteInvitationCopyWithImpl<_$_QuoteInvitation>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_QuoteInvitationToJson(
-      this,
-    );
-  }
-}
-
-abstract class _QuoteInvitation extends QuoteInvitation {
-  const factory _QuoteInvitation(
-          {final String id,
-          @JsonKey(name: 'client_contact_id') final String clientContactId,
-          final String key,
-          @JsonKey(name: 'link') final String url,
-          @JsonKey(name: 'sent_date') final String sentDate,
-          @JsonKey(name: 'viewed_date') final String viewedDate,
-          @JsonKey(name: 'opened_date') final String openedDate}) =
-      _$_QuoteInvitation;
-  const _QuoteInvitation._() : super._();
-
-  factory _QuoteInvitation.fromJson(Map<String, dynamic> json) =
-      _$_QuoteInvitation.fromJson;
-
-  @override
-  String get id;
-  @override
-  @JsonKey(name: 'client_contact_id')
-  String get clientContactId;
-  @override
-  String get key;
-  @override
-  @JsonKey(name: 'link')
-  String get url;
-  @override
-  @JsonKey(name: 'sent_date')
-  String get sentDate;
-  @override
-  @JsonKey(name: 'viewed_date')
-  String get viewedDate;
-  @override
-  @JsonKey(name: 'opened_date')
-  String get openedDate;
-  @override
-  @JsonKey(ignore: true)
-  _$$_QuoteInvitationCopyWith<_$_QuoteInvitation> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

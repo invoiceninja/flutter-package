@@ -33,7 +33,7 @@ class Quote with _$Quote {
     @Default(<InvoiceLineItem>[])
     @JsonKey(name: 'line_items')
         List<InvoiceLineItem> lineItems,
-    @Default(<QuoteInvitation>[]) List<QuoteInvitation> invitations,
+    @Default(<InvoiceInvitation>[]) List<InvoiceInvitation> invitations,
     @Default(0) double amount,
     @Default(0) double balance,
     @Default('') @JsonKey(name: 'status_id') String statusId,
@@ -105,31 +105,6 @@ class Quote with _$Quote {
 
   /// Create an Quote from JSON
   factory Quote.fromJson(Map<String, dynamic> json) => _$QuoteFromJson(json);
-}
-
-/// QuoteInvitation class
-@freezed
-class QuoteInvitation with _$QuoteInvitation {
-  const QuoteInvitation._();
-
-  /// QuoteInvitation factory constructor
-  @JsonSerializable(explicitToJson: true)
-  const factory QuoteInvitation({
-    @Default('') String id,
-    @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
-    @Default('') String key,
-    @Default('') @JsonKey(name: 'link') String url,
-    @Default('') @JsonKey(name: 'sent_date') String sentDate,
-    @Default('') @JsonKey(name: 'viewed_date') String viewedDate,
-    @Default('') @JsonKey(name: 'opened_date') String openedDate,
-  }) = _QuoteInvitation;
-
-  /// Get the PDF URL for the invitation
-  String get pdfUrl => '$url/download';
-
-  /// Create an QuoteInvitation from JSON
-  factory QuoteInvitation.fromJson(Map<String, dynamic> json) =>
-      _$QuoteInvitationFromJson(json);
 }
 
 /// Multi-item quote response

@@ -1,5 +1,7 @@
 library invoiceninja;
 
+import 'package:invoiceninja/repositories/recurring_invoice_repository.dart';
+
 import 'repositories/client_repository.dart';
 import 'repositories/company_repository.dart';
 import 'repositories/credit_repository.dart';
@@ -54,6 +56,8 @@ class InvoiceNinjaAdmin {
   static PaymentAdminRepository payments = PaymentAdminRepository();
   static QuoteAdminRepository quotes = QuoteAdminRepository();
   static CreditAdminRepository credits = CreditAdminRepository();
+  static RecurringInvoiceAdminRepository recurringInvoices =
+      RecurringInvoiceAdminRepository();
 
   /// Configure the Invoice Ninja package
   /// Tokens can be managed on Settings > Account Management
