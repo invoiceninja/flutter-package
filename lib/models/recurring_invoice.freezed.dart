@@ -111,6 +111,12 @@ mixin _$RecurringInvoice {
   @JsonKey(name: 'custom_surcharge_tax4')
   bool get customSurchargeTax4 => throw _privateConstructorUsedError;
   List<Document> get documents => throw _privateConstructorUsedError;
+  @JsonKey(name: 'frequency_id')
+  String get frequencyId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'remaining_cycles')
+  int get remainingCycles => throw _privateConstructorUsedError;
+  @JsonKey(name: 'due_date_days')
+  String get dueDateDays => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -175,7 +181,10 @@ abstract class $RecurringInvoiceCopyWith<$Res> {
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
-      List<Document> documents});
+      List<Document> documents,
+      @JsonKey(name: 'frequency_id') String frequencyId,
+      @JsonKey(name: 'remaining_cycles') int remainingCycles,
+      @JsonKey(name: 'due_date_days') String dueDateDays});
 }
 
 /// @nodoc
@@ -242,6 +251,9 @@ class _$RecurringInvoiceCopyWithImpl<$Res, $Val extends RecurringInvoice>
     Object? customSurchargeTax3 = null,
     Object? customSurchargeTax4 = null,
     Object? documents = null,
+    Object? frequencyId = null,
+    Object? remainingCycles = null,
+    Object? dueDateDays = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -448,6 +460,18 @@ class _$RecurringInvoiceCopyWithImpl<$Res, $Val extends RecurringInvoice>
           ? _value.documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
+      frequencyId: null == frequencyId
+          ? _value.frequencyId
+          : frequencyId // ignore: cast_nullable_to_non_nullable
+              as String,
+      remainingCycles: null == remainingCycles
+          ? _value.remainingCycles
+          : remainingCycles // ignore: cast_nullable_to_non_nullable
+              as int,
+      dueDateDays: null == dueDateDays
+          ? _value.dueDateDays
+          : dueDateDays // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -511,7 +535,10 @@ abstract class _$$_RecurringInvoiceCopyWith<$Res>
       @JsonKey(name: 'custom_surcharge_tax2') bool customSurchargeTax2,
       @JsonKey(name: 'custom_surcharge_tax3') bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') bool customSurchargeTax4,
-      List<Document> documents});
+      List<Document> documents,
+      @JsonKey(name: 'frequency_id') String frequencyId,
+      @JsonKey(name: 'remaining_cycles') int remainingCycles,
+      @JsonKey(name: 'due_date_days') String dueDateDays});
 }
 
 /// @nodoc
@@ -576,6 +603,9 @@ class __$$_RecurringInvoiceCopyWithImpl<$Res>
     Object? customSurchargeTax3 = null,
     Object? customSurchargeTax4 = null,
     Object? documents = null,
+    Object? frequencyId = null,
+    Object? remainingCycles = null,
+    Object? dueDateDays = null,
   }) {
     return _then(_$_RecurringInvoice(
       id: null == id
@@ -782,6 +812,18 @@ class __$$_RecurringInvoiceCopyWithImpl<$Res>
           ? _value._documents
           : documents // ignore: cast_nullable_to_non_nullable
               as List<Document>,
+      frequencyId: null == frequencyId
+          ? _value.frequencyId
+          : frequencyId // ignore: cast_nullable_to_non_nullable
+              as String,
+      remainingCycles: null == remainingCycles
+          ? _value.remainingCycles
+          : remainingCycles // ignore: cast_nullable_to_non_nullable
+              as int,
+      dueDateDays: null == dueDateDays
+          ? _value.dueDateDays
+          : dueDateDays // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -882,7 +924,13 @@ class _$_RecurringInvoice extends _RecurringInvoice
           this.customSurchargeTax3 = false,
       @JsonKey(name: 'custom_surcharge_tax4')
           this.customSurchargeTax4 = false,
-      final List<Document> documents = const <Document>[]})
+      final List<Document> documents = const <Document>[],
+      @JsonKey(name: 'frequency_id')
+          this.frequencyId = '',
+      @JsonKey(name: 'remaining_cycles')
+          this.remainingCycles = 0,
+      @JsonKey(name: 'due_date_days')
+          this.dueDateDays = ''})
       : _lineItems = lineItems,
         _invitations = invitations,
         _documents = documents,
@@ -1063,8 +1111,18 @@ class _$_RecurringInvoice extends _RecurringInvoice
   }
 
   @override
+  @JsonKey(name: 'frequency_id')
+  final String frequencyId;
+  @override
+  @JsonKey(name: 'remaining_cycles')
+  final int remainingCycles;
+  @override
+  @JsonKey(name: 'due_date_days')
+  final String dueDateDays;
+
+  @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RecurringInvoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents)';
+    return 'RecurringInvoice(id: $id, createdById: $createdById, assignedToId: $assignedToId, createdAt: $createdAt, updatedAt: $updatedAt, archivedAt: $archivedAt, isDeleted: $isDeleted, customValue1: $customValue1, customValue2: $customValue2, customValue3: $customValue3, customValue4: $customValue4, clientId: $clientId, lineItems: $lineItems, invitations: $invitations, amount: $amount, balance: $balance, statusId: $statusId, designId: $designId, number: $number, discount: $discount, poNumber: $poNumber, date: $date, lastSentDate: $lastSentDate, nextSendDate: $nextSendDate, dueDate: $dueDate, terms: $terms, publicNotes: $publicNotes, privateNotes: $privateNotes, usesInclusiveTaxes: $usesInclusiveTaxes, taxName1: $taxName1, taxRate1: $taxRate1, taxName2: $taxName2, taxRate2: $taxRate2, taxName3: $taxName3, taxRate3: $taxRate3, totalTaxes: $totalTaxes, isAmountDiscount: $isAmountDiscount, footer: $footer, partial: $partial, partialDueDate: $partialDueDate, hasTasks: $hasTasks, hasExpenses: $hasExpenses, customSurcharge1: $customSurcharge1, customSurcharge2: $customSurcharge2, customSurcharge3: $customSurcharge3, customSurcharge4: $customSurcharge4, customSurchargeTax1: $customSurchargeTax1, customSurchargeTax2: $customSurchargeTax2, customSurchargeTax3: $customSurchargeTax3, customSurchargeTax4: $customSurchargeTax4, documents: $documents, frequencyId: $frequencyId, remainingCycles: $remainingCycles, dueDateDays: $dueDateDays)';
   }
 
   @override
@@ -1122,7 +1180,10 @@ class _$_RecurringInvoice extends _RecurringInvoice
       ..add(DiagnosticsProperty('customSurchargeTax2', customSurchargeTax2))
       ..add(DiagnosticsProperty('customSurchargeTax3', customSurchargeTax3))
       ..add(DiagnosticsProperty('customSurchargeTax4', customSurchargeTax4))
-      ..add(DiagnosticsProperty('documents', documents));
+      ..add(DiagnosticsProperty('documents', documents))
+      ..add(DiagnosticsProperty('frequencyId', frequencyId))
+      ..add(DiagnosticsProperty('remainingCycles', remainingCycles))
+      ..add(DiagnosticsProperty('dueDateDays', dueDateDays));
   }
 
   @override
@@ -1222,7 +1283,11 @@ class _$_RecurringInvoice extends _RecurringInvoice
             (identical(other.customSurchargeTax4, customSurchargeTax4) ||
                 other.customSurchargeTax4 == customSurchargeTax4) &&
             const DeepCollectionEquality()
-                .equals(other._documents, _documents));
+                .equals(other._documents, _documents) &&
+            (identical(other.frequencyId, frequencyId) ||
+                other.frequencyId == frequencyId) &&
+            (identical(other.remainingCycles, remainingCycles) || other.remainingCycles == remainingCycles) &&
+            (identical(other.dueDateDays, dueDateDays) || other.dueDateDays == dueDateDays));
   }
 
   @JsonKey(ignore: true)
@@ -1279,7 +1344,10 @@ class _$_RecurringInvoice extends _RecurringInvoice
         customSurchargeTax2,
         customSurchargeTax3,
         customSurchargeTax4,
-        const DeepCollectionEquality().hash(_documents)
+        const DeepCollectionEquality().hash(_documents),
+        frequencyId,
+        remainingCycles,
+        dueDateDays
       ]);
 
   @JsonKey(ignore: true)
@@ -1299,56 +1367,102 @@ class _$_RecurringInvoice extends _RecurringInvoice
 abstract class _RecurringInvoice extends RecurringInvoice {
   const factory _RecurringInvoice(
       {final String id,
-      @JsonKey(name: 'user_id') final String createdById,
-      @JsonKey(name: 'assigned_user_id') final String assignedToId,
-      @JsonKey(name: 'created_at') final int createdAt,
-      @JsonKey(name: 'updated_at') final int updatedAt,
-      @JsonKey(name: 'archived_at') final int archivedAt,
-      @JsonKey(name: 'is_deleted') final bool isDeleted,
-      @JsonKey(name: 'custom_value1') final String customValue1,
-      @JsonKey(name: 'custom_value2') final String customValue2,
-      @JsonKey(name: 'custom_value3') final String customValue3,
-      @JsonKey(name: 'custom_value4') final String customValue4,
-      @JsonKey(name: 'client_id') final String clientId,
-      @JsonKey(name: 'line_items') final List<InvoiceLineItem> lineItems,
+      @JsonKey(name: 'user_id')
+          final String createdById,
+      @JsonKey(name: 'assigned_user_id')
+          final String assignedToId,
+      @JsonKey(name: 'created_at')
+          final int createdAt,
+      @JsonKey(name: 'updated_at')
+          final int updatedAt,
+      @JsonKey(name: 'archived_at')
+          final int archivedAt,
+      @JsonKey(name: 'is_deleted')
+          final bool isDeleted,
+      @JsonKey(name: 'custom_value1')
+          final String customValue1,
+      @JsonKey(name: 'custom_value2')
+          final String customValue2,
+      @JsonKey(name: 'custom_value3')
+          final String customValue3,
+      @JsonKey(name: 'custom_value4')
+          final String customValue4,
+      @JsonKey(name: 'client_id')
+          final String clientId,
+      @JsonKey(name: 'line_items')
+          final List<InvoiceLineItem> lineItems,
       final List<InvoiceInvitation> invitations,
       final double amount,
       final double balance,
-      @JsonKey(name: 'status_id') final String statusId,
-      @JsonKey(name: 'design_id') final String designId,
+      @JsonKey(name: 'status_id')
+          final String statusId,
+      @JsonKey(name: 'design_id')
+          final String designId,
       final String number,
       final double discount,
-      @JsonKey(name: 'po_number') final String poNumber,
+      @JsonKey(name: 'po_number')
+          final String poNumber,
       final String date,
-      @JsonKey(name: 'last_sent_date') final String lastSentDate,
-      @JsonKey(name: 'next_send_date') final String nextSendDate,
-      @JsonKey(name: 'due_date') final String dueDate,
+      @JsonKey(name: 'last_sent_date')
+          final String lastSentDate,
+      @JsonKey(name: 'next_send_date')
+          final String nextSendDate,
+      @JsonKey(name: 'due_date')
+          final String dueDate,
       final String terms,
-      @JsonKey(name: 'public_notes') final String publicNotes,
-      @JsonKey(name: 'private_notes') final String privateNotes,
-      @JsonKey(name: 'uses_inclusive_taxes') final bool usesInclusiveTaxes,
-      @JsonKey(name: 'tax_name1') final String taxName1,
-      @JsonKey(name: 'tax_rate1') final double taxRate1,
-      @JsonKey(name: 'tax_name2') final String taxName2,
-      @JsonKey(name: 'tax_rate2') final double taxRate2,
-      @JsonKey(name: 'tax_name3') final String taxName3,
-      @JsonKey(name: 'tax_rate3') final double taxRate3,
-      @JsonKey(name: 'total_taxes') final double totalTaxes,
-      @JsonKey(name: 'is_amount_discount') final bool isAmountDiscount,
+      @JsonKey(name: 'public_notes')
+          final String publicNotes,
+      @JsonKey(name: 'private_notes')
+          final String privateNotes,
+      @JsonKey(name: 'uses_inclusive_taxes')
+          final bool usesInclusiveTaxes,
+      @JsonKey(name: 'tax_name1')
+          final String taxName1,
+      @JsonKey(name: 'tax_rate1')
+          final double taxRate1,
+      @JsonKey(name: 'tax_name2')
+          final String taxName2,
+      @JsonKey(name: 'tax_rate2')
+          final double taxRate2,
+      @JsonKey(name: 'tax_name3')
+          final String taxName3,
+      @JsonKey(name: 'tax_rate3')
+          final double taxRate3,
+      @JsonKey(name: 'total_taxes')
+          final double totalTaxes,
+      @JsonKey(name: 'is_amount_discount')
+          final bool isAmountDiscount,
       final String footer,
       final double partial,
-      @JsonKey(name: 'partial_due_date') final String partialDueDate,
-      @JsonKey(name: 'has_tasks') final bool hasTasks,
-      @JsonKey(name: 'has_expenses') final bool hasExpenses,
-      @JsonKey(name: 'custom_surcharge1') final double customSurcharge1,
-      @JsonKey(name: 'custom_surcharge2') final double customSurcharge2,
-      @JsonKey(name: 'custom_surcharge3') final double customSurcharge3,
-      @JsonKey(name: 'custom_surcharge4') final double customSurcharge4,
-      @JsonKey(name: 'custom_surcharge_tax1') final bool customSurchargeTax1,
-      @JsonKey(name: 'custom_surcharge_tax2') final bool customSurchargeTax2,
-      @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
-      @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
-      final List<Document> documents}) = _$_RecurringInvoice;
+      @JsonKey(name: 'partial_due_date')
+          final String partialDueDate,
+      @JsonKey(name: 'has_tasks')
+          final bool hasTasks,
+      @JsonKey(name: 'has_expenses')
+          final bool hasExpenses,
+      @JsonKey(name: 'custom_surcharge1')
+          final double customSurcharge1,
+      @JsonKey(name: 'custom_surcharge2')
+          final double customSurcharge2,
+      @JsonKey(name: 'custom_surcharge3')
+          final double customSurcharge3,
+      @JsonKey(name: 'custom_surcharge4')
+          final double customSurcharge4,
+      @JsonKey(name: 'custom_surcharge_tax1')
+          final bool customSurchargeTax1,
+      @JsonKey(name: 'custom_surcharge_tax2')
+          final bool customSurchargeTax2,
+      @JsonKey(name: 'custom_surcharge_tax3')
+          final bool customSurchargeTax3,
+      @JsonKey(name: 'custom_surcharge_tax4')
+          final bool customSurchargeTax4,
+      final List<Document> documents,
+      @JsonKey(name: 'frequency_id')
+          final String frequencyId,
+      @JsonKey(name: 'remaining_cycles')
+          final int remainingCycles,
+      @JsonKey(name: 'due_date_days')
+          final String dueDateDays}) = _$_RecurringInvoice;
   const _RecurringInvoice._() : super._();
 
   factory _RecurringInvoice.fromJson(Map<String, dynamic> json) =
@@ -1496,6 +1610,15 @@ abstract class _RecurringInvoice extends RecurringInvoice {
   bool get customSurchargeTax4;
   @override
   List<Document> get documents;
+  @override
+  @JsonKey(name: 'frequency_id')
+  String get frequencyId;
+  @override
+  @JsonKey(name: 'remaining_cycles')
+  int get remainingCycles;
+  @override
+  @JsonKey(name: 'due_date_days')
+  String get dueDateDays;
   @override
   @JsonKey(ignore: true)
   _$$_RecurringInvoiceCopyWith<_$_RecurringInvoice> get copyWith =>
