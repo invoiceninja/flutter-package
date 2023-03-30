@@ -786,7 +786,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
-  _$_Invoice(
+  const _$_Invoice(
       {this.id = '',
       @JsonKey(name: 'user_id')
           this.createdById = '',
@@ -1292,7 +1292,7 @@ class _$_Invoice extends _Invoice with DiagnosticableTreeMixin {
 }
 
 abstract class _Invoice extends Invoice {
-  factory _Invoice(
+  const factory _Invoice(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -1344,7 +1344,7 @@ abstract class _Invoice extends Invoice {
       @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
       final List<Document> documents}) = _$_Invoice;
-  _Invoice._() : super._();
+  const _Invoice._() : super._();
 
   factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
 
@@ -1804,7 +1804,7 @@ class __$$_InvoiceLineItemCopyWithImpl<$Res>
 class _$_InvoiceLineItem
     with DiagnosticableTreeMixin
     implements _InvoiceLineItem {
-  _$_InvoiceLineItem(
+  const _$_InvoiceLineItem(
       {this.id = '',
       @JsonKey(name: 'product_key') this.productKey = '',
       this.notes = '',
@@ -1981,7 +1981,7 @@ class _$_InvoiceLineItem
 }
 
 abstract class _InvoiceLineItem implements InvoiceLineItem {
-  factory _InvoiceLineItem(
+  const factory _InvoiceLineItem(
       {final String id,
       @JsonKey(name: 'product_key') final String productKey,
       final String notes,
@@ -2225,7 +2225,7 @@ class __$$_InvoiceInvitationCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_InvoiceInvitation extends _InvoiceInvitation
     with DiagnosticableTreeMixin {
-  _$_InvoiceInvitation(
+  const _$_InvoiceInvitation(
       {this.id = '',
       @JsonKey(name: 'client_contact_id') this.clientContactId = '',
       this.key = '',
@@ -2318,7 +2318,7 @@ class _$_InvoiceInvitation extends _InvoiceInvitation
 }
 
 abstract class _InvoiceInvitation extends InvoiceInvitation {
-  factory _InvoiceInvitation(
+  const factory _InvoiceInvitation(
           {final String id,
           @JsonKey(name: 'client_contact_id') final String clientContactId,
           final String key,
@@ -2327,7 +2327,7 @@ abstract class _InvoiceInvitation extends InvoiceInvitation {
           @JsonKey(name: 'viewed_date') final String viewedDate,
           @JsonKey(name: 'opened_date') final String openedDate}) =
       _$_InvoiceInvitation;
-  _InvoiceInvitation._() : super._();
+  const _InvoiceInvitation._() : super._();
 
   factory _InvoiceInvitation.fromJson(Map<String, dynamic> json) =
       _$_InvoiceInvitation.fromJson;

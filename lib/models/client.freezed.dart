@@ -647,7 +647,7 @@ class __$$_ClientCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Client extends _Client with DiagnosticableTreeMixin {
-  _$_Client(
+  const _$_Client(
       {this.id = '',
       @JsonKey(name: 'user_id') this.createdById = '',
       @JsonKey(name: 'assigned_user_id') this.assignedToId = '',
@@ -1016,7 +1016,7 @@ class _$_Client extends _Client with DiagnosticableTreeMixin {
 }
 
 abstract class _Client extends Client {
-  factory _Client(
+  const factory _Client(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -1057,7 +1057,7 @@ abstract class _Client extends Client {
       @JsonKey(name: 'vat_number') final String vatNumber,
       final List<ClientContact> contacts,
       final List<Document> documents}) = _$_Client;
-  _Client._() : super._();
+  const _Client._() : super._();
 
   factory _Client.fromJson(Map<String, dynamic> json) = _$_Client.fromJson;
 

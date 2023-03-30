@@ -399,7 +399,7 @@ class __$$_ProductCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Product extends _Product with DiagnosticableTreeMixin {
-  _$_Product(
+  const _$_Product(
       {this.id = '',
       @JsonKey(name: 'user_id') this.createdById = '',
       @JsonKey(name: 'assigned_user_id') this.assignedToId = '',
@@ -632,7 +632,7 @@ class _$_Product extends _Product with DiagnosticableTreeMixin {
 }
 
 abstract class _Product extends Product {
-  factory _Product(
+  const factory _Product(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -656,7 +656,7 @@ abstract class _Product extends Product {
       @JsonKey(name: 'tax_name3') final String taxName3,
       @JsonKey(name: 'tax_rate3') final double taxRate3,
       final List<Document> documents}) = _$_Product;
-  _Product._() : super._();
+  const _Product._() : super._();
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 

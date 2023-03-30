@@ -9,13 +9,13 @@ part 'product.g.dart';
 
 /// Product class
 @freezed
-abstract class Product implements _$Product {
+class Product with _$Product {
   /// Default constructor
   const Product._();
 
   /// Product factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory Product({
+  const factory Product({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,

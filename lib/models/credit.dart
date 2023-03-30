@@ -12,13 +12,13 @@ part 'credit.g.dart';
 
 /// Credit class
 @freezed
-abstract class Credit implements _$Credit {
+class Credit with _$Credit {
   /// Default constructor
   const Credit._();
 
   /// Credit factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory Credit({
+  const factory Credit({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
@@ -109,12 +109,12 @@ abstract class Credit implements _$Credit {
 
 /// CreditInvitation class
 @freezed
-abstract class CreditInvitation implements _$CreditInvitation {
+class CreditInvitation with _$CreditInvitation {
   const CreditInvitation._();
 
   /// CreditInvitation factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory CreditInvitation({
+  const factory CreditInvitation({
     @Default('') String id,
     @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
     @Default('') String key,

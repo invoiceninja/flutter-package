@@ -10,13 +10,13 @@ part 'invoice.g.dart';
 
 /// Invoice class
 @freezed
-abstract class Invoice implements _$Invoice {
+class Invoice with _$Invoice {
   /// Default constructor
   const Invoice._();
 
   /// Invoice factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory Invoice({
+  const factory Invoice({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
@@ -109,10 +109,10 @@ abstract class Invoice implements _$Invoice {
 
 /// InvoiceLineItem class
 @freezed
-abstract class InvoiceLineItem implements _$InvoiceLineItem {
+class InvoiceLineItem with _$InvoiceLineItem {
   /// InvoiceLineItem factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory InvoiceLineItem({
+  const factory InvoiceLineItem({
     @Default('') String id,
     @Default('') @JsonKey(name: 'product_key') String productKey,
     @Default('') String notes,
@@ -139,12 +139,12 @@ abstract class InvoiceLineItem implements _$InvoiceLineItem {
 
 /// InvoiceInvitation class
 @freezed
-abstract class InvoiceInvitation implements _$InvoiceInvitation {
+class InvoiceInvitation with _$InvoiceInvitation {
   const InvoiceInvitation._();
 
   /// InvoiceInvitation factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory InvoiceInvitation({
+  const factory InvoiceInvitation({
     @Default('') String id,
     @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
     @Default('') String key,

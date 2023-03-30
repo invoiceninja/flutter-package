@@ -11,13 +11,13 @@ part 'quote.g.dart';
 
 /// Quote class
 @freezed
-abstract class Quote implements _$Quote {
+class Quote with _$Quote {
   /// Default constructor
   const Quote._();
 
   /// Quote factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory Quote({
+  const factory Quote({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
@@ -109,12 +109,12 @@ abstract class Quote implements _$Quote {
 
 /// QuoteInvitation class
 @freezed
-abstract class QuoteInvitation implements _$QuoteInvitation {
+class QuoteInvitation with _$QuoteInvitation {
   const QuoteInvitation._();
 
   /// QuoteInvitation factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory QuoteInvitation({
+  const factory QuoteInvitation({
     @Default('') String id,
     @Default('') @JsonKey(name: 'client_contact_id') String clientContactId,
     @Default('') String key,

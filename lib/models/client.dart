@@ -8,13 +8,13 @@ part 'client.g.dart';
 
 /// Client class
 @freezed
-abstract class Client implements _$Client {
+class Client with _$Client {
   /// Default constructor
   const Client._();
 
   /// Client factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory Client({
+  const factory Client({
     @Default('') String id,
     @Default('') @JsonKey(name: 'user_id') String createdById,
     @Default('') @JsonKey(name: 'assigned_user_id') String assignedToId,
@@ -116,10 +116,10 @@ class ClientContact with _$ClientContact {
 class ClientSettings with _$ClientSettings {
   /// ClientSettings factory constructor
   @JsonSerializable(explicitToJson: true)
-  factory ClientSettings({
-    @Default('') @JsonKey(name: 'currency_id') String? currencyId,
-    @Default('') @JsonKey(name: 'language_id') String? languageId
-  }) = _ClientSettings;
+  factory ClientSettings(
+          {@Default('') @JsonKey(name: 'currency_id') String? currencyId,
+          @Default('') @JsonKey(name: 'language_id') String? languageId}) =
+      _ClientSettings;
 
   /// Create a ClientSettings from JSON
   factory ClientSettings.fromJson(Map<String, dynamic> json) =>

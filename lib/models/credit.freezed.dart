@@ -771,7 +771,7 @@ class __$$_CreditCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Credit extends _Credit with DiagnosticableTreeMixin {
-  _$_Credit(
+  const _$_Credit(
       {this.id = '',
       @JsonKey(name: 'user_id')
           this.createdById = '',
@@ -1269,7 +1269,7 @@ class _$_Credit extends _Credit with DiagnosticableTreeMixin {
 }
 
 abstract class _Credit extends Credit {
-  factory _Credit(
+  const factory _Credit(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -1320,7 +1320,7 @@ abstract class _Credit extends Credit {
       @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
       final List<Document> documents}) = _$_Credit;
-  _Credit._() : super._();
+  const _Credit._() : super._();
 
   factory _Credit.fromJson(Map<String, dynamic> json) = _$_Credit.fromJson;
 
@@ -1639,7 +1639,7 @@ class __$$_CreditInvitationCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_CreditInvitation extends _CreditInvitation
     with DiagnosticableTreeMixin {
-  _$_CreditInvitation(
+  const _$_CreditInvitation(
       {this.id = '',
       @JsonKey(name: 'client_contact_id') this.clientContactId = '',
       this.key = '',
@@ -1731,7 +1731,7 @@ class _$_CreditInvitation extends _CreditInvitation
 }
 
 abstract class _CreditInvitation extends CreditInvitation {
-  factory _CreditInvitation(
+  const factory _CreditInvitation(
           {final String id,
           @JsonKey(name: 'client_contact_id') final String clientContactId,
           final String key,
@@ -1740,7 +1740,7 @@ abstract class _CreditInvitation extends CreditInvitation {
           @JsonKey(name: 'viewed_date') final String viewedDate,
           @JsonKey(name: 'opened_date') final String openedDate}) =
       _$_CreditInvitation;
-  _CreditInvitation._() : super._();
+  const _CreditInvitation._() : super._();
 
   factory _CreditInvitation.fromJson(Map<String, dynamic> json) =
       _$_CreditInvitation.fromJson;

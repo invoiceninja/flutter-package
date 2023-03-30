@@ -784,7 +784,7 @@ class __$$_QuoteCopyWithImpl<$Res> extends _$QuoteCopyWithImpl<$Res, _$_Quote>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Quote extends _Quote with DiagnosticableTreeMixin {
-  _$_Quote(
+  const _$_Quote(
       {this.id = '',
       @JsonKey(name: 'user_id')
           this.createdById = '',
@@ -1291,7 +1291,7 @@ class _$_Quote extends _Quote with DiagnosticableTreeMixin {
 }
 
 abstract class _Quote extends Quote {
-  factory _Quote(
+  const factory _Quote(
       {final String id,
       @JsonKey(name: 'user_id') final String createdById,
       @JsonKey(name: 'assigned_user_id') final String assignedToId,
@@ -1343,7 +1343,7 @@ abstract class _Quote extends Quote {
       @JsonKey(name: 'custom_surcharge_tax3') final bool customSurchargeTax3,
       @JsonKey(name: 'custom_surcharge_tax4') final bool customSurchargeTax4,
       final List<Document> documents}) = _$_Quote;
-  _Quote._() : super._();
+  const _Quote._() : super._();
 
   factory _Quote.fromJson(Map<String, dynamic> json) = _$_Quote.fromJson;
 
@@ -1664,7 +1664,7 @@ class __$$_QuoteInvitationCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
-  _$_QuoteInvitation(
+  const _$_QuoteInvitation(
       {this.id = '',
       @JsonKey(name: 'client_contact_id') this.clientContactId = '',
       this.key = '',
@@ -1756,7 +1756,7 @@ class _$_QuoteInvitation extends _QuoteInvitation with DiagnosticableTreeMixin {
 }
 
 abstract class _QuoteInvitation extends QuoteInvitation {
-  factory _QuoteInvitation(
+  const factory _QuoteInvitation(
           {final String id,
           @JsonKey(name: 'client_contact_id') final String clientContactId,
           final String key,
@@ -1765,7 +1765,7 @@ abstract class _QuoteInvitation extends QuoteInvitation {
           @JsonKey(name: 'viewed_date') final String viewedDate,
           @JsonKey(name: 'opened_date') final String openedDate}) =
       _$_QuoteInvitation;
-  _QuoteInvitation._() : super._();
+  const _QuoteInvitation._() : super._();
 
   factory _QuoteInvitation.fromJson(Map<String, dynamic> json) =
       _$_QuoteInvitation.fromJson;
