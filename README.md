@@ -21,7 +21,7 @@ Create PDF invoices and accept payments in a Flutter app
 
 ```yaml
 dependencies:
-  invoiceninja: ^0.0.10
+  invoiceninja: ^0.0.11
 ```
 
 ### Import
