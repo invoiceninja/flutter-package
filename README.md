@@ -13,7 +13,7 @@ Create PDF invoices and accept payments in a Flutter app
 ## Features
 * Accept online payment in mobile, web and desktop Flutter apps
 * Supports many payment gateways including Stripe, PayPal and [more](https://invoiceninja.com/payments/)
-* Easily create professional [PDF invoices](https://invoiceninja.com/invoice-templates/)
+* Create professional [PDF invoices](https://invoiceninja.com/invoice-templates/)
 * Includes a self-service client portal
 * Many [more features](https://invoiceninja.com/features/)... 
 

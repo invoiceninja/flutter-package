@@ -1,3 +1,6 @@
+## 0.0.11
+- Update package description
+
 ## 0.0.10
 - Added optional `action` parameter to save methods
 - Added recurring invoices
