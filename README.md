@@ -17,11 +17,6 @@ Create PDF invoices and accept payments in a Flutter app
 * Includes a self-service client portal
 * Many [more features](https://invoiceninja.com/features/)... 
 
-### To Do
-
-- [ ] Images/documents
-- [ ] Tasks and expenses  
-
 ### Installing
 
 ```yaml
