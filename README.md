@@ -17,18 +17,7 @@ Create PDF invoices and accept payments in a Flutter app
 * Includes a self-service client portal
 * Many [more features](https://invoiceninja.com/features/)... 
 
-### Installing
-
-```yaml
-dependencies:
-  invoiceninja: ^0.0.11
-```
-
-### Import
-
-```dart
-import 'package:invoiceninja/invoiceninja.dart';
-```
+## Overview
 
 The package provides two main classes:
 * `InvoiceNinja`: Supports the public 'Storefront' routes which allow reading the list of products and creating/finding clients and invoices. Using this class works with restricted access to the account.
