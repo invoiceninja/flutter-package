@@ -1,6 +1,6 @@
 name: invoiceninja
 description: Create PDF invoices and accept payments in a Flutter app
-version: 0.0.9
+version: 0.0.10
 homepage: https://invoiceninja.com
 repository: https://github.com/invoiceninja/flutter-package
 issue_tracker: https://github.com/invoiceninja/flutter-package/issues
